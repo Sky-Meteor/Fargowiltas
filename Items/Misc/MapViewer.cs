@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 
 namespace Fargowiltas.Items.Summons
 {
@@ -16,10 +17,12 @@ namespace Fargowiltas.Items.Summons
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
                 Tooltip.SetDefault("Reveals the whole map");
+                Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "显示整个地图");
             }
             else
             {
                 Tooltip.SetDefault("Reveals an area of the map around you");
+                Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "显示你周围的地图区域");
             }
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
