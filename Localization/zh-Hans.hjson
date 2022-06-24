@@ -160,6 +160,63 @@ Mods: {
 			ArmoredBones: Armored Bones Banner
 			PirateBanner: Pirate Banner
 		}
+
+		BuffName: {
+		    Omnistation: 万用增益站
+			WoodDrop: 掉落木头
+		}
+
+		BuffDescription: {
+		    Omnistation: 拥有所有原版增益站的效果
+		}
+
+		ItemName: {
+		    BoneQuiver: 无尽骨箭袋
+			ChlorophyteQuiver: 无尽叶绿箭袋
+			CursedQuiver: 无尽诅咒箭袋
+			FlameQuiver: 无尽烈焰箭袋
+			FrostburnQuiver: 无尽霜冻箭袋
+			HellfireQuiver: 无尽狱炎箭袋
+			HolyQuiver: 无尽圣箭袋
+			IchorQuiver: 无尽灵液箭袋
+			JesterQuiver: 无尽小丑箭袋
+			LuminiteQuiver: 无尽夜明箭袋
+			UnholyQuiver: 无尽邪箭袋
+			VenomQuiver: 无尽毒液箭袋
+
+			ChlorophytePouch: 无尽叶绿弹袋
+			CrystalPouch: 无尽水晶弹袋
+			CursedPouch: 无尽诅咒弹袋
+			ExplosivePouch: 无尽爆破弹袋
+			GoldenPouch: 无尽金弹袋
+			IchorPouch: 无尽灵液弹袋
+			LuminitePouch: 无尽夜明弹袋
+			MeteorPouch: 无尽流星弹袋
+			NanoPouch: 无尽纳米弹袋
+			PartyPouch: 无尽派对弹袋
+			SilverPouch: 无尽银弹袋
+			TungstenPouch: 无尽钨弹袋
+			VelocityPouch: 无尽高速弹袋
+			VenomPouch: 无尽毒液弹袋
+		}
+
+		ItemTooltip: {
+			ChlorophyteQuiver: 撞墙后弹回
+			HolyQuiver: 碰撞时召唤陨星
+			IchorQuiver: 降低目标的防御力
+			LuminiteQuiver: “以音速射下它们！”
+
+			ChlorophytePouch: 追杀敌人
+			CrystalPouch: 碰撞时产生水晶碎片
+			ExplosivePouch: 碰撞时爆炸
+			GoldenPouch: 杀死的敌人会掉落更多的钱
+			IchorPouch: 降低目标的防御力
+			LuminitePouch: “鬼怪排成行，一发百中……”
+			NanoPouch: 造成困惑
+			PartyPouch: 碰撞时爆炸成彩纸
+			VenomPouch: 对目标施放酸性毒液
+
+		}
 	}
 }
 
