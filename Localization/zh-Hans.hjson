@@ -162,16 +162,16 @@ Mods: {
 		}
 
 		BuffName: {
-		    Omnistation: 万用增益站
+			Omnistation: 万用增益站
 			WoodDrop: 掉落木头
 		}
 
 		BuffDescription: {
-		    Omnistation: 拥有所有原版增益站的效果
+			Omnistation: 拥有所有原版增益站的效果
 		}
 
 		ItemName: {
-		    BoneQuiver: 无尽骨箭袋
+			BoneQuiver: 无尽骨箭袋
 			ChlorophyteQuiver: 无尽叶绿箭袋
 			CursedQuiver: 无尽诅咒箭袋
 			FlameQuiver: 无尽烈焰箭袋
@@ -198,6 +198,103 @@ Mods: {
 			TungstenPouch: 无尽钨弹袋
 			VelocityPouch: 无尽高速弹袋
 			VenomPouch: 无尽毒液弹袋
+
+			CopperCoinBag: 无限铜币袋
+			SilverCoinBag: 无限银币袋
+			GoldCoinBag: 无限金币袋
+			PlatinumCoinBag: 无限铂金币袋
+
+			CrystalDartBox: 无尽水晶镖盒
+			CursedDartBox: 无尽诅咒镖盒
+			IchorDartBox: 无尽灵液镖盒
+			PoisonDartBox: 无尽毒镖盒
+
+			Rocket1Bag: 无尽一级火箭包
+			Rocket2Bag: 无尽二级火箭包
+			Rocket3Bag: 无尽三级火箭包
+			Rocket4Bag: 无尽四级火箭包
+			ClusterRocket1Bag: 无尽一级集束火箭包
+			ClusterRocket2Bag: 无尽二级集束火箭包
+			DryRocketBag: 无尽干火箭包
+			WetRocketBag: 无尽潮湿火箭包
+			LavaRocketBag: 无尽熔岩火箭包
+			HoneyRocketBag: 无尽蜂蜜火箭包
+			MiniNuke1Bag: 无尽一级迷你核弹包
+			MiniNuke2Bag: 无尽二级迷你核弹包
+
+			BrittleBone: 易碎骨头
+			GelPack: 无尽凝胶包
+			StarPouch: 无尽星星袋
+
+			Abominationn: 憎恶
+			Angler: 渔夫
+			ArmsDealer: 军火商
+			Clothier: 服装商
+			Cyborg: 机器侠
+			Demolitionist: 爆破专家
+			Deviantt: 戴薇安
+			Dryad: 树妖
+			DyeTrader: 染料商
+			GoblinTinkerer: 哥布林工匠
+			Golfer: 高尔夫球手
+			Guide: 向导
+			LumberJack: 伐木工
+			Mechanic: 机械师
+			Merchant: 商人
+			Mutant: 突变体
+			Nurse: 护士
+			Painter: 油漆工
+			PartyGirl: 派对女孩
+			Pirate: 海盗
+			SantaClaus: 圣诞老人
+			SkeletonMerchant: 骷髅商人
+			Squirrel: 高帽松鼠
+			Steampunker: 蒸汽朋克人
+			Stylist: 发型师
+			Tavernkeep: 酒馆老板
+			TaxCollector: 税收官
+			TravellingMerchant: 旅商
+			Truffle: 松露人
+			WitchDoctor: 巫医
+			Wizard: 巫师
+			Zoologist: 动物学家
+			Princess: 公主
+			TownDog: 城镇狗狗
+			TownCat: 城镇猫咪
+			TownBunny: 城镇兔兔
+
+			AutoHouse: 快速房屋
+			BoomShuriken: 爆炸手里剑
+			CityBuster: 城市克星
+			DoubleObsidianInstabridge: 双重黑曜石速建平台
+			GraveBuster: 墓碑克星
+			HalfInstavator: 半程地狱直通车
+			InstaBridge: 速建平台
+			InstaTrack: 速建轨道
+			Instavator: 地狱直通车
+			LihzahrdInstactuationBomb: 丛林神庙炸弹
+			MiniInstaBridge: 迷你速建平台
+			ObsidianInstaBridge: 黑曜石速建平台
+			
+			BattleCry: 战争号角
+			DeathFruit: 死亡果实
+			InstantResearch: 一键研究
+			MapViewer: 失落的王之地图
+			ModeToggle: 世界令牌
+			PortableSundial: 便携式日晷
+			SuperDummy: 超级假人
+
+			CorruptRenewal: 腐化领域
+			CorruptRenewalSupreme: 腐化维度
+			CrimsonRenewal: 猩红领域
+			CrimsonRenewalSupreme: 猩红维度
+			HallowRenewal: 神圣领域
+			HallowRenewalSupreme: 神圣维度
+			MushroomRenewal: 发光蘑菇领域
+			MushroomRenewalSupreme: 发光蘑菇维度
+			PurityRenewal: 纯净领域
+			PurityRenewalSupreme: 纯净维度
+
 		}
 
 		ItemTooltip: {
@@ -215,6 +312,141 @@ Mods: {
 			NanoPouch: 造成困惑
 			PartyPouch: 碰撞时爆炸成彩纸
 			VenomPouch: 对目标施放酸性毒液
+
+			Abominationn: “我当然希望我是一个Boss……”
+			Angler: “你是个优秀的得力仆从！”
+			ArmsDealer: “哥们，把手从我的枪上拿开！”
+			Clothier: “再次感谢你帮我解了诅咒。”
+			Cyborg: “射弹击中我的运动执行机构会严重降低我的探险效率。”
+			Demolitionist: “今天是个找死的好日子！”
+			Deviantt: “感受痛苦吧......受虐时别忘了来我这买新东西！”
+			Dryad: “注意安全！泰拉瑞亚需要你！”
+			DyeTrader: “亲爱的，你的穿着太单调了。”
+			GoblinTinkerer: “想找工具大师？我就是啊！”
+			Golfer: “早起的鸟儿有虫吃，靠前的球洞有球吃。”
+			Guide: “他们说，有个人会告诉你如何在这地方上生存……”
+			LumberJack: “我早餐吃了碗‘木’片……没就着牛奶”
+			Mechanic: “一定要多买些电线！”
+			Merchant: “你是说黄金？我会从你身上弄走。”
+			Mutant: “你很幸运，我站在你这边。”
+			Nurse: “让我看看哪里受伤了。”
+			Painter: “我知道青绿色和蓝绿色之间的差别。但我不会告诉你。”
+			PartyGirl: “我们得谈谈。这……聚会的事。”
+			Pirate: “别碰我的战利品，淘气鬼！”
+			SantaClaus: “什么？你认为我不是真的？”
+			SkeletonMerchant: “你肯定想不到大家扔了些什么给我……想买点？”
+			Squirrel: *吱*
+			Steampunker: “给我一些装备！”
+			Stylist: “你今天到底有没有梳过头发？”
+			Tavernkeep: “我在这是要干嘛啊……”
+			TaxCollector: “你又来了？你是想要更多钱吧！？”
+			TravellingMerchant: “我卖的商品来自可能根本就不存在的地方！”
+			Truffle: “感觉镇上的每个人都有点古怪。”
+			WitchDoctor: “我是啥医？我是巫医。”
+			Wizard: “想让我从你耳朵后面掏出一个钱币吗？不想？好吧。”
+			Zoologist: “我非常喜欢动物！”
+			Princess: “粉红色是任何人都梦寐以求的最佳颜色！”
+			TownDog: “汪汪！”
+			TownCat: “喵！”
+			TownBunny: “*小兔子声音*”
+
+			AutoHouse: 快速建造一间NPC房屋
+			BoomShuriken: 快速丢出炸药
+			CityBuster: 
+				'''
+				大面积破坏
+				不会破坏背景墙
+				风险自担
+				'''
+			DoubleObsidianInstabridge: 
+				'''
+				建造2条横跨整个世界的黑曜石平台
+				同时清除平台之间和平台上方的区域
+				附近有重要建筑物时请勿使用
+				'''
+			GraveBuster: 大面积破坏墓碑
+			HalfInstavator: 
+				'''
+				建造一条直通地狱的半程通道
+				如果下面有任何重要建筑物，请不要使用
+				'''
+			InstaBridge: 
+				'''
+				建造一条横跨整个世界的平台
+				同时清除平台正上方的区域
+				附近有重要建筑物时请勿使用
+				'''
+			InstaTrack: 
+				'''
+				创建一条横跨整个世界的矿车轨道
+				同时清除轨道正上方的区域
+				附近有重要建筑物时请勿使用
+				'''
+			Instavator: 
+				'''
+				建造一条直通地狱的通道
+				如果下面有任何重要建筑物，请不要使用
+				'''
+			LihzahrdInstactuationBomb: 
+				'''
+				站在丛林祭坛前使用时，清除丛林蜥蜴祭坛周围的空间
+				虚化丛林蜥蜴砖并摧毁其他物块
+				仅能在世纪之花被击败后，在丛林神庙中使用
+				'''
+			MiniInstaBridge: 
+				'''
+				建造一条长平台
+				不会破坏任何方块
+				'''
+			ObsidianInstaBridge: 
+				'''
+				建造一条横跨整个世界的黑曜石平台
+				同时清除平台正上方的区域
+				附近有重要建筑物时请勿使用
+				'''
+
+			BattleCry: 
+				'''
+				使用时刷怪率提高 10 倍
+				再次使用以关闭效果
+				'''
+			DeathFruit: 
+				'''
+				永久性地降低20点最大生命值
+				对于用过其他模组中一次性的、增加最大生命值的物品的角色，效果不可逆
+				'''
+			InstantResearch: 
+				'''
+				DEBUG ITEM
+				调 试 用 物 品
+				研究所有物品
+				'''
+			ModeToggle: 切换世界难度
+			PortableSundial: 
+				'''
+				左键单击可立即从白天切换到黑夜
+				右键点击可激活魔法日晷效果
+				这会重置旅行商人的商店
+				'''
+			SuperDummy: 
+				'''
+				在你的光标处产生一个超级假人
+				与普通训练假人相同，但仆从和追踪弹幕会以其为目标
+				会触发一些武器的“击中效果”
+				右击移除所有生成的超级假人
+				最多可以同时召唤50个超级假人
+				'''
+			
+			CorruptRenewal: 使一大片区域变为腐化之地
+			CorruptRenewalSupreme: 使整个世界变为腐化之地
+			CrimsonRenewal: 使一大片区域变为猩红之地
+			CrimsonRenewalSupreme: 使整个世界变为猩红之地
+			HallowRenewal: 使一大片区域变为神圣之地
+			HallowRenewalSupreme: 使整个世界变为神圣之地
+			MushroomRenewal: 使一大片区域变为发光蘑菇地
+			MushroomRenewalSupreme: 使整个世界变为发光蘑菇地
+			PurityRenewal: 净化一大片区域
+			PurityRenewalSupreme: 净化整个世界
 
 		}
 	}
