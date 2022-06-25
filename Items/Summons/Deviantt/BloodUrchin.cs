@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.BloodEelHead;
 
-        public override string NPCName => "Blood Eel";
+        public override string NPCName => FargoUtils.IsChinese() ? "血鳗鱼" : "Blood Eel";
 
         public override void SetStaticDefaults()
         {

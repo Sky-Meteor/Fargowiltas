@@ -8,7 +8,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.Nymph;
 
-        public override string NPCName => "Nymph";
+        public override string NPCName => FargoUtils.IsChinese() ? "宁芙" : "Nymph";
 
         public override void SetStaticDefaults()
         {

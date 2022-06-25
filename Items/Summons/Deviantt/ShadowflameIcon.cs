@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.GoblinSummoner;
 
-        public override string NPCName => "Goblin Summoner";
+        public override string NPCName => FargoUtils.IsChinese() ? "哥布林召唤师" : "Goblin Summoner";
 
         public override void SetStaticDefaults()
         {

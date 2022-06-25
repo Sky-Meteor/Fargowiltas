@@ -15,7 +15,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.GoldenSlime;
 
-        public override string NPCName => "Golden Slime";
+        public override string NPCName => FargoUtils.IsChinese() ? "金史莱姆" : "Golden Slime";
 
         public override void SetStaticDefaults()
         {

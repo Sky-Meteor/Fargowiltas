@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.UndeadMiner;
 
-        public override string NPCName => "Undead Miner";
+        public override string NPCName => FargoUtils.IsChinese() ? "不死矿工" : "Undead Miner";
 
         public override void SetStaticDefaults()
         {
