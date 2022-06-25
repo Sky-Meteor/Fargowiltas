@@ -60,11 +60,17 @@ namespace Fargowiltas.Items.Summons.Mutant
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("Every boss has awoken!"), new Color(175, 75, 255));
+                if (FargoUtils.IsChinese())
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("所有boss已苏醒！"), new Color(175, 75, 255));
+                else
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("Every boss has awoken!"), new Color(175, 75, 255));
             }
             else
             {
-                Main.NewText("Every boss has awoken!", new Color(175, 75, 255));
+                if (FargoUtils.IsChinese())
+                    Main.NewText("所有boss已苏醒！", new Color(175, 75, 255));
+                else
+                    Main.NewText("Every boss has awoken!", new Color(175, 75, 255));
             }
 
             SoundEngine.PlaySound(SoundID.Roar, player.position);
@@ -74,7 +80,10 @@ namespace Fargowiltas.Items.Summons.Mutant
 
         public static int SpawnBoss(Player player, int npcID, string name)
         {
-            Main.NewText($"{name} has awoken!", new Color(175, 75, 255));
+            if (FargoUtils.IsChinese())
+                Main.NewText($"{name}已苏醒！", new Color(175, 75, 255));
+            else
+                Main.NewText($"{name} has awoken!", new Color(175, 75, 255));
             return NPC.NewNPC(NPC.GetBossSpawnSource(player.whoAmI), (int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), npcID);
         }
     }

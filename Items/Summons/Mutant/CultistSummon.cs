@@ -6,7 +6,7 @@ namespace Fargowiltas.Items.Summons.Mutant
     {
         public override int NPCType => NPCID.CultistBoss;
 
-        public override string NPCName => "Lunatic Cultist";
+        public override string NPCName => FargoUtils.IsChinese() ? "拜月教邪教徒" : "Lunatic Cultist";
 
         public override void SetStaticDefaults()
         {

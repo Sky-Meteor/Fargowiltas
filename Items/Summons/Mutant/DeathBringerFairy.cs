@@ -46,11 +46,17 @@ namespace Fargowiltas.Items.Summons.Mutant
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("Several bosses have awoken!"), new Color(175, 75, 255));
+                if (FargoUtils.IsChinese())
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("数个boss已苏醒！"), new Color(175, 75, 255));
+                else
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("Several bosses have awoken!"), new Color(175, 75, 255));
             }
             else
             {
-                Main.NewText("Several bosses have awoken!", new Color(175, 75, 255));
+                if (FargoUtils.IsChinese())
+                    Main.NewText("数个boss已苏醒！", new Color(175, 75, 255));
+                else
+                    Main.NewText("Several bosses have awoken!", new Color(175, 75, 255));
             }
 
             SoundEngine.PlaySound(SoundID.Roar, player.position);
