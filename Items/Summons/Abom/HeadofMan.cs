@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override int NPCType => NPCID.HeadlessHorseman;
 
-        public override string NPCName => "Headless Horseman";
+        public override string NPCName => FargoUtils.IsChinese() ? "无头骑士" : "Headless Horseman";
 
         public override void SetStaticDefaults()
         {

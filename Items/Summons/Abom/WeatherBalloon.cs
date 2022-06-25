@@ -51,7 +51,10 @@ namespace Fargowiltas.Items.Summons.Abom
                 NetMessage.SendData(MessageID.WorldData);
                 Main.SyncRain();
             }
-            FargoUtils.PrintText("Rain clouds cover the sky.", new Color(175, 75, 255));
+            if (FargoUtils.IsChinese())
+                FargoUtils.PrintText("雨云遮住了天空。", new Color(175, 75, 255));
+            else
+                FargoUtils.PrintText("Rain clouds cover the sky.", new Color(175, 75, 255));
             SoundEngine.PlaySound(SoundID.Roar, player.position);
 
             return true;

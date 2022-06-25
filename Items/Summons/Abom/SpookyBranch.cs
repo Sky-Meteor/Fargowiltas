@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override int NPCType => NPCID.MourningWood;
 
-        public override string NPCName => "Mourning Wood";
+        public override string NPCName => FargoUtils.IsChinese() ? "哀木" : "Mourning Wood";
 
         public override void SetStaticDefaults()
         {

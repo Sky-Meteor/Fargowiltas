@@ -6,7 +6,7 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override int NPCType => NPCID.DD2DarkMageT1;
 
-        public override string NPCName => "Dark Mage";
+        public override string NPCName => FargoUtils.IsChinese() ? "黑暗魔法师" : "Dark Mage";
 
         public override void SetStaticDefaults()
         {

@@ -39,7 +39,10 @@ namespace Fargowiltas.Items.Summons.Abom
         public override bool? UseItem(Player player)
         {
             FargoWorld.Matsuri = true;
-            FargoUtils.PrintText("Lantern Night rate increased!", new Color(175, 75, 255));
+            if (FargoUtils.IsChinese())
+                FargoUtils.PrintText("出现灯笼夜的概率提高了！", new Color(175, 75, 255));
+            else
+                FargoUtils.PrintText("Lantern Night rate increased!", new Color(175, 75, 255));
             
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);
