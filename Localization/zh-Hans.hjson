@@ -295,6 +295,97 @@ Mods: {
 			PurityRenewal: 纯净领域
 			PurityRenewalSupreme: 纯净维度
 
+			Anemometer: 风速计
+			BatteredClub: 重击棍
+			BetsyEgg: 龙蛋
+			FestiveOrnament: 节日装饰
+			ForbiddenScarab: 禁忌圣甲虫
+			ForbiddenTome: 禁忌之书
+			HeadofMan: 无头骑士的头
+			IceKingsRemains: 寒冰领主的遗物
+			MartianMemoryStick: 火星记忆棒
+			MatsuriLantern: 祭典灯笼
+			NaughtyList: 捣蛋清单
+			PartyCone: 派对帽
+			PillarSummon: 异界之门
+			RunawayProbe: 逃亡的探测器
+			SlimyBarometer: 黏糊糊的晴雨表
+			SpentLantern: 燃尽的灯笼
+			SpookyBranch: 诡异树枝
+			SuspiciousLookingScythe: 可疑的镰刀
+			WeatherBalloon: 气象气球
+
+			AmalgamatedSkull: 聚合头骨
+			AmalgamatedSpirit: 聚合灵魂
+			AthenianIdol: 雅典神像
+			AttractiveOre: 吸引人的矿物
+			BloodSushiPlatter: 血寿司拼盘
+			BloodUrchin: 血海胆
+			CloudSnack: 白云棉花糖
+			ClownLicense: 小丑资格证
+			CoreoftheFrostCore: 寒冰核心
+			CorruptChest: 可疑的腐化箱子
+			CrimsonChest: 可疑的猩红箱子
+			DemonicPlushie: 恶魔玩具
+			DilutedRainbowMatter: 稀释彩虹物质
+			Eggplant: 茄子
+			ForbiddenForbiddenFragment: 禁忌碎片
+			GnomeHat: 侏儒帽
+			GoblinScrap: 哥布林破布
+			GoldenSlimeCrown: 金史莱姆王冠
+			GrandCross: 圣之十字
+			HallowChest: 可疑的神圣箱子
+			HeartChocolate: 心之巧克力
+			HemoclawCrab: Hemoclaw Crab
+			HolyGrail: 圣杯
+			JungleChest: 可疑的丛林箱子
+			LeesHeadband: 李小龙头带
+			MothLamp: 引蛾灯
+			MothronEgg: 蛾怪蛋
+			Pincushion: 针垫
+			PinkSlimeCrown: 迷之粉色王冠
+			PirateFlag: 海盗旗
+			PlunderedBooty: 掠夺的赃物
+			RuneOrb: 符文宝珠
+			ShadowflameIcon: 暗影火焰符章
+			SlimyLockBox: 黏黏的上锁箱子
+			SuspiciousLookingChest: 可疑的箱子
+			SuspiciousLookingLure: 可疑的鱼饵
+			WormSnack: 蠕虫小吃
+
+			AncientSeal: 古代符章
+			CultistSummon: 拜月教徒的遗物
+			DeathBringerFairy: 告死精灵
+			FleshyDoll: 血肉娃娃
+			JellyCrystal: 胶状水晶
+			MechanicalAmalgam: 机械融合体
+			MutantVoodoo: 突变体巫毒娃娃
+			PlanterasFruit: 世纪之果
+			PrismaticPrimrose: Prismatic Primrose
+			SuspiciousSkull: 可疑头骨
+
+			EnergizerBee: 蜂王强化剂
+			EnergizerBetsy: 双足翼龙强化剂
+			EnergizerBrain: 克苏鲁之脑强化剂
+			EnergizerCultist: 邪教徒强化剂
+			EnergizerDarkMage: 神秘强化剂
+			EnergizerDeer: 独眼巨鹿强化剂
+			EnergizerDestroy: 毁灭强化剂
+			EnergizerDG: 骸骨强化剂
+			EnergizerEmpress: 仙灵充能体
+			EnergizerEye: 视觉强化剂
+			EnergizerFish: 猪鲨强化剂
+			EnergizerGolem: 蜥蜴强化剂
+			EnergizerMoon: 月球强化剂
+			EnergizerPlant: 绿叶强化剂
+			EnergizerPrime: 统帅强化剂
+			EnergizerQueenSlime: 结晶强化剂
+			EnergizerSkele: 头骨强化剂
+			EnergizerSlime: 粘滑强化剂
+			EnergizerTwins: 双子强化剂
+			EnergizerWall: 血肉强化剂
+			EnergizerWorm: 蠕虫强化剂
+
 		}
 
 		ItemTooltip: {
@@ -434,7 +525,7 @@ Mods: {
 				与普通训练假人相同，但仆从和追踪弹幕会以其为目标
 				会触发一些武器的“击中效果”
 				右击移除所有生成的超级假人
-				最多可以同时召唤50个超级假人
+				最多可以同时生成50个超级假人
 				'''
 			
 			CorruptRenewal: 使一大片区域变为腐化之地
@@ -448,6 +539,323 @@ Mods: {
 			PurityRenewal: 净化一大片区域
 			PurityRenewalSupreme: 净化整个世界
 
+			Anemometer: 召唤大风天
+			BatteredClub: 召唤食人魔
+			BetsyEgg: 召唤双足翼龙
+			FestiveOrnament: 
+				'''
+				召唤常绿尖叫怪
+				只能在晚上使用
+				'''
+			ForbiddenScarab: 召唤沙尘暴
+			ForbiddenTome: 召唤黑暗魔法师
+			HeadofMan: 
+				'''
+				召唤无头骑士
+				只能在晚上使用
+				'''
+			IceKingsRemains: 
+				'''
+				召唤冰雪女王
+				只能在晚上使用
+				'''
+			MartianMemoryStick: 召唤火星飞碟
+			MatsuriLantern: 让每个无boss、无入侵事件的夜晚都是灯笼夜
+			NaughtyList: 
+				'''
+				召唤圣诞坦克
+				只能在晚上使用
+				'''
+			PartyCone: 
+				'''
+				开派对吧！
+				至少有5个城镇NPC时才能使用
+				'''
+			PillarSummon: 召唤天界柱
+			RunawayProbe: 召唤火星暴乱
+			SlimyBarometer: 召唤史莱姆雨
+			SpentLantern: 停用祭典灯笼的效果
+			SpookyBranch: 
+				'''
+				召唤哀木
+				只能在晚上使用
+				'''
+			SuspiciousLookingScythe: 
+				'''
+				召唤南瓜王
+				只能在晚上使用
+				'''
+			WeatherBalloon: 召唤下雨
+
+			AmalgamatedSkull: 
+				'''
+				召唤一批骷髅枪手
+				只能在晚上或地下使用
+				'''
+			AmalgamatedSpirit: 
+				'''
+				召唤一批骷髅法师
+				只能在晚上或地下使用
+				'''
+			AthenianIdol: 
+				'''
+				召唤蛇发女妖
+				只能在晚上或地下使用
+				'''
+			AttractiveOre: 
+				'''
+				召唤不死矿工
+				只能在晚上或地下使用
+				'''
+			BloodSushiPlatter: 
+				'''
+				召唤恐惧鹦鹉螺
+				只能在血月期间使用
+				'''
+			BloodUrchin:
+				'''
+				召唤血鳗鱼
+				只能在血月期间使用
+				'''
+			CloudSnack: 召唤飞龙
+			ClownLicense: 
+				'''
+				召唤小丑
+				只能在晚上或地下使用
+				'''
+			CoreoftheFrostCore: 召唤冰雪巨人
+			CorruptChest: 召唤腐化宝箱怪
+			CrimsonChest: 召唤猩红宝箱怪
+			DemonicPlushie: 
+				'''
+				召唤红魔鬼
+				只能在地下使用
+				'''
+			DilutedRainbowMatter: 召唤彩虹史莱姆
+			Eggplant: 
+				'''
+				召唤骷髅博士
+				只能在晚上或地下使用
+				'''
+			ForbiddenForbiddenFragment: 召唤沙尘精
+			GnomeHat: 召唤侏儒
+			GoblinScrap: 召唤哥布林侦察兵
+			GoldenSlimeCrown: 召唤金史莱姆
+			GrandCross: 
+				'''
+				召唤圣骑士
+				只能在晚上或地下使用
+				'''
+			HallowChest: 召唤神圣宝箱怪
+			HeartChocolate: 
+				'''
+				召唤宁芙
+				只能在晚上或地下使用
+				'''
+			HemoclawCrab: 
+				'''
+				召唤血浆哥布林鲨鱼
+				只能在血月期间使用
+				'''
+			HolyGrail: 
+				'''
+				召唤蒂姆
+				只能在晚上或地下使用
+				'''
+			JungleChest: 召唤丛林宝箱怪
+			LeesHeadband: 
+				'''
+				召唤骷髅李小龙
+				只能在晚上或地下使用
+				'''
+			MothLamp: 召唤蛾
+			MothronEgg: 
+				'''
+				召唤蛾怪
+				只能在日食期间使用
+				'''
+			Pincushion: 
+				'''
+				召唤钉头
+				只能在日食期间使用
+				'''
+			PinkSlimeCrown: 召唤粉史莱姆
+			PirateFlag: 召唤海盗船长
+			PlunderedBooty: 召唤荷兰飞盗船
+			RuneOrb: 
+				'''
+				召唤符文巫师
+				只能在晚上或地下使用
+				'''
+			ShadowflameIcon: 
+				'''
+				召唤哥布林召唤师
+				只能在哥布林入侵期间使用
+				'''
+			SlimyLockBox: 召唤地牢史莱姆
+			SuspiciousLookingChest: 
+				'''
+				召唤宝箱怪
+				在地下雪原中可召唤冰雪宝箱怪
+				'''
+			SuspiciousLookingLure: 
+				'''
+				召唤游荡眼球怪鱼和僵尸人鱼
+				只能在晚上使用
+				'''
+			WormSnack: 
+				'''
+				在困难模式之前召唤巨型蠕虫
+				在困难模式中召唤挖掘怪
+				只能在地下使用
+				'''
+			
+			AncientSeal: 
+				'''
+				召唤所有Boss，包括其他Mod中的
+				“后果自负”
+				'''
+			CultistSummon: 
+				'''
+				召唤拜月教邪教徒
+				如果你已经击败过拜月教邪教徒，击败后不生成天界柱
+				'''
+			DeathBringerFairy: 
+				'''
+				召唤所有困难模式前的Boss
+				你在特定的生物群落中时，某些Boss才会生成
+				'''
+			FleshyDoll: 
+				'''
+				召唤血肉之墙
+				只在地狱中生效
+				'''
+			JellyCrystal: 召唤史莱姆皇后
+			MechanicalAmalgam: 召唤三个机械Boss
+			MutantVoodoo: 召唤所有原版Boss
+			PlanterasFruit: 召唤世纪之花
+			PrismaticPrimrose: 召唤光之女皇
+			SuspiciousSkull: 
+				'''
+				在不杀死服装商的情况下召唤骷髅王
+				在白天会召唤地牢守卫
+				'''
+
+			EnergizerBee: 
+				'''
+				击败十轮过载幼虫后获得
+				“闻起来像蜂蜜”
+				'''
+			EnergizerBetsy: 
+				'''
+				击败十轮龙蛋盒后获得
+				“你感觉你已经等了三千年”
+				'''
+			EnergizerBrain: 
+				'''
+				击败十轮头脑风暴后获得
+				“你仍然觉得自己很傻”
+				'''
+			EnergizerCultist: 
+				'''
+				击败十轮狂热者暴动后获得
+				“你可能疯了”
+				'''
+			EnergizerDarkMage: 
+				'''
+				击败十轮绝对禁忌之书后获得
+				“你感觉你已经等了一千年”
+				'''
+			EnergizerDeer: 
+				'''
+				击败十轮融合巨鹿后获得
+				“它使你饥饿”
+				'''
+			EnergizerDestroy: 
+				'''
+				击败十轮地震触发器后获得
+				“它让你有了一种想毁灭东西的冲动”
+				'''
+			EnergizerDG: 
+				'''
+				击败十轮白天的头骨项链后获得
+				“让你想起一头卑鄙的母牛”
+				'''
+			EnergizerEmpress: 
+				'''
+				击败十轮草蛉罐后获得
+				“观察它的时候佩戴护目镜”
+				'''
+			EnergizerEye: 
+				'''
+				击败十轮融合眼球后获得
+				“它似乎在看着你”
+				'''
+			EnergizerFish: 
+				'''
+				击败十轮松露虫堆后获得
+				“你很满意”
+				'''
+			EnergizerGolem: 
+				'''
+				击败十轮符文能量电池后获得
+				“你希望它拼写为‘TechDirito’”
+				'''
+			EnergizerMoon: 
+				'''
+				击败十轮符文铭文后形成
+				“你在享受奶酪”
+				'''
+			EnergizerPlant: 
+				'''
+				击败十轮丛林之心后获得
+				“变成一片叶子？听起来很不错”
+				'''
+			EnergizerPrime: 
+				'''
+				击败十轮统帅控制芯片后获得
+				“感觉就像一个全新的自己”
+				'''
+			EnergizerQueenSlime: 
+				'''
+				击败十轮集群水晶后获得
+				“感觉非常粘”
+				'''
+			EnergizerSkele: 
+				'''
+				击败十轮骷髅项链后获得
+				“让你想起一头牛”
+				'''
+			EnergizerSlime: 
+				'''
+				击败十轮群冠后获得
+				“感觉有点粘”
+				'''
+			EnergizerTwins: 
+				'''
+				击败十轮全焦距晶状体后获得
+				“你希望你拥有更多”
+				'''
+			EnergizerWall: 
+				'''
+				击败十轮人偶包后获得
+				“你感到幽闭恐惧”
+				'''
+			EnergizerWorm: 
+				'''
+				击败十轮蠕虫串烧后获得
+				“有点黏”
+				'''
+
+		}
+
+		NPCName: {
+			Abominationn: 憎恶
+			Deviantt: 戴薇安
+			LumberJack: 伐木工
+			Mutant: 突变体
+			Squirrel: 高帽松鼠
+			SuperDummy: 超级假人
 		}
 	}
 }
