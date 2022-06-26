@@ -386,6 +386,33 @@ Mods: {
 			EnergizerWall: 血肉强化剂
 			EnergizerWorm: 蠕虫强化剂
 
+			OverloadBee: 过载幼虫
+			OverloadBetsy: 龙蛋盒
+			OverloadBrain: 头脑风暴
+			OverloadCultist: 狂热者暴动
+			OverloadDarkMage: 绝对禁忌之书
+			OverloadDeer: 融合巨鹿
+			OverloadedSlimeRain: 相当黏的晴雨表
+			OverloadEmpress: 草蛉罐
+			Overloader: 过载
+			OverloadEye: 融合眼球
+			OverloadFish: 松露虫堆
+			OverloadFrostMoon: 过载调皮礼物
+			OverloadGoblins: 过载哥布林战旗
+			OverloadGolem: 符文能量电池
+			OverloadMartians: 过载探测器
+			OverloadMoon: 符文铭文
+			OverloadPirates: 海盗的赏金
+			OverloadPlant: 丛林之心
+			OverloadPrime: 统帅控制芯片
+			OverloadPumpkinMoon: 过载南瓜月勋章
+			OverloadQueenSlime: 集群水晶
+			OverloadSkele: 骷髅项链
+			OverloadSlimeCrown: 群冠
+			OverloadTwins: 全焦距晶状体
+			OverloadWall: 人偶包
+			OverloadWorm: 蠕虫串烧
+
 		}
 
 		ItemTooltip: {
@@ -453,29 +480,32 @@ Mods: {
 				'''
 				建造2条横跨整个世界的黑曜石平台
 				同时清除平台之间和平台上方的区域
+				下方的平台出现在鼠标位置
 				附近有重要建筑物时请勿使用
 				'''
 			GraveBuster: 大面积破坏墓碑
 			HalfInstavator: 
 				'''
-				建造一条直通地狱的半程通道
+				投掷一枚炸弹，建造一条直通地狱的半程通道
 				如果下面有任何重要建筑物，请不要使用
 				'''
 			InstaBridge: 
 				'''
 				建造一条横跨整个世界的平台
 				同时清除平台正上方的区域
+				平台出现在鼠标位置
 				附近有重要建筑物时请勿使用
 				'''
 			InstaTrack: 
 				'''
 				创建一条横跨整个世界的矿车轨道
 				同时清除轨道正上方的区域
+				轨道出现在鼠标位置
 				附近有重要建筑物时请勿使用
 				'''
 			Instavator: 
 				'''
-				建造一条直通地狱的通道
+				投掷一枚炸弹，建造一条直通地狱的通道
 				如果下面有任何重要建筑物，请不要使用
 				'''
 			LihzahrdInstactuationBomb: 
@@ -486,13 +516,14 @@ Mods: {
 				'''
 			MiniInstaBridge: 
 				'''
-				建造一条长平台
+				在鼠标的高度建造一条长平台
 				不会破坏任何方块
 				'''
 			ObsidianInstaBridge: 
 				'''
 				建造一条横跨整个世界的黑曜石平台
 				同时清除平台正上方的区域
+				平台出现在鼠标位置
 				附近有重要建筑物时请勿使用
 				'''
 
@@ -845,6 +876,142 @@ Mods: {
 				'''
 				击败十轮蠕虫串烧后获得
 				“有点黏”
+				'''
+
+			OverloadBee: 
+				'''
+				召唤十只蜂王
+				只会掉落宝藏袋
+				'''
+			OverloadBetsy: 
+				'''
+				召唤十只双足翼龙
+				只会掉落宝藏袋
+				'''
+			OverloadBrain: 
+				'''
+				召唤十个克苏鲁之脑
+				只会掉落宝藏袋
+				'''
+			OverloadCultist: 
+				'''
+				召唤十个拜月教邪教徒
+				只会掉落宝藏袋
+				'''
+			OverloadDarkMage: 召唤十只黑暗魔法师
+			OverloadDeer: 
+				'''
+				召唤十只独眼巨鹿
+				只会掉落宝藏袋
+				'''
+			OverloadDestroyer: 
+				'''
+				召唤十只毁灭者
+				只会掉落宝藏袋
+				'''
+			OverloadedSlimeRain: 
+				'''
+				召唤过载的史莱姆雨
+				再次使用以停止事件
+				'''
+			OverloadEmpress: 
+				'''
+				召唤十只光之女皇
+				只会掉落宝藏袋
+				'''
+			Overloader: 
+				'''
+				用于合成过载召唤物
+				使用过载召唤物时，堆叠在一起的所有召唤物都会被消耗
+				消耗的越多，产生的boss就越多
+				每击杀10个Boss就会掉落一个纪念章
+				每击杀100个Boss就会掉落一个强化剂
+				'''
+			OverloadEye: 
+				'''
+				召唤十只克苏鲁之眼
+				只会掉落宝藏袋
+				'''
+			OverloadFish: 
+				'''
+				召唤十个猪龙鱼公爵
+				只会掉落宝藏袋
+				'''
+			OverloadFrostMoon: 
+				'''
+				召唤霜月事件，直接从第20波开始且刷怪率大幅增加
+				再次使用以停止事件
+				'''
+			OverloadGoblins: 
+				'''
+				召唤过载的哥布林入侵事件
+				再次使用以停止事件
+				'''
+			OverloadGolem: 
+				'''
+				召唤十个石巨人
+				只会掉落宝藏袋
+				'''
+			OverloadMartians: 
+				'''
+				召唤过载的火星暴乱事件
+				再次使用以停止事件
+				'''
+			OverloadMoon: 
+				'''
+				召唤十个月亮领主
+				只会掉落宝藏袋
+				'''
+			OverloadPirates: 
+				'''
+				召唤过载量的海盗入侵事件
+				再次使用以停止事件
+				'''
+			OverloadPlant: 
+				'''
+				召唤十个世纪之花
+				只会掉落宝藏袋
+				'''
+			OverloadPrime: 
+				'''
+				召唤十个机械骷髅王
+				只会掉落宝藏袋
+				'''
+			OverloadPumpkinMoon: 
+				'''
+				召唤南瓜月事件，直接从第15波开始且刷怪率大幅增加
+				再次使用以停止事件
+				'''
+			OverloadQueenSlime: 
+				'''
+				召唤十只史莱姆皇后
+				只会掉落宝藏袋
+				'''
+			OverloadSkele: 
+				'''
+				在夜晚召唤十个骷髅王
+				在白天召唤十个地牢守卫
+				只会掉落宝藏袋
+				'''
+			OverloadSlimeCrown: 
+				'''
+				召唤十只史莱姆王
+				只会掉落宝藏袋
+				'''
+			OverloadTwins: 
+				'''
+				召唤十个双子魔眼
+				只会掉落宝藏袋
+				'''
+			OverloadWall: 
+				'''
+				召唤十道血肉之墙
+				只会掉落宝藏袋
+				'''
+			OverloadWorm: 
+				'''
+				召唤十个世界吞噬怪
+				只会掉落宝藏袋
 				'''
 
 		}
