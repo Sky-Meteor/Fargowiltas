@@ -12,7 +12,7 @@ namespace Fargowiltas.Items.Summons
 {
     public class MechEye : ModItem
     {
-        public override string Texture => FargoUtils.IsChinese() ? "双子魔眼" : "Terraria/Images/Item_544";
+        public override string Texture => "Terraria/Images/Item_544";
 
         public override void SetStaticDefaults()
         {
