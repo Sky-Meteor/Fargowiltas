@@ -10,7 +10,7 @@ namespace Fargowiltas.Items.Summons.VanillaCopy
     {
         public override int NPCType => NPCID.Golem;
 
-        public override string NPCName => "Golem";
+        public override string NPCName => FargoUtils.IsChinese() ? "石巨人" : "Golem";
 
         public override void SetStaticDefaults()
         {

@@ -413,6 +413,19 @@ Mods: {
 			OverloadWall: 人偶包
 			OverloadWorm: 蠕虫串烧
 
+			Abeemination2: 令人憎恶的蜜蜂
+			CelestialSigil2: 天魔印记
+			DeerThing2: 华鹿
+			GoreySpine: 红斑脊椎
+			LihzahrdPowerCell2: 蜥蜴电池包
+			MechEye: 某种金属眼睛
+			MechSkull: 某种金属头骨
+			MechWorm: 某种金属蠕虫
+			SlimyCrown: 黏糊糊的王冠
+			SuspiciousEye: 似乎可疑的眼球
+			TruffleWorm2: 松露蠕虫
+			WormyFood: 蠕虫食物
+			
 		}
 
 		ItemTooltip: {
@@ -1013,6 +1026,19 @@ Mods: {
 				召唤十个世界吞噬怪
 				只会掉落宝藏袋
 				'''
+
+			Abeemination2: 在任何生物群系中召唤蜂后
+			CelestialSigil2: 立即召唤月亮领主
+			DeerThing2: 在任何生物群系中召唤独眼巨鹿
+			GoreySpine: 在任何生物群系中召唤克苏鲁之脑
+			LihzahrdPowerCell2: 在没有祭坛的情况下召唤石巨人
+			MechEye: 召唤双子魔眼
+			MechSkull: 召唤机械骷髅王
+			MechWorm: 召唤毁灭者
+			SlimyCrown: 召唤史莱姆王
+			SuspiciousEye: 召唤克苏鲁之眼
+			TruffleWorm2: 不钓鱼就召唤猪龙鱼公爵
+			WormyFood: 在任何生物群系中召唤世界吞噬怪
 
 		}
 

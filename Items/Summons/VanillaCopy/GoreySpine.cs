@@ -12,7 +12,7 @@ namespace Fargowiltas.Items.Summons
 
         public override int NPCType => NPCID.BrainofCthulhu;
 
-        public override string NPCName => "Brain of Cthulhu";
+        public override string NPCName => FargoUtils.IsChinese() ? "克苏鲁之脑" : "Brain of Cthulhu";
 
         public override void SetStaticDefaults()
         {

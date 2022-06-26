@@ -12,7 +12,7 @@ namespace Fargowiltas.Items.Summons
 
         public override int NPCType => NPCID.MoonLordCore;
 
-        public override string NPCName => "Moon Lord";
+        public override string NPCName => FargoUtils.IsChinese() ? "月亮领主" : "Moon Lord";
 
         public override void SetStaticDefaults()
         {
