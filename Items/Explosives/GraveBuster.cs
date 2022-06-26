@@ -34,8 +34,8 @@ namespace Fargowiltas.Items.Explosives
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.Dynamite, 25)
-                .AddIngredient(ItemID.FallenStar, 5)
+                .AddIngredient(ItemID.Dynamite, 5)
+                .AddIngredient(ItemID.FallenStar, 1)
                 .AddRecipeGroup("Fargowiltas:AnyTombstone")
                 .AddTile(TileID.Anvils)
                 .Register();

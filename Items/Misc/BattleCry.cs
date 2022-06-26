@@ -13,8 +13,8 @@ namespace Fargowiltas.Items.Misc
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Battle Cry");
-            Tooltip.SetDefault("Increase spawn rates by 10x on use" +
-                               "\nUse it again to decrease them");
+            Tooltip.SetDefault("Left click to toggle 10x increased spawn rates" +
+                               "\nRight click to toggle 10x decreased spawn rates");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -29,25 +29,38 @@ namespace Fargowiltas.Items.Misc
             Item.useStyle = ItemUseStyleID.Shoot;
         }
 
+        public override bool AltFunctionUse(Player player) => true;
+
+        void ToggleCry(bool isBattle, string playerName, ref bool cry)
+        {
+            cry = !cry;
+            string cryToggled = isBattle ? "Battle" : "Calming";
+            string toggle = cry ? "activated" : "deactivated";
+            string punctuation = isBattle ? "!" : ".";
+            Color color = isBattle ? new Color(255, 0, 0) : new Color(0, 255, 255);
+            FargoUtils.PrintText($"{cryToggled} Cry {toggle} for {playerName}{punctuation}", color);
+        }
+
         public override bool? UseItem(Player player)
         {
             FargoPlayer modPlayer = player.GetFargoPlayer();
-            modPlayer.BattleCry = !modPlayer.BattleCry;
+            if (player.altFunctionUse == 2)
+            {
+                if (modPlayer.BattleCry)
+                    ToggleCry(true, player.name, ref modPlayer.BattleCry);
 
-            string text = "Spawn rates " + (modPlayer.BattleCry ? "increased!" : "decreased!");
-            if (Main.netMode == NetmodeID.SinglePlayer)
-            {
-                Main.NewText(text, new Color(175, 75, 255));
+                ToggleCry(false, player.name, ref modPlayer.CalmingCry);
             }
-            else if (Main.netMode == NetmodeID.Server)
+            else
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), new Color(175, 75, 255));
+                if (modPlayer.CalmingCry)
+                    ToggleCry(false, player.name, ref modPlayer.CalmingCry);
+
+                ToggleCry(true, player.name, ref modPlayer.BattleCry);
             }
 
             if (!Main.dedServ)
-            {
                 SoundEngine.PlaySound(new SoundStyle("Fargowiltas/Sounds/Horn"), player.Center);
-            }
 
             return true;
         }
@@ -56,7 +69,9 @@ namespace Fargowiltas.Items.Misc
         {
             CreateRecipe()
                 .AddIngredient(ItemID.BattlePotion, 15)
-                .AddIngredient(ItemID.WaterCandle, 10)
+                .AddIngredient(ItemID.WaterCandle, 5)
+                .AddIngredient(ItemID.CalmingPotion, 15)
+                .AddIngredient(ItemID.PeaceCandle, 5)
                 .AddTile(TileID.DemonAltar)
                 .Register();
         }

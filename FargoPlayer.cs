@@ -29,6 +29,7 @@ namespace Fargowiltas
         public bool extractSpeed;
         public bool HasDrawnDebuffLayer;
         internal bool BattleCry;
+        internal bool CalmingCry;
 
         internal int originalSelectedItem;
         internal bool autoRevertSelectedItem;
@@ -79,6 +80,12 @@ namespace Fargowiltas
             }
 
             tag.Add(name, dyes);
+
+            if (BattleCry)
+                tag.Add($"FargoBattleCry{Player.name}", true);
+
+            if (CalmingCry)
+                tag.Add($"FargoCalmingCry{Player.name}", true);
         }
 
         //        public override void Initialize()
@@ -95,6 +102,9 @@ namespace Fargowiltas
             {
                 FirstDyeIngredients[downedTag] = dyes.Contains(downedTag);
             }
+
+            BattleCry = tag.ContainsKey($"FargoBattleCry{Player.name}");
+            CalmingCry = tag.ContainsKey($"FargoCalmingCry{Player.name}");
         }
 
         public override void ModifyStartingInventory(IReadOnlyDictionary<string, List<Item>> itemsByMod, bool mediumCoreDeath)

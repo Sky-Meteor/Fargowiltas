@@ -601,10 +601,18 @@ namespace Fargowiltas.NPCs
 
         public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
         {
-            if (player.GetFargoPlayer().BattleCry)
+            FargoPlayer fargoPlayer = player.GetFargoPlayer();
+
+            if (fargoPlayer.BattleCry)
             {
                 spawnRate = (int)(spawnRate * 0.1);
                 maxSpawns = (int)(maxSpawns * 10f);
+            }
+
+            if (fargoPlayer.CalmingCry)
+            {
+                spawnRate = (int)(spawnRate * 10f);
+                maxSpawns = (int)(maxSpawns * 0.1);
             }
 
             if ((FargoWorld.OverloadGoblins || FargoWorld.OverloadPirates) && player.position.X > Main.invasionX * 16.0 - 3000 && player.position.X < Main.invasionX * 16.0 + 3000)

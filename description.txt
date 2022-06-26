@@ -13,6 +13,10 @@ ALPHA UPDATE - V 2.8.2
 -Added Jelly Crystal recipe
 -Added Wet Bomb recipe
 -Slightly increased City Buster blast zone
+-Made Grave Buster recipe cheaper and increased area of effect
+-Added some clarification to insta-build descriptions
+-Added recipes for Hemoclaw Crab, Blood Urchin, Blood Sushi Platter
+-Battle Cry can now Calming Cry
 
 ALPHA UPDATE - V 2.8.1
 -Added Crucible of Cosmos crossmod recipe supporting Magic Storage's combined stations

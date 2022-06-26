@@ -96,14 +96,14 @@ namespace Fargowiltas.UI
 
 
             AddStat($"Life: {player.statLifeMax2}", ItemID.LifeCrystal);
-            AddStat($"Life Regen: {player.lifeRegen}/sec", ItemID.BandofRegeneration);
+            AddStat($"Life Regen: {player.lifeRegen / 2}/sec", ItemID.BandofRegeneration);
             AddStat($"Mana: {player.statManaMax2}", ItemID.ManaCrystal);
             AddStat($"Mana Regen: {player.manaRegen / 2}/sec", ItemID.ManaCrystal);
             AddStat($"Defense: {player.statDefense}", ItemID.CobaltShield);
             AddStat($"Damage Reduction: {Math.Round(player.endurance * 100)}%", ItemID.WormScarf);
             AddStat($"Luck: {Math.Round(player.luck, 2)}", ItemID.Torch);
             AddStat($"Fishing Quests: {player.anglerQuestsFinished}", ItemID.AnglerEarring);
-            AddStat($"Battle Cry: {(modPlayer.BattleCry ? "On" : "Off")}", ModContent.ItemType<BattleCry>());
+            AddStat($"Battle Cry: {(modPlayer.BattleCry ? "[c/ff0000:Battle]" : (modPlayer.CalmingCry ? "[c/00ffff:Calming]" : "None"))}", ModContent.ItemType<BattleCry>());
             AddStat($"Max Speed: {(int)((player.accRunSpeed + player.maxRunSpeed) / 2f * player.moveSpeed * 6)} mph", ItemID.HermesBoots);
 
             string RenderWingStat(double stat) => stat <= 0 ? "???" : stat.ToString();

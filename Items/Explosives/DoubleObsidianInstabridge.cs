@@ -14,6 +14,7 @@ namespace Fargowiltas.Items.Explosives
             DisplayName.SetDefault("Double Obsidian Instabridge");
             Tooltip.SetDefault("Creates 2 bridges of obsidian platforms across the whole world" +
                                "\nAlso clears the area between and above the platforms" +
+                               "\nThe bottom bridge appears at your cursor" +
                                "\nDo not use if any important building is nearby");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
         }

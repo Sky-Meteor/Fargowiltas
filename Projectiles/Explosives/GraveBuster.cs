@@ -48,7 +48,7 @@ namespace Fargowiltas.Projectiles.Explosives
             }
 
             Vector2 position = Projectile.Center;
-            int radius = 120;     //bigger = boomer
+            int radius = 360;     //bigger = boomer
 
             for (int x = -radius; x <= radius; x++)
             {
@@ -62,10 +62,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
                     Tile tile = Main.tile[xPosition, yPosition];
 
-                    if (!FargoGlobalProjectile.OkayToDestroyTile(tile) || FargoGlobalProjectile.TileIsLiterallyAir(tile))
-                        continue;
-
-                    if (tile.TileType == TileID.Tombstones)
+                    if (tile.TileType == TileID.Tombstones && FargoGlobalProjectile.OkayToDestroyTile(tile))
                         FargoGlobalTile.ClearTileAndLiquid(xPosition, yPosition);
                 }
             }
