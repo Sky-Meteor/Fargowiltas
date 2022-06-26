@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadWall : SwarmSummonBase
     {
-        public OverloadWall() : base(NPCID.WallofFlesh, "A fortress of flesh arises from the depths!", 10, "FleshyDoll")
+        public OverloadWall() : base(NPCID.WallofFlesh, FargoUtils.IsChinese() ? "一个血肉堡垒从深处升起！" : "A fortress of flesh arises from the depths!", 10, "FleshyDoll")
         {
         }
 

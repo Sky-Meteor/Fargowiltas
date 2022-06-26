@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadQueenSlime : SwarmSummonBase
     {
-        public OverloadQueenSlime() : base(NPCID.QueenSlimeBoss, "Welcome to the truer slime rain!", 25, "JellyCrystal")
+        public OverloadQueenSlime() : base(NPCID.QueenSlimeBoss, FargoUtils.IsChinese() ? "欢迎来到名副其实的史莱姆雨！" : "Welcome to the truer slime rain!", 25, "JellyCrystal")
         {
         }
 

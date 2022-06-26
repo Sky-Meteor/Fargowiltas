@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadCultist : SwarmSummonBase
     {
-        public OverloadCultist() : base(NPCID.CultistBoss, "Defeaning chants fill your ears!", 25, "CultistSummon")
+        public OverloadCultist() : base(NPCID.CultistBoss, FargoUtils.IsChinese() ? "反抗的圣歌回响在你的耳畔！" : "Defeaning chants fill your ears!", 25, "CultistSummon")
         {
         }
 

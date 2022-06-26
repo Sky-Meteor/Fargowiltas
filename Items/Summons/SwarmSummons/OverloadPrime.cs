@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadPrime : SwarmSummonBase
     {
-        public OverloadPrime() : base(NPCID.SkeletronPrime, "A sickly chill envelops the world!", 25, "MechSkull")
+        public OverloadPrime() : base(NPCID.SkeletronPrime, FargoUtils.IsChinese() ? "一股恶心的寒气笼罩着整个世界！" : "A sickly chill envelops the world!", 25, "MechSkull")
         {
         }
 

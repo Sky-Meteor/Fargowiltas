@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadBetsy : SwarmSummonBase
     {
-        public OverloadBetsy() : base(NPCID.DD2Betsy, "The real Old One's Army is attacking!", 25, "BetsyEgg")
+        public OverloadBetsy() : base(NPCID.DD2Betsy, FargoUtils.IsChinese() ? "真正的撒旦大军来袭！" : "The real Old One's Army is attacking!", 25, "BetsyEgg")
         {
         }
 

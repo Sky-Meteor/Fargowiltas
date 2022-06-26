@@ -68,11 +68,11 @@ namespace Fargowiltas.Items.Summons
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral($"{NPCName} has awoken!"), new Color(175, 75, 255));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? $"{NPCName}已苏醒！" : $"{NPCName} has awoken!"), new Color(175, 75, 255));
             }
             else if (NPCType != NPCID.KingSlime)
             {
-                Main.NewText($"{NPCName} has awoken!", new Color(175, 75, 255));
+                Main.NewText(FargoUtils.IsChinese() ? $"{NPCName}已苏醒！" : $"{NPCName} has awoken!", new Color(175, 75, 255));
             }
 
             SoundEngine.PlaySound(SoundID.Roar, player.position);

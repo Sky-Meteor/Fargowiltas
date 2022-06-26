@@ -12,7 +12,7 @@ namespace Fargowiltas.Items.Summons
 {
     public class MechEye : ModItem
     {
-        public override string Texture => FargoUtils.IsChinese() ? "双子魔眼" : "Terraria/Images/Item_544";
+        public override string Texture => "Terraria/Images/Item_544";
 
         public override void SetStaticDefaults()
         {
@@ -61,11 +61,11 @@ namespace Fargowiltas.Items.Summons
 
                 if (Main.netMode == NetmodeID.Server)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("The Twins have awoken!"), new Color(175, 75, 255));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "双子魔眼已苏醒！" : "The Twins have awoken!"), new Color(175, 75, 255));
                 }
                 else
                 {
-                    Main.NewText("The Twins have awoken!", new Color(175, 75, 255));
+                    Main.NewText(FargoUtils.IsChinese() ? "双子魔眼已苏醒！" : "The Twins have awoken!", new Color(175, 75, 255));
                 }
             }
 

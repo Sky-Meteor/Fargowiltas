@@ -34,11 +34,11 @@ namespace Fargowiltas.Items.Misc
         void ToggleCry(bool isBattle, string playerName, ref bool cry)
         {
             cry = !cry;
-            string cryToggled = isBattle ? "Battle" : "Calming";
-            string toggle = cry ? "activated" : "deactivated";
-            string punctuation = isBattle ? "!" : ".";
+            string cryToggled = FargoUtils.IsChinese() ? (isBattle ? "战争" : "镇静") : (isBattle ? "Battle" : "Calming");
+            string toggle = FargoUtils.IsChinese() ? (cry ? "生效" : "停止生效") : (cry ? "activated" : "deactivated");
+            string punctuation = FargoUtils.IsChinese() ? (isBattle ? "！" : "。") : (isBattle ? "!" : ".");
             Color color = isBattle ? new Color(255, 0, 0) : new Color(0, 255, 255);
-            FargoUtils.PrintText($"{cryToggled} Cry {toggle} for {playerName}{punctuation}", color);
+            FargoUtils.PrintText(FargoUtils.IsChinese() ? $"{cryToggled}号角已对{playerName}{toggle}{punctuation}" : $"{cryToggled} Cry {toggle} for {playerName}{punctuation}", color);
         }
 
         public override bool? UseItem(Player player)

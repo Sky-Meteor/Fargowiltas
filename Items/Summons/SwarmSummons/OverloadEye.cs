@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadEye : SwarmSummonBase
     {
-        public OverloadEye() : base(NPCID.EyeofCthulhu, "Countless eyes pierce the veil staring in your direction!", 50, "SuspiciousEye")
+        public OverloadEye() : base(NPCID.EyeofCthulhu, FargoUtils.IsChinese() ? "无数眼睛刺破面纱看透了你！" : "Countless eyes pierce the veil staring in your direction!", 50, "SuspiciousEye")
         {
         }
 
