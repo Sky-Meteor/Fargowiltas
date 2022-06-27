@@ -36,38 +36,38 @@ namespace Fargowiltas.Items
             switch (item.type)
             {
                 case ItemID.PureWaterFountain:
-                    line = new TooltipLine(Mod, "Tooltip0", "Forces surrounding biome state to Ocean upon activation");
+                    line = new TooltipLine(Mod, "Tooltip0", FargoUtils.IsChinese() ?  "激活时使周围的生物群落变为海洋" : "Forces surrounding biome state to Ocean upon activation");
                     tooltips.Add(line);
                     break;
 
                 case ItemID.OasisFountain:
                 case ItemID.DesertWaterFountain:
-                    line = new TooltipLine(Mod, "Tooltip0", "Forces surrounding biome state to Desert upon activation");
+                    line = new TooltipLine(Mod, "Tooltip0", FargoUtils.IsChinese() ?  "激活时使周围的生物群落变为沙漠" : "Forces surrounding biome state to Desert upon activation");
                     tooltips.Add(line);
                     break;
 
                 case ItemID.JungleWaterFountain:
-                    line = new TooltipLine(Mod, "Tooltip0", "Forces surrounding biome state to Jungle upon activation");
+                    line = new TooltipLine(Mod, "Tooltip0", FargoUtils.IsChinese() ?  "激活时使周围的生物群落变为丛林" : "Forces surrounding biome state to Jungle upon activation");
                     tooltips.Add(line);
                     break;
 
                 case ItemID.IcyWaterFountain:
-                    line = new TooltipLine(Mod, "Tooltip0", "Forces surrounding biome state to Snow upon activation");
+                    line = new TooltipLine(Mod, "Tooltip0", FargoUtils.IsChinese() ?  "激活时使周围的生物群落变为雪原" : "Forces surrounding biome state to Snow upon activation");
                     tooltips.Add(line);
                     break;
 
                 case ItemID.CorruptWaterFountain:
-                    line = new TooltipLine(Mod, "Tooltip0", "Forces surrounding biome state to Corruption upon activation");
+                    line = new TooltipLine(Mod, "Tooltip0", FargoUtils.IsChinese() ?  "激活时使周围的生物群落变为腐化之地" : "Forces surrounding biome state to Corruption upon activation");
                     tooltips.Add(line);
                     break;
 
                 case ItemID.CrimsonWaterFountain:
-                    line = new TooltipLine(Mod, "Tooltip1", "Forces surrounding biome state to Crimson upon activation");
+                    line = new TooltipLine(Mod, "Tooltip1", FargoUtils.IsChinese() ?  "激活时使周围的生物群落变为猩红之地" : "Forces surrounding biome state to Crimson upon activation");
                     tooltips.Add(line);
                     break;
 
                 case ItemID.HallowedWaterFountain:
-                    line = new TooltipLine(Mod, "Tooltip1", "In hardmode, forces surrounding biome state to Hallow upon activation");
+                    line = new TooltipLine(Mod, "Tooltip1", FargoUtils.IsChinese() ?  "在困难模式中，激活时使周围的生物群落变为神圣之地" : "In hardmode, forces surrounding biome state to Hallow upon activation");
                     tooltips.Add(line);
                     break;
 
@@ -75,7 +75,7 @@ namespace Fargowiltas.Items
 
                 case ItemID.BugNet:
                 case ItemID.GoldenBugNet:
-                    line = new TooltipLine(Mod, "Tooltip0", "Can also catch townsfolk");
+                    line = new TooltipLine(Mod, "Tooltip0", FargoUtils.IsChinese() ?  "能抓城镇NPC" : "Can also catch townsfolk");
                     tooltips.Add(line);
                     break;
 
@@ -85,25 +85,25 @@ namespace Fargowiltas.Items
             {
                 if (item.type == ItemID.FishingPotion)
                 {
-                    line = new TooltipLine(Mod, "Tooltip1", "Also grants one extra lure");
+                    line = new TooltipLine(Mod, "Tooltip1", FargoUtils.IsChinese() ?  "多抛出一条鱼线" : "Also grants one extra lure");
                     tooltips.Insert(3, line);
                 }
 
                 if (item.type == ItemID.FiberglassFishingPole || item.type == ItemID.FisherofSouls || item.type == ItemID.Fleshcatcher || item.type == ItemID.ScarabFishingRod || item.type == ItemID.BloodFishingRod)
                 {
-                    line = new TooltipLine(Mod, "Tooltip1", "This rod fires 2 lures");
+                    line = new TooltipLine(Mod, "Tooltip1", FargoUtils.IsChinese() ?  "能抛出两条鱼线" : "This rod fires 2 lures");
                     tooltips.Insert(3, line);
                 }
 
                 if (item.type == ItemID.MechanicsRod || item.type == ItemID.SittingDucksFishingRod)
                 {
-                    line = new TooltipLine(Mod, "Tooltip1", "This rod fires 3 lures");
+                    line = new TooltipLine(Mod, "Tooltip1", FargoUtils.IsChinese() ?  "能抛出三条鱼线" : "This rod fires 3 lures");
                     tooltips.Insert(3, line);
                 }
 
                 if (item.type == ItemID.GoldenFishingRod || item.type == ItemID.HotlineFishingHook)
                 {
-                    line = new TooltipLine(Mod, "Tooltip1", "This rod fires 5 lures");
+                    line = new TooltipLine(Mod, "Tooltip1", FargoUtils.IsChinese() ?  "能抛出五条鱼线" : "This rod fires 5 lures");
                     tooltips.Insert(3, line);
                 }
             }
@@ -111,9 +111,39 @@ namespace Fargowiltas.Items
             if (GetInstance<FargoConfig>().SquirrelTooltips && Squirrel.SquirrelSells(item, out Squirrel.SquirrelSellType sellType) != Squirrel.ShopGroup.None)
             {
                 string text = Regex.Replace(sellType.ToString(), "([a-z])([A-Z])", "$1 $2");
-                line = new TooltipLine(Mod, "TooltipSquirrel", 
+                if (FargoUtils.IsChinese())
+                {
+                    if (text == "Craftable Materials Sold")
+                    {
+                        line = new TooltipLine(Mod, "TooltipSquirrel", 
+                        $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:售卖可合成材料]");
+                        tooltips.Add(line);
+                    }
+                    else if (text == "Sold By Squirrel")
+                    {
+                        line = new TooltipLine(Mod, "TooltipSquirrel", 
+                        $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:高帽松鼠售卖]");
+                        tooltips.Add(line);
+                    }
+                    else if (text == "Some Materials Sold")
+                    {
+                        line = new TooltipLine(Mod, "TooltipSquirrel", 
+                        $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:售卖部分材料]");
+                        tooltips.Add(line);
+                    }
+                    else
+                    {
+                        line = new TooltipLine(Mod, "TooltipSquirrel", 
+                        $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:堆叠30个时售卖]");
+                        tooltips.Add(line);
+                    }
+                }
+                else
+                {
+                    line = new TooltipLine(Mod, "TooltipSquirrel", 
                     $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:{text}]");
-                tooltips.Add(line);
+                    tooltips.Add(line);
+                }
             }
         }
 

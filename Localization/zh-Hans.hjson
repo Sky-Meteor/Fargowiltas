@@ -20,89 +20,89 @@ Mods: {
 		#This is what displays during all of an NPC's happiness levels. Note that the localization key for these should always be "TownNPCMood.*NPCName*.*Mood*" or else it won't display properly.
 		TownNPCMood: {
 			Deviantt: {
-				Content: I'm feeling good!
-				NoHome: Do you have any spare housing? Please? Anything? Even a jail cell is fine with me!
-				LoveSpace: Peace and quiet means I get to live it up!
-				FarFromHome: I think my house was that way... unless you're taking me somewhere?
-				DislikeCrowded: The more the merrier and all, but I'm starting to feel a lil' overcrowded.
-				HateCrowded: I can't kick my legs out and relax without hitting someone...
-				LikeBiome: "Ha ha ha, something about {BiomeName} just makes me laugh uncontrollably for some reason!"
-				LoveBiome: The stars above are so pretty, I love watching them go by so much!
-				DislikeBiome: Can we go somewhere warmer than this?
-				HateBiome: I wanna live elsewhere! This is awful, I'm sweating up a storm!
-				LikeNPC: "{NPCName} is my big-but-not-biggest bro. He's pretty cool!"
-				LikeNPC_Princess: "I gotta visit {NPCName} again sometime, there's a girl who gets me!"
-				LoveNPC: "{NPCName} is here! That's my big bro, isn't he just the coolest?!"
-				DislikeNPC: "I can't stand girls like {NPCName}, feels like she's just here for a certain audience."
-				HateNPC: "Just between us. Have you ever considered throwing {NPCName} back where you found him?"
+				Content: 我感觉很好！
+				NoHome: 请问你有空的房间吗？任何房间？即使是监狱也没问题！
+				LoveSpace: 和平与宁静意味着我可以尽情享受！
+				FarFromHome: 我想我的房子就在那边……除非你正带我去什么地方？
+				DislikeCrowded: 人越多越好，但我开始觉得有点挤了。
+				HateCrowded: 我甚至不能把腿踢出去而不碰到别人。
+				LikeBiome: "哈哈哈，关于{BiomeName}的一些东西只是出于某种原因让我无法控制地笑了起来！"
+				LoveBiome: 天上的星星太美了，我很喜欢看它们划过天空！
+				DislikeBiome: 我们能去比这儿暖和的地方吗？
+				HateBiome: 我想住在别的地方！这太可怕了，我正冒着暴风雨！
+				LikeNPC: "{NPCName}是我的大哥，但不是最大的。他酷毙了！"
+				LikeNPC_Princess: "我要找时间再去看看{NPCName}，这儿有个女孩钩住了我！"
+				LoveNPC: "{NPCName}在这！那是我的老大哥，他不是最酷的吗？！"
+				DislikeNPC: "我受不了像{NPCName}那样的女孩，感觉她到这儿来只是为某个特定的观众。"
+				HateNPC: "就在我们之间。你有没有想过把{NPCName}扔回你找到他的地方？"
 			}
 			Abominationn: {
-				Content: I am content.
-				NoHome: Give me a home and I'll lower my prices.
-				LoveSpace: Not being crowded around is good.
-				FarFromHome: I'd fly back to my house, but I don't really feel like being watched.
-				DislikeCrowded: There's too many humans around, they keep poking at my face.
-				HateCrowded: Do you know how hard it is to carry a scythe and not cut anyone with this many people around?
-				LikeBiome: "I like {BiomeName}, it's home to a fine opponent with my brother's wings."
-				LoveBiome: "I like Space a lot, we came here first before landing."
-				DislikeBiome: "Too many weak enemies live in {BiomeName}."
-				HateBiome: "I dislike {BiomeName} a lot."
-				LikeNPC: "{NPCName} is my sister... I've defeated more events than her, but she's okay."
-				LikeNPC_Princess: "{NPCName} is okay."
-				LoveNPC: "{NPCName} is my brother... I've fought more bosses than him, but he's strong."
-				DislikeNPC: "I do not like {NPCName}."
-				HateNPC: "{NPCName} ruins the glory of battle, I don't want her near me."
+				Content: 我很满意。
+				NoHome: 给我一个住所，我会降低价格。
+				LoveSpace: 不用挤在一起针不戳。
+				FarFromHome: 我可以飞回我家，但我真的不想被人看到。
+				DislikeCrowded: 周围的人太多了，他们一直在戳我的脸。
+				HateCrowded: 你知道在周围这么多人的情况下，拿着镰刀不割伤任何人有多难吗？
+				LikeBiome: "我喜欢{BiomeName}, 这是一个拥有我兄弟翅膀的好对手的家。"
+				LoveBiome: "我非常喜欢太空，我们在着陆前先到达了这里。"
+				DislikeBiome: "这儿有太多弱小的敌人生活在{BiomeName}。"
+				HateBiome: "我很讨厌{BiomeName}。"
+				LikeNPC: "那个女孩，{NPCName}，她是我妹妹……我击败过的事件比她多，但是她很不错。"
+				LikeNPC_Princess: "{NPCName}看起来真棒。"
+				LoveNPC: "那个家伙，{NPCName}，他是我哥哥……我击败过的boss比他多，但是他很强大。"
+				DislikeNPC: "我不喜欢{NPCName}。"
+				HateNPC: "{NPCName}毁了战斗的荣耀，我不想让她靠近我。"
 			}
 			Mutant: {
-				Content: Thanks for the house, I guess.
-				NoHome: A house wouldn't hurt, but I don't mind either way.
-				LoveSpace: Downtime between boss fights is nice. I don't get that with lots of humans around.
-				FarFromHome: I'll eat slimes and zombies, but eating human food at home would be good too.
-				DislikeCrowded: There's too many people here. And they seem upset I keep winning our staring contests.
-				HateCrowded: If one more human in this cramped town bumps into my brain again... never mind.
-				LikeBiome: "We all start in {BiomeName}, it's a good place."
-				LoveBiome: "Living up here is comfortable, but when are you going to find my temple?"
-				DislikeBiome: "Is {BiomeName} supposed to impress me? The big fairy doesn't, that's for sure."
-				HateBiome: "Do you want pricier summons? Making me live in {BiomeName} means pricier summons."
-				LikeNPC: "I forget when {NPCName} joined the family, but she's earned her place."
-				LikeNPC_Princess: "{NPCName} seems friendly."
-				LoveNPC: "{NPCName} and I fought through many battles, too bad there's no opportunity to do it again."
-				DislikeNPC: "Why is {NPCName} here? It's okay, me, just don't look him in the eye and he can't scare you..."
-				HateNPC: "{NPCName} needs to leave before my Penetrator makes it happen."
+				Content: 谢谢你的房子，我想。
+				NoHome: 房子没什么坏处，但我不介意。
+				LoveSpace: boss战之间的休息时间很不错。周围有很多人，我不明白这一点。
+				FarFromHome: 我会吃史莱姆和僵尸，但在家吃人类的食物也不错。
+				DislikeCrowded: 这里人太多了。他们似乎很沮丧，因为我一直在赢得我们的对视比赛。
+				HateCrowded: 如果在这个拥挤的小镇上再多一个人撞上我的脑子……不要介意。
+				LikeBiome: "我们都从{BiomeName}开始，这是个好地方。"
+				LoveBiome: "住在这儿很舒服，但是你什么时候能找到我的神殿？"
+				DislikeBiome: "{BiomeName}应该给我留下深刻印象吗？大仙灵不会，这是肯定的。"
+				HateBiome: "你想要更昂贵的召唤物吗？让我住在{BiomeName}意味着更贵的召唤物。"
+				LikeNPC: "我忘了{NPCName}是什么时候加入这个家庭的，但她已经赢得了她的位置。"
+				LikeNPC_Princess: "{NPCName}看起来很友好。"
+				LoveNPC: "{NPCName}和我打了很多次仗，可惜没有机会再打了。"
+				DislikeNPC: "为什么{NPCName}在这儿？那好吧，不要直视他的眼睛，他不会吓到你的……"
+				HateNPC: "{NPCName}需要在我用我的洞察者之前离开。"
 			}
 			LumberJack: {
-				Content: I'm happy as long as the world has wood that needs chopping.
-				NoHome: No lumberjack is complete without a log cabin to call home!
-				LoveSpace: Fewer people around means I can swing my axe all I want with nobody in the way.
-				FarFromHome: This is too far from my cabin. I should get back and sharpen my axe.
-				DislikeCrowded: I think it's getting crowded around here.
-				HateCrowded: Too many people around. Nothing ruins a good chopping session more than chopping down someone.
-				LikeBiome: "Plenty of trees to chop in {BiomeName} makes for a happy lumberjack."
-				LoveBiome: "There's nothing like good old fashioned woodchopping in {BiomeName}!"
-				DislikeBiome: "There's nothing to chop in {BiomeName}!"
-				HateBiome: "There's nothing to chop in {BiomeName}!"
-				LikeNPC: "I chop down trees, {NPCName} plants more, we're the perfect duo."
-				LikeNPC_Princess: "{NPCName} is better with an axe than I expected!"
-				LoveNPC: "I'm glad {NPCName} understands the beauty of felling a big tree."
-				DislikeNPC: "{NPCName} told me to start hugging trees... so I taught my axe to hug trees for me."
-				HateNPC: "{NPCName} doesn't get me at all. Bombing a forest isn't woodchopping!"
+				Content: 我很高兴只要世界上有需要砍伐的木头。
+				NoHome: 没有一个小木屋可以回家的伐木工人是不完整的！
+				LoveSpace: 周围人少了，这意味着我可以随心所欲地挥动斧头，没有人挡道。
+				FarFromHome: 这儿离我的小木屋太远了。我应该回去磨一磨我的斧子。
+				DislikeCrowded: 我觉得这里越来越挤了。
+				HateCrowded: 周围人太多了。没什么会比砍掉一个人更能破坏一个砍树的好心情。
+				LikeBiome: "{BiomeName}里大量的树让人成为一个快乐的伐木工人。"
+				LoveBiome: "在{BiomeName}没有什么能比得上老式的伐木工了！"
+				DislikeBiome: "在{BiomeName}没什么能砍的!"
+				HateBiome: "在{BiomeName}什么都砍不了!"
+				LikeNPC: "我砍倒了树，{NPCName}种了更多，我们是完美的搭档。"
+				LikeNPC_Princess: "{NPCName}用斧头比我想象中要更好！"
+				LoveNPC: "我很高兴{NPCName}了解砍倒大树的美妙之处。"
+				DislikeNPC: "{NPCName}告诉我要开始拥抱树木……所以我教会了我的斧头为我拥抱树木。"
+				HateNPC: "{NPCName}一点也不懂我的意思。炸掉森林不是伐木！"
 			}
 			Squirrel: {
-				Content: *content squeak*
-				NoHome: *sad homeless squeak*
-				LoveSpace: *happy uncrowded squeak*
-				FarFromHome: *sad lost squeak*
-				DislikeCrowded: *sad crowded squeak*
-				HateCrowded: *very sad crowded squeak*
-				LikeBiome: *happy squeak about {BiomeName}*
-				LoveBiome: *very happy squeak about {BiomeName}*
-				DislikeBiome: *sad squeak about {BiomeName}*
-				HateBiome: *very sad squeak about {BiomeName}*
-				LikeNPC: *happy squeak about {NPCName}*
-				LikeNPC_Princess: *happy squeak about {NPCName}*
-				LoveNPC: *very happy squeak about {NPCName}*
-				DislikeNPC: *angry squeak about {NPCName}*
-				HateNPC: *very angry squeak about {NPCName}*
+				Content: *表达满足的吱吱声*
+				NoHome: *因无家可归而悲哀的吱吱声*
+				LoveSpace: *因不拥挤而快乐的吱吱声*
+				FarFromHome: *因迷路而悲哀的吱吱声*
+				DislikeCrowded: *因拥挤而悲哀的吱吱声*
+				HateCrowded: *因拥挤不堪而非常悲哀的吱吱声*
+				LikeBiome: *对{BiomeName}开心的吱吱声*
+				LoveBiome: *对{BiomeName}非常开心的吱吱声*
+				DislikeBiome: *对{BiomeName}悲哀的吱吱声*
+				HateBiome: *对{BiomeName}非常悲哀的吱吱声*
+				LikeNPC: *对{NPCName}快乐的吱吱声*
+				LikeNPC_Princess: *对{NPCName}快乐的吱吱声*
+				LoveNPC: *对{NPCName}非常快乐的吱吱声*
+				DislikeNPC: *对{NPCName}愤怒的吱吱声*
+				HateNPC: *对{NPCName}非常愤怒的吱吱声*
 			}
 		}
 
@@ -426,6 +426,48 @@ Mods: {
 			TruffleWorm2: 松露蠕虫
 			WormyFood: 蠕虫食物
 			
+			CrucibleCosmos: 宇宙坩埚
+			DemonAltar: 恶魔祭坛
+			CrimsonAltar: 猩红祭坛
+			EchPainting: Ech猫绘画
+			ElementalAssembler: 元素装配台
+			GoldenDippingVat: 金染缸
+			MultitaskCenter: 多功能合成桌
+			Omnistation: 万用增益站
+			Omnistation2: 万用增益站
+			RegalStatue: 富豪雕像
+			UnsafeBlueSlabWall: 危险蓝板墙
+			UnsafeBlueTileWall: 危险蓝瓷砖墙
+			UnsafeBlueBrickWall: 危险蓝砖墙
+			UnsafeGreenSlabWall: 危险蓝板墙
+			UnsafeGreenTileWall: 危险蓝瓷砖墙
+			UnsafeGreenBrickWall: 危险蓝砖墙
+			UnsafePinkSlabWall: 危险粉板墙
+			UnsafePinkTileWall: 危险粉瓷砖墙
+			UnsafePinkBrickWall: 危险粉砖墙
+			UnsafeLihzahrdBrickWall: 危险丛林蜥蜴砖墙
+			UnsafeSpiderWall: 危险蜘蛛墙
+			UnsafeMarbleWall: 危险大理石墙
+			UnsafeGraniteWall: 危险花岗岩墙
+			WalkingRick: 走路的Rick
+			WoodenToken: 木牌
+
+			AbominationnBody: 憎恶之躯
+			AbominationnMask: 憎恶面具
+			AbominationnPants: 憎恶裤子
+			AbominationnScythe: 憎恶之镰
+			DevianttBody: 戴薇安的身体
+			DevianttMask: 戴薇安的面具
+			DevianttPants: 戴薇安的裤子
+			LumberHat: 伐木工帽
+			LumberjackBody: 伐木工身体
+			LumberjackMask: 伐木工面具
+			LumberjackPants: 伐木工裤
+			MutantBody: 突变躯体
+			MutantMask: 突变面具
+			MutantPants: 突变裤
+
+			LumberJaxe: 伐木斧
 		}
 
 		ItemTooltip: {
@@ -1040,7 +1082,63 @@ Mods: {
 			TruffleWorm2: 不钓鱼就召唤猪龙鱼公爵
 			WormyFood: 在任何生物群系中召唤世界吞噬怪
 
+			CrucibleCosmos: 
+				'''
+				包含几乎所有制作环境
+				“它似乎隐藏着巨大的力量”
+				'''
+			ElementalAssembler: 拥有几个基本制作站的功能
+			GoldenDippingVat: 用于制作金动物
+			MultitaskCenter: 拥有几个基本制作站的功能
+			Omnistation: 
+				'''
+				可以被无限次重复使用
+				拥有所有原版增益站的效果
+				接触时给予蜂蜜和糖果冲刺增益
+				拿着武器的同时右键单击以获得对应增益
+				'''
+			Omnistation2: 
+				'''
+				可以被无限次重复使用
+				拥有所有原版增益站的效果
+				接触时给予蜂蜜和糖果冲刺增益
+				拿着武器的同时右键单击以获得对应增益
+				'''
+			RegalStatue: 在附近时城镇NPC会极快地重生
+			UnsafeBlueSlabWall: 允许区域特有的敌怪生成
+			UnsafeBlueTileWall: 允许区域特有的敌怪生成
+			UnsafeBlueBrickWall: 允许区域特有的敌怪生成
+			UnsafeGreenSlabWall: 允许区域特有的敌怪生成
+			UnsafeGreenTileWall: 允许区域特有的敌怪生成
+			UnsafeGreenBrickWall: 允许区域特有的敌怪生成
+			UnsafePinkSlabWall: 允许区域特有的敌怪生成
+			UnsafePinkTileWall: 允许区域特有的敌怪生成
+			UnsafePinkBrickWall: 允许区域特有的敌怪生成
+			UnsafeLihzahrdBrickWall: 允许区域特有的敌怪生成
+			UnsafeSpiderWall: 允许区域特有的敌怪生成
+			UnsafeMarbleWall: 允许区域特有的敌怪生成
+			UnsafeGraniteWall: 允许区域特有的敌怪生成
+			WoodenToken: “真正的木材爱好者的标志”
+
+			LumberJaxe: 
+				'''
+				被击中的敌人死亡时会掉落木头
+				“挥舞斧头的真正英雄的武器”
+				'''
 		}
+		
+		MapObject: {
+			CrucibleCosmosSheet: 宇宙坩埚
+			DemonAltarSheet: 恶魔祭坛
+			CrimsonAltarSheet: 猩红祭坛
+			ElementalAssemblerSheet: 元素装配台
+			GoldenDippingVatSheet: 金染缸
+			MultitaskCenterSheet: 多功能合成桌
+			OmnistationSheet: 万用增益站
+			OmnistationSheet2: 万用增益站
+			RegalStatueSheet: 富豪雕像
+		}
+
 
 		NPCName: {
 			Abominationn: 憎恶
@@ -1049,6 +1147,39 @@ Mods: {
 			Mutant: 突变体
 			Squirrel: 高帽松鼠
 			SuperDummy: 超级假人
+		}
+
+		ProjectileName: {
+			//爆裂物弹幕
+			AutoHouseProj: 快速房屋
+			CityBuster: 城市克星
+			DoubleObsInstaBridgeProj: 双重速建平台
+			InstabridgeProj: 速建平台
+			GraveBuster: 墓碑克星
+			HalfInstaProj: 半地狱直通车
+			InstaHouseVisual: 速建房屋
+			InstaProj: 速建
+			InstatrackProj: 速建轨道
+			LihzahrdInstactuationBombProj: 丛林神庙炸弹
+			MiniInstabridgeProj: 迷你速建平台
+			ObsInstabridgeProj: 速建平台
+			ShurikenProj: 手里剑
+			//其它弹幕
+			DeathScythe: 死神镰刀刃气
+			Explosion: 爆裂物破片
+			EyeProjectile: 游荡眼球
+			FakeHeart2Deviantt: 假性心脏病
+			FakeHeartDeviantt: 假性心脏病
+			FakeHeartMarkDeviantt: 假性心脏标记
+			FargoGlobalProjectile: FargoNPC飞弹
+			LumberJaxe: 伐木工
+			MechEyeProjectile: 机械眼球
+			PhantasmalEyeProjectile_Glow: 幻影之眼辉光
+			PhantasmalEyeProjectile: 幻影之眼
+			RenewalBaseProj: 领域
+			RenewalProjectiles: 领域飞弹
+			SpawnProj: 再生
+
 		}
 	}
 }
