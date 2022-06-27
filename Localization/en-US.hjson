@@ -160,6 +160,40 @@ Mods: {
 			ArmoredBones: Armored Bones Banner
 			PirateBanner: Pirate Banner
 		}
+
+		Dialogues: {
+			Abom : {
+				Defeat: You really defeated me... not bad. Now do it again without getting hit. Oh, and Copper Shortsword only.
+				1: "Where'd I get my scythe from? "
+				1phm: Ask me later.
+				1hm: You'll figure it out.
+				2: I have defeated everything in this land... nothing can beat me.
+				3: Have you ever had a weapon stuck to your hand? It's not very handy.
+				4: What happened to Yoramur? No idea who you're talking about.
+				5: You wish you could dress like me? Ha! Actually yea.. you can.
+				6: You ever read the ancient classics, I love all the fighting in them.
+				7: I'm a world class poet, ever read my piece about impending doom?
+				8: You want swarm summons? Maybe next year.
+				9: Like my wings? Thanks, the thing I got them from didn't like it much.
+				10: Heroism has no place in this world, instead let's just play ping pong.
+				11: Why are you looking at me like that? Your fashion sense isn't going to be winning you any awards either.
+				12: No, you can't have my hat.
+				13: Embrace suffering... Wait what do you mean that's already taken?
+				14: Your attempt to exploit my anger is admirable, but I cannot be angered.
+				15: Is it really a crime if everyone else does it.
+				16: Inflicting suffering upon others is the most amusing thing there is.
+				17: Irony is the best kind of humor, isn't that ironic?
+				18: I like Cat... What do you mean who's Cat?
+				19: Check the wiki if you need anything, the kirb is slowly getting it up to par.
+				20: I've heard tales of a legendary Diver... Anyway what was that about a giant jellyfish?
+				21: Overloaded events...? Yeah, they're pretty cool.
+				22: It's not like I don't enjoy your company, but can you buy something?
+				23: I have slain one thousand humans! Huh? You're a human? There's so much blood on your hands..
+				Graveyard: I hope all these graves lying around don't belong to you.
+				Mechanic1: "Can you please ask "
+				Mechanic2: " to stop touching my laser arm please."
+			}
+		}
 	}
 }
 
