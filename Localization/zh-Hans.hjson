@@ -1151,34 +1151,38 @@ Mods: {
 
 		ProjectileName: {
 			//爆裂物弹幕
-			AutoHouseProj: 快速房屋
 			CityBuster: 城市克星
-			DoubleObsInstaBridgeProj: 双重速建平台
+			DoubleObsInstaBridgeProj: 双重黑曜石速建平台
 			InstabridgeProj: 速建平台
 			GraveBuster: 墓碑克星
-			HalfInstaProj: 半地狱直通车
-			InstaHouseVisual: 速建房屋
-			InstaProj: 速建
+			HalfInstaProj: 半程地狱直通车
+			InstaProj: 速建者
 			InstatrackProj: 速建轨道
-			LihzahrdInstactuationBombProj: 丛林神庙炸弹
+			LihzahrdInstactuationBombProj: 丛林蜥蜴炸弹
 			MiniInstabridgeProj: 迷你速建平台
-			ObsInstabridgeProj: 速建平台
+			ObsInstabridgeProj: 黑曜石速建平台
 			ShurikenProj: 手里剑
 			//其它弹幕
-			DeathScythe: 死神镰刀刃气
+			DeathScythe: 憎恶之镰
 			Explosion: 爆裂物破片
 			EyeProjectile: 游荡眼球
-			FakeHeart2Deviantt: 假性心脏病
-			FakeHeartDeviantt: 假性心脏病
-			FakeHeartMarkDeviantt: 假性心脏标记
-			FargoGlobalProjectile: FargoNPC飞弹
-			LumberJaxe: 伐木工
+			FakeHeart2Deviantt: 假心
+			FakeHeartDeviantt: 假心
+			FakeHeartMarkDeviantt: 假心
+			LumberJaxe: 伐木斧
 			MechEyeProjectile: 机械眼球
-			PhantasmalEyeProjectile_Glow: 幻影之眼辉光
 			PhantasmalEyeProjectile: 幻影之眼
-			RenewalBaseProj: 领域
-			RenewalProjectiles: 领域飞弹
-			SpawnProj: 再生
+			CorruptNukeProj: 腐化领域
+			CorruptNukeSupremeProj: 腐化维度
+			CrimsonNukeProj: 猩红领域
+			CrimsonNukeSupremeProj: 猩红维度
+			HallowNukeProj: 神圣领域
+			HallowNukeSupremeProj: 神圣维度
+			MushroomNukeProj: 发光蘑菇领域
+			MushroomNukeSupremeProj: 发光蘑菇维度
+			PurityNukeProj: 纯净领域
+			PurityNukeSupremeProj: 纯净维度
+			SpawnProj: 生成
 
 		}
 	}
