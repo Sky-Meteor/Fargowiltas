@@ -154,7 +154,7 @@ namespace Fargowiltas.NPCs
             showCycleShop = GetSellableItems().Count / maxShop > 0;
 
             if (Main.bloodMoon)
-                return "You will suffer."; //"[c/FF0000:You will suffer.]";
+                return "[c/FF0000:You will suffer.]";
 
             switch (Main.rand.Next(3))
 			{

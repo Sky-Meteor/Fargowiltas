@@ -3,20 +3,21 @@ There are several other items such as infinite ammos, craftable instant builds f
 
 ALPHA UPDATE - V 2.8.2
 -Added Endless Coin Bags
--Slice of Cake now works as an inventory unlimited buff like class stations
 -Added Bat Bat banner recipe
 -Added Honey Dispenser recipe
--Fixed Mummy Banner not counting for desert banner recipes
--Abominationn Pumpkin/Frost Moon spawners work at night and can yield loot
 -Added Bewitching Table recipe using Dungeon crates
--Ham Bat recipe now requires Mythril Anvil
 -Added Jelly Crystal recipe
 -Added Wet Bomb recipe
--Slightly increased City Buster blast zone
--Made Grave Buster recipe cheaper and increased area of effect
 -Added some clarification to insta-build descriptions
 -Added recipes for Hemoclaw Crab, Blood Urchin, Blood Sushi Platter
+-Slice of Cake now works as an inventory unlimited buff like class stations
+-Abominationn Pumpkin/Frost Moon spawners work at night and can yield loot
+-Ham Bat recipe now requires Mythril Anvil
+-Slightly increased City Buster blast zone
+-Made Grave Buster recipe cheaper and increased area of effect
 -Battle Cry can now Calming Cry
+-Restored Squirrel Blood Moon dialogue color
+-Fixed Mummy Banner not counting for desert banner recipes
 
 ALPHA UPDATE - V 2.8.1
 -Added Crucible of Cosmos crossmod recipe supporting Magic Storage's combined stations
