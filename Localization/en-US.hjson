@@ -222,29 +222,129 @@ Mods: {
 				Lumber2: "? ...even I know better than to try."
 				Eternity: Embrace suffering... and while you're at it, embrace another purchase!
 			}
+
 			Lumber: {
 				1: Dynasty wood? Between you and me, that stuff ain't real wood!
-				2: 
-				3: 
-				4: 
-				5: 
-				6: 
-				7: 
-				8: 
-				9: 
-				10: 
-				11: 
-				12: 
-				13: 
-				14: 
-				15: 
-				16: 
-				17: 
-				18: 
-				19: 
-				20: 
-				
+				2: Sure cactus isn't wood, but I can still chop it with me trusty axe.
+				3: You wouldn't by chance have any fantasies about me... right?
+				4: I eat a bowl of woodchips for breakfast... without any milk.
+				5: TIIIIIIIIIMMMBEEEEEEEERRR!
+				6: I'm a lumberjack and I'm okay, I sleep all night and I work all day!
+				7: You won't ever need an axe again with me around.
+				8: I have heard of people cutting trees with fish, who does that?
+				9: You wanna see me work without my shirt on? Maybe in 2030.
+				10: You ever seen the world tree?
+				11: You want what? ...Sorry that's not the kind of wood I'm selling.
+				12: Why don't I sell acorns? ...I replant all the trees I chop, don't you?
+				13: What's the best kind of tree? ... Any if I can chop it.
+				14: Can I axe you a question?
+				15: Might take a nap under a tree later, care to join me?
+				16: I'm an expert in all wood types.
+				17: I'm glad there's more trees to chop here at journey's end.
+				18: Red is one of my favourite colors, right after wood.
+				19: It's always flannel season.
+				20: I'm glad my wood put such a big smile on your face.
+				Nurse1: I always see
+				Nurse2: looking at my biceps when I'm working. Wonder if she wants some of my wood.
+				LucyTheAxe: Lucy from that universe.. Interesting things await you.
+				Desert: While I was chopping down a cactus these things leaped at me, why don't you take care of them?
+				Jungle: These mahogany trees are full of life, but a tree only has one purpose: to be chopped. Oh yea these fell out of the last one.
+				Hallow: This place is a bit fanciful for my tastes, but the wood's as choppable as any. Nighttime has these cool bugs though, take a few.
+				Glowshroom: Whatever causes these to glow is beyond me, you're probably gonna eat them anyway so have this while you're at it.
+				EvilBiome: The trees here are probably the toughest in this branch of reality.. Sorry, just tree puns. I found these for you here.
+				Snow: This neck of the woods is pretty eh? Here I've got some of my favorite wood for you.
+				Beach: Even on vacation, I always fit in a little chopping. A couple annoying birds fell out of a palm tree. Take them off my hands.. maybe cook them up?
+				Underworld: I looked around here for a while and didn't find any trees. I did find these little guys though. Maybe you'll want them?
+				Cave: I certainly didn't expect to find such wonderful trees down here. Check this out.
+				DayTime1: Back in the day, people used to forge butterflies into powerful gear. We try to forget those days... but here have one.
+				DayTime2: These little critters are always falling out of the trees I cut down. Maybe you can find a use for them?
+				NightTime: Chopping trees at night is always relaxing... well except for the flying eyeballs. Have one of these little guys to keep you company.
+				Rest: I'm resting after a good day of chopping, come back tomorrow and maybe I'll have something else for you.
 			}
+
+			Mutant: {
+				DefeatE: Congratulations. You truly embraced eternity... at least, I think you did? So what happens next? Ascend from this plane of existence? Fight a transcendant cat-like entity? Destroy the world? All the power's in your hands now.
+				Defeat: Good work beating me, I guess. I still feel like stretching my wings... Why don't we go at it for real next time?
+				1: Savagery, barbarism, bloodthirst, that's what I like seeing in people.
+				2: The stronger you get, the more stuff I sell. Makes sense, right?
+				3: There's something all of you have that I don't... Death perception, I think it's called?
+				4: It would be pretty cool if I sold a summon for myself...
+				5: The only way to get stronger is to keep buying from me and in bulk too!
+				6: Why are you looking at me like that, all I did was eat an apple.
+				7: Don't bother with anyone else, all you'll ever need is right here.
+				8: You're lucky I'm on your side.
+				9: Why yes I would love a ham and swiss sandwich.
+				10: Should I start wearing clothes? ...Nah.
+				11: It's not like I can actually use all the gold you're spending.
+				12: Violence for violence is the law of the beast.
+				13: Those guys really need to get more creative. All of their first bosses are desert themed!
+				14: You say you want to know how a Mutant and Abominationn are brothers? You're better off not knowing.
+				15: I'm all you need for a calamity.
+				16: Everything shall bow before me! ...after you make this purchase.
+				17: It's clear that I'm helping you out, but uh.. what's in this for me? A house you say? I eat zombies for breakfast.
+				18: Can I jump? No, I don't have something called a 'spacebar'.
+				19: Got your nose, I needed one to replace mine.
+				20: What's a Terry?
+				21: Why do so many creatures carry around a weird looking blue doll? The world may never know.
+				22: Impending doom approaches. ...If you don't buy anything of course.
+				23: I've heard of a '3rd dimension', I wonder what that looks like.
+				24: Boy don't I look fabulous today.
+				25: You have fewer friends than I do eyes.
+				26: The ocean is a dangerous place, I wonder where Diver is?
+				27: Do you know what an Ee-arth is?
+				28: I can't even spell 'apotheosis', do you expect me to know what it is?
+				29: Where do monsters get their gold from? ...I don't have pockets you know.
+				30: Dogs are cool and all, but cats don't try to bite my brain.
+				31: Beware the green dragon... What's that face mean?
+				32: Where is this O-hi-o I keep hearing about.
+				33: I've told you 56 times already, I'm busy... Oh wait you want to buy something, I suppose I have time.
+				34: I've heard of a 'Soul of Souls' that only exists in 2015.
+				35: Adding EX after everything makes it way more difficult.
+				36: I think that all modern art looks great, especially the bloody stuff.
+				37: How many guides does it take to change a lightbulb? ... I don't know, how about you ask him.
+				38: Good thing I don't have a bed, I'd probably never leave it.
+				39: What's this about an update? Sounds rare.
+				40: If you need me I'll be slacking off somewhere.
+				41: What do you mean who is Fargo!
+				42: Have you seen the ech cat?
+				43: I don't understand music nowadays, I prefer some smooth jazz... or the dying screams of monsters.
+				44: Cthulhu's got nothing on me!
+				45: I heard of a rumor of infinite use boss summons. Makes me sick..
+				ml: Now that you've defeated the big guy, I'd say it's time to start collecting those materials!
+				Downed: What's that? You want to fight me? ...sure, I guess.
+				DownedAbom: What's that? You want to fight me? ...maybe if I had a reason.
+				NoSouls: What's that? You want to fight me? ...you're not worthy you rat.
+				Pumpkin: A bit spooky tonight, isn't it.
+				Frost: I'd ask for a coat, but I don't think you have any my size.
+				Slime: Weather seems odd today, wouldn't you agree?
+				Blood1: Lovely night, isn't it?
+				Blood2: I hope the constant arguing I'm hearing isn't my fault.
+				Night: I'd follow and help, but I'd much rather sit around right now.
+				PartyGirl: " is the one who invited me, I don't understand why though."
+				NoPartyGirl: I don't know what everyone's so happy about, but as long as nobody mistakes me for a Pigronata, I'm happy too.
+				Nurse1: "Whenever we're alone, "
+				Nurse2: " keeps throwing syringes at me, no matter how many times I tell her to stop!"
+				WitchDoctor1: "Please go tell "
+				WitchDoctor2: " to drop the 'mystical' shtick, I mean, come on! I get it, you make tainted water or something."
+				Dryad1: "Why does "
+				Dryad2: "'s outfit make my wings flutter?"
+				Stylist: " once gave me a wig... I look hideous with long hair."
+				Truffle: That mutated mushroom seems like my type of fella.
+				TaxCollector: " keeps asking me for money, but he won't accept my spawners!"
+				Guide1: "Any idea why "
+				Guide2: " is always cowering in fear when I get near him?"
+				Cyborg1: "If any of us could play instruments, I'd totally start a band with "
+				Cyborg2: ", "
+				Cyborg3: ", and "
+				Cyborg4: "."
+				PartyGirl2: "Man, "
+				PartyGirl3: "'s confetti keeps getting stuck to my wings."
+				Demolitionist1: "I'm surprised "
+				Demolitionist2: " hasn't blown a hole in the floor yet, on second thought that sounds fun."
+				DD2Bartender: " keeps suggesting I drink some beer, something tells me he wouldn't like me when I'm drunk though."
+				DyeTrader: " wants to see what I would look like in blue... I don't know how to feel."
+			}
+
 		}
 	}
 }

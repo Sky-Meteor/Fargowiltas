@@ -147,168 +147,169 @@ namespace Fargowiltas.NPCs
                 saidDefeatQuote = true;
 
                 if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("EternityMode"))
-                    return "Congratulations. You truly embraced eternity... at least, I think you did? So what happens next? Ascend from this plane of existence? Fight a transcendant cat-like entity? Destroy the world? All the power's in your hands now.";
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.DefeatE");
                 else
-                    return "Good work beating me, I guess. I still feel like stretching my wings... Why don't we go at it for real next time?";
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Defeat");
             }
 
             List<string> dialogue = new List<string>
             {
-                "Savagery, barbarism, bloodthirst, that's what I like seeing in people.",
-                "The stronger you get, the more stuff I sell. Makes sense, right?",
-                "There's something all of you have that I don't... Death perception, I think it's called?",
-                "It would be pretty cool if I sold a summon for myself...",
-                "The only way to get stronger is to keep buying from me and in bulk too!",
-                "Why are you looking at me like that, all I did was eat an apple.",
-                "Don't bother with anyone else, all you'll ever need is right here.",
-                "You're lucky I'm on your side.",
-                "Why yes I would love a ham and swiss sandwich.",
-                "Should I start wearing clothes? ...Nah.",
-                "It's not like I can actually use all the gold you're spending.",
-                "Violence for violence is the law of the beast.",
-                "Those guys really need to get more creative. All of their first bosses are desert themed!",
-                "You say you want to know how a Mutant and Abominationn are brothers? You're better off not knowing.",
-                "I'm all you need for a calamity.",
-                "Everything shall bow before me! ...after you make this purchase.",
-                "It's clear that I'm helping you out, but uh.. what's in this for me? A house you say? I eat zombies for breakfast.",
-                "Can I jump? No, I don't have something called a 'spacebar'.",
-                "Got your nose, I needed one to replace mine.",
-                "What's a Terry?",
-                "Why do so many creatures carry around a weird looking blue doll? The world may never know.",
-                "Impending doom approaches. ...If you don't buy anything of course.",
-                "I've heard of a '3rd dimension', I wonder what that looks like.",
-                "Boy don't I look fabulous today.",
-                "You have fewer friends than I do eyes.",
-                "The ocean is a dangerous place, I wonder where Diver is?",
-                "Do you know what an Ee-arth is?",
-                "I can't even spell 'apotheosis', do you expect me to know what it is?",
-                "Where do monsters get their gold from? ...I don't have pockets you know.",
-                "Dogs are cool and all, but cats don't try to bite my brain.",
-                "Beware the green dragon... What's that face mean?",
-                "Where is this O-hi-o I keep hearing about.",
-                "I've told you 56 times already, I'm busy... Oh wait you want to buy something, I suppose I have time.",
-                "I've heard of a 'Soul of Souls' that only exists in 2015.",
-                "Adding EX after everything makes it way more difficult.",
-                "I think that all modern art looks great, especially the bloody stuff.",
-                "How many guides does it take to change a lightbulb? ... I don't know, how about you ask him.",
-                "Good thing I don't have a bed, I'd probably never leave it.",
-                "What's this about an update? Sounds rare.",
-                "If you need me I'll be slacking off somewhere.",
-                "What do you mean who is Fargo!",
-                "Have you seen the ech cat?",
-                "I don't understand music nowadays, I prefer some smooth jazz... or the dying screams of monsters.",
-                "Cthulhu's got nothing on me!",
-                "I heard of a rumor of infinite use boss summons. Makes me sick.."
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.1"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.2"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.3"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.4"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.5"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.6"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.7"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.8"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.9"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.10"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.11"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.12"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.13"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.14"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.15"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.16"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.17"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.18"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.19"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.20"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.21"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.22"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.23"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.24"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.25"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.26"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.27"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.28"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.29"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.30"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.31"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.32"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.33"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.34"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.35"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.36"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.37"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.38"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.39"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.40"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.41"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.42"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.43"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.44"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.45")
             };
 
             if (Fargowiltas.ModLoaded["FargowiltasSouls"])
             {
-                dialogue.AddWithCondition("Now that you've defeated the big guy, I'd say it's time to start collecting those materials!", NPC.downedMoonlord);
+                dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.ml"), NPC.downedMoonlord);
 
                 if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedMutant"))
                 {
-                    dialogue.Add("What's that? You want to fight me? ...sure, I guess.");
+                    dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Downed"));
                 }
                 else if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedFishronEX") || (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedAbom"))
                 {
-                    dialogue.Add("What's that? You want to fight me? ...maybe if I had a reason.");
+                    dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.DownedAbom"));
                 }
             }
             else
             {
-                dialogue.Add("What's that? You want to fight me? ...you're not worthy you rat.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.NoSouls"));
             }
 
             //dialogue.AddWithCondition("Why would you do this.", Fargowiltas.ModLoaded["CalamityMod"]);
             //dialogue.AddWithCondition("I feel a great imbalance in this world.", Fargowiltas.ModLoaded["CalamityMod"] && Fargowiltas.ModLoaded["ThoriumMod"]);
             //dialogue.AddWithCondition("A great choice, shame about that first desert boss thing though.", Fargowiltas.ModLoaded["ThoriumMod"]);
-            dialogue.AddWithCondition("A bit spooky tonight, isn't it.", Main.pumpkinMoon);
-            dialogue.AddWithCondition("I'd ask for a coat, but I don't think you have any my size.", Main.snowMoon);
-            dialogue.AddWithCondition("Weather seems odd today, wouldn't you agree?", Main.slimeRain);
-            dialogue.AddWithCondition("Lovely night, isn't it?", Main.bloodMoon);
-            dialogue.AddWithCondition("I hope the constant arguing I'm hearing isn't my fault.", Main.bloodMoon);
-            dialogue.AddWithCondition("I'd follow and help, but I'd much rather sit around right now.", !Main.dayTime);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Pumpkin"), Main.pumpkinMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Frost"), Main.snowMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Slime"), Main.slimeRain);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Blood1"), Main.bloodMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Blood2"), Main.bloodMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Night"), !Main.dayTime);
 
             int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
             if (BirthdayParty.PartyIsUp)
             {
                 if (partyGirl >= 0)
                 {
-                    dialogue.Add($"{Main.npc[partyGirl].GivenName} is the one who invited me, I don't understand why though.");
+                    dialogue.Add(Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.PartyGirl"));
                 }
                 
-                dialogue.Add("I don't know what everyone's so happy about, but as long as nobody mistakes me for a Pigronata, I'm happy too.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.NoPartyGirl"));
             }
 
             int nurse = NPC.FindFirstNPC(NPCID.Nurse);
             if (nurse >= 0)
             {
-                dialogue.Add($"Whenever we're alone, {Main.npc[nurse].GivenName} keeps throwing syringes at me, no matter how many times I tell her to stop!");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Nurse1") + Main.npc[nurse].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Nurse2"));
             }
 
             int witchDoctor = NPC.FindFirstNPC(NPCID.WitchDoctor);
             if (witchDoctor >= 0)
             {
-                dialogue.Add($"Please go tell {Main.npc[witchDoctor].GivenName} to drop the 'mystical' shtick, I mean, come on! I get it, you make tainted water or something.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.WitchDoctor1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.WitchDoctor2"));
             }
 
             int dryad = NPC.FindFirstNPC(NPCID.Dryad);
             if (dryad >= 0)
             {
-                dialogue.Add($"Why does {Main.npc[dryad].GivenName}'s outfit make my wings flutter?");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Dryad1") + Main.npc[dryad].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Dryad2"));
             }
 
             int stylist = NPC.FindFirstNPC(NPCID.Stylist);
             if (stylist >= 0)
             {
-                dialogue.Add($"{Main.npc[stylist].GivenName} once gave me a wig... I look hideous with long hair.");
+                dialogue.Add(Main.npc[stylist].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Stylist"));
             }
 
             int truffle = NPC.FindFirstNPC(NPCID.Truffle);
             if (truffle >= 0)
             {
-                dialogue.Add("That mutated mushroom seems like my type of fella.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Truffle"));
             }
 
             int tax = NPC.FindFirstNPC(NPCID.TaxCollector);
             if (tax >= 0)
             {
-                dialogue.Add($"{Main.npc[tax].GivenName} keeps asking me for money, but he won't accept my spawners!");
+                dialogue.Add(Main.npc[tax].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.TaxCollector"));
             }
 
             int guide = NPC.FindFirstNPC(NPCID.Guide);
             if (guide >= 0)
             {
-                dialogue.Add($"Any idea why {Main.npc[guide].GivenName} is always cowering in fear when I get near him?");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Guide1") + Main.npc[guide].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Guide2"));
             }
 
             int cyborg = NPC.FindFirstNPC(NPCID.Cyborg);
             if (truffle >= 0 && witchDoctor >= 0 && cyborg >= 0 && Main.rand.NextBool(52))
             {
-                dialogue.Add($"If any of us could play instruments, I'd totally start a band with {Main.npc[witchDoctor].GivenName}, {Main.npc[truffle].GivenName}, and {Main.npc[cyborg].GivenName}.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg2")
+                + Main.npc[truffle].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg3") + Main.npc[cyborg].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg4"));
             }
 
             if (partyGirl >= 0)
             {
-                dialogue.Add($"Man, {Main.npc[partyGirl].GivenName}'s confetti keeps getting stuck to my wings");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.PartyGirl2") + Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.PartyGirl3"));
             }
 
             int demoman = NPC.FindFirstNPC(NPCID.Demolitionist);
             if (demoman >= 0)
             {
-                dialogue.Add($"I'm surprised {Main.npc[demoman].GivenName} hasn't blown a hole in the floor yet, on second thought that sounds fun.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Demolitionist1") + Main.npc[demoman].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Demolitionist2"));
             }
 
             int tavernkeep = NPC.FindFirstNPC(NPCID.DD2Bartender);
             if (tavernkeep >= 0)
             {
-                dialogue.Add($"{Main.npc[tavernkeep].GivenName} keeps suggesting I drink some beer, something tells me he wouldn't like me when I'm drunk though.");
+                dialogue.Add(Main.npc[tavernkeep].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.DD2Bartender"));
             }
 
             int dyeTrader = NPC.FindFirstNPC(NPCID.DyeTrader);
             if (dyeTrader >= 0)
             {
-                dialogue.Add($"{Main.npc[dyeTrader].GivenName} wants to see what I would look like in blue... I don't know how to feel.");
+                dialogue.Add(Main.npc[dyeTrader].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.DyeTrader"));
             }
 
             return Main.rand.Next(dialogue);
@@ -319,21 +320,21 @@ namespace Fargowiltas.NPCs
             switch (shopNum)
             {
                 case 1:
-                    button = "Pre Hardmode";
+                    button = FargoUtils.IsChinese() ? "困难模式前" : "Pre Hardmode";
                     break;
 
                 case 2:
-                    button = "Hardmode";
+                    button = FargoUtils.IsChinese() ? "困难模式" : "Hardmode";
                     break;
 
                 default:
-                    button = "Post Moon Lord";
+                    button = FargoUtils.IsChinese() ? "月亮领主后" : "Post Moon Lord";
                     break;
             }
 
             if (Main.hardMode)
             {
-                button2 = "Cycle Shop";
+                button2 = FargoUtils.IsChinese() ? "切换商店" : "Cycle Shop";
             }
 
             if (NPC.downedMoonlord)
