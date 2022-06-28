@@ -1481,13 +1481,13 @@ namespace Fargowiltas.NPCs
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("Killed: " + Fargowiltas.SwarmKills), new Color(206, 12, 15));
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("Total: " + Fargowiltas.SwarmTotal), new Color(206, 12, 15));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral((FargoUtils.IsChinese() ? "击杀数：" : "Killed: ") + Fargowiltas.SwarmKills), new Color(206, 12, 15));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral((FargoUtils.IsChinese() ? "总计：" : "Total: ") + Fargowiltas.SwarmTotal), new Color(206, 12, 15));
             }
             else
             {
-                Main.NewText("Killed: " + Fargowiltas.SwarmKills, new Color(206, 12, 15));
-                Main.NewText("Total: " + Fargowiltas.SwarmTotal, new Color(206, 12, 15));
+                Main.NewText((FargoUtils.IsChinese() ? "击杀数：" : "Killed: ") + Fargowiltas.SwarmKills, new Color(206, 12, 15));
+                Main.NewText((FargoUtils.IsChinese() ? "总计：" : "Total: ") + Fargowiltas.SwarmTotal, new Color(206, 12, 15));
             }
 
             if (minion != -1 && NPC.CountNPCS(minion) >= Fargowiltas.SwarmSpawned)
@@ -1553,11 +1553,11 @@ namespace Fargowiltas.NPCs
             {
                 if (Main.netMode == NetmodeID.Server)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("The swarm has been defeated!"), new Color(206, 12, 15));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "这群怪物已经被击败！" : "The swarm has been defeated!"), new Color(206, 12, 15));
                 }
                 else
                 {
-                    Main.NewText("The swarm has been defeated!", new Color(206, 12, 15));
+                    Main.NewText(FargoUtils.IsChinese() ? "这群怪物已经被击败！" : "The swarm has been defeated!", new Color(206, 12, 15));
                 }
 
                 for (int i = 0; i < Main.maxNPCs; i++)

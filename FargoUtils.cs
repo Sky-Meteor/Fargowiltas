@@ -46,16 +46,53 @@ namespace Fargowiltas
             if (update)
             {
                 string text = $"A new item has been unlocked in {seller}'s shop!";
-                if (Main.netMode == NetmodeID.SinglePlayer)
+                if (FargoUtils.IsChinese())
                 {
-                    if (conditions)
-                        Main.NewText(text, color);
+                    if (seller == "Deviantt")
+                    {
+                        text = "戴薇安解锁了新商品！";
+                        if (Main.netMode == NetmodeID.SinglePlayer)
+                        {
+                            if (conditions)
+                                Main.NewText(text, color);
+                        }
+                        else if (Main.netMode == NetmodeID.Server)
+                        {
+                            if (conditions)
+                                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
+                            NetMessage.SendData(MessageID.WorldData); //sync world
+                        }
+                    }
+                    else
+                    {
+                        text = "憎恶解锁了新商品！";
+                        if (Main.netMode == NetmodeID.SinglePlayer)
+                        {
+                            if (conditions)
+                                Main.NewText(text, color);
+                        }
+                        else if (Main.netMode == NetmodeID.Server)
+                        {
+                            if (conditions)
+                                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
+                            NetMessage.SendData(MessageID.WorldData); //sync world
+                        }
+                    }
+
                 }
-                else if (Main.netMode == NetmodeID.Server)
+                else
                 {
-                    if (conditions)
-                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
-                    NetMessage.SendData(MessageID.WorldData); //sync world
+                    if (Main.netMode == NetmodeID.SinglePlayer)
+                    {
+                        if (conditions)
+                            Main.NewText(text, color);
+                    }
+                    else if (Main.netMode == NetmodeID.Server)
+                    {
+                        if (conditions)
+                            ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
+                        NetMessage.SendData(MessageID.WorldData); //sync world
+                    }
                 }
             }
         }

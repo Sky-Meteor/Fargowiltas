@@ -125,70 +125,70 @@ namespace Fargowiltas.NPCs
                 && !(bool)ModLoader.GetMod("FargowiltasSouls").Call("GiftsReceived"))
             {
                 ModLoader.GetMod("FargowiltasSouls").Call("GiveDevianttGifts");
-                return Main.npcChatText = "This world looks tougher than usual, so you can have these on the house just this once! Talk to me if you need any tips, yeah?";
+                return Main.npcChatText = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Gift");
             }
 
             if (Main.notTheBeesWorld)
             {
-                string text = "HA";
+                string text = FargoUtils.IsChinese() ? "哈" : "HA";
                 int max = Main.rand.Next(10, 50);
                 for (int i = 0; i < max; i++)
-                    text += " " + Main.rand.Next(new string[] { "HA", "HA", "HA", "HEE", "HOO", "HEH" });
-                text += "!";
+                    text += FargoUtils.IsChinese() ? Main.rand.Next(new string[] { "哈", "哈", "哈", "嘻", "呼", "嘿" }) : (" " + Main.rand.Next(new string[] { "HA", "HA", "HA", "HEE", "HOO", "HEH" }));
+                text += FargoUtils.IsChinese() ? "!" : "!";
                 return text;
             }
 
             if (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("EridanusArmor") && Main.rand.NextBool())
             {
-                return "UWAH! Please don't hurt... wait, it's just you. Don't scare me like that! And why is that THING following you?!";
+                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Eridanus");
             }
 
             if (NPC.homeless && !saidDefeatQuote && Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedDevi"))
             {
                 saidDefeatQuote = true;
-                return "Good work getting one over on me! Hope I didn't make you sweat too much. Keep at the grind - I wanna see how far you can go!";
+                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Defeat");
             }
 
             if (Main.bloodMoon && Main.rand.NextBool(2))
             {
-                return "The blood moon's effects? I'm not human anymore, so nope!";
+                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.BloodMoon");
             }
 
             List<string> dialogue = new List<string>
             {
-                "Did you know? The only real music genres are death metal and artcore.",
-                "I'll have you know I'm over a hundred Fargo years old! Don't ask me how long a Fargo year is.",
-                "I might be able to afford a taller body if you keep buying!",
-                "Where's that screm cat?",
-                $"{Main.LocalPlayer.name}! I saw something rodent-y just now! You don't have a hamster infestation, right? Right!?",
-                "You're the Terrarian? Honestly, I was expecting someone a little... taller.",
-                "Don't look at me like that! The only thing I've deviated from is my humanity.",
-                "Rip and tear and buy from me for more things to rip and tear!",
-                "What's a chee-bee doe-goe?",
-                "Wait a second. Are you sure this house isn't what they call 'prison?'",
-                "Deviantt has awoken! Quick, give her all your money to defeat her!",
-                "One day, I'll sell a summon for myself! ...Just kidding.",
-                "Hmm, I can tell! You've killed a lot, but you haven't killed enough!",
-                "Why the extra letter, you ask? Only the strongest sibling is allowed to remove their own!",
-                "The more rare things you kill, the more stuff I sell! Simple, right?",
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.1"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.2"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.3"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.4"),
+                Main.LocalPlayer.name + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.5"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.6"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.7"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.8"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.9"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.10"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.11"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.12"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.13"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.14"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.15"),
             };
 
             int mutant = NPC.FindFirstNPC(NPCType<Mutant>());
             if (mutant != -1)
             {
-                dialogue.Add($"Can you tell {Main.npc[mutant].GivenName} to put some clothes on?");
-                dialogue.Add($"One day, I'll sell a summon for myself! ...Just kidding. That's {Main.npc[mutant].GivenName}'s job.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant1") + Main.npc[mutant].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant3") + Main.npc[mutant].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant4"));
             }
 
             int lumberjack = NPC.FindFirstNPC(NPCType<LumberJack>());
             if (lumberjack != -1)
             {
-                dialogue.Add($"What's that? You want to fight {Main.npc[lumberjack].GivenName}? ...even I know better than to try.");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Lumber1") + Main.npc[lumberjack].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Lumber2"));
             }
 
             if (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("EternityMode"))
             {
-                dialogue.Add("Embrace suffering... and while you're at it, embrace another purchase!");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Eternity"));
             }
 
             return Main.rand.Next(dialogue);
@@ -199,7 +199,7 @@ namespace Fargowiltas.NPCs
             button = Language.GetTextValue("LegacyInterface.28");
             if (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("EternityMode"))
             {
-                button2 = "Help"; //(bool)ModLoader.GetMod("FargowiltasSouls").Call("GiftsReceived") ? "Help" : "Receive Gift";
+                button2 = FargoUtils.IsChinese() ? "帮助" : "Help"; //(bool)ModLoader.GetMod("FargowiltasSouls").Call("GiftsReceived") ? "Help" : "Receive Gift";
             }
         }
 

@@ -115,7 +115,7 @@ namespace Fargowiltas.NPCs
         {
             List<string> dialogue = new List<string>
             {
-                "Dynasty wood? Between you and me, that stuff ain't real wood!",
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.1"),
                 "Sure cactus isn't wood, but I can still chop it with me trusty axe.",
                 "You wouldn't by chance have any fantasies about me... right?",
                 "I eat a bowl of woodchips for breakfast... without any milk.",
