@@ -88,16 +88,16 @@ namespace Fargowiltas.UI
                 AddStat((FargoUtils.IsChinese() ? "召唤暴击率：" : "Summon Critical: ") + $"{(int)ModLoader.GetMod("FargowiltasSouls").Call("GetSummonCrit")}%", ItemID.SlimeStaff);
             else
                 AddStat("");
-            AddStat((FargoUtils.IsChinese() ? "最大仆从数：" : "Max Minions: " ) + player.maxMinions, ItemID.SlimeStaff);
-            AddStat((FargoUtils.IsChinese() ? "最大哨兵数：" : "Max Sentries: ") + player.maxTurrets, ItemID.SlimeStaff);
+            AddStat((FargoUtils.IsChinese() ? "仆从数量上限：" : "Max Minions: " ) + player.maxMinions, ItemID.SlimeStaff);
+            AddStat((FargoUtils.IsChinese() ? "哨兵数量上限：" : "Max Sentries: ") + player.maxTurrets, ItemID.SlimeStaff);
 
             AddStat((FargoUtils.IsChinese() ? "盔甲穿透：" : "Armor Penetration: ") + player.GetArmorPenetration(DamageClass.Generic), ItemID.SharkToothNecklace);
             AddStat((FargoUtils.IsChinese() ? "仇恨：" : "Aggro: ") + player.aggro, ItemID.FleshKnuckles);
 
 
-            AddStat((FargoUtils.IsChinese() ? "最大生命值：" : "Life: ") + player.statLifeMax2, ItemID.LifeCrystal);
+            AddStat((FargoUtils.IsChinese() ? "生命值上限：" : "Life: ") + player.statLifeMax2, ItemID.LifeCrystal);
             AddStat((FargoUtils.IsChinese() ? $"生命再生：每秒{player.lifeRegen / 2}" : $"Life Regen: {player.lifeRegen / 2}/sec"), ItemID.BandofRegeneration);
-            AddStat((FargoUtils.IsChinese() ? "最大魔力值：" : "Mana: ") + player.statManaMax2, ItemID.ManaCrystal);
+            AddStat((FargoUtils.IsChinese() ? "魔力值上限：" : "Mana: ") + player.statManaMax2, ItemID.ManaCrystal);
             AddStat((FargoUtils.IsChinese() ? $"魔力再生：每秒{player.lifeRegen / 2}" : $"Mana Regen: {player.manaRegen / 2}/sec"), ItemID.ManaCrystal);
             AddStat((FargoUtils.IsChinese() ? "防御力：" : "Defense: ") + player.statDefense, ItemID.CobaltShield);
             AddStat((FargoUtils.IsChinese() ? "伤害减免：" : "Damage Reduction: ") + $"{Math.Round(player.endurance * 100)}%", ItemID.WormScarf);

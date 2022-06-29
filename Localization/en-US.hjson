@@ -221,6 +221,39 @@ Mods: {
 				Lumber1: "What's that? You want to fight "
 				Lumber2: "? ...even I know better than to try."
 				Eternity: Embrace suffering... and while you're at it, embrace another purchase!
+				DownedMutant: What's that? You want to fight me for real? ...nah, I can't put up a good fight on my own.
+				MutantSuggestion: Hey, you've almost made it to the end! Got all your Soul accessories ready? What's that? You want to fight my big brother? ...maybe if he had a reason to.
+				AbomSuggestion: Ready to fight my big brother? Remember how you've learned to learn. Stay focused, look for patterns, and don't panic. Good luck!
+				ChampionSuggestion: Wanna craft Forces, but missing Enchantments? Craft the Sigil of Champions and they'll give you what you want, so long as you earn it.
+				MoonLordSuggestion: Only a specific type of weapon will work against each specific pillar. As for that moon guy, his weakness will keep changing.
+				CultistSuggestion: Some powerful enemies like that dungeon guy can create their own arenas. You won't be able to escape, so make full use of the room you do have.
+				FishronSuggestion: Did you beat that fish pig dragon yet? He reduces your maximum life a little on every hit. He's also strong enough to break defenses in one hit. Too bad you don't have any reinforced plating to prevent that, right?
+				BetsySuggestion: Now's a good time to go for Betsy! Don't worry. If you reach the last wave and lose, you won't have to retry the event for more attempts at her. Careful not to slip up before then, and mind her debuffs!
+				GolemSuggestion: That temple? Reach the altar to regain wire control! The golem gets upset when you leave, so fighting in there is best. Platforms won't work, but a Lihzahrd Instactuation Bomb can help clear space!
+				PlanteraSuggestion: That overgrown plant inflicts a special venom that works her into an enraged frenzy if she stacks enough hits on you. She also has a ring of crystal leaves, but minions go through it.
+				DestoryerSuggestion: That metal worm has a few upgrades, but its probes were downgraded to compensate. It'll start shooting homing dark stars and flying. When it coils around you, don't try to escape!
+				TwinsSuggestion: I saw that metal eye spinning while firing a huge laser the other day. Also, even if you kill them, they won't die until they're both killed!
+				PrimeSuggestion: Focus on taking down that metal skull, not its limbs. Don't try to outrun its spinning limbs! Keep your eyes open and learn to recognize what's doing what.
+				WallOfFleshSuggestion: That thing's mouth is as good as immune to damage, so you'll have to aim for the eye. Only one of them is vulnerable at a time, though. What thing? You know, that thing!
+				DeviSuggestion: Next up is me! Make sure you can recognize whatever attack I'll throw at you. Blocks and turning away can nullify petrification!
+				SkeletronSuggestion: The master of the dungeon can use its babies to attack! Which attack it uses depends on whether or not it's spinning. It'll also take a last stand, so be ready to run when you make the kill!
+				QueenBeeSuggestion: The queen bee will summon her progeny for backup. She's harder to hurt while they're there, so take them out first. Oh, and her swarm can't hit right above or below her!
+				BrainSuggestion: Focus on how the ichor moves and don't get overwhelmed! When the brain gets mad, it'll confuse you every few seconds. Four rings to confuse you, one ring when it wears off!
+				EaterSuggestion: The more the world eater splits, the more worms can rush you at once. The head is extra sturdy now, but don't let them pile up too much!
+				GoblinCrimsonSuggestion: Watch out when you break your second Crimson Heart! It might attract the goblins, so prepare before you do it.
+				GoblinCorruptSuggestion: Watch out when you break your second Shadow Orb! It might attract the goblins, so prepare before you do it.
+				EyeSuggestion: That big eyeball has the power of the moon, but it's too flashy for its own good! Learn to notice and focus only on the bits that threaten to hurt you.
+				SlimeSuggestion: Gonna fight that slime king soon? Crafting a Mini Instabridge or two might help, and mind the spike rain. Don't stay up and out of his range or he'll get mad, though!
+				SuggestionMisc1: Seems like everyone's learning to project auras these days. If you look at the particles, you can see whether it'll affect you at close range or a distance!
+				SuggestionMisc2: There's probably a thousand items to protect against all these debuffs. It's a shame you don't have a thousand hands to carry them all at once!
+				SuggestionMisc3: Don't forget you can turn off your soul toggles! They're all in that little wrench button right below your inventory. Those small buttons at the very bottom of the list include a recommended low-lag preset!
+				SuggestionMaxLife: I don't have any more Life Crystals for you, but I think my big brother left some in the fat slime king. Maybe he'll share if you beat it up!
+				SuggestionFish: Watch out for those fish! Sharks will leave you alone if you leave them alone, but piranhas go wild when they smell blood. They can jump out of water to get you!
+				SuggestionWater: The water is bogging you down? Never had an issue with it, personally... Have you tried breathing water instead of air?
+				SuggestionOnFire: The underworld has gotten a lot hotter since the last time I visited. I hear an obsidian skull is a good luck charm against burning alive, though!
+				SuggestionSpace: Want to have a breath-holding contest? The empty vacuum of space would be perfect. No, I won't cheat by breathing water instead of air!
+				SuggestionUndergroundHallow: That's a funny face you're making... Is the underground Hallow too disorienting? Try controlling gravity on your own and maybe it can't flip you by force!
+				SuggestionUndergroundJungle: If you ask me, Plantera is really letting herself go. A diet of Chlorophyte Ore and Life Fruit isn't THAT healthy! Why don't you help her slim down?
 			}
 
 			Lumber: {

@@ -10,11 +10,11 @@ Mods: {
 	Fargowiltas: {
 		
 		Bestiary: {
-			Deviantt: Provides monster spawners and (if she feels like it) a helping hand. This upbeat and energetic creature likes money almost as much as she likes violence. Only a little deformed.
-			Abominationn: Can control the weather and stop invasions, but he's lazy and his weapons are fused to his hands. Good thing he doesn't need to eat and doors magically open when he approaches.
-			Mutant: Called brother by its siblings, but refuses to confirm its gender. More interested in watching fights and small pets than talking about its past. It seems to be looking for someone strong...
-			LumberJack: A wholly ordinary lumberjack that loves collecting critters and chopping wood of any kind. But could there be more to him than meets the eye? Secret godly powers? ...Probably not.
-			Squirrel: This dapper critter sells duplicates of valuable items that it notices in inventories. Won't divulge how it gets them, mostly because it can't speak.
+			Deviantt: 她提供敌怪召唤物和一些帮助（如果她想）。这个乐观又充满活力的生物喜爱钱的程度和喜爱暴力的程度相同。她有一点畸形。
+			Abominationn: 他可以控制天气和停止入侵，但他很懒惰，并且他的武器和手融合在一起。好消息是，他不需要吃东西。当他靠近时，门神奇地打开了。
+			Mutant: 他被他的弟妹叫做大哥，但他拒绝承认他的性别。相比于谈论他的过去，他对观看战斗和观察小宠物更感兴趣。他似乎在寻找某个强壮的人……
+			LumberJack: 他是一个非常普通的，喜欢收集小动物和砍任何树的伐木工。但他是否有不为人知之处？神秘的神力？或许没有……
+			Squirrel: 当这个矮小利落的小动物注意到你的背包中有价值的物品时，它会售卖它的的复制品。它不会告诉你它从哪得到的这些东西，不过这基本上是因为它不会说话。
 		}
 		
 		#This is what displays during all of an NPC's happiness levels. Note that the localization key for these should always be "TownNPCMood.*NPCName*.*Mood*" or else it won't display properly.
@@ -43,7 +43,7 @@ Mods: {
 				FarFromHome: 我可以飞回我家，但我真的不想被人看到。
 				DislikeCrowded: 周围的人太多了，他们一直在戳我的脸。
 				HateCrowded: 你知道在周围这么多人的情况下，拿着镰刀不割伤任何人有多难吗？
-				LikeBiome: "我喜欢{BiomeName}, 这是一个拥有我兄弟翅膀的好对手的家。"
+				LikeBiome: "我喜欢{BiomeName}，这是一个拥有我兄弟翅膀的好对手的家。"
 				LoveBiome: "我非常喜欢太空，我们在着陆前先到达了这里。"
 				DislikeBiome: "这儿有太多弱小的敌人生活在{BiomeName}。"
 				HateBiome: "我很讨厌{BiomeName}。"
@@ -107,58 +107,58 @@ Mods: {
 		}
 
 		Config: {
-			CanSpawn: Can Spawn
+			CanSpawn: 可以生成
 
-			TownNPCsHeader: Town NPCs
-			CatchNPCs: "[i:267] Catch Town NPCs"
-			NPCSales: "[i:267] Extra Town NPC sales"
-			SaferBoundNPCs: "[i:1274] Rescuable Town NPCs take no contact damage"
-			SquirrelTooltips: "[i:239] Mark items sold by Squirrel"
+			TownNPCsHeader: 城镇NPC
+			CatchNPCs: "[i:267] 可以抓城镇NPC"
+			NPCSales: "[i:267] NPC卖额外商品"
+			SaferBoundNPCs: "[i:1274] 可救援的NPC不会受到接触伤害"
+			SquirrelTooltips: "[i:239] 标记松鼠售卖的物品"
 
-			SeasonsHeader: Seasons
-			Halloween: "[i:1774] Halloween Season Active"
-			Christmas: "[i:1869] Christmas Season Active"
+			SeasonsHeader: 季节性事件
+			Halloween: "[i:1774] 开启万圣节"
+			Christmas: "[i:1869] 开启圣诞节"
 
-			SeedsHeader: Secret World Seeds
-			DrunkWorld: "[i:353] Drunk World Active"
-			BeeWorld: "[i:1133] Bee World Active"
-			WorthyWorld: "[i:2107] For the Worthy World Active"
-			CelebrationWorld: "[i:3732] Celebration World Active"
-			ConstantWorld: "[i:5109] Constant World Active"
+			SeedsHeader: 秘密世界种子
+			DrunkWorld: "[i:353] 开启醉酒世界/05162020"
+			BeeWorld: "[i:1133] 开启Not the bees"
+			WorthyWorld: "[i:2107] 开启For the worthy"
+			CelebrationWorld: "[i:3732] 开启Celebrationmk10/05162021/05162011"
+			ConstantWorld: "[i:5109] 开启永恒领域"
 
-			UnlimitedHeader: Unlimited
-			UnlimitedAmmo: "[i:771] Unlimited Ammo at 3996+ in Hardmode"
-			UnlimitedConsumableWeapons: "[i:42] Unlimited Consumable Weapons at 3996+ in Hardmode"
-			UnlimitedPotionBuffsOn120: "[i:292] Unlimited Buffs at 30/15+ in Inventory/Piggy Bank"
-			UnlimitedPotionBuffsOn120Tooltip: 30+ for potions, 15+ for class stations (e.g. Sharpening Table)
+			UnlimitedHeader: 无限效果
+			UnlimitedAmmo: "[i:771] 在困难模式中，背包中的某种弹药多于3996时不消耗"
+			UnlimitedConsumableWeapons: "[i:42] 在困难模式中，某种消耗品武器多于3996时不消耗"
+			UnlimitedPotionBuffsOn120: "[i:292] 背包/猪猪存钱罐中有30/15以上增益物品时获得无尽时长的增益"
+			UnlimitedPotionBuffsOn120Tooltip: 对于药水需要30瓶，对于职业增益站（比如利器站）需要15台
 
-			MiscHeader: Miscellaneous
-			ExtraBuffSlots: "[i:3000] Additional Buff Slots"
-			AnglerQuestInstantReset: "[i:2374] Angler Quest Instant Reset"
-			ExtraLures: "[i:2294] Extra Lures on Fishing Rods"
-			StalkerMoneyTrough: "[i:3213] Stalker Money Trough"
-			RottenEggs: "[i:1809] Powerful Rotten Eggs"
-			BannerRecipes: "[i:1683] Banner Recipes"
-			IncreaseMaxStack: "[i:2] Increased Max Stacks"
-			ExtractSpeed: "[i:997] Increased Extractinator Speed"
-			Fountains: "[i:909] Fountains Cause Biomes"
-			BossZen: "[i:3117] No enemies spawn during boss fights"
-			PiggyBankAcc: "[i:87] Informational and Construction Accessories work in Piggy Bank"
-			FasterLavaFishing: "[i:4881] Faster Fishing in Lava"
-			DebuffOpacity: "[i:1612] Debuff Display Max Opacity"
-			DebuffFaderRatio: "[i:1612] Debuff Duration Fader Strength"
-			TransparentMinions: "[i:1309] Transparent Minions & Support Attacks"
+			MiscHeader: 杂项
+			ExtraBuffSlots: "[i:3000] 额外增益栏上限"
+			AnglerQuestInstantReset: "[i:2374] 渔夫任务提交后立即重置"
+			ExtraLures: "[i:2294] 钓鱼竿有额外鱼线"
+			StalkerMoneyTrough: "[i:3213] 钱币槽跟踪玩家"
+			RottenEggs: "[i:1809] 强力臭蛋（秒杀NPC）"
+			BannerRecipes: "[i:1683] 旗帜合成表"
+			IncreaseMaxStack: "[i:2] 增加最大堆叠"
+			ExtractSpeed: "[i:997] 增加提炼机速度"
+			Fountains: "[i:909] 喷泉改变生物群落"
+			BossZen: "[i:3117] Boss战不刷新敌怪"
+			PiggyBankAcc: "[i:87] 信息饰品和建筑饰品在猪猪存钱罐中生效"
+			FasterLavaFishing: "[i:4881] 岩浆中钓鱼速度加快"
+			DebuffOpacity: "[i:1612] 减益显示不透明度"
+			DebuffFaderRatio: "[i:1612] 减益持续时间显示衰减强度"
+			TransparentMinions: "[i:1309] 仆从和协同攻击的不透明度"
 		}
 
 		RecipeGroups: {
-			EvilWood: Evil Wood
-			CommonFish: Common Fish
-			Dragonfly: Dragonfly
-			Butterfly: Butterfly
-			CaughtNPC: Caught Town NPC
-			Banner: Banner
-			ArmoredBones: Armored Bones Banner
-			PirateBanner: Pirate Banner
+			EvilWood: 邪恶木头
+			CommonFish: 普通鱼
+			Dragonfly: 蜻蜓
+			Butterfly: 蝴蝶
+			CaughtNPC: 被抓捕的城镇NPC
+			Banner: 旗帜
+			ArmoredBones: 装甲骷髅旗帜
+			PirateBanner: 海盗旗帜
 		}
 
 		BuffName: {
@@ -1246,6 +1246,39 @@ Mods: {
 				Lumber1: 啥？你想和
 				Lumber2: 打？……最好不要尝试。
 				Eternity: 拥抱痛苦吧……受虐时别忘了来我这买新东西！
+				DownedMutant: 啥？你真想和我打？……啊这，我自己一个人不太会打架。
+				MutantSuggestion: 嘿，你已经快到最后了！准备好所有的魂饰品了吗？啥，你想和我大哥打？……应该能吧，如果他有理由这么做。
+				AbomSuggestion: 准备打我大哥了？回想你是如何学会洞察战斗的。保持专注，寻找规律，不要惊慌。祝好运！
+				ChampionSuggestion: 想合成九大力，但是缺少魔石？去做一个唤灵魔符。你想要的东西，只要你证明了自己的实力，他们就会给你。
+				MoonLordSuggestion: 只有特定类型的武器能够有效对付每根特定的天界柱。至于那个没腿的大章鱼，他的弱点会不断变化。
+				CultistSuggestion: 一些强大的敌人——例如那个地牢门口的家伙——可以创造自己的战斗区域。你不能逃出来，所以充分利用你掌握的空间。
+				FishronSuggestion: 你打过那个猪龙鱼了吗？你每次被击中，他都会降低你的最大生命值。他的力量强到足以一下破除你的防御。最糟的是，你没有任何坚固的盔甲来防止这种情况发生，对吧？
+				BetsySuggestion: 现在是去打双足翼龙的好时机！别担心。如果你撑到了最后一波但输掉了，你不需要从头来过。注意不要在最后一波前失误，并注意她的减益！
+				GolemSuggestion: 那座神庙？碰一下祭坛来重新控制电线！石巨人会在你离开神庙时狂暴，所以最好在那里战斗。平台在这场战斗中不起作用，但丛林神庙炸弹可以帮助清理空间！
+				PlanteraSuggestion: 那株长得飞快的植物会造成一种特殊的毒液，如果你被她击中得够多，她就会进入狂暴状态。她还有一圈叶状水晶，但召唤物能穿过它们。
+				DestoryerSuggestion: 那条金属蠕虫经过了一些升级，但它的探针被削弱了以维持平衡。它会开始射出追踪的暗星并飞行。当它盘旋在你身边时，不要试图逃跑！
+				TwinsSuggestion: 前几天我看到了那个金属眼球在射出一道巨大的激光时旋转。而且，即使你杀了它们，它们也不会立即死亡，直到它们都被杀死！
+				PrimeSuggestion: 专注于拿下那个大铁骷髅头，而不是它的四肢。不要试图跑出它旋转的四肢！睁大你的眼睛，学会分析它的行动。
+				WallOfFleshSuggestion: 那东西的嘴几乎免疫伤害，所以你必须瞄准它们的眼睛。虽然同一时间内，它们之间只有一个能受到伤害。哪个东西？你知道的，那个东西！
+				DeviSuggestion: 下一个是我！确保你能回避我向你丢出的任何攻击。方块和转身可以使石化无效！
+				SkeletronSuggestion: 地牢之主可以操纵它的宝宝来攻击！它使用哪种攻击取决于它的头是否在旋转。它也会在最后再坚持一会，所以当你杀死它时准备好开跑！
+				QueenBeeSuggestion: 蜂后会召唤它的后代作为后援。它们存在她更难被伤害，所以先灭了它们。对了，它的蜂群不能打到她的正上方和下方！
+				BrainSuggestion: 注意灵液如何移动，不要惊慌失措！当大脑变得疯狂时，它每几秒钟就会让你感到困惑。在一个红色的环逐渐消失后，四个环会出现并让你感到困惑！
+				EaterSuggestion: 世界吞噬怪吐出越多魔唾液，一次就有更多虫子会想向你冲来。它的头部现在非常结实，但不要让它们堆积太多！
+				GoblinCrimsonSuggestion: 当你打破第二颗猩红心脏时要小心！这也许会引来哥布林，所以在你做这桩事前做好准备。
+				GoblinCorruptSuggestion: 当你打破第二颗暗影珠时要小心！这也许会引来哥布林，所以在你做这桩事前做好准备。
+				EyeSuggestion: 那个大眼珠子有着月亮之力，但是全都是花里胡哨！学会注意并只关注那些可能会打到你的部分。
+				SlimeSuggestion: 马上要和史莱姆王打一架了吗？造一两个速建平台也许会有帮助，并且注意从天而降的刺。不要待在他范围外的地方太久，不然它会狂暴的！
+				SuggestionMisc1: 看起来每个人这几天都在学习如何发出光环。如果你细看那些粒子，你可以看出它会在圈内还是圈外生效！
+				SuggestionMisc2: 可能有上千件物品来免疫这些减益。可惜你并没有一千只手来把它们一次全带上！
+				SuggestionMisc3: 不要忘记你可以关闭你的魂石开关！它们都在你物品栏右下角的小扳手里。列表最底部的那些小按钮包含了一套推荐的低卡顿预设！
+				SuggestionMaxLife: 我没有更多的生命水晶给你了，但我想我大哥在那只肥胖的史莱姆王里留了一些。如果你击败了它，它也许会分享这些水晶！
+				SuggestionFish: 小心那些鱼！鲨鱼会在你离开它们时离开你，但食人鱼一旦闻到血腥味就会立刻变得狂野。它们可以跳出水面来抓你！
+				SuggestionWater: 水让你陷入了困境？就我而言，从来没遇到过这个问题……你试过在水里呼吸而不是在空气里吗？
+				SuggestionOnFire: 较我上次参观，地狱变得更热了。不过，我听说黑曜石骷髅头是个防止被活活烧死的好运符！
+				SuggestionSpace: 想来一场憋气大赛吗？太空的真空环境会是个完美的场地。不，我不会通过呼吸水而非空气来作弊！
+				SuggestionUndergroundHallow: 你这脸真滑稽……地下神圣让你搞不清东南西北？试试自己控制重力，也许它不能强行翻转你！
+				SuggestionUndergroundJungle: 你要是问我的话，世纪之花实在是太放纵自己了。叶绿矿和生命果并不是一套那么好的饮食！为什么你不帮帮她减肥？
 			}
 
 			Lumber: {
@@ -1308,7 +1341,7 @@ Mods: {
 				16: 我将拥有整个世界！……在你购买我东西之后。
 				17: 很明显我是在帮助你，但是呃……这对我有什么好处？你认为是房子？我早餐吃僵尸。
 				18: 我可以跳吗？不，我没有叫做“空格键”的东西。
-				19: 摸到你的鼻子了, 我需要一个东西把我的鼻子换掉。
+				19: 摸到你的鼻子了，我需要一个东西把我的鼻子换掉。
 				20: 什么是Terry？
 				21: 为什么这么多生物带着一个看起来很奇怪的蓝色娃娃？这个问题的答案可能永远不会被知晓。
 				22: 末日即将来临……如果你不买我东西的话。
@@ -1369,6 +1402,7 @@ Mods: {
 				DD2Bartender: 一直建议我喝啤酒，但我喝醉了他也不会喜欢我。
 				DyeTrader: 想看看我穿蓝色衣服会是什么样子……我不知道什么感觉。
 			}
+			#松鼠在原文件中
 		}
 	}
 }
