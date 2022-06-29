@@ -1,5 +1,6 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
+ALPHA UPDATE - V 2.8.1
 
 ALPHA UPDATE - V 2.8.2
 -Added Endless Coin Bags
@@ -50,3 +51,55 @@ ALPHA UPDATE - V 2.8.1
 -Fixed Suspicious Skull not being usable to summon Dungeon Guardian
 -Fixed Suspicious Looking Chest not actually summoning Ice Mimic in snow biome as advertised
 -Fixed Grave Buster multiplayer sync
+
+这是一个提升生存质量的MOD，添加了能卖几乎所有MOD中的Boss召唤物的突变体NPC。
+这个MOD中也有很多其他东西，比如无限的弹药，可制造的速建建筑，比如世界平台、黑曜石平台、地狱直通车，还有无限的药水，增加刷怪率的物品等等！
+
+ALPHA UPDATE - V 2.8.2
+-添加了无限钱币袋
+-添加了蝙蝠棒的旗帜合成表
+-添加了蜂蜜分配机合成表
+-添加了施法桌合成表（用地牢匣）
+-添加了胶状水晶合成表
+-添加了湿炸弹合成表
+-添加了速建道具的工具提示解释
+-添加了血浆蟹饵，血海胆，血寿司拼盘的合成表
+-蛋糕片现在在背包中可以像职业增益站一样生效为无限增益
+-憎恶的南瓜月/霜月（中的稀有怪和Boss）召唤物现在可以在夜晚正常生效并产生掉落物
+-火腿棍的合成现在需要秘银砧
+-略微增大城市克星的爆炸范围
+-使墓碑克星更廉价并增加爆炸范围
+-战争号角现在有镇静效果
+-恢复了高帽松鼠在血月时的对话颜色
+-修复了木乃伊旗帜不算做沙漠怪旗帜
+
+-添加了宇宙坩埚的跨MOD合成表，使它可以以魔法存储的混合合成站为材料
+-添加了炼药桌的匣子合成表
+-为粉史莱姆王冠添加合成表
+-为独眼巨鹿的掉落物添加合成表
+-所有爆炸物不会破坏魔法存储的物块了
+-修改了突变体商店的boss权重使它与1.4的boss列表匹配
+-伐木工卖松果和宝石松果
+-无限药水效果现在对回忆药水，返回药水和虫洞药水生效
+-三兄弟有了喜爱的生物群落
+-修复了高帽松鼠的坐下效果
+-回家热键现在有优先级：返回药水-> 回忆药水 -> 魔镜
+-优化了无限药水效果，使用物品栏中堆叠的药水中的一个药水也不会消耗
+-boss禅定（boss战不生成敌怪）效果范围翻倍，为375图格
+-重构了大量的内部声音
+-更新了机械融合体的贴图
+-更新了戴薇安裤子的合成表
+-更新了翻译文件
+-修复了祭典灯笼禁止下雨
+-修复了背包中的城镇NPC名字格式错误
+-修复了是否可抓捕NPC的Config配置无效
+-修复了减益显示不显示减益持续时间
+-修复了速建房屋总是向右建造
+-修复了速建房屋开启方块交换时不生效
+-修复了速建房屋错误的墙壁边框
+-修复了速建房屋的门在多人模式会崩溃
+-修复了元素装配台在魔法存储中没有岩浆/蜂蜜的制作环境
+-修复了松鼠在怪物图鉴中不显示
+-修复了可疑的骷髅头不能召唤地牢守卫
+-修复了可疑的宝箱不能在雪地召唤冰雪宝箱怪
+-修复了墓碑克星的多人同步
