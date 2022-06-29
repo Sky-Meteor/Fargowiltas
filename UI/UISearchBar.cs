@@ -11,7 +11,7 @@ namespace Fargowiltas.UI
 {
     public class UISearchBar : UIElement
     {
-        public const string HintText = "Search...";
+        public string HintText = FargoUtils.IsChinese() ? "搜索……" : "Search...";
 
         public bool IsEmpty => string.IsNullOrEmpty(Input);
 

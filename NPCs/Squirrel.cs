@@ -154,16 +154,16 @@ namespace Fargowiltas.NPCs
             showCycleShop = GetSellableItems().Count / maxShop > 0;
 
             if (Main.bloodMoon)
-                return "[c/FF0000:You will suffer.]";
+                return FargoUtils.IsChinese() ? "[c/FF0000:你会受苦的。]" : "[c/FF0000:You will suffer.]";
 
             switch (Main.rand.Next(3))
 			{
 				case 0:
-					return "*squeak*";
+					return FargoUtils.IsChinese() ? "*吱吱*" : "*squeak*";
 				case 1:
-					return "*chitter*";
+					return FargoUtils.IsChinese() ? "*啾啾*" : "*chitter*";
 				default:
-					return "*crunch crunch*";
+					return FargoUtils.IsChinese() ? "*嘎吱嘎吱*" : "*crunch crunch*";
 			}
 		}
 
@@ -173,7 +173,7 @@ namespace Fargowiltas.NPCs
             if (showCycleShop)
             {
                 button += $" {shopNum + 1}";
-                button2 = "Cycle Shop";
+                button2 = FargoUtils.IsChinese() ? "切换商店" : "Cycle Shop";
             }
         }
 

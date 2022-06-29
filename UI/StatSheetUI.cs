@@ -75,42 +75,42 @@ namespace Fargowiltas.UI
             double Damage(DamageClass damageClass) => Math.Round(player.GetTotalDamage(damageClass).Additive * player.GetTotalDamage(damageClass).Multiplicative * 100 - 100);
             int Crit(DamageClass damageClass) => (int)player.GetTotalCritChance(damageClass);
 
-            AddStat($"Melee Damage: {Damage(DamageClass.Melee)}%", ItemID.CopperBroadsword);
-            AddStat($"Melee Critical: {Crit(DamageClass.Melee)}%", ItemID.CopperBroadsword);
-            AddStat($"Melee Speed: {(int)(1f / player.GetAttackSpeed(DamageClass.Melee) * 100)}%", ItemID.CopperBroadsword);
-            AddStat($"Ranged Damage: {Damage(DamageClass.Ranged)}%", ItemID.CopperBow);
-            AddStat($"Ranged Critical: {Crit(DamageClass.Ranged)}%", ItemID.CopperBow);
-            AddStat($"Magic Damage: {Damage(DamageClass.Magic)}%", ItemID.WandofSparking);
-            AddStat($"Magic Critical: {Crit(DamageClass.Magic)}%", ItemID.WandofSparking);
-            AddStat($"Mana Cost Reduction: {Math.Round((1.0 - player.manaCost) * 100)}%", ItemID.WandofSparking);
-            AddStat($"Summon Damage: {Damage(DamageClass.Summon)}%", ItemID.SlimeStaff);
+            AddStat((FargoUtils.IsChinese() ? "近战伤害：" : "Melee Damage: ") + $"{Damage(DamageClass.Melee)}%", ItemID.CopperBroadsword);
+            AddStat((FargoUtils.IsChinese() ? "近战暴击率：" : "Melee Critical: ") + $"{Crit(DamageClass.Melee)}%", ItemID.CopperBroadsword);
+            AddStat((FargoUtils.IsChinese() ? "近战速度：" : "Melee Speed: ") + $"{(int)(1f / player.GetAttackSpeed(DamageClass.Melee) * 100)}%", ItemID.CopperBroadsword);
+            AddStat((FargoUtils.IsChinese() ? "远程伤害：" : "Ranged Damage: ") + $"{Damage(DamageClass.Ranged)}%", ItemID.CopperBow);
+            AddStat((FargoUtils.IsChinese() ? "远程暴击率：" : "Ranged Critical: ") + $"{Crit(DamageClass.Ranged)}%", ItemID.CopperBow);
+            AddStat((FargoUtils.IsChinese() ? "魔法伤害：" : "Magic Damage: ") + $"{Damage(DamageClass.Magic)}%", ItemID.WandofSparking);
+            AddStat((FargoUtils.IsChinese() ? "魔法暴击率：" : "Magic Critical: ") + $"{Crit(DamageClass.Magic)}%", ItemID.WandofSparking);
+            AddStat((FargoUtils.IsChinese() ? "魔力消耗降低：" : "Mana Cost Reduction: ") + $"{Math.Round((1.0 - player.manaCost) * 100)}%", ItemID.WandofSparking);
+            AddStat((FargoUtils.IsChinese() ? "召唤伤害：" : "Summon Damage: ") + $"{Damage(DamageClass.Summon)}%", ItemID.SlimeStaff);
             if (Fargowiltas.ModLoaded["FargowiltasSouls"])
-                AddStat($"Summon Critical: {(int)ModLoader.GetMod("FargowiltasSouls").Call("GetSummonCrit")}%", ItemID.SlimeStaff);
+                AddStat((FargoUtils.IsChinese() ? "召唤暴击率：" : "Summon Critical: ") + $"{(int)ModLoader.GetMod("FargowiltasSouls").Call("GetSummonCrit")}%", ItemID.SlimeStaff);
             else
                 AddStat("");
-            AddStat($"Max Minions: {player.maxMinions}", ItemID.SlimeStaff);
-            AddStat($"Max Sentries: {player.maxTurrets}", ItemID.SlimeStaff);
+            AddStat((FargoUtils.IsChinese() ? "最大仆从数：" : "Max Minions: " ) + player.maxMinions, ItemID.SlimeStaff);
+            AddStat((FargoUtils.IsChinese() ? "最大哨兵数：" : "Max Sentries: ") + player.maxTurrets, ItemID.SlimeStaff);
 
-            AddStat($"Armor Penetration: {player.GetArmorPenetration(DamageClass.Generic)}", ItemID.SharkToothNecklace);
-            AddStat($"Aggro: {player.aggro}", ItemID.FleshKnuckles);
+            AddStat((FargoUtils.IsChinese() ? "盔甲穿透：" : "Armor Penetration: ") + player.GetArmorPenetration(DamageClass.Generic), ItemID.SharkToothNecklace);
+            AddStat((FargoUtils.IsChinese() ? "仇恨：" : "Aggro: ") + player.aggro, ItemID.FleshKnuckles);
 
 
-            AddStat($"Life: {player.statLifeMax2}", ItemID.LifeCrystal);
-            AddStat($"Life Regen: {player.lifeRegen / 2}/sec", ItemID.BandofRegeneration);
-            AddStat($"Mana: {player.statManaMax2}", ItemID.ManaCrystal);
-            AddStat($"Mana Regen: {player.manaRegen / 2}/sec", ItemID.ManaCrystal);
-            AddStat($"Defense: {player.statDefense}", ItemID.CobaltShield);
-            AddStat($"Damage Reduction: {Math.Round(player.endurance * 100)}%", ItemID.WormScarf);
-            AddStat($"Luck: {Math.Round(player.luck, 2)}", ItemID.Torch);
-            AddStat($"Fishing Quests: {player.anglerQuestsFinished}", ItemID.AnglerEarring);
-            AddStat($"Battle Cry: {(modPlayer.BattleCry ? "[c/ff0000:Battle]" : (modPlayer.CalmingCry ? "[c/00ffff:Calming]" : "None"))}", ModContent.ItemType<BattleCry>());
-            AddStat($"Max Speed: {(int)((player.accRunSpeed + player.maxRunSpeed) / 2f * player.moveSpeed * 6)} mph", ItemID.HermesBoots);
+            AddStat((FargoUtils.IsChinese() ? "最大生命值：" : "Life: ") + player.statLifeMax2, ItemID.LifeCrystal);
+            AddStat((FargoUtils.IsChinese() ? $"生命再生：每秒{player.lifeRegen / 2}" : $"Life Regen: {player.lifeRegen / 2}/sec"), ItemID.BandofRegeneration);
+            AddStat((FargoUtils.IsChinese() ? "最大魔力值：" : "Mana: ") + player.statManaMax2, ItemID.ManaCrystal);
+            AddStat((FargoUtils.IsChinese() ? $"魔力再生：每秒{player.lifeRegen / 2}" : $"Mana Regen: {player.manaRegen / 2}/sec"), ItemID.ManaCrystal);
+            AddStat((FargoUtils.IsChinese() ? "防御力：" : "Defense: ") + player.statDefense, ItemID.CobaltShield);
+            AddStat((FargoUtils.IsChinese() ? "伤害减免：" : "Damage Reduction: ") + $"{Math.Round(player.endurance * 100)}%", ItemID.WormScarf);
+            AddStat((FargoUtils.IsChinese() ? "运气：" : "Luck: ") + Math.Round(player.luck, 2), ItemID.Torch);
+            AddStat((FargoUtils.IsChinese() ? "已完成钓鱼任务：" : "Fishing Quests: ") + player.anglerQuestsFinished, ItemID.AnglerEarring);
+            AddStat(FargoUtils.IsChinese() ? $"战争号角效果：{(modPlayer.BattleCry ? "[c/ff0000:战争]" : (modPlayer.CalmingCry ? "[c/00ffff:镇静]" : "无"))}" : $"Battle Cry: {(modPlayer.BattleCry ? "[c/ff0000:Battle]" : (modPlayer.CalmingCry ? "[c/00ffff:Calming]" : "None"))}", ModContent.ItemType<BattleCry>());
+            AddStat((FargoUtils.IsChinese() ? $"最大速度：{(int)((player.accRunSpeed + player.maxRunSpeed) / 2f * player.moveSpeed * 6)}英里每小时" : $"Max Speed: {(int)((player.accRunSpeed + player.maxRunSpeed) / 2f * player.moveSpeed * 6)} mph"), ItemID.HermesBoots);
 
-            string RenderWingStat(double stat) => stat <= 0 ? "???" : stat.ToString();
-            AddStat(player.wingTimeMax / 60 > 60 || player.empressBrooch ? "Wing Time: Yes" : $"Wing Time: {RenderWingStat(Math.Round(player.wingTimeMax / 60.0, 2))} sec", ItemID.AngelWings);
-            AddStat($"Wing Max Speed: {RenderWingStat(Math.Round(modPlayer.StatSheetWingSpeed * 32 / 6.25))} mph", ItemID.AngelWings);
-            AddStat($"Wing Ascent Modifier: {RenderWingStat(Math.Round(modPlayer.StatSheetMaxAscentMultiplier * 100))}%", ItemID.AngelWings);
-            AddStat($"Wing Can Hover: {(modPlayer.CanHover == null ? "???" : modPlayer.CanHover)}", ItemID.AngelWings);
+            string RenderWingStat(double stat) => stat <= 0 ? (FargoUtils.IsChinese() ? "？？？" : "???") : stat.ToString();
+            AddStat(player.wingTimeMax / 60 > 60 || player.empressBrooch ? (FargoUtils.IsChinese() ? "飞行时间：接近无限" : "Wing Time: Yes") : (FargoUtils.IsChinese() ? $"飞行时间：{RenderWingStat(Math.Round(player.wingTimeMax / 60.0, 2))}秒" : $"Wing Time: {RenderWingStat(Math.Round(player.wingTimeMax / 60.0, 2))} sec"), ItemID.AngelWings);
+            AddStat((FargoUtils.IsChinese() ? $"最大飞行速度：{RenderWingStat(Math.Round(modPlayer.StatSheetWingSpeed * 32 / 6.25))}英里每小时" : $"Wing Max Speed: {RenderWingStat(Math.Round(modPlayer.StatSheetWingSpeed * 32 / 6.25))} mph"), ItemID.AngelWings);
+            AddStat((FargoUtils.IsChinese() ? "翅膀上升速度：" : "Wing Ascent Modifier: ") + $"{RenderWingStat(Math.Round(modPlayer.StatSheetMaxAscentMultiplier * 100))}%", ItemID.AngelWings);
+            AddStat((FargoUtils.IsChinese() ? $"翅膀是否可水平悬停：{(modPlayer.CanHover == null ? "无翅膀" : ((bool)modPlayer.CanHover ? "是" : "否"))}" : $"Wing Can Hover: {(modPlayer.CanHover == null ? "???" : modPlayer.CanHover)}"), ItemID.AngelWings);
         }
 
         public void AddStat(string text, int item = -1)
