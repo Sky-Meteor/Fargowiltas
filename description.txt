@@ -1,6 +1,5 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
-ALPHA UPDATE - V 2.8.1
 
 ALPHA UPDATE - V 2.8.2
 -Added Endless Coin Bags
@@ -73,6 +72,7 @@ ALPHA UPDATE - V 2.8.2
 -恢复了高帽松鼠在血月时的对话颜色
 -修复了木乃伊旗帜不算做沙漠怪旗帜
 
+ALPHA UPDATE - V 2.8.1
 -添加了宇宙坩埚的跨MOD合成表，使它可以以魔法存储的混合合成站为材料
 -添加了炼药桌的匣子合成表
 -为粉史莱姆王冠添加合成表
