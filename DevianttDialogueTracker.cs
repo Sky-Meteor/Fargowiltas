@@ -124,7 +124,7 @@ namespace Fargowiltas
 
             //AddDialogue("Watch out when you break your fourth altar! It might attract the pirates, so be sure you're ready when you do it.", HelpDialogueType.BossOrEvent, (name) => Main.hardMode && !NPC.downedPirates);
 
-            AddDialogue(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.DestoryerSuggestion"),
+            AddDialogue(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.DestroyerSuggestion"),
                 HelpDialogueType.BossOrEvent, (name) => Main.hardMode && !NPC.downedMechBoss1);
 
             AddDialogue(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.TwinsSuggestion"),
