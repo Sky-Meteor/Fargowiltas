@@ -147,169 +147,169 @@ namespace Fargowiltas.NPCs
                 saidDefeatQuote = true;
 
                 if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("EternityMode"))
-                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.DefeatE");
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DefeatE");
                 else
-                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Defeat");
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Defeat");
             }
 
             List<string> dialogue = new List<string>
             {
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.1"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.2"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.3"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.4"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.5"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.6"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.7"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.8"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.9"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.10"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.11"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.12"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.13"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.14"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.15"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.16"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.17"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.18"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.19"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.20"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.21"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.22"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.23"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.24"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.25"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.26"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.27"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.28"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.29"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.30"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.31"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.32"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.33"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.34"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.35"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.36"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.37"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.38"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.39"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.40"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.41"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.42"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.43"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.44"),
-                Language.GetTextValue("Mods.Fargowiltas.Dialogues.45")
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.1"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.2"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.3"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.4"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.5"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.6"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.7"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.8"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.9"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.10"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.11"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.12"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.13"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.14"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.15"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.16"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.17"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.18"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.19"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.20"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.21"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.22"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.23"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.24"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.25"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.26"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.27"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.28"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.29"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.30"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.31"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.32"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.33"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.34"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.35"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.36"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.37"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.38"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.39"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.40"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.41"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.42"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.43"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.44"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.45")
             };
 
             if (Fargowiltas.ModLoaded["FargowiltasSouls"])
             {
-                dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.ml"), NPC.downedMoonlord);
+                dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.ml"), NPC.downedMoonlord);
 
                 if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedMutant"))
                 {
-                    dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Downed"));
+                    dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Downed"));
                 }
                 else if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedFishronEX") || (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedAbom"))
                 {
-                    dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.DownedAbom"));
+                    dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DownedAbom"));
                 }
             }
             else
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.NoSouls"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.NoSouls"));
             }
 
             //dialogue.AddWithCondition("Why would you do this.", Fargowiltas.ModLoaded["CalamityMod"]);
             //dialogue.AddWithCondition("I feel a great imbalance in this world.", Fargowiltas.ModLoaded["CalamityMod"] && Fargowiltas.ModLoaded["ThoriumMod"]);
             //dialogue.AddWithCondition("A great choice, shame about that first desert boss thing though.", Fargowiltas.ModLoaded["ThoriumMod"]);
-            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Pumpkin"), Main.pumpkinMoon);
-            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Frost"), Main.snowMoon);
-            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Slime"), Main.slimeRain);
-            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Blood1"), Main.bloodMoon);
-            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Blood2"), Main.bloodMoon);
-            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Night"), !Main.dayTime);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Pumpkin"), Main.pumpkinMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Frost"), Main.snowMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Slime"), Main.slimeRain);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Blood1"), Main.bloodMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Blood2"), Main.bloodMoon);
+            dialogue.AddWithCondition(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Night"), !Main.dayTime);
 
             int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
             if (BirthdayParty.PartyIsUp)
             {
                 if (partyGirl >= 0)
                 {
-                    dialogue.Add(Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.PartyGirl"));
+                    dialogue.Add(Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl"));
                 }
                 
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.NoPartyGirl"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.NoPartyGirl"));
             }
 
             int nurse = NPC.FindFirstNPC(NPCID.Nurse);
             if (nurse >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Nurse1") + Main.npc[nurse].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Nurse2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Nurse1") + Main.npc[nurse].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Nurse2"));
             }
 
             int witchDoctor = NPC.FindFirstNPC(NPCID.WitchDoctor);
             if (witchDoctor >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.WitchDoctor1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.WitchDoctor2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.WitchDoctor1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.WitchDoctor2"));
             }
 
             int dryad = NPC.FindFirstNPC(NPCID.Dryad);
             if (dryad >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Dryad1") + Main.npc[dryad].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Dryad2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Dryad1") + Main.npc[dryad].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Dryad2"));
             }
 
             int stylist = NPC.FindFirstNPC(NPCID.Stylist);
             if (stylist >= 0)
             {
-                dialogue.Add(Main.npc[stylist].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Stylist"));
+                dialogue.Add(Main.npc[stylist].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Stylist"));
             }
 
             int truffle = NPC.FindFirstNPC(NPCID.Truffle);
             if (truffle >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Truffle"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Truffle"));
             }
 
             int tax = NPC.FindFirstNPC(NPCID.TaxCollector);
             if (tax >= 0)
             {
-                dialogue.Add(Main.npc[tax].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.TaxCollector"));
+                dialogue.Add(Main.npc[tax].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.TaxCollector"));
             }
 
             int guide = NPC.FindFirstNPC(NPCID.Guide);
             if (guide >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Guide1") + Main.npc[guide].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Guide2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Guide1") + Main.npc[guide].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Guide2"));
             }
 
             int cyborg = NPC.FindFirstNPC(NPCID.Cyborg);
             if (truffle >= 0 && witchDoctor >= 0 && cyborg >= 0 && Main.rand.NextBool(52))
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg2")
-                + Main.npc[truffle].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg3") + Main.npc[cyborg].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Cyborg4"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg2")
+                + Main.npc[truffle].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg3") + Main.npc[cyborg].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg4"));
             }
 
             if (partyGirl >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.PartyGirl2") + Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.PartyGirl3"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl2") + Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl3"));
             }
 
             int demoman = NPC.FindFirstNPC(NPCID.Demolitionist);
             if (demoman >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Demolitionist1") + Main.npc[demoman].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Demolitionist2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Demolitionist1") + Main.npc[demoman].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Demolitionist2"));
             }
 
             int tavernkeep = NPC.FindFirstNPC(NPCID.DD2Bartender);
             if (tavernkeep >= 0)
             {
-                dialogue.Add(Main.npc[tavernkeep].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.DD2Bartender"));
+                dialogue.Add(Main.npc[tavernkeep].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DD2Bartender"));
             }
 
             int dyeTrader = NPC.FindFirstNPC(NPCID.DyeTrader);
             if (dyeTrader >= 0)
             {
-                dialogue.Add(Main.npc[dyeTrader].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.DyeTrader"));
+                dialogue.Add(Main.npc[dyeTrader].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DyeTrader"));
             }
 
             return Main.rand.Next(dialogue);
