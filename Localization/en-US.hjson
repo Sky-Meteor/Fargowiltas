@@ -113,7 +113,6 @@ Mods: {
 			CatchNPCs: "[i:267] Catch Town NPCs"
 			NPCSales: "[i:267] Extra Town NPC sales"
 			SaferBoundNPCs: "[i:1274] Rescuable Town NPCs take no contact damage"
-			SquirrelTooltips: "[i:239] Mark items sold by Squirrel"
 
 			SeasonsHeader: Seasons
 			Halloween: "[i:1774] Halloween Season Active"
@@ -129,13 +128,14 @@ Mods: {
 			UnlimitedHeader: Unlimited
 			UnlimitedAmmo: "[i:771] Unlimited Ammo at 3996+ in Hardmode"
 			UnlimitedConsumableWeapons: "[i:42] Unlimited Consumable Weapons at 3996+ in Hardmode"
-			UnlimitedPotionBuffsOn120: "[i:292] Unlimited Buffs at 30/15+ in Inventory/Piggy Bank"
+			UnlimitedPotionBuffsOn120: "[i:292] Unlimited Buffs at 30/15+ when carried"
 			UnlimitedPotionBuffsOn120Tooltip: 30+ for potions, 15+ for class stations (e.g. Sharpening Table)
 
 			MiscHeader: Miscellaneous
 			ExtraBuffSlots: "[i:3000] Additional Buff Slots"
+			ExpandedTooltips: "[i:171] More tooltips indicate Mutant Mod changes"
 			AnglerQuestInstantReset: "[i:2374] Angler Quest Instant Reset"
-			ExtraLures: "[i:2294] Extra Lures on Fishing Rods"
+			ExtraLures: "[i:2373] Extra Lures on Fishing Rods"
 			StalkerMoneyTrough: "[i:3213] Stalker Money Trough"
 			RottenEggs: "[i:1809] Powerful Rotten Eggs"
 			BannerRecipes: "[i:1683] Banner Recipes"

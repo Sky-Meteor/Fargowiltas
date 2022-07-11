@@ -231,7 +231,8 @@ namespace Fargowiltas.NPCs
             ItemType<CrucibleCosmos>(),
             ItemType<ElementalAssembler>(),
             ItemType<MultitaskCenter>(),
-            ItemType<PortableSundial>()
+            ItemType<PortableSundial>(),
+            ItemType<BattleCry>()
         };
 
         public static ShopGroup SquirrelSells(Item item, out SquirrelSellType sellType)

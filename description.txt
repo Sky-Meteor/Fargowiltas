@@ -1,6 +1,15 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
+ALPHA UPDATE - V 2.8.3
+-Added crate recipe for Demon Conch
+-Added Empress bag recipe for Prismatic Dye
+-Party Girl sells Slice of Cake during parties
+-Squirrel sells Battle Cry
+-Unlimited Buffs have tooltips and work in Safe
+-Informational and Construction Accessories work in Safe
+-Fixed DPS Meter not working properly from Piggy Bank
+
 ALPHA UPDATE - V 2.8.2
 -Added Endless Coin Bags
 -Added Bat Bat banner recipe

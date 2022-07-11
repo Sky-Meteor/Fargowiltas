@@ -45,10 +45,6 @@ namespace Fargowiltas
         [DefaultValue(true)]
         public bool SaferBoundNPCs;
 
-        [Label("$Mods.Fargowiltas.Config.SquirrelTooltips")]
-        [DefaultValue(true)]
-        public bool SquirrelTooltips;
-
         [Header("$Mods.Fargowiltas.Config.SeasonsHeader")]
         [Label("$Mods.Fargowiltas.Config.Halloween")]
         [DefaultValue(true)]
@@ -100,6 +96,10 @@ namespace Fargowiltas
         [DefaultValue(22)]
         [ReloadRequired]
         public uint ExtraBuffSlots;
+
+        [Label("$Mods.Fargowiltas.Config.ExpandedTooltips")]
+        [DefaultValue(true)]
+        public bool ExpandedTooltips;
 
         [Label("$Mods.Fargowiltas.Config.AnglerQuestInstantReset")]
         [DefaultValue(true)]

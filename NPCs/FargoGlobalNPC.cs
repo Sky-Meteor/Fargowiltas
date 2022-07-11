@@ -335,6 +335,13 @@ namespace Fargowiltas.NPCs
 
                 switch (type)
                 {
+                    case NPCID.PartyGirl:
+                        if (BirthdayParty.PartyIsUp)
+                        {
+                            AddItem(ref nextSlot, ItemID.SliceOfCake);
+                        }
+                        break;
+
                     case NPCID.Clothier:
                         AddItem(ref nextSlot, ItemID.PharaohsMask, Item.buyPrice(gold: 1));
                         AddItem(ref nextSlot, ItemID.PharaohsRobe, Item.buyPrice(gold: 1));

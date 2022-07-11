@@ -146,9 +146,38 @@ namespace Fargowiltas
 
         public override void PostUpdateBuffs()
         {
-            foreach (Item item in Player.bank.item)
+            if (GetInstance<FargoConfig>().UnlimitedPotionBuffsOn120)
             {
-                FargoGlobalItem.TryUnlimBuff(item, Player);
+                foreach (Item item in Player.bank.item)
+                {
+                    FargoGlobalItem.TryUnlimBuff(item, Player);
+                }
+
+                foreach (Item item in Player.bank2.item)
+                {
+                    FargoGlobalItem.TryUnlimBuff(item, Player);
+                }
+            }
+
+            if (GetInstance<FargoConfig>().PiggyBankAcc)
+            {
+                foreach (Item item in Player.bank.item)
+                {
+                    FargoGlobalItem.TryPiggyBankAcc(item, Player);
+                }
+
+                foreach (Item item in Player.bank2.item)
+                {
+                    FargoGlobalItem.TryPiggyBankAcc(item, Player);
+                }
+            }
+        }
+
+        public override void PostUpdateEquips()
+        {
+            if (Fargowiltas.SwarmActive)
+            {
+                Player.buffImmune[BuffID.Horrified] = true;
             }
         }
 
@@ -285,81 +314,6 @@ namespace Fargowiltas
             //Projectile.NewProjectile( pos, Vector2.Zero, ModContent.ProjectileType<SpawnProj>(), 0, 0, Main.myPlayer, type);
         }
 
-        public override void PostUpdateEquips()
-        {
-            // Main.NewText(GetInstance<FargoConfig>().Mutant && FargoWorld.DownedBools["boss"] && !FargoGlobalNPC.AnyBossAlive());
-
-            if (Fargowiltas.SwarmActive)
-            {
-                Player.buffImmune[BuffID.Horrified] = true;
-            }
-
-            if (GetInstance<FargoConfig>().PiggyBankAcc)
-            {
-                for (int i = 0; i < Player.bank.item.Length; i++)
-                {
-                    Item item = Player.bank.item[i];
-
-                    if (item.active && Array.IndexOf(Informational, item.type) > -1)
-                    {
-                        Item item2 = new Item();
-                        item2.SetDefaults(item.type);
-
-                        Player.VanillaUpdateEquip(item2);
-                    }
-                    else
-                    {
-                        switch (item.type)
-                        {
-                            case ItemID.Toolbelt:
-                                Player.blockRange = 1;
-                                break;
-                            case ItemID.Toolbox:
-                                if (Player.whoAmI == Main.myPlayer)
-                                {
-                                    Player.tileRangeX++;
-                                    Player.tileRangeY++;
-                                }
-                                break;
-                            case ItemID.ExtendoGrip:
-                                if (Player.whoAmI == Main.myPlayer)
-                                {
-                                    Player.tileRangeX += 3;
-                                    Player.tileRangeY += 2;
-                                }
-                                break;
-                            case ItemID.PaintSprayer:
-                                Player.autoPaint = true;
-                                break;
-                            case ItemID.BrickLayer:
-                                Player.tileSpeed += 0.5f;
-                                break;
-                            case ItemID.PortableCementMixer:
-                                Player.wallSpeed += 0.5f;
-                                break;
-                            case ItemID.ActuationAccessory:
-                                Player.autoActuator = true;
-                                break;
-                            case ItemID.ArchitectGizmoPack:
-                                Player.autoPaint = true;
-                                Player.tileSpeed += 0.5f;
-                                Player.wallSpeed += 0.5f;
-
-                                if (Player.whoAmI == Main.myPlayer)
-                                {
-                                    Player.tileRangeX += 3;
-                                    Player.tileRangeY += 2;
-                                }
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-            }
-        }
-
         public override bool PreModifyLuck(ref float luck)
         {
             if (FargoWorld.Matsuri && !Main.IsItRaining && !Main.IsItStorming)
@@ -377,8 +331,6 @@ namespace Fargowiltas
 
             luckPotionBoost = 0; //look nowhere else works ok
         }
-
-        int[] Informational = { ItemID.CopperWatch, ItemID.TinWatch, ItemID.TungstenWatch, ItemID.SilverWatch, ItemID.GoldWatch, ItemID.PlatinumWatch, ItemID.DepthMeter, ItemID.Compass, ItemID.Radar, ItemID.LifeformAnalyzer, ItemID.TallyCounter, ItemID.MetalDetector, ItemID.Stopwatch, ItemID.Ruler, ItemID.FishermansGuide, ItemID.Sextant, ItemID.WeatherRadio, ItemID.GPS, ItemID.REK, ItemID.GoblinTech, ItemID.FishFinder, ItemID.PDA, ItemID.CellPhone };
 
         public void AutoUseMirror()
         {
