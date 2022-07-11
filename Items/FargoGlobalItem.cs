@@ -126,7 +126,7 @@ namespace Fargowiltas.Items
                             || item.type == ItemID.BewitchingTable
                             || item.type == ItemID.SliceOfCake)
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠15个时获得无尽增益" : "[c/AAAAAA:Unlimited buff at thirty stack in inventory, Piggy Bank, or Safe]"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠15个时获得无尽增益]" : "[c/AAAAAA:Unlimited buff at thirty stack in inventory, Piggy Bank, or Safe]"));
                         tooltips.Add(line);
                     }
                 }
