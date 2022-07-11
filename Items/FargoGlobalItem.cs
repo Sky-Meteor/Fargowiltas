@@ -29,7 +29,7 @@ namespace Fargowiltas.Items
 
         //public override bool CloneNewInstances => true;
 
-        TooltipLine FountainTooltip(string biome) => new TooltipLine(Mod, "Tooltip0", "[i:909]" + (FargoUtils.IsChinese() ? $"[c/AAAAAA:激活时使周围的生物群落变为{biome}]" : $"[c/AAAAAA:Forces surrounding biome state to {biome} upon activation]"));
+        TooltipLine FountainTooltip(string biome) => new TooltipLine(Mod, "Tooltip0", "[i:909] " + (FargoUtils.IsChinese() ? $"[c/AAAAAA:激活时使周围的生物群落变为{biome}]" : $"[c/AAAAAA:Forces surrounding biome state to {biome} upon activation]"));
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
@@ -81,7 +81,7 @@ namespace Fargowiltas.Items
                     case ItemID.GoldenBugNet:
                     case ItemID.FireproofBugNet:
                         if (GetInstance<FargoConfig>().CatchNPCs)
-                            tooltips.Add(new TooltipLine(Mod, "Tooltip0", "[i:1991]" + (FargoUtils.IsChinese() ? "[c/AAAAAA:可以抓城镇NPC]" : "[c/AAAAAA:Can also catch townsfolk]")));
+                            tooltips.Add(new TooltipLine(Mod, "Tooltip0", "[i:1991] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:可以抓城镇NPC]" : "[c/AAAAAA:Can also catch townsfolk]")));
                         break;
 
                 }
@@ -90,25 +90,25 @@ namespace Fargowiltas.Items
                 {
                     if (item.type == ItemID.FishingPotion)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373]" + (FargoUtils.IsChinese() ?  "[c/AAAAAA:多抛出一条鱼线]" : "[c/AAAAAA:Also grants one extra lure]"));
+                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ?  "[c/AAAAAA:多抛出一条鱼线]" : "[c/AAAAAA:Also grants one extra lure]"));
                     tooltips.Insert(3, line);
                     }
 
                     if (item.type == ItemID.FiberglassFishingPole || item.type == ItemID.FisherofSouls || item.type == ItemID.Fleshcatcher || item.type == ItemID.ScarabFishingRod || item.type == ItemID.BloodFishingRod)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373]" + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出两条鱼线]" : "[c/AAAAAA:This rod fires 2 lures]"));
+                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出两条鱼线]" : "[c/AAAAAA:This rod fires 2 lures]"));
                         tooltips.Insert(3, line);
                     }
 
                     if (item.type == ItemID.MechanicsRod || item.type == ItemID.SittingDucksFishingRod)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373]" + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出三条鱼线]" : "[c/AAAAAA:This rod fires 3 lures]"));
+                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出三条鱼线]" : "[c/AAAAAA:This rod fires 3 lures]"));
                         tooltips.Insert(3, line);
                     }
 
                     if (item.type == ItemID.GoldenFishingRod || item.type == ItemID.HotlineFishingHook)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373]" + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出五条鱼线]" : "[c/AAAAAA:This rod fires 5 lures]"));
+                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出五条鱼线]" : "[c/AAAAAA:This rod fires 5 lures]"));
                         tooltips.Insert(3, line);
                     }
                 }
@@ -117,7 +117,7 @@ namespace Fargowiltas.Items
                 {
                     if (item.buffType != 0)
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87]" + (FargoUtils.IsChinese() ? "[c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠30个时获得无尽增益]" : "[c/AAAAAA:Unlimited buff at thirty stack in inventory, Piggy Bank, or Safe]"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠30个时获得无尽增益]" : "[c/AAAAAA:Unlimited buff at thirty stack in inventory, Piggy Bank, or Safe]"));
                         tooltips.Add(line);
                     }
                     else if (item.type == ItemID.SharpeningStation
@@ -126,7 +126,7 @@ namespace Fargowiltas.Items
                             || item.type == ItemID.BewitchingTable
                             || item.type == ItemID.SliceOfCake)
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87]" + (FargoUtils.IsChinese() ? "c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠15个时获得无尽增益" : "[c/AAAAAA:Unlimited buff at thirty stack in inventory, Piggy Bank, or Safe]"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠15个时获得无尽增益" : "[c/AAAAAA:Unlimited buff at thirty stack in inventory, Piggy Bank, or Safe]"));
                         tooltips.Add(line);
                     }
                 }
@@ -135,7 +135,7 @@ namespace Fargowiltas.Items
                 {
                     if (Informational.Contains(item.type) || Construction.Contains(item.type))
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87]" + (FargoUtils.IsChinese() ? "[c/AAAAAA:在猪猪存钱罐和保险箱中同样生效]" : "[c/AAAAAA:Works from Piggy Bank and Safe]"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:在猪猪存钱罐和保险箱中同样生效]" : "[c/AAAAAA:Works from Piggy Bank and Safe]"));
                         tooltips.Add(line);
                     }
                 }

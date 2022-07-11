@@ -113,7 +113,6 @@ Mods: {
 			CatchNPCs: "[i:267] 可以抓城镇NPC"
 			NPCSales: "[i:267] NPC卖额外商品"
 			SaferBoundNPCs: "[i:1274] 可救援的NPC不会受到接触伤害"
-			SquirrelTooltips: "[i:239] 标记松鼠售卖的物品"
 
 			SeasonsHeader: 季节性事件
 			Halloween: "[i:1774] 开启万圣节"
@@ -129,13 +128,14 @@ Mods: {
 			UnlimitedHeader: 无限效果
 			UnlimitedAmmo: "[i:771] 在困难模式中，背包中的某种弹药多于3996时不消耗"
 			UnlimitedConsumableWeapons: "[i:42] 在困难模式中，某种消耗品武器多于3996时不消耗"
-			UnlimitedPotionBuffsOn120: "[i:292] 背包/猪猪存钱罐中有30/15以上增益物品时获得无尽时长的增益"
+			UnlimitedPotionBuffsOn120: "[i:292] 携带30/15以上增益物品时获得无尽时长的增益"
 			UnlimitedPotionBuffsOn120Tooltip: 对于药水需要30瓶，对于职业增益站（比如利器站）需要15台
 
 			MiscHeader: 杂项
 			ExtraBuffSlots: "[i:3000] 额外增益栏上限"
+			ExpandedTooltips: "[i:171] 更多说明模组改动的道具提示"
 			AnglerQuestInstantReset: "[i:2374] 渔夫任务提交后立即重置"
-			ExtraLures: "[i:2294] 钓鱼竿有额外鱼线"
+			ExtraLures: "[i:2373] 钓鱼竿有额外鱼线"
 			StalkerMoneyTrough: "[i:3213] 钱币槽跟踪玩家"
 			RottenEggs: "[i:1809] 强力臭蛋（秒杀NPC）"
 			BannerRecipes: "[i:1683] 旗帜合成表"
@@ -392,6 +392,7 @@ Mods: {
 			OverloadCultist: 狂热者暴动
 			OverloadDarkMage: 绝对禁忌之书
 			OverloadDeer: 融合巨鹿
+			OverloadDestroyer: 地震触发器
 			OverloadedSlimeRain: 相当黏的晴雨表
 			OverloadEmpress: 草蛉罐
 			Overloader: 过载
