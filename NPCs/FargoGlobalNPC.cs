@@ -1355,7 +1355,7 @@ namespace Fargowiltas.NPCs
 
             if (npc.type == NPCID.DD2Betsy && !PandoraActive)
             {
-                FargoUtils.PrintText("Betsy has been defeated!", new Color(175, 75, 0));
+                FargoUtils.PrintText(FargoUtils.IsChinese() ? "双足翼龙已被击败！" : "Betsy has been defeated!", new Color(175, 75, 0));
                 FargoWorld.DownedBools["betsy"] = true;
             }
 
