@@ -303,5 +303,22 @@ namespace Fargowiltas
             base.ModifyInterfaceLayers(layers);
             Fargowiltas.UserInterfaceManager.ModifyInterfaceLayers(layers);
         }
+
+        public override void AddRecipes()
+        {
+            base.AddRecipes();
+
+            Fargowiltas.summonTracker.FinalizeSummonData();
+
+            FargoRecipes recipes = new FargoRecipes(Fargowiltas.Instance);
+            recipes.AddRecipes();
+        }
+
+        public override void AddRecipeGroups()
+        {
+            base.AddRecipeGroups();
+
+            FargoRecipes.AddRecipeGroups();
+        }
     }
 }
