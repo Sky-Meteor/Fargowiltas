@@ -85,7 +85,7 @@ namespace Fargowiltas
 
             HomeKey = KeybindLoader.RegisterKeybind(this, FargoUtils.IsChinese() ? "快速回家" : "Quick Recall/Mirror", "Home");
             RodKey = KeybindLoader.RegisterKeybind(this, FargoUtils.IsChinese() ? "快捷混沌传送杖" : "Quick Rod of Discord", "E");
-            CustomKey = KeybindLoader.RegisterKeybind(this, FargoUtils.IsChinese() ? "快捷使用背包右下角物品" : "Quick Use Custom (Bottom Left Inventory Slot)", "K");
+            CustomKey = KeybindLoader.RegisterKeybind(this, FargoUtils.IsChinese() ? "快捷使用背包左下角物品" : "Quick Use Custom (Bottom Left Inventory Slot)", "K");
 
             StatKey = KeybindLoader.RegisterKeybind(this, FargoUtils.IsChinese() ? "打开属性统计表" : "Open Stat Sheet", "M");
 
