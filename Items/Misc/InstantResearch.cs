@@ -48,7 +48,7 @@ namespace Fargowiltas.Items.Misc
 					}
 				}
 
-				FargoUtils.PrintText(FargoUtils.IsChinese() ? $"ÒÑÑĞ¾¿{count}¸öÎïÆ·" : $"researched {count} items");
+				FargoUtils.PrintText(FargoUtils.IsChinese() ? $"å·²ç ”ç©¶{count}ä¸ªç‰©å“" : $"researched {count} items");
 			}
 
 			return true;
