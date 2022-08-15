@@ -397,7 +397,7 @@ namespace Fargowiltas
                 {
                     Main.windSpeedTarget = 0;
                     Main.windSpeedCurrent = 0;
-                    FargoUtils.PrintText(FargoUtils.IsChinese() ? "大风停止了号叫！" : "The wind has ended!", 175, 75, 255);
+                    FargoUtils.PrintText(FargoUtils.IsChinese() ? "狂风已经平息！" : "The wind has ended!", 175, 75, 255);
                 }
 
                 if (Main.slimeRain)
