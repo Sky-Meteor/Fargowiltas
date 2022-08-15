@@ -29,7 +29,7 @@ namespace Fargowiltas.Items.Summons.Abom
         {
             FargoWorld.Matsuri = false;
             if (FargoUtils.IsChinese())
-                FargoUtils.PrintText("出现灯笼夜的概率恢复正常", new Color(175, 75, 255));
+                FargoUtils.PrintText("出现灯笼夜的概率恢复正常。", new Color(175, 75, 255));
             else
                 FargoUtils.PrintText("Lantern Night rate restored to default.", new Color(175, 75, 255));
             
