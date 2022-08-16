@@ -46,11 +46,11 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                 if (Main.netMode == 2)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "南瓜月消逝！" : "The Pumpkin Moon fades away!"), new Color(175, 75, 255));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "南瓜月消逝……" : "The Pumpkin Moon fades away!"), new Color(175, 75, 255));
                 }
                 else
                 {
-                    Main.NewText(FargoUtils.IsChinese() ? "南瓜月消逝！" : "The Pumpkin Moon fades away!", 175, 75, 255);
+                    Main.NewText(FargoUtils.IsChinese() ? "南瓜月消逝……" : "The Pumpkin Moon fades away!", 175, 75, 255);
                 }
             }
             else
