@@ -74,11 +74,11 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                     if (Main.netMode == 2)
                     {
-                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "波数: 20: 一切" : "Wave: 20: Everything"), new Color(175, 75, 255));
+                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "波数：20：一切" : "Wave: 20: Everything"), new Color(175, 75, 255));
                     }
                     else
                     {
-                        Main.NewText(FargoUtils.IsChinese() ? "波数: 20: 一切" : "Wave: 20: Everything", 175, 75, 255);
+                        Main.NewText(FargoUtils.IsChinese() ? "波数：20：一切" : "Wave: 20: Everything", 175, 75, 255);
                     }
                 }
                 else
