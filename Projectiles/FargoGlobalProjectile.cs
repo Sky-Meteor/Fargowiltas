@@ -16,24 +16,27 @@ namespace Fargowiltas.Projectiles
 
         public override void SetDefaults(Projectile projectile)
         {
-            if (projectile.CountsAsClass(DamageClass.Summon) || projectile.minion || projectile.sentry || projectile.minionSlots > 0 || ProjectileID.Sets.MinionShot[projectile.type] || ProjectileID.Sets.SentryShot[projectile.type])
-            {
-                if (!ProjectileID.Sets.IsAWhip[projectile.type])
-                    lowRender = true;
-            }
+            //if (projectile.CountsAsClass(DamageClass.Summon) || projectile.minion || projectile.sentry || projectile.minionSlots > 0 || ProjectileID.Sets.MinionShot[projectile.type] || ProjectileID.Sets.SentryShot[projectile.type])
+            //{
+            //    if (!ProjectileID.Sets.IsAWhip[projectile.type])
+            //        lowRender = true;
+            //}
 
-            switch (projectile.type)
-            {
-                case ProjectileID.FlowerPetal:
-                case ProjectileID.HallowStar:
-                case ProjectileID.RainbowFront:
-                case ProjectileID.RainbowBack:
-                    lowRender = true;
-                    break;
+            //switch (projectile.type)
+            //{
+            //    case ProjectileID.FlowerPetal:
+            //    case ProjectileID.HallowStar:
+            //    case ProjectileID.RainbowFront:
+            //    case ProjectileID.RainbowBack:
+            //        lowRender = true;
+            //        break;
 
-                default:
-                    break;
-            }
+            //    default:
+            //        break;
+            //}
+
+            if (projectile.friendly)
+                lowRender = true;
         }
 
         public override void OnSpawn(Projectile projectile, IEntitySource source)
@@ -154,9 +157,9 @@ namespace Fargowiltas.Projectiles
 
         public override Color? GetAlpha(Projectile projectile, Color lightColor)
         {
-            if (lowRender && !projectile.hostile && GetInstance<FargoConfig>().TransparentMinions < 1)
+            if (lowRender && !projectile.hostile && GetInstance<FargoConfig>().TransparentFriendlyProjectiles < 1)
             {
-                lightColor *= GetInstance<FargoConfig>().TransparentMinions;
+                lightColor *= GetInstance<FargoConfig>().TransparentFriendlyProjectiles;
                 return lightColor;
             }
 

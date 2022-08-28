@@ -38,6 +38,7 @@ namespace Fargowiltas.NPCs
             Soul,
             Potion,
             Other,
+            Acorn,
             None
         }
 
@@ -412,6 +413,16 @@ namespace Fargowiltas.NPCs
                 if (Main.npc[i].active && Main.npc[i].townNPC && Items.CaughtNPCs.CaughtNPCItem.CaughtTownies.ContainsKey(Main.npc[i].type))
                     AddToCollection(Items.CaughtNPCs.CaughtNPCItem.CaughtTownies[Main.npc[i].type], ShopGroup.Other, itemCollections);
             }
+
+            //add acorns to shop
+            AddToCollection(ItemID.Acorn, ShopGroup.Acorn, itemCollections);
+            AddToCollection(ItemID.GemTreeAmberSeed, ShopGroup.Acorn, itemCollections);
+            AddToCollection(ItemID.GemTreeAmethystSeed, ShopGroup.Acorn, itemCollections);
+            AddToCollection(ItemID.GemTreeDiamondSeed, ShopGroup.Acorn, itemCollections);
+            AddToCollection(ItemID.GemTreeEmeraldSeed, ShopGroup.Acorn, itemCollections);
+            AddToCollection(ItemID.GemTreeRubySeed, ShopGroup.Acorn, itemCollections);
+            AddToCollection(ItemID.GemTreeSapphireSeed, ShopGroup.Acorn, itemCollections);
+            AddToCollection(ItemID.GemTreeTopazSeed, ShopGroup.Acorn, itemCollections);
 
             List<int> sellableItems = new List<int>();
             for (int i = 0; i < itemCollections.Length; i++)

@@ -17,7 +17,8 @@ namespace Fargowiltas.NPCs
     [AutoloadHead]
     public class Deviantt : ModNPC
     {
-        private bool saidDefeatQuote;
+        private bool canSayDefeatQuote = true;
+        private int defeatQuoteTimer = 900;
 
         //public override bool Autoload(ref string name)
         //{
@@ -110,6 +111,10 @@ namespace Fargowiltas.NPCs
         public override void AI()
         {
             NPC.breath = 200;
+            if (defeatQuoteTimer > 0)
+                defeatQuoteTimer--;
+            else
+                canSayDefeatQuote = false;
         }
 
         public override List<string> SetNPCNameList()
@@ -138,14 +143,18 @@ namespace Fargowiltas.NPCs
                 return text;
             }
 
-            if (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("EridanusArmor") && Main.rand.NextBool())
+            if (Fargowiltas.ModLoaded["FargowiltasSouls"] && Main.rand.NextBool())
             {
-                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Eridanus");
+                if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("EridanusArmor"))
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Eridanus");
+
+                if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("NekomiArmor"))
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Nekomi");
             }
 
-            if (NPC.homeless && !saidDefeatQuote && Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedDevi"))
+            if (NPC.homeless && canSayDefeatQuote && Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedDevi"))
             {
-                saidDefeatQuote = true;
+                canSayDefeatQuote = false;
                 return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Defeat");
             }
 

@@ -1,6 +1,16 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
+NEW UPDATE - V 2.8.4
+-Siblings will only say their defeat quotes if spoken to shortly after being defeated
+-Transparent Minions & Support Attacks config is now Transparent Friendly Projectiles config
+-Deviantt can comment on Nekomi armor if you wear it
+-Acorns are now sold by Squirrel instead of Lumberjack, resolving a crucial lore inconsistency
+-Fixed DPS Meter not working properly from Piggy Bank
+-Fixed Instahouse being able to destroy blocks with its Torch when it shouldn't
+-Fixed tooltips indicating the wrong stack amount for unlimited station buffs
+-Tried reducing Boom Shuriken lag
+
 NEW UPDATE - V 2.8.3
 -Added crate recipe for Demon Conch
 -Added Empress bag recipe for Prismatic Dye
@@ -8,7 +18,6 @@ NEW UPDATE - V 2.8.3
 -Squirrel sells Battle Cry
 -Unlimited Buffs have tooltips and work in Safe
 -Informational and Construction Accessories work in Safe
--Fixed DPS Meter not working properly from Piggy Bank
 
 NEW UPDATE - V 2.8.2
 -Added Endless Coin Bags

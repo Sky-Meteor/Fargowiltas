@@ -148,6 +148,11 @@ namespace Fargowiltas.Projectiles.Explosives
             int xPosition = (int)((side * -1) + x + position.X / 16.0f);
             int yPosition = (int)(y + position.Y / 16.0f);
 
+            Tile tile = Main.tile[xPosition, yPosition];
+            // Testing for blocks that should not be destroyed
+            if (!FargoGlobalProjectile.OkayToDestroyTile(tile))
+                return;
+
             if (y == -1)
             {
                 if (Math.Abs(x) == 1)

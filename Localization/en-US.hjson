@@ -147,7 +147,8 @@ Mods: {
 			FasterLavaFishing: "[i:4881] Faster Fishing in Lava"
 			DebuffOpacity: "[i:1612] Debuff Display Max Opacity"
 			DebuffFaderRatio: "[i:1612] Debuff Duration Fader Strength"
-			TransparentMinions: "[i:1309] Transparent Minions & Support Attacks"
+			TransparentFriendlyProjectiles: "[i:1309] Transparent Friendly Projectiles"
+			TransparentFriendlyProjectilesTooltip: "Use with vanilla setting for Quality at Medium or Low for best results"
 		}
 
 		RecipeGroups: {

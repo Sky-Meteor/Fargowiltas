@@ -27,22 +27,26 @@ namespace Fargowiltas.Projectiles.Explosives
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            Projectile.Kill();
+            Projectile.timeLeft = 0;
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            Projectile.Kill();
+            Projectile.timeLeft = 0;
             return false;
         }
 
         public override void Kill(int timeLeft)
         {
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0, ModContent.ProjectileType<Explosion>(), 0, Projectile.knockBack, Projectile.owner);
+            if (Projectile.owner == Main.myPlayer)
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0, ModContent.ProjectileType<Explosion>(), 0, Projectile.knockBack, Projectile.owner);
 
             Vector2 position = Projectile.Center;
             SoundEngine.PlaySound(SoundID.Item14, position);
             int radius = 16;     // bigger = boomer
+
+            Player player = Main.player[Projectile.owner];
+            Item bestPickaxe = player.GetBestPickaxe();
 
             for (int x = -radius; x <= radius; x++)
             {
@@ -55,19 +59,20 @@ namespace Fargowiltas.Projectiles.Explosives
                         continue;
 
                     Tile tile = Main.tile[xPosition, yPosition];
-                    Player player = Main.player[Projectile.owner];
-                    Item bestPickaxe = player.GetBestPickaxe();
 
                     // Circle
                     if ((x * x + y * y) <= radius)
                     {
-                        // Hit the tile 6 times, most tiles that you can break will break in 1-3 hits.
-                        for (int i = 0; i < 6; i++)
+                        if (Projectile.owner == Main.myPlayer)
                         {
-                            if (tile.IsActuated || FargoGlobalProjectile.TileIsLiterallyAir(tile) || FargoGlobalProjectile.TileBelongsToMagicStorage(tile))
-                                break;
+                            // Hit the tile 6 times, most tiles that you can break will break in 1-3 hits.
+                            for (int i = 0; i < 6; i++)
+                            {
+                                if (tile.IsActuated || FargoGlobalProjectile.TileIsLiterallyAir(tile) || FargoGlobalProjectile.TileBelongsToMagicStorage(tile))
+                                    break;
 
-                            player.PickTile(xPosition, yPosition, bestPickaxe != null ? bestPickaxe.pick : 35);
+                                player.PickTile(xPosition, yPosition, bestPickaxe != null ? bestPickaxe.pick : 35);
+                            }
                         }
 
                         Dust.NewDust(position, 22, 22, DustID.Smoke, 0.0f, 0.0f, 120);

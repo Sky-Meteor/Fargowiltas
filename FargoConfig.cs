@@ -159,15 +159,17 @@ namespace Fargowiltas
         //[DefaultValue(true)]
         //public bool DebuffCountdown;
 
-        [Label("$Mods.Fargowiltas.Config.TransparentMinions")]
+        [Label("$Mods.Fargowiltas.Config.TransparentFriendlyProjectiles")]
         [DefaultValue(1f)]
+        [Tooltip("$Mods.Fargowiltas.Config.TransparentFriendlyProjectilesTooltip")]
         [Slider]
-        public float TransparentMinions;
+        public float TransparentFriendlyProjectiles;
 
         [OnDeserialized]
         internal void OnDeserializedMethod(StreamingContext context)
         {
             ExtraBuffSlots = Utils.Clamp<uint>(ExtraBuffSlots, 0, maxExtraBuffSlots);
+            TransparentFriendlyProjectiles = Utils.Clamp(TransparentFriendlyProjectiles, 0f, 1f);
         }
     }
 }

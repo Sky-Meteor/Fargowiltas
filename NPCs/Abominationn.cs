@@ -18,7 +18,8 @@ namespace Fargowiltas.NPCs
     [AutoloadHead]
     public class Abominationn : ModNPC
     {
-        private bool saidDefeatQuote;
+        private bool canSayDefeatQuote = true;
+        private int defeatQuoteTimer = 900;
 
         //public override bool Autoload(ref string name)
         //{
@@ -109,6 +110,10 @@ namespace Fargowiltas.NPCs
         public override void AI()
         {
             NPC.breath = 200;
+            if (defeatQuoteTimer > 0)
+                defeatQuoteTimer--;
+            else
+                canSayDefeatQuote = false;
         }
 
         public override List<string> SetNPCNameList()
@@ -120,9 +125,9 @@ namespace Fargowiltas.NPCs
 
         public override string GetChat()
         {
-            if (NPC.homeless && !saidDefeatQuote && Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedAbom"))
+            if (NPC.homeless && canSayDefeatQuote && Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedAbom"))
             {
-                saidDefeatQuote = true;
+                canSayDefeatQuote = false;
                 return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.Defeat");
             }
 
@@ -170,7 +175,7 @@ namespace Fargowiltas.NPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = FargoUtils.IsChinese() ? "取消事件" : "Cancel Event";
+            button2 = FargoUtils.IsChinese() ? "ȡ���¼�" : "Cancel Event";
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)
@@ -197,12 +202,12 @@ namespace Fargowiltas.NPCs
                         netMessage.Send();
                     }
 
-                    Main.npcChatText = FargoUtils.IsChinese() ? (Fargowiltas.TryClearEvents() ? "吼吼嘿哈，事件结束了！" : $"我现在感觉不到，{FargoWorld.AbomClearCD / 60}秒之后再来吧。")
+                    Main.npcChatText = FargoUtils.IsChinese() ? (Fargowiltas.TryClearEvents() ? "���ٹ����¼������ˣ�" : $"�����ڸо�������{FargoWorld.AbomClearCD / 60}��֮�������ɡ�")
                                                               : (Fargowiltas.TryClearEvents() ? "Hocus pocus, the event is over" : $"I'm not feeling it right now, come back in {FargoWorld.AbomClearCD / 60} seconds.");
                 }
                 else
                 {
-                    Main.npcChatText = FargoUtils.IsChinese() ? "我认为现在没有事件。" : "I don't think there's an event right now.";
+                    Main.npcChatText = FargoUtils.IsChinese() ? "����Ϊ����û���¼���" : "I don't think there's an event right now.";
                 }
             }
         }

@@ -339,31 +339,6 @@ namespace Fargowiltas.NPCs
             }
 
 
-            shop.item[nextSlot].SetDefaults(ItemID.Acorn);
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.GemTreeAmethystSeed);
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.GemTreeTopazSeed);
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.GemTreeSapphireSeed);
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.GemTreeEmeraldSeed);
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.GemTreeRubySeed);
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.GemTreeDiamondSeed);
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.GemTreeAmberSeed);
-            nextSlot++;
-
-
             shop.item[nextSlot].SetDefaults(ItemID.Cactus);
             shop.item[nextSlot].shopCustomPrice = 10;
             nextSlot++;
