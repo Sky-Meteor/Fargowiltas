@@ -154,8 +154,8 @@ namespace Fargowiltas.NPCs
 
             if (NPC.homeless && canSayDefeatQuote && Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedDevi"))
             {
-                canSayDefeatQuote = false;
-                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Defeat");
+                saidDefeatQuote = true;
+                return "Good work getting one over on me! Hope I didn't make you sweat too much. Keep at the grind - I wanna see how far you can go!";
             }
 
             if (Main.bloodMoon && Main.rand.NextBool(2))
