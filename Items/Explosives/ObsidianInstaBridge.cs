@@ -50,7 +50,7 @@ namespace Fargowiltas.Items.Explosives
             CreateRecipe()
                 .AddIngredient(ItemID.Dynamite, 10)
                 .AddIngredient(ItemID.ObsidianPlatform, 1000)
-                .AddIngredient(ItemID.FallenStar, 5)
+                .AddIngredient(ItemID.FallenStar, 3)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

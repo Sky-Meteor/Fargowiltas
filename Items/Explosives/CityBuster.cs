@@ -37,7 +37,7 @@ Use at your own risk");
         {
             CreateRecipe()
                 .AddIngredient(ItemID.Dynamite, 50)
-                .AddIngredient(ItemID.FallenStar, 5)
+                .AddIngredient(ItemID.FallenStar, 1)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

@@ -38,7 +38,7 @@ namespace Fargowiltas.Items.Explosives
         {
             CreateRecipe(20)
                 .AddIngredient(ItemID.Shuriken, 20)
-                .AddIngredient(ItemID.Dynamite, 5)
+                .AddIngredient(ItemID.Dynamite, 1)
                 .AddTile(TileID.Anvils)
                 .Register();
         }
