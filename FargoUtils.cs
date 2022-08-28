@@ -116,7 +116,7 @@ namespace Fargowiltas
 
         public static void PrintText(string text, int r, int g, int b) => PrintText(text, new Color(r, g, b));
 
-        public static bool IsChinese =>  Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
+        public static bool IsChinese() =>  Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
 
         public static string Loc(string en, string zh = null) => (IsChinese && zh != null) ? zh : en;
     }
