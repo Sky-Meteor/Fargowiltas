@@ -46,7 +46,7 @@ namespace Fargowiltas
             if (update)
             {
                 string text = $"A new item has been unlocked in {seller}'s shop!";
-                if (IsChinese)
+                if (IsChinese())
                 {
                     if (seller == "Deviantt")
                     {
@@ -118,6 +118,6 @@ namespace Fargowiltas
 
         public static bool IsChinese() =>  Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
 
-        public static string Loc(string en, string zh = null) => (IsChinese && zh != null) ? zh : en;
+        public static string Loc(string en, string zh = null) => (IsChinese() && zh != null) ? zh : en;
     }
 }
