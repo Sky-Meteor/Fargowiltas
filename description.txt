@@ -38,44 +38,44 @@ NEW UPDATE - V 2.8.2
 -Restored Squirrel Blood Moon dialogue color
 -Fixed Mummy Banner not counting for desert banner recipes
 
-����һ����������������MOD������������������MOD�е�Boss�ٻ����ͻ����NPC��
-���MOD��Ҳ�кܶ������������������޵ĵ�ҩ����������ٽ���������������ƽ̨������ʯƽ̨������ֱͨ�����������޵�ҩˮ������ˢ���ʵ���Ʒ�ȵȣ�
+这是一个提升生存质量的MOD，添加了能卖几乎所有MOD中的Boss召唤物的突变体NPC。
+这个MOD中也有很多其他东西，比如无限的弹药，可制造的速建建筑，比如世界平台、黑曜石平台、地狱直通车，还有无限的药水，增加刷怪率的物品等等！
 
 NEW UPDATE - V 2.8.4
--Siblings will only say their defeat quotes if spoken to shortly after being defeated
--Transparent Minions & Support Attacks config is now Transparent Friendly Projectiles config
--Deviantt can comment on Nekomi armor if you wear it
--Acorns are now sold by Squirrel instead of Lumberjack, resolving a crucial lore inconsistency
--Fixed DPS Meter not working properly from Piggy Bank
--Fixed Instahouse being able to destroy blocks with its Torch when it shouldn't
--Fixed tooltips indicating the wrong stack amount for unlimited station buffs
--Tried reducing Boom Shuriken lag
--Reduced recipe requirements for most explosives
+-如果在击败后的短时间内与三兄妹对话，他们会说自己的被击败对话
+-透明的仆从和协同攻击配置现在改为透明的友方弹幕配置
+-戴薇安会在玩家穿着猫猫睡衣套装的时候触发对话
+-现在是松鼠卖橡实而不是戴薇安,解决与对话的矛盾
+-修复了每秒伤害计数器在猪猪存钱罐中不正常生效
+-修复了速建房屋可以用火把破坏它不能破坏的方块
+-修复了无尽站增益描述的错误数量
+-尝试降低爆炸手里剑卡顿
+-减少大部分炸药的合成表需求
 
 NEW UPDATE - V 2.8.3
--Ϊ��ħ��������˺ϳɱ�
--������ù�֮Ů�ʱ��ش��ϳ��߲�Ⱦ�ϵĺϳɱ�
--�ɶ�Ů�����ɶ��ڼ�������
--������ս���Ž�
--�޾������������ʾ�����ڱ���������Ч
--��Ϣ��Ʒ�ͽ�����Ʒ�ڱ���������Ч
--�޸���DPS�������������Ǯ���в�����ȷ��Ч��bug
+-为恶魔海螺添加了合成表
+-添加了用光之女皇宝藏袋合成七彩染料的合成表
+-派对女孩在派对期间卖蛋糕块
+-松鼠卖战争号角
+-无尽增益添加了提示并且在保险箱中生效
+-信息饰品和建筑饰品在保险箱中生效
+-修复了DPS计数器在猪猪存钱罐中不能正确生效的bug
 
 NEW UPDATE - V 2.8.2
--���������Ǯ�Ҵ�
--��������������ĺϳɱ�
--����˷��۷�����ϳɱ�
--�����ʩ�����ϳɱ���õ���ϻ��
--����˽�״ˮ���ϳɱ�
--�����ʪը���ϳɱ�
--������ٽ����ߵĹ�����ʾ����
--�����Ѫ��з����Ѫ������Ѫ��˾ƴ�̵ĺϳɱ�
--����Ƭ�����ڱ����п�����ְҵ����վһ����ЧΪ��������
--������Ϲ���/˪�£��е�ϡ�йֺ�Boss���ٻ������ڿ�����ҹ��������Ч������������
--���ȹ��ĺϳ�������Ҫ������
--��΢������п��ǵı�ը��Χ
--ʹĹ�����Ǹ����۲����ӱ�ը��Χ
--ս���Ž���������Ч��
--�ָ��˸�ñ������Ѫ��ʱ�ĶԻ���ɫ
--�޸���ľ�������Ĳ�����ɳĮ������
+-添加了无限钱币袋
+-添加了蝙蝠棒的旗帜合成表
+-添加了蜂蜜分配机合成表
+-添加了施法桌合成表（用地牢匣）
+-添加了胶状水晶合成表
+-添加了湿炸弹合成表
+-添加了速建道具的工具提示解释
+-添加了血浆蟹饵，血海胆，血寿司拼盘的合成表
+-蛋糕片现在在背包中可以像职业增益站一样生效为无限增益
+-憎恶的南瓜月/霜月（中的稀有怪和Boss）召唤物现在可以在夜晚正常生效并产生掉落物
+-火腿棍的合成现在需要秘银砧
+-略微增大城市克星的爆炸范围
+-使墓碑克星更廉价并增加爆炸范围
+-战争号角现在有镇静效果
+-恢复了高帽松鼠在血月时的对话颜色
+-修复了木乃伊旗帜不算做沙漠怪旗帜
 
