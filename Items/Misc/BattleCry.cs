@@ -31,14 +31,15 @@ namespace Fargowiltas.Items.Misc
 
         public override bool AltFunctionUse(Player player) => true;
 
-        void ToggleCry(bool isBattle, string playerName, ref bool cry)
+        public static void GenerateText(bool isBattle, Player player, bool cry)
         {
-            cry = !cry;
             string cryToggled = FargoUtils.IsChinese() ? (isBattle ? "战争" : "镇静") : (isBattle ? "Battle" : "Calming");
             string toggle = FargoUtils.IsChinese() ? (cry ? "生效" : "停止生效") : (cry ? "activated" : "deactivated");
             string punctuation = FargoUtils.IsChinese() ? (isBattle ? "！" : "。") : (isBattle ? "!" : ".");
+
+            string text = FargoUtils.IsChinese() ? $"{cryToggled}号角已对{player.name}{toggle}{punctuation}" : $"{cryToggled} Cry {toggle} for {player.name}{punctuation}";
             Color color = isBattle ? new Color(255, 0, 0) : new Color(0, 255, 255);
-            FargoUtils.PrintText(FargoUtils.IsChinese() ? $"{cryToggled}号角已对{playerName}{toggle}{punctuation}" : $"{cryToggled} Cry {toggle} for {playerName}{punctuation}", color);
+            FargoUtils.PrintText(text, color);
         }
 
         public override bool? UseItem(Player player)
@@ -47,16 +48,16 @@ namespace Fargowiltas.Items.Misc
             if (player.altFunctionUse == 2)
             {
                 if (modPlayer.BattleCry)
-                    ToggleCry(true, player.name, ref modPlayer.BattleCry);
+                    ToggleCry(true, player, ref modPlayer.BattleCry);
 
-                ToggleCry(false, player.name, ref modPlayer.CalmingCry);
+                ToggleCry(false, player, ref modPlayer.CalmingCry);
             }
             else
             {
                 if (modPlayer.CalmingCry)
-                    ToggleCry(false, player.name, ref modPlayer.CalmingCry);
+                    ToggleCry(false, player, ref modPlayer.CalmingCry);
 
-                ToggleCry(true, player.name, ref modPlayer.BattleCry);
+                ToggleCry(true, player, ref modPlayer.BattleCry);
             }
 
             if (!Main.dedServ)

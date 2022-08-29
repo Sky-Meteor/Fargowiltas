@@ -9,8 +9,10 @@ NEW UPDATE - V 2.8.4
 -Fixed DPS Meter not working properly from Piggy Bank
 -Fixed Instahouse being able to destroy blocks with its Torch when it shouldn't
 -Fixed tooltips indicating the wrong stack amount for unlimited station buffs
+-Fixed Calming Cry message not appearing in multiplayer
 -Tried reducing Boom Shuriken lag
 -Reduced recipe requirements for most explosives
+-Increased dimensions of Lihzahrd Instactuation Bomb
 
 NEW UPDATE - V 2.8.3
 -Added crate recipe for Demon Conch
@@ -49,8 +51,10 @@ NEW UPDATE - V 2.8.4
 -修复了每秒伤害计数器在猪猪存钱罐中不正常生效
 -修复了速建房屋可以用火把破坏它不能破坏的方块
 -修复了无尽站增益描述的错误数量
+-修复镇静号角在多人模式中不发出消息
 -尝试降低爆炸手里剑卡顿
 -减少大部分炸药的合成表需求
+-增加了丛林蜥蜴炸弹的范围
 
 NEW UPDATE - V 2.8.3
 -为恶魔海螺添加了合成表

@@ -338,6 +338,16 @@ namespace Fargowiltas
                     }
                     break;
 
+                    //client requested server to broadcast battle cry message
+                case 7:
+                    {
+                        bool isBattle = reader.ReadBoolean();
+                        int p = reader.ReadInt32();
+                        bool cry = reader.ReadBoolean();
+                        BattleCry.GenerateText(isBattle, Main.player[p], cry);
+                    }
+                    break;
+
                 default:
                     break;
             }

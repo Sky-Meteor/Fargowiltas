@@ -44,7 +44,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
             bool WipeColumn(int i)
             {
-                for (int j = 0; j >= -50; j--)
+                for (int j = 0; j >= -60; j--)
                 {
                     int tileX = xPos + i;
                     int tileY = yPos + j;
@@ -115,8 +115,8 @@ namespace Fargowiltas.Projectiles.Explosives
                 return true;
             }
 
-            int leftMax = 50;
-            int rightMax = 50;
+            int leftMax = 60;
+            int rightMax = 60;
 
             int leftTry = 0;
             for (; leftTry >= -leftMax; leftTry--) //try clearing left side
