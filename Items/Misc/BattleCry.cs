@@ -39,7 +39,27 @@ namespace Fargowiltas.Items.Misc
 
             string text = FargoUtils.IsChinese() ? $"{cryToggled}号角已对{player.name}{toggle}{punctuation}" : $"{cryToggled} Cry {toggle} for {player.name}{punctuation}";
             Color color = isBattle ? new Color(255, 0, 0) : new Color(0, 255, 255);
+
             FargoUtils.PrintText(text, color);
+        }
+
+        void ToggleCry(bool isBattle, Player player, ref bool cry)
+        {
+            cry = !cry;
+
+            if (Main.netMode == NetmodeID.SinglePlayer)
+            {
+                GenerateText(isBattle, player, cry);
+            }
+            else if (Main.netMode == NetmodeID.MultiplayerClient && player.whoAmI == Main.myPlayer)
+            {
+                var packet = Mod.GetPacket();
+                packet.Write((byte)7);
+                packet.Write(isBattle);
+                packet.Write(player.whoAmI);
+                packet.Write(cry);
+                packet.Send();
+            }
         }
 
         public override bool? UseItem(Player player)
