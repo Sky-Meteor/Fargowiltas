@@ -159,6 +159,11 @@ namespace Fargowiltas.Projectiles
         {
             if (lowRender && !projectile.hostile && GetInstance<FargoConfig>().TransparentFriendlyProjectiles < 1)
             {
+                Color? color = projectile.ModProjectile?.GetAlpha(lightColor);
+                if (color != null)
+                {
+                    return color.Value * GetInstance<FargoConfig>().TransparentFriendlyProjectiles;
+                }
                 lightColor *= GetInstance<FargoConfig>().TransparentFriendlyProjectiles;
                 return lightColor;
             }

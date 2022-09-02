@@ -27,7 +27,7 @@ namespace Fargowiltas.NPCs
             SomeMaterialsSold, //sells materials with names matching the associated shopgroup
             CraftableMaterialsSold,
             SoldAtThirtyStack,
-            None
+            End
         }
 
         public enum ShopGroup
@@ -39,7 +39,7 @@ namespace Fargowiltas.NPCs
             Potion,
             Other,
             Acorn,
-            None
+            End
         }
 
         public override bool UsesPartyHat() => false;
@@ -320,8 +320,8 @@ namespace Fargowiltas.NPCs
                 }
             }
 
-            sellType = SquirrelSellType.None;
-            return ShopGroup.None;
+            sellType = SquirrelSellType.End;
+            return ShopGroup.End;
         }
 
         private void AddToCollection(int type, ShopGroup group, List<int>[] itemCollections)
@@ -376,7 +376,7 @@ namespace Fargowiltas.NPCs
                         AddToCollection(item.type, shopGroup, itemCollections);
                     break;
 
-                case SquirrelSellType.None:
+                case SquirrelSellType.End:
                 default:
                     break;
             }
@@ -384,7 +384,7 @@ namespace Fargowiltas.NPCs
 
         private List<int> GetSellableItems()
         {
-            List<int>[] itemCollections = new List<int>[7]; //so they can be grouped by category
+            List<int>[] itemCollections = new List<int>[(int)ShopGroup.End]; //so they can be grouped by category
             for (int i = 0; i < itemCollections.Length; i++)
                 itemCollections[i] = new List<int>();
 
