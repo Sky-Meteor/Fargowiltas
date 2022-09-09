@@ -1,4 +1,6 @@
 using Fargowiltas.Items.Tiles;
+using Microsoft.Xna.Framework;
+using System.Linq;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -49,6 +51,87 @@ namespace Fargowiltas.Tiles
                 if (FargoWorld.WoodChopped > 500)
                 {
                     FargoWorld.DownedBools["lumberjack"] = true;
+                }
+            }
+        }
+
+        private static uint LastTorchUpdate;
+        private readonly int[] TorchesToReplace = new int[]
+        {
+            //13,   //bone, but there's never a penalty for using this, so its ok to place and not remove
+            7,      //demon, but this never gives a bonus for some reason
+            20,     //hallow
+            18,     //corrupt
+            19,     //crimson
+            9,      //ice
+            21,     //jungle
+            16,     //desert
+            17,     //coral - not actually on the default torch rotation for some reason???
+            0,      //regular torch
+        };
+
+        private enum TorchStyle : int
+        {
+            None = 0,
+            Bone = 13,
+            Demon = 7,
+            Hallow = 20,
+            Corrupt = 18,
+            Crimson = 19,
+            Ice = 9,
+            Jungle = 21,
+            Desert = 16,
+            Coral = 17
+        };
+
+        public override void NearbyEffects(int i, int j, int type, bool closer)
+        {
+            if (closer && TileID.Sets.Torch[type] && !Main.dedServ
+                && Main.LocalPlayer.UsingBiomeTorches
+                && (LastTorchUpdate < Main.GameUpdateCount - 60 || LastTorchUpdate == Main.GameUpdateCount))
+            {
+                //check for == is so that all torches can update on the same tick
+                LastTorchUpdate = Main.GameUpdateCount;
+
+                if (ModContent.GetInstance<FargoConfig>().TorchGodEX
+                    && Main.LocalPlayer.ShoppingZone_BelowSurface //torch luck only applies underground
+                    && !Main.LocalPlayer.ZoneDungeon && !Main.LocalPlayer.ZoneLihzhardTemple //torch luck doesnt apply here
+                    )
+                {
+                    int torch = Framing.GetTileSafely(i, j).TileFrameY / 22;
+
+                    //PLEASE don't ask me anything about torch luck logic.
+                    bool replaceTorch = TorchesToReplace.Contains(torch);
+                    if (replaceTorch)
+                    {
+                        if ((torch == (int)TorchStyle.Hallow && Main.LocalPlayer.ZoneHallow)
+                            || (torch == (int)TorchStyle.Corrupt && Main.LocalPlayer.ZoneCorrupt)
+                            || (torch == (int)TorchStyle.Crimson && Main.LocalPlayer.ZoneCrimson)
+                            || (torch == (int)TorchStyle.Desert && (Main.LocalPlayer.ZoneDesert || Main.LocalPlayer.ZoneUndergroundDesert))
+                            || (torch == (int)TorchStyle.Jungle && Main.LocalPlayer.ZoneJungle)
+                            || (torch == (int)TorchStyle.Coral && Main.LocalPlayer.ZoneBeach)
+                            )
+                        {
+                            replaceTorch = false;
+                        }
+                    }
+
+                    if (replaceTorch)
+                    {
+                        int correctTorch = Main.LocalPlayer.BiomeTorchPlaceStyle(0);
+                        if (correctTorch == (int)TorchStyle.Demon)
+                            correctTorch = (int)TorchStyle.Bone; //because bone gives bonus in hell but demon doesnt????
+                        else if (Main.LocalPlayer.ZoneBeach)
+                            correctTorch = (int)TorchStyle.Coral;
+                        else if (correctTorch == (int)TorchStyle.None)
+                            correctTorch = (int)TorchStyle.Bone; //bone gives bonus in general but torch god recommends normal
+
+                        if (torch != correctTorch && TorchesToReplace.Contains(torch))
+                        {
+                            WorldGen.KillTile(i, j, noItem: true);
+                            WorldGen.PlaceTile(i, j, TileID.Torches, false, false, Main.LocalPlayer.whoAmI, correctTorch);
+                        }
+                    }
                 }
             }
         }

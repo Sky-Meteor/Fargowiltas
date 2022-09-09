@@ -145,6 +145,11 @@ namespace Fargowiltas
         [DefaultValue(true)]
         public bool FasterLavaFishing;
 
+        [Label("$Mods.Fargowiltas.Config.TorchGodEX")]
+        [Tooltip("$Mods.Fargowiltas.Config.TorchGodEXTooltip")]
+        [DefaultValue(true)]
+        public bool TorchGodEX;
+
         [Label("$Mods.Fargowiltas.Config.DebuffOpacity")]
         [DefaultValue(1f)]
         [Slider]

@@ -115,6 +115,11 @@ namespace Fargowiltas
             }
         }
 
+        public override void OnEnterWorld(Player player)
+        {
+            Items.Misc.BattleCry.SyncCry(player);
+        }
+
         public override void ResetEffects()
         {
             extractSpeed = false;

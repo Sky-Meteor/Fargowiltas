@@ -33,45 +33,47 @@ namespace Fargowiltas.Items
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            if (GetInstance<FargoConfig>().ExpandedTooltips)
+            FargoConfig fargoConfig = GetInstance<FargoConfig>();
+
+            if (fargoConfig.ExpandedTooltips)
             {
                 TooltipLine line;
 
                 switch (item.type)
                 {
                     case ItemID.PureWaterFountain:
-                        if (GetInstance<FargoConfig>().Fountains)
+                        if (fargoConfig.Fountains)
                             tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "海洋" : "Ocean"));
                         break;
 
                     case ItemID.OasisFountain:
                     case ItemID.DesertWaterFountain:
-                        if (GetInstance<FargoConfig>().Fountains)
+                        if (fargoConfig.Fountains)
                             tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "沙漠" : "Desert"));
                         break;
 
                     case ItemID.JungleWaterFountain:
-                        if (GetInstance<FargoConfig>().Fountains)
+                        if (fargoConfig.Fountains)
                             tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "丛林" : "Jungle"));
                         break;
 
                     case ItemID.IcyWaterFountain:
-                        if (GetInstance<FargoConfig>().Fountains)
+                        if (fargoConfig.Fountains)
                             tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "雪原" : "Snow"));
                         break;
 
                     case ItemID.CorruptWaterFountain:
-                        if (GetInstance<FargoConfig>().Fountains)
+                        if (fargoConfig.Fountains)
                             tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "腐化之地" : "Corruption"));
                         break;
 
                     case ItemID.CrimsonWaterFountain:
-                        if (GetInstance<FargoConfig>().Fountains)
+                        if (fargoConfig.Fountains)
                             tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "猩红之地" : "Crimson"));
                         break;
 
                     case ItemID.HallowedWaterFountain:
-                        if (GetInstance<FargoConfig>().Fountains)
+                        if (fargoConfig.Fountains)
                             tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "神圣之地（在困难模式中生效）" : "Hallow (in hardmode only)"));
                         break;
 
@@ -80,13 +82,13 @@ namespace Fargowiltas.Items
                     case ItemID.BugNet:
                     case ItemID.GoldenBugNet:
                     case ItemID.FireproofBugNet:
-                        if (GetInstance<FargoConfig>().CatchNPCs)
+                        if (fargoConfig.CatchNPCs)
                             tooltips.Add(new TooltipLine(Mod, "Tooltip0", "[i:1991] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:可以抓城镇NPC]" : "[c/AAAAAA:Can also catch townsfolk]")));
                         break;
 
                 }
 
-                if (GetInstance<FargoConfig>().ExtraLures)
+                if (fargoConfig.ExtraLures)
                 {
                     if (item.type == ItemID.FishingPotion)
                     {
@@ -113,7 +115,15 @@ namespace Fargowiltas.Items
                     }
                 }
 
-                if (GetInstance<FargoConfig>().UnlimitedPotionBuffsOn120 && item.maxStack > 1)
+                if (fargoConfig.TorchGodEX && item.type == ItemID.TorchGodsFavor)
+                {
+                    line = new TooltipLine(Mod, "TooltipTorchGod1", FargoUtils.Loc("[i:5043] [c/AAAAAA:Automatically swaps placed torches to boost luck]", "[i:5043] [c/AAAAAA:自动替换已放置的火把来增加运气]"));
+                    tooltips.Add(line);
+                    line = new TooltipLine(Mod, "TooltipTorchGod2", FargoUtils.Loc("[i:5043] [c/AAAAAA:Obeys true torch luck when replacing torches, which may differ from default choices]", "[i:5043] [c/AAAAAA:替换火把遵循火把运气，可能会与默认的选择有不同]"));
+                    tooltips.Add(line);
+                }
+
+                if (fargoConfig.UnlimitedPotionBuffsOn120 && item.maxStack > 1)
                 {
                     if (item.buffType != 0)
                     {
@@ -131,7 +141,7 @@ namespace Fargowiltas.Items
                     }
                 }
 
-                if (GetInstance<FargoConfig>().PiggyBankAcc)
+                if (fargoConfig.PiggyBankAcc)
                 {
                     if (Informational.Contains(item.type) || Construction.Contains(item.type))
                     {
@@ -140,7 +150,7 @@ namespace Fargowiltas.Items
                     }
                 }
 
-                if (Squirrel.SquirrelSells(item, out Squirrel.SquirrelSellType sellType) != Squirrel.ShopGroup.None)
+                if (Squirrel.SquirrelSells(item, out Squirrel.SquirrelSellType sellType) != Squirrel.ShopGroup.End)
                 {
                     string text = Regex.Replace(sellType.ToString(), "([a-z])([A-Z])", "$1 $2");
                     if (FargoUtils.IsChinese())

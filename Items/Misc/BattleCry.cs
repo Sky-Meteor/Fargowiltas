@@ -43,6 +43,21 @@ namespace Fargowiltas.Items.Misc
             FargoUtils.PrintText(text, color);
         }
 
+        public static void SyncCry(Player player)
+        {
+            if (player.whoAmI == Main.myPlayer && Main.netMode == NetmodeID.MultiplayerClient)
+            {
+                FargoPlayer modPlayer = player.GetModPlayer<FargoPlayer>();
+
+                ModPacket packet = modPlayer.Mod.GetPacket();
+                packet.Write((byte)8);
+                packet.Write(player.whoAmI);
+                packet.Write(modPlayer.BattleCry);
+                packet.Write(modPlayer.CalmingCry);
+                packet.Send();
+            }
+        }
+
         void ToggleCry(bool isBattle, Player player, ref bool cry)
         {
             cry = !cry;
@@ -59,25 +74,30 @@ namespace Fargowiltas.Items.Misc
                 packet.Write(player.whoAmI);
                 packet.Write(cry);
                 packet.Send();
+
+                SyncCry(player);
             }
         }
 
         public override bool? UseItem(Player player)
         {
-            FargoPlayer modPlayer = player.GetFargoPlayer();
-            if (player.altFunctionUse == 2)
+            if (player.whoAmI == Main.myPlayer)
             {
-                if (modPlayer.BattleCry)
-                    ToggleCry(true, player, ref modPlayer.BattleCry);
+                FargoPlayer modPlayer = player.GetFargoPlayer();
+                if (player.altFunctionUse == 2)
+                {
+                    if (modPlayer.BattleCry)
+                        ToggleCry(true, player, ref modPlayer.BattleCry);
 
-                ToggleCry(false, player, ref modPlayer.CalmingCry);
-            }
-            else
-            {
-                if (modPlayer.CalmingCry)
                     ToggleCry(false, player, ref modPlayer.CalmingCry);
+                }
+                else
+                {
+                    if (modPlayer.CalmingCry)
+                        ToggleCry(false, player, ref modPlayer.CalmingCry);
 
-                ToggleCry(true, player, ref modPlayer.BattleCry);
+                    ToggleCry(true, player, ref modPlayer.BattleCry);
+                }
             }
 
             if (!Main.dedServ)

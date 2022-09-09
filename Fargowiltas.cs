@@ -348,6 +348,15 @@ namespace Fargowiltas
                     }
                     break;
 
+                    //client sync battle cry states to others
+                case 8:
+                    {
+                        int p = reader.ReadInt32();
+                        Main.player[p].GetModPlayer<FargoPlayer>().BattleCry = reader.ReadBoolean();
+                        Main.player[p].GetModPlayer<FargoPlayer>().CalmingCry = reader.ReadBoolean();
+                    }
+                    break;
+
                 default:
                     break;
             }
