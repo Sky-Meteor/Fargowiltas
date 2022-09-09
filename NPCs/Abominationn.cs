@@ -137,12 +137,6 @@ namespace Fargowiltas.NPCs
                     return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.Styx");
             }
 
-            if (Fargowiltas.ModLoaded["FargowiltasSouls"] && Main.rand.NextBool(3))
-            {
-                if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("StyxArmor"))
-                    return "What nostalgic armor you're wearing... No, it doesn't fit on me anymore. And its battery takes too long to charge.";
-            }
-
             List<string> dialogue = new List<string>
             {
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.1") + (!Main.hardMode ? Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.1phm") : Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.1hm")),
