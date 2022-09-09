@@ -164,6 +164,12 @@ namespace Fargowiltas.NPCs
                     return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.TrueMutant");
             }
 
+            if (Fargowiltas.ModLoaded["FargowiltasSouls"] && Main.rand.NextBool(4))
+            {
+                if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("MutantArmor"))
+                    return "Nice armor you have, very realistic skin. As a matter of fact, mind if I borrow it? Your skin, that is.";
+            }
+
             List<string> dialogue = new List<string>
             {
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.1"),
