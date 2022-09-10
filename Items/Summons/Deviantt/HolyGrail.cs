@@ -21,5 +21,15 @@ namespace Fargowiltas.Items.Summons.Deviantt
         {
             return !Main.dayTime || player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight || player.ZoneUnderworldHeight;
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddRecipeGroup("Fargowiltas:AnyGoldBar", 3)
+                .AddIngredient(ItemID.Ruby, 3)
+                .AddIngredient(ItemID.WineGlass)
+                .AddTile(TileID.DemonAltar)
+                .Register();
+        }
     }
 }

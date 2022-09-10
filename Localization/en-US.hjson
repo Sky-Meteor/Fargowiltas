@@ -145,6 +145,8 @@ Mods: {
 			BossZen: "[i:3117] No enemies spawn during boss fights"
 			PiggyBankAcc: "[i:87] Informational and Construction Accessories work in Piggy Bank"
 			FasterLavaFishing: "[i:4881] Faster Fishing in Lava"
+			TorchGodEX: "[i:5043] Torch God's Favor Automatically Swaps Placed Torches"
+			TorchGodEXTooltip: "Obeys true torch luck, which may differ from Torch God's Favor"
 			DebuffOpacity: "[i:1612] Debuff Display Max Opacity"
 			DebuffFaderRatio: "[i:1612] Debuff Duration Fader Strength"
 			TransparentFriendlyProjectiles: "[i:1309] Transparent Friendly Projectiles"
@@ -165,6 +167,7 @@ Mods: {
 		Dialogues: {
 			Abom : {
 				Defeat: You really defeated me... not bad. Now do it again without getting hit. Oh, and Copper Shortsword only.
+				Styx: What nostalgic armor you're wearing... No, it doesn't fit on me anymore. And its battery takes too long to charge.
 				1: "Where'd I get my scythe from? "
 				1phm: Ask me later.
 				1hm: You'll figure it out.
@@ -300,6 +303,7 @@ Mods: {
 			Mutant: {
 				DefeatE: Congratulations. You truly embraced eternity... at least, I think you did? So what happens next? Ascend from this plane of existence? Fight a transcendant cat-like entity? Destroy the world? All the power's in your hands now.
 				Defeat: Good work beating me, I guess. I still feel like stretching my wings... Why don't we go at it for real next time?
+				TrueMutant: Nice armor you have, very realistic skin. As a matter of fact, mind if I borrow it? Your skin, that is.
 				1: Savagery, barbarism, bloodthirst, that's what I like seeing in people.
 				2: The stronger you get, the more stuff I sell. Makes sense, right?
 				3: There's something all of you have that I don't... Death perception, I think it's called?

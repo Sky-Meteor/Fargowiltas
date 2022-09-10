@@ -131,6 +131,12 @@ namespace Fargowiltas.NPCs
                 return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.Defeat");
             }
 
+            if (Fargowiltas.ModLoaded["FargowiltasSouls"] && Main.rand.NextBool(3))
+            {
+                if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("StyxArmor"))
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.Styx");
+            }
+
             List<string> dialogue = new List<string>
             {
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.1") + (!Main.hardMode ? Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.1phm") : Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.1hm")),

@@ -158,6 +158,12 @@ namespace Fargowiltas.NPCs
                     return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Defeat");
             }
 
+            if (Fargowiltas.ModLoaded["FargowiltasSouls"] && Main.rand.NextBool(4))
+            {
+                if ((bool)ModLoader.GetMod("FargowiltasSouls").Call("MutantArmor"))
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.TrueMutant");
+            }
+
             List<string> dialogue = new List<string>
             {
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.1"),

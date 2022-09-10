@@ -12,9 +12,10 @@ namespace Fargowiltas.Items.Misc
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Portable Sundial");
-            Tooltip.SetDefault("Left click to instantly switch from day to night" +
+            Tooltip.SetDefault("Left click to instantly change time" +
+                               "\nTime cycles between dawn, noon, dusk, and midnight" +
                                "\nRight click to activate the Enchanted Sundial effect" +
-                               "\nThis will also reset travelling merchant's shops");
+                               "\nCycling to dawn will reset travelling merchant's shops");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -59,7 +60,7 @@ namespace Fargowiltas.Items.Misc
                 Main.sundialCooldown = 0;
                 if (Main.netMode == NetmodeID.MultiplayerClient)
                 {
-                    NetMessage.SendData( MessageID.WorldData, number: Main.myPlayer, number2: 3f);
+                    NetMessage.SendData(MessageID.WorldData, number: Main.myPlayer, number2: 3f);
                     return true;
                 }
 
@@ -69,20 +70,36 @@ namespace Fargowiltas.Items.Misc
             }
             else
             {
-                Main.dayTime = !Main.dayTime;
-                Main.time = 0;
-                Chest.SetupTravelShop();
-
-                //change moon phases when switching to night
-                if (!Main.dayTime && ++Main.moonPhase > 7)
+                int noon = 27000;
+                int midnight = 16200;
+                if (Main.dayTime && Main.time < noon)
                 {
-                    Main.moonPhase = 0;
+                    Main.time = noon;
                 }
-
-                if (Main.dayTime)
-                    BirthdayParty.CheckMorning();
+                else if (Main.time < midnight)
+                {
+                    Main.time = midnight;
+                }
                 else
-                    BirthdayParty.CheckNight();
+                {
+                    Main.dayTime = !Main.dayTime;
+                    Main.time = 0;
+
+                    if (Main.dayTime)
+                    {
+                        BirthdayParty.CheckMorning();
+
+                        Chest.SetupTravelShop();
+                    }
+                    else
+                    {
+                        BirthdayParty.CheckNight();
+
+                        //change moon phases when switching to night
+                        if (!Main.dayTime && ++Main.moonPhase > 7)
+                            Main.moonPhase = 0;
+                    }
+                }
             }
 
             return true;
