@@ -42,13 +42,23 @@ namespace Fargowiltas.Items.Misc
 				foreach (TeleportPylonInfo pylonInfo in Main.PylonSystem.Pylons)
                 {
 				  	Vector2 pos = pylonInfo.PositionInTiles.ToWorldCoordinates();
-					int projType = pylonInfo.TypeOfPylon == TeleportPylonType.Hallow
-						? ModContent.ProjectileType<HallowNukeProj>()
-						: ModContent.ProjectileType<PurityNukeProj>();
+					
+					int projType = ModContent.ProjectileType<PurityNukeProj>();
+					if (pylonInfo.TypeOfPylon == TeleportPylonType.Hallow)
+						projType = ModContent.ProjectileType<HallowNukeProj>();
+
 					int p = Projectile.NewProjectile(player.GetSource_ItemUse(Item), pos, Vector2.Zero, projType, 0, 0f, Main.myPlayer);
 					if (p != Main.maxProjectiles)
 						Main.projectile[p].timeLeft = 2;
-                }
+
+					if (pylonInfo.TypeOfPylon == TeleportPylonType.GlowingMushroom)
+                    {
+						projType = ModContent.ProjectileType<MushroomNukeProj>();
+						p = Projectile.NewProjectile(player.GetSource_ItemUse(Item), pos, Vector2.Zero, projType, 0, 0f, Main.myPlayer);
+						if (p != Main.maxProjectiles)
+							Main.projectile[p].timeLeft = 6;
+					}
+				}
 			}
 
 			return true;
