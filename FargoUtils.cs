@@ -119,5 +119,12 @@ namespace Fargowiltas
         public static bool IsChinese() =>  Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
 
         public static string Loc(string en, string zh = null) => (IsChinese() && zh != null) ? zh : en;
+
+        public static string L10n(this string str, string key)
+        {
+            if (IsChinese())
+                return Language.GetTextValue("Mods.Fargowiltas." + key);
+            return str;
+        }
     }
 }

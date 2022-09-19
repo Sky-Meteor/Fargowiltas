@@ -603,6 +603,8 @@ Mods: {
 				调 试 用 物 品
 				研究所有物品
 				'''
+			MapSingle: 显示整个地图
+			MapMulti: 显示你周围的地图区域
 			ModeToggle: 切换世界难度
 			PortableSundial: 
 				'''
