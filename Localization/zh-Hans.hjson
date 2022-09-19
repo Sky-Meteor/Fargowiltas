@@ -264,6 +264,7 @@ Mods: {
 			TownCat: 城镇猫咪
 			TownBunny: 城镇兔兔
 
+			AltarExterminator: 祭坛根除者
 			AutoHouse: 快速房屋
 			BoomShuriken: 爆炸手里剑
 			CityBuster: 城市克星
@@ -526,6 +527,7 @@ Mods: {
 			TownCat: “喵！”
 			TownBunny: “*小兔子声音*”
 
+			AltarExterminator: 破坏所有自然生成的恶魔祭坛和猩红祭坛
 			AutoHouse: 快速建造一间NPC房屋
 			BoomShuriken: 快速丢出炸药
 			CityBuster: 
@@ -1160,6 +1162,7 @@ Mods: {
 
 		ProjectileName: {
 			//爆裂物弹幕
+			AltarExterminatorProj: 祭坛根除者
 			CityBuster: 城市克星
 			DoubleObsInstaBridgeProj: 双重黑曜石速建平台
 			InstabridgeProj: 速建平台
