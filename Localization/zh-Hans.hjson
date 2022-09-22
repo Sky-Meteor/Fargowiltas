@@ -162,6 +162,11 @@ Mods: {
 			PirateBanner: 海盗旗帜
 		}
 
+		MessageInfo: {
+			SiblingPylonNotNearSiblings: 目标晶塔需要三兄妹在附近才能使用
+			NearbySiblingPylonNotNearSiblings: 当前晶塔需要三兄妹在附近才能使用
+		}
+
 		BuffName: {
 			Omnistation: 万用增益站
 			WoodDrop: 掉落木头
@@ -440,6 +445,7 @@ Mods: {
 			Omnistation: 万用增益站
 			Omnistation2: 万用增益站
 			RegalStatue: 富豪雕像
+			SiblingPylon: 血亲晶塔
 			UnsafeBlueSlabWall: 危险蓝板墙
 			UnsafeBlueTileWall: 危险蓝瓷砖墙
 			UnsafeBlueBrickWall: 危险蓝砖墙
@@ -1118,6 +1124,11 @@ Mods: {
 				拿着武器的同时右键单击以获得对应增益
 				'''
 			RegalStatue: 在附近时城镇NPC会极快地重生
+			SiblingPylon: 
+				'''
+				当附近有突变体，憎恶和戴薇安时可以传送至另一个晶塔
+				只能放置一个
+				'''
 			UnsafeBlueSlabWall: 允许区域特有的敌怪生成
 			UnsafeBlueTileWall: 允许区域特有的敌怪生成
 			UnsafeBlueBrickWall: 允许区域特有的敌怪生成
@@ -1150,6 +1161,7 @@ Mods: {
 			OmnistationSheet: 万用增益站
 			OmnistationSheet2: 万用增益站
 			RegalStatueSheet: 富豪雕像
+			SiblingPylonTile: 血亲晶塔
 		}
 
 
