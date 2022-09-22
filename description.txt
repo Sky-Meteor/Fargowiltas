@@ -9,6 +9,7 @@ NEW UPDATE - V 2.8.5
 -Added Pylon Cleaner
 -Added new config effect: Torch God's Favor automatically replaces placed torches
 -Added Altar Exterminator
+-Added Sibling Pylon
 -Demon Altars are now crafted at Anvil
 -Instahouse places White Torches
 

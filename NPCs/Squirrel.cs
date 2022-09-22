@@ -152,7 +152,7 @@ namespace Fargowiltas.NPCs
 
 		public override string GetChat()
 		{
-            showCycleShop = GetSellableItems().Count / maxShop > 0;
+            showCycleShop = GetSellableItems().Count / maxShop > 0 && !ModLoader.TryGetMod("ShopExpander", out _);
 
             if (Main.bloodMoon)
                 return FargoUtils.IsChinese() ? "[c/FF0000:你会受苦的。]" : "[c/FF0000:You will suffer.]";

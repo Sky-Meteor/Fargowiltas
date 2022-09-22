@@ -163,6 +163,11 @@ Mods: {
 			ArmoredBones: Armored Bones Banner
 			PirateBanner: Pirate Banner
 		}
+		
+		MessageInfo: {
+			SiblingPylonNotNearSiblings: That pylon needs the mutated siblings to function.
+			NearbySiblingPylonNotNearSiblings: The nearby pylon needs the mutated siblings to function.
+		}
 
 		Dialogues: {
 			Abom : {
