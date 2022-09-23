@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using Terraria;
 using Terraria.Audio;
 using Terraria.Chat;
@@ -33,11 +34,13 @@ namespace Fargowiltas.Items.Misc
 
         public static void GenerateText(bool isBattle, Player player, bool cry)
         {
-            string cryToggled = FargoUtils.IsChinese() ? (isBattle ? "战争" : "镇静") : (isBattle ? "Battle" : "Calming");
-            string toggle = FargoUtils.IsChinese() ? (cry ? "生效" : "停止生效") : (cry ? "activated" : "deactivated");
-            string punctuation = FargoUtils.IsChinese() ? (isBattle ? "！" : "。") : (isBattle ? "!" : ".");
+            string CryText(string key) => Language.GetTextValue($"Mods.Fargowiltas.MessageInfo.BattleCry.{key}");
 
-            string text = FargoUtils.IsChinese() ? $"{cryToggled}号角已对{player.name}{toggle}{punctuation}" : $"{cryToggled} Cry {toggle} for {player.name}{punctuation}";
+            string cryToggled = isBattle ? CryText("Battle") : CryText("Calming");
+            string toggle = cry ? CryText("activated") : CryText("deactivated");
+            string punctuation = isBattle ? CryText("!") : CryText(".");
+
+            string text = Language.GetTextValue($"Mods.Fargowiltas.MessageInfo.BattleCry.Text", new object[] { cryToggled, toggle, player.name, punctuation });
             Color color = isBattle ? new Color(255, 0, 0) : new Color(0, 255, 255);
 
             FargoUtils.PrintText(text, color);

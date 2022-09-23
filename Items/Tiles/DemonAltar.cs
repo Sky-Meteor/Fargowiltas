@@ -35,7 +35,7 @@ namespace Fargowiltas.Items.Tiles
             CreateRecipe()
                 .AddIngredient(ItemID.DemoniteBar, 10)
                 .AddIngredient(ItemID.ShadowScale, 5)
-                .AddTile(TileID.DemonAltar)
+                .AddTile(TileID.Anvils)
                 .Register();
         }
     }
@@ -68,7 +68,7 @@ namespace Fargowiltas.Items.Tiles
             CreateRecipe()
                 .AddIngredient(ItemID.CrimtaneBar, 10)
                 .AddIngredient(ItemID.TissueSample, 5)
-                .AddTile(TileID.DemonAltar)
+                .AddTile(TileID.Anvils)
                 .Register();
         }
     }

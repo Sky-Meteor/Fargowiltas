@@ -130,6 +130,8 @@ namespace Fargowiltas.Tiles
                         {
                             WorldGen.KillTile(i, j, noItem: true);
                             WorldGen.PlaceTile(i, j, TileID.Torches, false, false, Main.LocalPlayer.whoAmI, correctTorch);
+                            if (Main.netMode == NetmodeID.MultiplayerClient)
+                                NetMessage.SendData(MessageID.TileManipulation, -1, -1, null, 1, i, j, TileID.Torches);
                         }
                     }
                 }

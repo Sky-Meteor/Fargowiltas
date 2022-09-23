@@ -50,25 +50,25 @@ namespace Fargowiltas.Items.Misc
                 case 0:
                     Main.GameMode = 1;
                     player.difficulty = 0;
-                    text = FargoUtils.IsChinese() ? "专家模式已开启！" : "Expert mode is now enabled!";
+                    text = Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Expert");
                     break;
 
                 case 1:
                     Main.GameMode = 2;
                     player.difficulty = 0;
-                    text = FargoUtils.IsChinese() ? "大师模式已开启！" : "Master mode is now enabled!";
+                    text = Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Master");
                     break;
 
                 case 2:
                     Main.GameMode = 3;
                     player.difficulty = 3;
-                    text = FargoUtils.IsChinese() ? "旅行模式已开启！" : "Journey mode is now enabled!";
+                    text = Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Journey");
                     break;
 
                 default:
                     Main.GameMode = 0;
                     player.difficulty = 0;
-                    text = FargoUtils.IsChinese() ? "经典模式已开启！" : "Normal mode is now enabled!";
+                    text = Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Normal");
                     break;
             }
             

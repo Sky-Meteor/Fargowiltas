@@ -107,7 +107,7 @@ Mods: {
 		}
 
 		Config: {
-			CanSpawn: Can Spawn
+			CanSpawn: " Can Spawn"
 
 			TownNPCsHeader: Town NPCs
 			CatchNPCs: "[i:267] Catch Town NPCs"
@@ -162,6 +162,114 @@ Mods: {
 			Banner: Banner
 			ArmoredBones: Armored Bones Banner
 			PirateBanner: Pirate Banner
+		}
+		
+		MessageInfo: {
+			InvadersLeft: The invaders have left!
+			PumpkinMoon: The Pumpkin Moon is lowering...
+			FrostMoon: The Frost Moon is lowering...
+			Eclipse: A solar eclipse is not happening!
+			BloodMoon: The blood moon is descending...
+			Windy: The wind has ended!
+			OOA: The Old One's Army is leaving!
+			SandStorm: The sandstorm has ended!
+			Towers: Celestial creatures are not invading!
+			Rain: The rain has ended!
+			HasAwoken: "{0} has awoken!"
+			HaveAwoken: "{0} have awoken!"
+
+			BattleCry: {
+				Battle: Battle
+				Calming: Calming
+				activated: activated
+				deactivated: deactivated
+				!: !
+				.: .
+				Text: "{0} Cry {1} for {2}{3}"
+			}
+
+			InstantResearch: "researched {0} items"
+			Expert: Expert mode is now enabled!
+			Master: Master mode is now enabled!
+			Journey: Journey mode is now enabled!
+			Normal: Normal mode is now enabled!
+			Anemometer: The wind begins howling.
+			ForbiddenScarab: A sandstorm has begun.
+			MatsuriLantern: Lantern Night rate increased!
+			PillarSummon: The Celestial Pillars have awoken!
+			SpentLantern: Lantern Night rate restored to default.
+			WeatherBalloon: Rain clouds cover the sky.
+
+
+			SiblingPylonNotNearSiblings: That pylon needs the mutated siblings to function.
+			NearbySiblingPylonNotNearSiblings: The nearby pylon needs the mutated siblings to function.
+		}
+
+		Keybind: {
+			Home: Quick Recall/Mirror
+			Rod: Quick Rod of Discord
+			Custom: Quick Use Custom (Bottom Left Inventory Slot)
+			Stat: Open Stat Sheet
+		}
+
+		ItemTooltip: {
+			FountainTooltip: "[i:909] [c/AAAAAA:Forces surrounding biome state to {0} upon activation]"
+			Ocean: Ocean
+			Desert: Desert
+			Jungle: Jungle
+			Snow: Snow
+			Corruption: Corruption
+			Crimson: Crimson
+			Hallow: Hallow (in hardmode only)
+			CatchNPCs: "[i:1991] [c/AAAAAA:Can also catch townsfolk]"
+			Lure1: "[i:2373] [c/AAAAAA:Also grants one extra lure]"
+			Lure2: "[i:2373] [c/AAAAAA:This rod fires 2 lures]"
+			Lure3: "[i:2373] [c/AAAAAA:This rod fires 3 lures]"
+			Lure5: "[i:2373] [c/AAAAAA:This rod fires 5 lures]"
+			TorchGod1: "[i:5043] [c/AAAAAA:Automatically swaps placed torches to boost luck]"
+			TorchGod2: "[i:5043] [c/AAAAAA:Obeys true torch luck when replacing torches, which may differ from default choices]"
+			Unlimited30: "[i:87] [c/AAAAAA:Unlimited buff at 30 stack in inventory, Piggy Bank, or Safe]"
+			Unlimited15: "[i:87] [c/AAAAAA:Unlimited buff at 15 stack in inventory, Piggy Bank, or Safe]"
+			PiggyBankAcc: "[i:87] [c/AAAAAA:Works from Piggy Bank and Safe]"
+
+			MapSingle: Reveals the whole map
+			MapMulti: Reveals an area of the map around you
+		}
+
+		MapObject: {
+			SiblingPylonTile: Sibling Pylon
+		}
+		
+		NPCName: {
+			Summons: {
+				Ogre: Ogre
+				Betsy: Betsy
+				Everscream: Everscream
+				DarkMage: Dark Mage
+				HeadlessHorseman: Headless Horseman
+				IceQueen: Ice Queen
+				MartianSaucer: Martian Saucer
+				SantaNK1: Santa-NK1
+				MourningWood: Mourning Wood
+				Pumpking: Pumpking
+				Medusa: Medusa
+				UndeadMiner: Undead Miner
+				Dreadnautilus: Dreadnautilus
+				BloodEel: Blood Eel
+				Wyvern: Wyvern
+				Clown: Clown
+				IceGolem: Ice Golem
+				CorruptMimic: Corrupt Mimic
+				CrimsonMimic: Crimson Mimic
+				RedDevil: Red Devil
+				RainbowSlime: Rainbow Slime
+				DoctorBones: Doctor Bones
+				SandElemental: Sand Elemental
+				Gnome: Gnome
+				GoblinScout: Goblin Scout
+				GoldenSlime: Golden Slime
+				
+			}
 		}
 
 		Dialogues: {

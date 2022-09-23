@@ -5,6 +5,7 @@ using Terraria.Audio;
 using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 
 namespace Fargowiltas.Items.Summons.Abom
 {
@@ -42,10 +43,7 @@ namespace Fargowiltas.Items.Summons.Abom
             Sandstorm.StartSandstorm();
 
             NetMessage.SendData(MessageID.WorldData);
-            if (FargoUtils.IsChinese())
-                FargoUtils.PrintText("沙尘暴开始了。", new Color(175, 75, 255));
-            else
-                FargoUtils.PrintText("A sandstorm has begun.", new Color(175, 75, 255));
+            FargoUtils.PrintText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.ForbiddenScarab"), new Color(175, 75, 255));
             SoundEngine.PlaySound(SoundID.Roar, player.position);
 
             return true;

@@ -308,7 +308,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
             if (x == (7 * side) && y == -4)
             {
-                WorldGen.PlaceTile(xPosition, yPosition, TileID.Torches);
+                WorldGen.PlaceTile(xPosition, yPosition, TileID.Torches, style: 5);
                 if (Main.netMode == NetmodeID.Server)
                     NetMessage.SendData(MessageID.TileChange, -1, -1, null, 1, xPosition, yPosition, TileID.Torches);
             }

@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override int NPCType => NPCID.IceQueen;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "冰雪女王" : "Ice Queen";
+        public override string NPCName => LocalizedName("IceQueen");
 
         public override void SetStaticDefaults()
         {

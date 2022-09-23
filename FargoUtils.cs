@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Chat;
 using Terraria.ID;
 using Terraria.Localization;
+using Terraria.ModLoader;
 
 namespace Fargowiltas
 {
@@ -116,8 +117,19 @@ namespace Fargowiltas
 
         public static void PrintText(string text, int r, int g, int b) => PrintText(text, new Color(r, g, b));
 
+        public static bool IsChinesee => Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
+
         public static bool IsChinese() =>  Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
 
         public static string Loc(string en, string zh = null) => (IsChinese() && zh != null) ? zh : en;
+
+        public static string L10n(this string str, string key)
+        {
+            if (IsChinese())
+                return Language.GetTextValue("Mods.Fargowiltas." + key);
+            return str;
+        }
+
+        public static string GetTranslation(string key) => LocalizationLoader.GetOrCreateTranslation($"Mods.Fargowiltas.{key}").GetTranslation(Language.ActiveCulture);
     }
 }

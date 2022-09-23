@@ -2,12 +2,20 @@ This is a Quality of life mod that adds the Mutant town NPC who sells boss summo
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
 NEW UPDATE - V 2.8.5
+-Added Pylon Cleaner
+-Added Altar Exterminator
+-Added Sibling Pylon
 -Added recipe for Holy Grail
+-Added new config effect: Torch God's Favor automatically replaces placed torches
+-Overloaded Pumpkin Moon Medallion is now Haunted Trophy
+-Overloaded Runaway Probe is now Martian Communications Satellite
+-Overloaded Naughty Present is now Naughty Present Sack
 -Abominationn can comment on Styx armor if you wear it
 -Mutant can comment on True Mutant armor if you wear it
 -Portable Sundial can now jump to noon and midnight
--Added Pylon Cleaner
--Added new config effect: Torch God's Favor automatically replaces placed torches
+-Demon Altars are now crafted at Anvil
+-Instahouse places White Torches
+-Resprited Grave Buster
 
 NEW UPDATE - V 2.8.4
 -Siblings will only say their defeat quotes if spoken to shortly after being defeated
@@ -52,12 +60,20 @@ NEW UPDATE - V 2.8.2
 这个MOD中也有很多其他东西，比如无限的弹药，可制造的速建建筑，比如世界平台、黑曜石平台、地狱直通车，还有无限的药水，增加刷怪率的物品等等！
 
 NEW UPDATE - V 2.8.5
+-添加了晶塔清洁器
+-添加了祭坛根除者
+-添加了血亲晶塔
 -为圣杯添加了合成表
+-添加了新配置效果：火把神的恩宠自动替换放置的火把和已放置的火把
+-过载南瓜月勋章更新为闹鬼奖杯
+-过载探测器更新为火星通讯卫星
+-过载调皮礼物更新为调皮礼物袋
 -当穿着冥河套时憎恶对它有特殊对话
 -当穿着真突变套时突变体对它有特殊对话
 -便携日晷现在可以跳过时间到中午和午夜
--添加了晶塔清洁器
--添加了新配置效果：火把神的恩宠会替换已放置的火把
+-恶魔祭坛/猩红祭坛现在在铁砧处制作
+-快速房屋现在放置白火把
+-重绘了墓碑克星
 
 NEW UPDATE - V 2.8.4
 -如果在击败后的短时间内与三兄妹对话，他们会说自己的被击败对话

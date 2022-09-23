@@ -6,7 +6,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.SandElemental;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "沙尘精" : "Sand Elemental";
+        public override string NPCName => LocalizedName("SandElemental");
 
         public override void SetStaticDefaults()
         {

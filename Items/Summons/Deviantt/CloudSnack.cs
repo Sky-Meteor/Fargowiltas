@@ -6,7 +6,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.WyvernHead;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "飞龙" : "Wyvern";
+        public override string NPCName => LocalizedName("Wyvern");
 
         public override void SetStaticDefaults()
         {

@@ -10,11 +10,9 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadMartians : ModItem
     {
-        public override string Texture => "Fargowiltas/Items/Summons/Abom/RunawayProbe";
-
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Overloaded Runaway Probe");
+            DisplayName.SetDefault("Martian Communications Satellite");
             Tooltip.SetDefault("Summons an Overloaded Martian Invasion\nUse again to stop the event");
         }
 
