@@ -145,6 +145,8 @@ Mods: {
 			BossZen: "[i:3117] Boss战不刷新敌怪"
 			PiggyBankAcc: "[i:87] 信息饰品和建筑饰品在猪猪存钱罐中生效"
 			FasterLavaFishing: "[i:4881] 岩浆中钓鱼速度加快"
+			TorchGodEX: "[i:5043] 火把神的恩宠自动替换放置的火把和已放置的火把"
+			TorchGodEXTooltip: "替换遵循火把运气，可能会和火把神的恩宠的选择有所不同"
 			DebuffOpacity: "[i:1612] 减益显示不透明度"
 			DebuffFaderRatio: "[i:1612] 减益持续时间显示衰减强度"
 			TransparentFriendlyProjectiles: "[i:1309] 友好弹幕的不透明度"
@@ -406,10 +408,10 @@ Mods: {
 			Overloader: 过载
 			OverloadEye: 融合眼球
 			OverloadFish: 松露虫堆
-			OverloadFrostMoon: 过载调皮礼物
+			OverloadFrostMoon: 调皮礼物袋
 			OverloadGoblins: 过载哥布林战旗
 			OverloadGolem: 符文能量电池
-			OverloadMartians: 过载探测器
+			OverloadMartians: 火星人通讯卫星
 			OverloadMoon: 符文铭文
 			OverloadPirates: 海盗的赏金
 			OverloadPlant: 丛林之心
