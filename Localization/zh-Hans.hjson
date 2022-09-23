@@ -146,7 +146,7 @@ Mods: {
 			PiggyBankAcc: "[i:87] 信息饰品和建筑饰品在猪猪存钱罐中生效"
 			FasterLavaFishing: "[i:4881] 岩浆中钓鱼速度加快"
 			TorchGodEX: "[i:5043] 火把神的恩宠自动替换放置的火把和已放置的火把"
-			TorchGodEXTooltip: "替换遵循火把运气，可能会和火把神的恩宠的选择有所不同"
+			TorchGodEXTooltip: "替换遵循火把运气，可能会和火把神的恩宠的默认选择有所不同"
 			DebuffOpacity: "[i:1612] 减益显示不透明度"
 			DebuffFaderRatio: "[i:1612] 减益持续时间显示衰减强度"
 			TransparentFriendlyProjectiles: "[i:1309] 友好弹幕的不透明度"
@@ -165,8 +165,27 @@ Mods: {
 		}
 
 		MessageInfo: {
+			InvadersLeft: 入侵者已离开！
+			PumpkinMoon: 南瓜月正在降下……
+			FrostMoon: 霜月正在降下……
+			Eclipse: 日食停止发生！
+			BloodMoon: 血月正在降下……
+			Windy: 狂风已经平息！
+			OOA: 旧日军团正在离开！
+			SandStorm: 沙尘暴已结束！
+			Towers: 天界生物停止入侵！
+			Rain: 雨停了！
+			HaveAwoken: 已苏醒！
+
 			SiblingPylonNotNearSiblings: 目标晶塔需要三兄妹在附近才能使用
 			NearbySiblingPylonNotNearSiblings: 当前晶塔需要三兄妹在附近才能使用
+		}
+
+		Keybind: {
+			Home: 快速回家
+			Rod: 快捷混沌传送杖
+			Custom: 快捷使用背包左下角物品
+			Stat: 打开属性统计表
 		}
 
 		BuffName: {
@@ -483,6 +502,24 @@ Mods: {
 		}
 
 		ItemTooltip: {
+			FountainTooltip: "[c/AAAAAA:激活时使周围的生物群落变为{0}]"
+			Ocean: 海洋
+			Desert: 沙漠
+			Jungle: 丛林
+			Snow: 雪原
+			Corruption: 腐化之地
+			Crimson: 猩红之地
+			Hallow: 神圣之地（在困难模式中生效）
+			CatchNPCs: "[i:1991] [c/AAAAAA:可以抓城镇NPC]"
+			Lure1: "[i:2373] [c/AAAAAA:让你多抛出一条鱼线]"
+			Lure2: "[i:2373] [c/AAAAAA:能抛出两条鱼线]"
+			Lure3: "[i:2373] [c/AAAAAA:能抛出三条鱼线]"
+			Lure5: "[i:2373] [c/AAAAAA:能抛出五条鱼线]"
+			TorchGod1: "[i:5043] [c/AAAAAA:自动替换已放置的火把来增加运气]"
+			TorchGod2: "[i:5043] [c/AAAAAA:替换火把遵循火把运气，可能会与默认的选择有不同]"
+			Unlimited30: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠30个时获得无尽增益]"
+			Unlimited15: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠15个时获得无尽增益]"
+
 			ChlorophyteQuiver: 撞墙后弹回
 			HolyQuiver: 碰撞时召唤陨星
 			IchorQuiver: 降低目标的防御力

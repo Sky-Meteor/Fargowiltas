@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Chat;
 using Terraria.ID;
 using Terraria.Localization;
+using Terraria.ModLoader;
 
 namespace Fargowiltas
 {
@@ -126,5 +127,7 @@ namespace Fargowiltas
                 return Language.GetTextValue("Mods.Fargowiltas." + key);
             return str;
         }
+
+        public static string GetTranslation(string key) => LocalizationLoader.GetOrCreateTranslation($"Mods.Fargowiltas.{key}").GetTranslation(Language.ActiveCulture);
     }
 }

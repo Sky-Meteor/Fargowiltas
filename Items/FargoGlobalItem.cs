@@ -10,6 +10,7 @@ using Fargowiltas.NPCs;
 using Fargowiltas.Items.Ammos.Rockets;
 using System.Text.RegularExpressions;
 using System.Linq;
+using Terraria.Localization;
 
 namespace Fargowiltas.Items
 {
@@ -29,7 +30,7 @@ namespace Fargowiltas.Items
 
         //public override bool CloneNewInstances => true;
 
-        TooltipLine FountainTooltip(string biome) => new TooltipLine(Mod, "Tooltip0", "[i:909] " + (FargoUtils.IsChinese() ? $"[c/AAAAAA:激活时使周围的生物群落变为{biome}]" : $"[c/AAAAAA:Forces surrounding biome state to {biome} upon activation]"));
+        TooltipLine FountainTooltip(string biome) => new TooltipLine(Mod, "Tooltip0", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.FountainTooltip", biome));
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
@@ -43,38 +44,38 @@ namespace Fargowiltas.Items
                 {
                     case ItemID.PureWaterFountain:
                         if (fargoConfig.Fountains)
-                            tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "海洋" : "Ocean"));
+                            tooltips.Add(FountainTooltip(Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Ocean")));
                         break;
 
                     case ItemID.OasisFountain:
                     case ItemID.DesertWaterFountain:
                         if (fargoConfig.Fountains)
-                            tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "沙漠" : "Desert"));
+                            tooltips.Add(FountainTooltip(Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Desert")));
                         break;
 
                     case ItemID.JungleWaterFountain:
                         if (fargoConfig.Fountains)
-                            tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "丛林" : "Jungle"));
+                            tooltips.Add(FountainTooltip(Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Jungle")));
                         break;
 
                     case ItemID.IcyWaterFountain:
                         if (fargoConfig.Fountains)
-                            tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "雪原" : "Snow"));
+                            tooltips.Add(FountainTooltip(Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Snow")));
                         break;
 
                     case ItemID.CorruptWaterFountain:
                         if (fargoConfig.Fountains)
-                            tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "腐化之地" : "Corruption"));
+                            tooltips.Add(FountainTooltip(Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Corruption")));
                         break;
 
                     case ItemID.CrimsonWaterFountain:
                         if (fargoConfig.Fountains)
-                            tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "猩红之地" : "Crimson"));
+                            tooltips.Add(FountainTooltip(Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Crimson")));
                         break;
 
                     case ItemID.HallowedWaterFountain:
                         if (fargoConfig.Fountains)
-                            tooltips.Add(FountainTooltip(FargoUtils.IsChinese() ? "神圣之地（在困难模式中生效）" : "Hallow (in hardmode only)"));
+                            tooltips.Add(FountainTooltip(Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Hallow")));
                         break;
 
                     //cavern fountain?
@@ -83,7 +84,7 @@ namespace Fargowiltas.Items
                     case ItemID.GoldenBugNet:
                     case ItemID.FireproofBugNet:
                         if (fargoConfig.CatchNPCs)
-                            tooltips.Add(new TooltipLine(Mod, "Tooltip0", "[i:1991] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:可以抓城镇NPC]" : "[c/AAAAAA:Can also catch townsfolk]")));
+                            tooltips.Add(new TooltipLine(Mod, "Tooltip0", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.CatchNPCs")));
                         break;
 
                 }
@@ -92,34 +93,34 @@ namespace Fargowiltas.Items
                 {
                     if (item.type == ItemID.FishingPotion)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:多抛出一条鱼线]" : "[c/AAAAAA:Also grants one extra lure]"));
+                        line = new TooltipLine(Mod, "Tooltip1", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Lure1"));
                         tooltips.Insert(3, line);
                     }
 
                     if (item.type == ItemID.FiberglassFishingPole || item.type == ItemID.FisherofSouls || item.type == ItemID.Fleshcatcher || item.type == ItemID.ScarabFishingRod || item.type == ItemID.BloodFishingRod)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出两条鱼线]" : "[c/AAAAAA:This rod fires 2 lures]"));
+                        line = new TooltipLine(Mod, "Tooltip1", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Lure2"));
                         tooltips.Insert(3, line);
                     }
 
                     if (item.type == ItemID.MechanicsRod || item.type == ItemID.SittingDucksFishingRod)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出三条鱼线]" : "[c/AAAAAA:This rod fires 3 lures]"));
+                        line = new TooltipLine(Mod, "Tooltip1", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Lure3"));
                         tooltips.Insert(3, line);
                     }
 
                     if (item.type == ItemID.GoldenFishingRod || item.type == ItemID.HotlineFishingHook)
                     {
-                        line = new TooltipLine(Mod, "Tooltip1", "[i:2373] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:能抛出五条鱼线]" : "[c/AAAAAA:This rod fires 5 lures]"));
+                        line = new TooltipLine(Mod, "Tooltip1", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Lure5"));
                         tooltips.Insert(3, line);
                     }
                 }
 
                 if (fargoConfig.TorchGodEX && item.type == ItemID.TorchGodsFavor)
                 {
-                    line = new TooltipLine(Mod, "TooltipTorchGod1", FargoUtils.Loc("[i:5043] [c/AAAAAA:Automatically swaps placed torches to boost luck]", "[i:5043] [c/AAAAAA:自动替换已放置的火把来增加运气]"));
+                    line = new TooltipLine(Mod, "TooltipTorchGod1", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.TorchGod1"));
                     tooltips.Add(line);
-                    line = new TooltipLine(Mod, "TooltipTorchGod2", FargoUtils.Loc("[i:5043] [c/AAAAAA:Obeys true torch luck when replacing torches, which may differ from default choices]", "[i:5043] [c/AAAAAA:替换火把遵循火把运气，可能会与默认的选择有不同]"));
+                    line = new TooltipLine(Mod, "TooltipTorchGod2", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.TorchGod2"));
                     tooltips.Add(line);
                 }
 
@@ -127,7 +128,7 @@ namespace Fargowiltas.Items
                 {
                     if (item.buffType != 0)
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠30个时获得无尽增益]" : "[c/AAAAAA:Unlimited buff at 30 stack in inventory, Piggy Bank, or Safe]"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Unlimited30"));
                         tooltips.Add(line);
                     }
                     else if (item.type == ItemID.SharpeningStation
@@ -136,7 +137,7 @@ namespace Fargowiltas.Items
                             || item.type == ItemID.BewitchingTable
                             || item.type == ItemID.SliceOfCake)
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠15个时获得无尽增益]" : "[c/AAAAAA:Unlimited buff at 15 stack in inventory, Piggy Bank, or Safe]"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Unlimited15"));
                         tooltips.Add(line);
                     }
                 }
@@ -198,11 +199,11 @@ namespace Fargowiltas.Items
                         tooltips.Remove(tooltips[i]);
                         if (Main.netMode != NetmodeID.MultiplayerClient)
                         {
-                            tooltips.Insert(i, new TooltipLine(Mod, "MapViewerTooltip", "Reveals the whole map".L10n("ItemTooltip.MapSingle")));
+                            tooltips.Insert(i, new TooltipLine(Mod, "MapViewerTooltip", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.MapSingle")));
                         }
                         else
                         {
-                            tooltips.Insert(i, new TooltipLine(Mod, "MapViewerTooltip", "Reveals an area of the map around you".L10n("ItemTooltip.MapMulti")));
+                            tooltips.Insert(i, new TooltipLine(Mod, "MapViewerTooltip", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.MapMulti")));
                         }
                     }
                         
