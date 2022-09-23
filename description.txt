@@ -2,16 +2,20 @@ This is a Quality of life mod that adds the Mutant town NPC who sells boss summo
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
 NEW UPDATE - V 2.8.5
+-Added Pylon Cleaner
+-Added Altar Exterminator
+-Added Sibling Pylon
 -Added recipe for Holy Grail
+-Added new config effect: Torch God's Favor automatically replaces placed torches
+-Overloaded Pumpkin Moon Medallion is now Haunted Trophy
+-Overloaded Runaway Probe is now Martian Communications Satellite
+-Overloaded Naughty Present is now Naughty Present Sack
 -Abominationn can comment on Styx armor if you wear it
 -Mutant can comment on True Mutant armor if you wear it
 -Portable Sundial can now jump to noon and midnight
--Added Pylon Cleaner
--Added new config effect: Torch God's Favor automatically replaces placed torches
--Added Altar Exterminator
--Added Sibling Pylon
 -Demon Altars are now crafted at Anvil
 -Instahouse places White Torches
+-Resprited Grave Buster
 
 NEW UPDATE - V 2.8.4
 -Siblings will only say their defeat quotes if spoken to shortly after being defeated

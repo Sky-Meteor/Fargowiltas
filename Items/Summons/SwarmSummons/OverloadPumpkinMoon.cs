@@ -10,8 +10,6 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadPumpkinMoon : ModItem
     {
-        public override string Texture => "Terraria/Images/Item_1844";
-
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Overloaded Pumpkin Moon Medallion");
