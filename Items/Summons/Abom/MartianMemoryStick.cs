@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override int NPCType => NPCID.MartianSaucerCore;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "火星飞碟" : "Martian Saucer";
+        public override string NPCName => LocalizedName("MartianSaucer");
 
         public override void SetStaticDefaults()
         {

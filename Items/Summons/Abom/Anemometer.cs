@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace Fargowiltas.Items.Summons.Abom
@@ -39,10 +40,7 @@ namespace Fargowiltas.Items.Summons.Abom
 
             if (Main.netMode == NetmodeID.Server)
                 NetMessage.SendData(MessageID.WorldData);
-            if (FargoUtils.IsChinese())
-                FargoUtils.PrintText("狂风开始怒号。", new Color(175, 75, 255));
-            else
-                FargoUtils.PrintText("The wind begins howling.", new Color(175, 75, 255));
+            FargoUtils.PrintText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Anemometer"), new Color(175, 75, 255));
             SoundEngine.PlaySound(SoundID.Roar, player.position);
 
             return true;

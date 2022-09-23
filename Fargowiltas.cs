@@ -532,12 +532,12 @@ namespace Fargowiltas
                     {
                         if (Main.netMode == NetmodeID.SinglePlayer)
                         {
-                            Main.NewText(npcName + Language.GetTextValue("Mods.Fargowiltas.HaveAwoken"), 175, 75);
+                            Main.NewText(Language.GetTextValue("Mods.Fargowiltas.HaveAwoken", npcName), 175, 75);
                         }
                         else
                         if (Main.netMode == NetmodeID.Server)
                         {
-                            ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(npcName + Language.GetTextValue("Mods.Fargowiltas.HaveAwoken")), new Color(175, 75, 255));
+                            ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.HaveAwoken", npcName)), new Color(175, 75, 255));
                         }
                     }
                     else

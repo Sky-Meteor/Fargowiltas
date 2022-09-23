@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.Medusa;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "蛇发女妖" : "Medusa";
+        public override string NPCName => LocalizedName("Medusa");
 
         public override void SetStaticDefaults()
         {

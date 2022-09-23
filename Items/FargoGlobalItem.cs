@@ -146,7 +146,7 @@ namespace Fargowiltas.Items
                 {
                     if (Informational.Contains(item.type) || Construction.Contains(item.type))
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", "[i:87] " + (FargoUtils.IsChinese() ? "[c/AAAAAA:在猪猪存钱罐和保险箱中同样生效]" : "[c/AAAAAA:Works from Piggy Bank and Safe]"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.PiggyBankAcc"));
                         tooltips.Add(line);
                     }
                 }
@@ -154,39 +154,14 @@ namespace Fargowiltas.Items
                 if (Squirrel.SquirrelSells(item, out Squirrel.SquirrelSellType sellType) != Squirrel.ShopGroup.End)
                 {
                     string text = Regex.Replace(sellType.ToString(), "([a-z])([A-Z])", "$1 $2");
-                    if (FargoUtils.IsChinese())
+                    if (FargoUtils.IsChinesee)
                     {
-                        if (text == "Craftable Materials Sold")
-                        {
-                            line = new TooltipLine(Mod, "TooltipSquirrel",
-                            $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:售卖可合成材料]");
-                            tooltips.Add(line);
-                        }
-                        else if (text == "Sold By Squirrel")
-                        {
-                            line = new TooltipLine(Mod, "TooltipSquirrel",
-                            $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:高帽松鼠售卖]");
-                            tooltips.Add(line);
-                        }
-                        else if (text == "Some Materials Sold")
-                        {
-                            line = new TooltipLine(Mod, "TooltipSquirrel",
-                            $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:售卖部分材料]");
-                            tooltips.Add(line);
-                        }
-                        else
-                        {
-                            line = new TooltipLine(Mod, "TooltipSquirrel",
-                            $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:堆叠30个时售卖]");
-                            tooltips.Add(line);
-                        }
+                        text = text.Replace("Craftable Materials Sold", "售卖可合成材料").Replace("Sold By Squirrel", "高帽松鼠售卖")
+                            .Replace("Some Materials Sold", "售卖部分材料").Replace("Sold At Thirty Stack", "堆叠30个时售卖");
                     }
-                    else
-                    {
-                        line = new TooltipLine(Mod, "TooltipSquirrel",
-                        $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:{text}]");
-                        tooltips.Add(line);
-                    }
+                    line = new TooltipLine(Mod, "TooltipSquirrel",
+                    $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:{text}]");
+                    tooltips.Add(line);
                 }
             }
 

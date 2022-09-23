@@ -1,3 +1,4 @@
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -48,7 +49,7 @@ namespace Fargowiltas.Items.Misc
 					}
 				}
 
-				FargoUtils.PrintText(FargoUtils.IsChinese() ? $"已研究{count}个物品" : $"researched {count} items");
+				FargoUtils.PrintText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.InstantResearch", count));
 			}
 
 			return true;

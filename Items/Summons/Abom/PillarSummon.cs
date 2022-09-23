@@ -42,10 +42,7 @@ namespace Fargowiltas.Items.Summons.Abom
                 Projectile.NewProjectile(player.GetSource_ItemUse(source.Item), pos, Vector2.Zero, type, 0, 0, Main.myPlayer, pillars[i]);
             }
 
-            if (FargoUtils.IsChinese())
-                FargoUtils.PrintText("天界柱已苏醒！", new Color(175, 75, 255));
-            else
-                FargoUtils.PrintText("The Celestial Pillars have awoken!", new Color(175, 75, 255));
+            FargoUtils.PrintText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.PillarSummon"), new Color(175, 75, 255));
 
             SoundEngine.PlaySound(SoundID.Roar, player.position);
 

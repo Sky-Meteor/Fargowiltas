@@ -175,7 +175,31 @@ Mods: {
 			SandStorm: The sandstorm has ended!
 			Towers: Celestial creatures are not invading!
 			Rain: The rain has ended!
-			HaveAwoken: " have awoken!"
+			HasAwoken: "{0} has awoken!"
+			HaveAwoken: "{0} have awoken!"
+
+			BattleCry: {
+				Battle: Battle
+				Calming: Calming
+				activated: activated
+				deactivated: deactivated
+				!: !
+				.: .
+				Text: "{0} Cry {1} for {2}{3}"
+			}
+
+			InstantResearch: "researched {0} items"
+			Expert: Expert mode is now enabled!
+			Master: Master mode is now enabled!
+			Journey: Journey mode is now enabled!
+			Normal: Normal mode is now enabled!
+			Anemometer: The wind begins howling.
+			ForbiddenScarab: A sandstorm has begun.
+			MatsuriLantern: Lantern Night rate increased!
+			PillarSummon: The Celestial Pillars have awoken!
+			SpentLantern: Lantern Night rate restored to default.
+			WeatherBalloon: Rain clouds cover the sky.
+
 
 			SiblingPylonNotNearSiblings: That pylon needs the mutated siblings to function.
 			NearbySiblingPylonNotNearSiblings: The nearby pylon needs the mutated siblings to function.
@@ -206,6 +230,7 @@ Mods: {
 			TorchGod2: "[i:5043] [c/AAAAAA:Obeys true torch luck when replacing torches, which may differ from default choices]"
 			Unlimited30: "[i:87] [c/AAAAAA:Unlimited buff at 30 stack in inventory, Piggy Bank, or Safe]"
 			Unlimited15: "[i:87] [c/AAAAAA:Unlimited buff at 15 stack in inventory, Piggy Bank, or Safe]"
+			PiggyBankAcc: "[i:87] [c/AAAAAA:Works from Piggy Bank and Safe]"
 
 			MapSingle: Reveals the whole map
 			MapMulti: Reveals an area of the map around you
@@ -213,6 +238,38 @@ Mods: {
 
 		MapObject: {
 			SiblingPylonTile: Sibling Pylon
+		}
+		
+		NPCName: {
+			Summons: {
+				Ogre: Ogre
+				Betsy: Betsy
+				Everscream: Everscream
+				DarkMage: Dark Mage
+				HeadlessHorseman: Headless Horseman
+				IceQueen: Ice Queen
+				MartianSaucer: Martian Saucer
+				SantaNK1: Santa-NK1
+				MourningWood: Mourning Wood
+				Pumpking: Pumpking
+				Medusa: Medusa
+				UndeadMiner: Undead Miner
+				Dreadnautilus: Dreadnautilus
+				BloodEel: Blood Eel
+				Wyvern: Wyvern
+				Clown: Clown
+				IceGolem: Ice Golem
+				CorruptMimic: Corrupt Mimic
+				CrimsonMimic: Crimson Mimic
+				RedDevil: Red Devil
+				RainbowSlime: Rainbow Slime
+				DoctorBones: Doctor Bones
+				SandElemental: Sand Elemental
+				Gnome: Gnome
+				GoblinScout: Goblin Scout
+				GoldenSlime: Golden Slime
+				
+			}
 		}
 
 		Dialogues: {

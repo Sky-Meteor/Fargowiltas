@@ -8,7 +8,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.IceGolem;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "冰雪巨人" : "Ice Golem";
+        public override string NPCName => LocalizedName("IceGolem");
 
         public override void SetStaticDefaults()
         {
