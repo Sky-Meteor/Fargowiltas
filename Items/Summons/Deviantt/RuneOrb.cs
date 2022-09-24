@@ -8,7 +8,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.RuneWizard;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "符文巫师" : "Rune Wizard";
+        public override string NPCName => LocalizedName("RuneWizard");
 
         public override void SetStaticDefaults()
         {

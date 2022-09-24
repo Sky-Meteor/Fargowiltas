@@ -272,6 +272,30 @@ Mods: {
 				Gnome: Gnome
 				GoblinScout: Goblin Scout
 				GoldenSlime: Golden Slime
+				Paladin: Paladin
+				HallowedMimic: Hallowed Mimic
+				Nymph: Nymph
+				HemogoblinShark: Hemogoblin Shark
+				Tim: Tim
+				JungleMimic: Jungle Mimic
+				BoneLee: Bone Lee
+				Moth: Moth
+				Mothron: Mothron
+				Nailhead: Nailhead
+				PirateCaptain: Pirate Captain
+				FlyingDutchman: Flying Dutchman
+				RuneWizard: Rune Wizard
+				GoblinSummoner: Goblin Summoner
+				DungeonSlime: Dungeon Slime
+				Mimic: Mimic
+				Digger: Digger
+				GiantWorm: Giant Worm
+				LunaticCultist: Lunatic Cultist
+				QueenSlime: Queen Slime
+				Plantera: Plantera
+				FairyQueen: Empress of Light
+				DungeonGuardian: Dungeon Guardian
+				Skeletron: Skeletron
 				Deerclops: Deerclops
 				
 			}
