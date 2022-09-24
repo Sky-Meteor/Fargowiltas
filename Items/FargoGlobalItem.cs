@@ -154,7 +154,7 @@ namespace Fargowiltas.Items
                 if (Squirrel.SquirrelSells(item, out Squirrel.SquirrelSellType sellType) != Squirrel.ShopGroup.End)
                 {
                     string text = Regex.Replace(sellType.ToString(), "([a-z])([A-Z])", "$1 $2");
-                    if (FargoUtils.IsChinesee)
+                    if (FargoUtils.IsChinese)
                     {
                         text = text.Replace("Craftable Materials Sold", "售卖可合成材料").Replace("Sold By Squirrel", "高帽松鼠售卖")
                             .Replace("Some Materials Sold", "售卖部分材料").Replace("Sold At Thirty Stack", "堆叠30个时售卖");
