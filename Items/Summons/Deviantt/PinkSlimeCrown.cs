@@ -45,17 +45,11 @@ namespace Fargowiltas.Items.Summons.Deviantt
 
             if (Main.netMode == NetmodeID.Server)
             {
-                if (FargoUtils.IsChinese())
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("粉史莱姆已苏醒！"), new Color(175, 75, 255));
-                else
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral("Pinky has awoken!"), new Color(175, 75, 255));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Pinky")), new Color(175, 75, 255));
             }
             else
             {
-                if (FargoUtils.IsChinese())
-                    Main.NewText("粉史莱姆已苏醒！", new Color(175, 75, 255));
-                else
-                    Main.NewText("Pinky has awoken!", new Color(175, 75, 255));
+                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Pinky"), new Color(175, 75, 255));
             }
 
             return true;

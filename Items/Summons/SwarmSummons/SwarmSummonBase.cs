@@ -6,6 +6,7 @@ using Terraria.Chat;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 
 namespace Fargowiltas.Items.Summons.SwarmSummons
 {
@@ -22,7 +23,11 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
         protected SwarmSummonBase(int npcType, string spawnMessage, int maxSpawn, string material)
         {
             this.npcType = npcType;
-            this.spawnMessage = spawnMessage;
+            ModTranslation message = LocalizationLoader.CreateTranslation($"Mods.Fargowiltas.MessageInfo.Swarms.{material}");
+            message.SetDefault(spawnMessage);
+            message.AddTranslation((int)GameCulture.CultureName.Chinese, FargoUtils.GetTranslation($"MessageInfo.Swarms.{material}"));
+            LocalizationLoader.AddTranslation(message);
+            this.spawnMessage = message.GetTranslation(Language.ActiveCulture);
             this.maxSpawn = maxSpawn;
             this.material = material;
         }

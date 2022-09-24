@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadSkele : SwarmSummonBase
     {
-        public OverloadSkele() : base(NPCID.SkeletronHead, FargoUtils.IsChinese() ? "骨头的碰撞声从地牢中升腾而起！" : "A great clammering of bones rises from the dungeon!", 40, "SuspiciousSkull")
+        public OverloadSkele() : base(NPCID.SkeletronHead, "A great clammering of bones rises from the dungeon!", 40, "SuspiciousSkull")
         {
         }
 
