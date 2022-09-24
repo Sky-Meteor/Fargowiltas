@@ -186,14 +186,14 @@ namespace Fargowiltas.NPCs
             int mutant = NPC.FindFirstNPC(NPCType<Mutant>());
             if (mutant != -1)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant1") + Main.npc[mutant].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant2"));
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant3") + Main.npc[mutant].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant4"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant1", Main.npc[mutant].GivenName));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Mutant3", Main.npc[mutant].GivenName));
             }
 
             int lumberjack = NPC.FindFirstNPC(NPCType<LumberJack>());
             if (lumberjack != -1)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Lumber1") + Main.npc[lumberjack].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Lumber2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Lumber", Main.npc[lumberjack].GivenName));
             }
 
             if (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("EternityMode"))

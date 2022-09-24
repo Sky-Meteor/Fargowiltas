@@ -246,7 +246,7 @@ namespace Fargowiltas.NPCs
             {
                 if (partyGirl >= 0)
                 {
-                    dialogue.Add(Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl"));
+                    dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl", Main.npc[partyGirl].GivenName));
                 }
                 
                 dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.NoPartyGirl"));
@@ -255,25 +255,25 @@ namespace Fargowiltas.NPCs
             int nurse = NPC.FindFirstNPC(NPCID.Nurse);
             if (nurse >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Nurse1") + Main.npc[nurse].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Nurse2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Nurse", Main.npc[nurse].GivenName));
             }
 
             int witchDoctor = NPC.FindFirstNPC(NPCID.WitchDoctor);
             if (witchDoctor >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.WitchDoctor1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.WitchDoctor2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.WitchDoctor", Main.npc[witchDoctor].GivenName));
             }
 
             int dryad = NPC.FindFirstNPC(NPCID.Dryad);
             if (dryad >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Dryad1") + Main.npc[dryad].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Dryad2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Dryad", Main.npc[dryad].GivenName));
             }
 
             int stylist = NPC.FindFirstNPC(NPCID.Stylist);
             if (stylist >= 0)
             {
-                dialogue.Add(Main.npc[stylist].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Stylist"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Stylist", Main.npc[stylist].GivenName));
             }
 
             int truffle = NPC.FindFirstNPC(NPCID.Truffle);
@@ -285,43 +285,42 @@ namespace Fargowiltas.NPCs
             int tax = NPC.FindFirstNPC(NPCID.TaxCollector);
             if (tax >= 0)
             {
-                dialogue.Add(Main.npc[tax].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.TaxCollector"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.TaxCollector", Main.npc[tax].GivenName));
             }
 
             int guide = NPC.FindFirstNPC(NPCID.Guide);
             if (guide >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Guide1") + Main.npc[guide].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Guide2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Guide", Main.npc[guide].GivenName));
             }
 
             int cyborg = NPC.FindFirstNPC(NPCID.Cyborg);
             if (truffle >= 0 && witchDoctor >= 0 && cyborg >= 0 && Main.rand.NextBool(52))
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg1") + Main.npc[witchDoctor].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg2")
-                + Main.npc[truffle].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg3") + Main.npc[cyborg].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg4"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Cyborg", Main.npc[witchDoctor].GivenName, Main.npc[truffle].GivenName, Main.npc[cyborg].GivenName));
             }
 
             if (partyGirl >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl2") + Main.npc[partyGirl].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl3"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.PartyGirl2", Main.npc[partyGirl].GivenName));
             }
 
             int demoman = NPC.FindFirstNPC(NPCID.Demolitionist);
             if (demoman >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Demolitionist1") + Main.npc[demoman].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Demolitionist2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.Demolitionist", Main.npc[demoman].GivenName));
             }
 
             int tavernkeep = NPC.FindFirstNPC(NPCID.DD2Bartender);
             if (tavernkeep >= 0)
             {
-                dialogue.Add(Main.npc[tavernkeep].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DD2Bartender"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DD2Bartender", Main.npc[tavernkeep].GivenName));
             }
 
             int dyeTrader = NPC.FindFirstNPC(NPCID.DyeTrader);
             if (dyeTrader >= 0)
             {
-                dialogue.Add(Main.npc[dyeTrader].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DyeTrader"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Mutant.DyeTrader", Main.npc[dyeTrader].GivenName));
             }
 
             return Main.rand.Next(dialogue);

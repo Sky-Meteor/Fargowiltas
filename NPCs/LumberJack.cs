@@ -140,7 +140,7 @@ namespace Fargowiltas.NPCs
             int nurse = NPC.FindFirstNPC(NPCID.Nurse);
             if (nurse >= 0)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Nurse1") + Main.npc[nurse].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Nurse2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Nurse", Main.npc[nurse].GivenName));
             }
 
             Player player = Main.LocalPlayer;

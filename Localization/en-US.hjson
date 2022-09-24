@@ -275,39 +275,39 @@ Mods: {
 
 				MeleeDamage: "Melee Damage: {0}%"
 				MeleeCritical: "Melee Critical: {0}%"
-                MeleeSpeed: "Melee Speed: {0}%"
-                RangedDamage: "Ranged Damage: {0}%"
-                RangedCritical: "Ranged Critical: {0}%"
-                MagicDamage: "Magic Damage: {0}%"
-                MagicCritical: "Magic Critical: {0}%"
-                ManaCostReduction: "Mana Cost Reduction: {0}%"
-                SummonDamage: "Summon Damage: {0}%"
-                SummonCritical: "Summon Critical: {0}%"
-                MaxMinions: "Max Minions: {0}"
-                MaxSentries: "Max Sentries: {0}"
+				MeleeSpeed: "Melee Speed: {0}%"
+				RangedDamage: "Ranged Damage: {0}%"
+				RangedCritical: "Ranged Critical: {0}%"
+				MagicDamage: "Magic Damage: {0}%"
+				MagicCritical: "Magic Critical: {0}%"
+				ManaCostReduction: "Mana Cost Reduction: {0}%"
+				SummonDamage: "Summon Damage: {0}%"
+				SummonCritical: "Summon Critical: {0}%"
+				MaxMinions: "Max Minions: {0}"
+				MaxSentries: "Max Sentries: {0}"
 
-                ArmorPenetration: "Armor Penetration: {0}"
-                Aggro: "Aggro: {0}"
-                Life: "Life: {0}"
-                LifeRegen: "Life Regen: {0}/sec"
-                Mana: "Mana: {0}"
-                ManaRegen: "Mana Regen: {0}/sec"
-                Defense: "Defense: {0}"
-                DamageReduction: "Damage Reduction: {0}%"
-                Luck: "Luck: {0}"
-                FishingQuests: "Fishing Quests: {0}"
-                BattleCry: "Battle Cry: {0}"
-                Battle: Battle
-                Calming: Calming
-                None: None
-                MaxSpeed: "Max Speed: {0}%"
+				ArmorPenetration: "Armor Penetration: {0}"
+				Aggro: "Aggro: {0}"
+				Life: "Life: {0}"
+				LifeRegen: "Life Regen: {0}/sec"
+				Mana: "Mana: {0}"
+				ManaRegen: "Mana Regen: {0}/sec"
+				Defense: "Defense: {0}"
+				DamageReduction: "Damage Reduction: {0}%"
+				Luck: "Luck: {0}"
+				FishingQuests: "Fishing Quests: {0}"
+				BattleCry: "Battle Cry: {0}"
+				Battle: Battle
+				Calming: Calming
+				None: None
+				MaxSpeed: "Max Speed: {0}%"
 
 				???: ???
-                WingTime: "Wing Time: {0}"
+				WingTime: "Wing Time: {0}"
 				WingTimeInfinite: "Yes"
 				WingTimeSec: "{0} sec"
-                WingMaxSpeed: "Wing Max Speed: {0} mph"
-                WindAscentModifier: "Wing Ascent Modifier: {0}%"
+				WingMaxSpeed: "Wing Max Speed: {0} mph"
+				WindAscentModifier: "Wing Ascent Modifier: {0}%"
 				WingCanHover: "Wing Can Hover: {0}"
 				True: True
 				False: False
@@ -344,8 +344,7 @@ Mods: {
 				22: It's not like I don't enjoy your company, but can you buy something?
 				23: I have slain one thousand humans! Huh? You're a human? There's so much blood on your hands..
 				Graveyard: I hope all these graves lying around don't belong to you.
-				Mechanic1: "Can you please ask "
-				Mechanic2: " to stop touching my laser arm please."
+				Mechanic1: "Can you please ask {0} to stop touching my laser arm please."
 				EventOver: Hocus pocus, the event is over
 				CD: "I'm not feeling it right now, come back in {0} seconds."
 				NoEvent: I don't think there's an event right now.
@@ -376,12 +375,9 @@ Mods: {
 				13: Hmm, I can tell! You've killed a lot, but you haven't killed enough!
 				14: Why the extra letter, you ask? Only the strongest sibling is allowed to remove their own!
 				15: The more rare things you kill, the more stuff I sell! Simple, right?
-				Mutant1: "Can you tell "
-				Mutant2: " to put some clothes on?"
-				Mutant3: "One day, I'll sell a summon for myself! ...Just kidding. That's "
-				Mutant4: "'s job."
-				Lumber1: "What's that? You want to fight "
-				Lumber2: "? ...even I know better than to try."
+				Mutant1: "Can you tell {0} to put some clothes on?"
+				Mutant2: "One day, I'll sell a summon for myself! ...Just kidding. That's {0}'s job."
+				Lumber: "What's that? You want to fight {0}? ...even I know better than to try."
 				Eternity: Embrace suffering... and while you're at it, embrace another purchase!
 				DownedMutant: What's that? You want to fight me for real? ...nah, I can't put up a good fight on my own.
 				MutantSuggestion: Hey, you've almost made it to the end! Got all your Soul accessories ready? What's that? You want to fight my big brother? ...maybe if he had a reason to.
@@ -439,8 +435,7 @@ Mods: {
 				18: Red is one of my favourite colors, right after wood.
 				19: It's always flannel season.
 				20: I'm glad my wood put such a big smile on your face.
-				Nurse1: "I always see "
-				Nurse2: " looking at my biceps when I'm working. Wonder if she wants some of my wood."
+				Nurse: "I always see {0} looking at my biceps when I'm working. Wonder if she wants some of my wood."
 				LucyTheAxe: Lucy from that universe.. Interesting things await you.
 				Desert: While I was chopping down a cactus these things leaped at me, why don't you take care of them?
 				Jungle: These mahogany trees are full of life, but a tree only has one purpose: to be chopped. Oh yea these fell out of the last one.
@@ -518,27 +513,18 @@ Mods: {
 				Night: I'd follow and help, but I'd much rather sit around right now.
 				PartyGirl: " is the one who invited me, I don't understand why though."
 				NoPartyGirl: I don't know what everyone's so happy about, but as long as nobody mistakes me for a Pigronata, I'm happy too.
-				Nurse1: "Whenever we're alone, "
-				Nurse2: " keeps throwing syringes at me, no matter how many times I tell her to stop!"
-				WitchDoctor1: "Please go tell "
-				WitchDoctor2: " to drop the 'mystical' shtick, I mean, come on! I get it, you make tainted water or something."
-				Dryad1: "Why does "
-				Dryad2: "'s outfit make my wings flutter?"
-				Stylist: " once gave me a wig... I look hideous with long hair."
+				Nurse: "Whenever we're alone, {0} keeps throwing syringes at me, no matter how many times I tell her to stop!"
+				WitchDoctor: "Please go tell {0} to drop the 'mystical' shtick, I mean, come on! I get it, you make tainted water or something."
+				Dryad: "Why does {0}'s outfit make my wings flutter?"
+				Stylist: "{0} once gave me a wig... I look hideous with long hair."
 				Truffle: That mutated mushroom seems like my type of fella.
-				TaxCollector: " keeps asking me for money, but he won't accept my spawners!"
-				Guide1: "Any idea why "
-				Guide2: " is always cowering in fear when I get near him?"
-				Cyborg1: "If any of us could play instruments, I'd totally start a band with "
-				Cyborg2: ", "
-				Cyborg3: ", and "
-				Cyborg4: "."
-				PartyGirl2: "Man, "
-				PartyGirl3: "'s confetti keeps getting stuck to my wings."
-				Demolitionist1: "I'm surprised "
-				Demolitionist2: " hasn't blown a hole in the floor yet, on second thought that sounds fun."
-				DD2Bartender: " keeps suggesting I drink some beer, something tells me he wouldn't like me when I'm drunk though."
-				DyeTrader: " wants to see what I would look like in blue... I don't know how to feel."
+				TaxCollector: "{0} keeps asking me for money, but he won't accept my spawners!"
+				Guide: "Any idea why {0} is always cowering in fear when I get near him?"
+				Cyborg: "If any of us could play instruments, I'd totally start a band with {0}, {1}, and {2}."
+				PartyGirl2: "Man, {0}'s confetti keeps getting stuck to my wings."
+				Demolitionist: "I'm surprised {0} hasn't blown a hole in the floor yet, on second thought that sounds fun."
+				DD2Bartender: "{0} keeps suggesting I drink some beer, something tells me he wouldn't like me when I'm drunk though."
+				DyeTrader: "{0} wants to see what I would look like in blue... I don't know how to feel."
 			}
 					
 			Squirrel: {

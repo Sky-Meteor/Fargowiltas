@@ -172,7 +172,7 @@ namespace Fargowiltas.NPCs
             int mechanic = NPC.FindFirstNPC(NPCID.Mechanic);
             if (mechanic != -1)
             {
-                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.Mechanic1") + Main.npc[mechanic].GivenName + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.Mechanic2"));
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.Mechanic", Main.npc[mechanic].GivenName));
             }
 
             return Main.rand.Next(dialogue);
