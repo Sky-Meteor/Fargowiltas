@@ -6,7 +6,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.BigMimicHallow;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "神圣宝箱怪" : "Hallowed Mimic";
+        public override string NPCName => LocalizedName("HallowedMimic");
 
         public override void SetStaticDefaults()
         {

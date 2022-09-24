@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => Main.hardMode ? NPCID.DiggerHead : NPCID.GiantWormHead;
 
-        public override string NPCName => FargoUtils.IsChinese() ? (Main.hardMode ? "挖掘怪" : "巨型蠕虫") : (Main.hardMode ? "Digger" : "Giant Worm");
+        public override string NPCName => Main.hardMode ? LocalizedName("Digger") : LocalizedName("GiantWorm");
 
         public override void SetStaticDefaults()
         {

@@ -14,7 +14,7 @@ namespace Fargowiltas.Items.Summons.Mutant
     {
         public override int NPCType => Main.dayTime ? NPCID.DungeonGuardian : NPCID.SkeletronHead;
 
-        public override string NPCName => FargoUtils.IsChinese() ? (Main.dayTime ? "地牢守卫" : "骷髅王") : (Main.dayTime ? "Dungeon Guardian" : "Skeletron");
+        public override string NPCName => Main.dayTime ? LocalizedName("DungeonGuardian") : LocalizedName("Skeletron");
 
         public override bool ResetTimeWhenUsed => !Main.dayTime && !NPC.downedBoss3;
 
