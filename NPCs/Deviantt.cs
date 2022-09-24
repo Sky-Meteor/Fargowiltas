@@ -135,11 +135,12 @@ namespace Fargowiltas.NPCs
 
             if (Main.notTheBeesWorld)
             {
-                string text = FargoUtils.IsChinese() ? "哈" : "HA";
+                string LocalizedText(string text) => Language.GetTextValue($"Mods.Fargowiltas.Dialogues.Devi.{text}");
+                string text = LocalizedText("HA");
                 int max = Main.rand.Next(10, 50);
                 for (int i = 0; i < max; i++)
-                    text += FargoUtils.IsChinese() ? Main.rand.Next(new string[] { "哈", "哈", "哈", "嘻", "呼", "嘿" }) : (" " + Main.rand.Next(new string[] { "HA", "HA", "HA", "HEE", "HOO", "HEH" }));
-                text += FargoUtils.IsChinese() ? "!" : "!";
+                    text += Language.GetTextValue("Mods.Fargowiltas.UI.space") + Main.rand.Next(new string[] { LocalizedText("HA"), LocalizedText("HA"), LocalizedText("HA"), LocalizedText("HEE"), LocalizedText("HOO"), LocalizedText("HEH") });
+                text += Language.GetTextValue("Mods.Fargowiltas.MessageInfo.BattleCry.!");
                 return text;
             }
 
@@ -208,7 +209,7 @@ namespace Fargowiltas.NPCs
             button = Language.GetTextValue("LegacyInterface.28");
             if (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("EternityMode"))
             {
-                button2 = FargoUtils.IsChinese() ? "帮助" : "Help"; //(bool)ModLoader.GetMod("FargowiltasSouls").Call("GiftsReceived") ? "Help" : "Receive Gift";
+                button2 = Language.GetTextValue("Mods.Fargowiltas.UI.Help"); //(bool)ModLoader.GetMod("FargowiltasSouls").Call("GiftsReceived") ? "Help" : "Receive Gift";
             }
         }
 

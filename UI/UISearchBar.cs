@@ -11,7 +11,7 @@ namespace Fargowiltas.UI
 {
     public class UISearchBar : UIElement
     {
-        public string HintText = FargoUtils.IsChinese() ? "搜索……" : "Search...";
+        public string HintText = FargoUtils.GetTranslation("UI.StatSheet.HintText");
 
         public bool IsEmpty => string.IsNullOrEmpty(Input);
 

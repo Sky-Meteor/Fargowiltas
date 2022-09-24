@@ -155,16 +155,16 @@ namespace Fargowiltas.NPCs
             showCycleShop = GetSellableItems().Count / maxShop > 0 && !ModLoader.TryGetMod("ShopExpander", out _);
 
             if (Main.bloodMoon)
-                return FargoUtils.IsChinese() ? "[c/FF0000:你会受苦的。]" : "[c/FF0000:You will suffer.]";
+                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Squirrel.BloodMoon");
 
             switch (Main.rand.Next(3))
 			{
 				case 0:
-					return FargoUtils.IsChinese() ? "*吱吱*" : "*squeak*";
+					return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Squirrel.1");
 				case 1:
-					return FargoUtils.IsChinese() ? "*啾啾*" : "*chitter*";
+					return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Squirrel.2");
 				default:
-					return FargoUtils.IsChinese() ? "*嘎吱嘎吱*" : "*crunch crunch*";
+					return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Squirrel.3");
 			}
 		}
 
@@ -173,8 +173,8 @@ namespace Fargowiltas.NPCs
             button = Language.GetTextValue("LegacyInterface.28");
             if (showCycleShop)
             {
-                button += $" {shopNum + 1}";
-                button2 = FargoUtils.IsChinese() ? "切换商店" : "Cycle Shop";
+                button += $"{Language.GetTextValue("Mods.Fargowiltas.UI.space")}{shopNum + 1}";
+                button2 = Language.GetTextValue("Mods.Fargowiltas.UI.CycleShop");
             }
         }
 

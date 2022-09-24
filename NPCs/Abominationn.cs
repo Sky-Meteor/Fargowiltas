@@ -181,7 +181,7 @@ namespace Fargowiltas.NPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = FargoUtils.IsChinese() ? "取消事件" : "Cancel Event";
+            button2 = Language.GetTextValue("Mods.Fargowiltas.UI.CancelEvent");
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)
@@ -208,12 +208,11 @@ namespace Fargowiltas.NPCs
                         netMessage.Send();
                     }
 
-                    Main.npcChatText = FargoUtils.IsChinese() ? (Fargowiltas.TryClearEvents() ? "吼吼嘿哈，事件结束了！" : $"我现在感觉不到，{FargoWorld.AbomClearCD / 60}秒之后再来吧。")
-                                                              : (Fargowiltas.TryClearEvents() ? "Hocus pocus, the event is over" : $"I'm not feeling it right now, come back in {FargoWorld.AbomClearCD / 60} seconds.");
+                    Main.npcChatText = Fargowiltas.TryClearEvents() ? Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.EventOver"): Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.CD", FargoWorld.AbomClearCD / 60);
                 }
                 else
                 {
-                    Main.npcChatText = FargoUtils.IsChinese() ? "我认为现在没有事件。" : "I don't think there's an event right now.";
+                    Main.npcChatText = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Abom.NoEvent");
                 }
             }
         }

@@ -44,22 +44,22 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                 if (Main.netMode == 2)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "南瓜月消逝……" : "The Pumpkin Moon fades away!"), new Color(175, 75, 255));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadPumpkinMoon1")), new Color(175, 75, 255));
                 }
                 else
                 {
-                    Main.NewText(FargoUtils.IsChinese() ? "南瓜月消逝……" : "The Pumpkin Moon fades away!", 175, 75, 255);
+                    Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadPumpkinMoon1"), 175, 75, 255);
                 }
             }
             else
             {
                 if (Main.netMode == 2)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "南瓜月正在升起……" : "The Pumpkin Moon is rising..."), new Color(50, 255, 130));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadPumpkinMoon2")), new Color(50, 255, 130));
                 }
                 else
                 {
-                    Main.NewText(FargoUtils.IsChinese() ? "南瓜月正在升起……" : "The Pumpkin Moon is rising...", 50, 255, 130);
+                    Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadPumpkinMoon2"), 50, 255, 130);
                 }
 
                 Main.pumpkinMoon = true;
@@ -72,11 +72,11 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                     if (Main.netMode == 2)
                     {
-                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "波数: 15: 一切" : "Wave: 15: Everything"), new Color(175, 75, 255));
+                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadPumpkinMoonWave")), new Color(175, 75, 255));
                     }
                     else
                     {
-                        Main.NewText(FargoUtils.IsChinese() ? "波数: 15: 一切" : "Wave: 15: Everything", 175, 75, 255);
+                        Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadPumpkinMoonWave"), 175, 75, 255);
                     }
                 }
                 else

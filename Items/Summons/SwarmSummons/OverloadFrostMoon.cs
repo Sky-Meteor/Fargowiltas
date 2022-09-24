@@ -44,22 +44,22 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                 if (Main.netMode == 2)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "霜月消逝……" : "The Frost Moon fades away!"), new Color(175, 75, 255));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon1")), new Color(175, 75, 255));
                 }
                 else
                 {
-                    Main.NewText(FargoUtils.IsChinese() ? "霜月消逝……" : "The Frost Moon fades away!", 175, 75, 255);
+                    Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon1"), 175, 75, 255);
                 }
             }
             else
             {
                 if (Main.netMode == 2)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "霜月正在升起……" : "The Frost Moon is rising..."), new Color(50, 255, 130));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon2")), new Color(50, 255, 130));
                 }
                 else
                 {
-                    Main.NewText(FargoUtils.IsChinese() ? "霜月正在升起……" : "The Frost Moon is rising...", 50, 255, 130);
+                    Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon2"), 50, 255, 130);
                 }
 
                 Main.snowMoon = true;
@@ -72,11 +72,11 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                     if (Main.netMode == 2)
                     {
-                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "波数：20：一切" : "Wave: 20: Everything"), new Color(175, 75, 255));
+                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoonWave")), new Color(175, 75, 255));
                     }
                     else
                     {
-                        Main.NewText(FargoUtils.IsChinese() ? "波数：20：一切" : "Wave: 20: Everything", 175, 75, 255);
+                        Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoonWave"), 175, 75, 255);
                     }
                 }
                 else

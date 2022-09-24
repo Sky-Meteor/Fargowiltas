@@ -204,7 +204,21 @@ Mods: {
 			DeathBringerFairy: Several bosses have awoken!
 			MutantVoodoo: Several bosses have awoken!
 
+			OverloadFrostMoon1: The Frost Moon fades away!
+			OverloadFrostMoon2: The Frost Moon is rising...
+			OverloadFrostMoonWave: "Wave: 20: Everything"
+			OverloadGoblins: The goblins have calmed down!
+			OverloadMartians: The martians have calmed down!
+			OverloadPirates: The pirates have calmed down!
+			OverloadPumpkinMoon1: The Pumpkin Moon fades away!
+			OverloadPumpkinMoon2: The Pumpkin Moon is rising...
+			OverloadPumpkinMoonWave: "Wave: 15: Everything"
 
+			SwarmKilled: "Killed: "
+			SwarmTotal: "Total: "
+			SwarmDefeated: The swarm has been defeated!
+
+			ItemUnlocked: "A new item has been unlocked in {0}'s shop!"
 			SiblingPylonNotNearSiblings: That pylon needs the mutated siblings to function.
 			NearbySiblingPylonNotNearSiblings: The nearby pylon needs the mutated siblings to function.
 		}
@@ -244,6 +258,62 @@ Mods: {
 			SiblingPylonTile: Sibling Pylon
 		}
 
+		UI: {
+			CancelEvent: Cancel Event
+			Help: Help
+			space: " "
+			TreeTreasures: Tree Treasures
+			PreHardmode: Pre Hardmode
+			Hardmode: Hardmode
+			PostMoonLord: Post Moon Lord
+			CycleShop: Cycle Shop
+
+			StatSheet: {
+				#by steviegt6 / tomat
+				Name: Stat Sheet
+				HintText: Search...
+
+				MeleeDamage: "Melee Damage: {0}%"
+				MeleeCritical: "Melee Critical: {0}%"
+                MeleeSpeed: "Melee Speed: {0}%"
+                RangedDamage: "Ranged Damage: {0}%"
+                RangedCritical: "Ranged Critical: {0}%"
+                MagicDamage: "Magic Damage: {0}%"
+                MagicCritical: "Magic Critical: {0}%"
+                ManaCostReduction: "Mana Cost Reduction: {0}%"
+                SummonDamage: "Summon Damage: {0}%"
+                SummonCritical: "Summon Critical: {0}%"
+                MaxMinions: "Max Minions: {0}"
+                MaxSentries: "Max Sentries: {0}"
+
+                ArmorPenetration: "Armor Penetration: {0}"
+                Aggro: "Aggro: {0}"
+                Life: "Life: {0}"
+                LifeRegen: "Life Regen: {0}/sec"
+                Mana: "Mana: {0}"
+                ManaRegen: "Mana Regen: {0}/sec"
+                Defense: "Defense: {0}"
+                DamageReduction: "Damage Reduction: {0}%"
+                Luck: "Luck: {0}"
+                FishingQuests: "Fishing Quests: {0}"
+                BattleCry: "Battle Cry: {0}"
+                Battle: Battle
+                Calming: Calming
+                None: None
+                MaxSpeed: "Max Speed: {0}%"
+
+				???: ???
+                WingTime: "Wing Time: {0}"
+				WingTimeInfinite: "Yes"
+				WingTimeSec: "{0} sec"
+                WingMaxSpeed: "Wing Max Speed: {0} mph"
+                WindAscentModifier: "Wing Ascent Modifier: {0}%"
+				WingCanHover: "Wing Can Hover: {0}"
+				True: True
+				False: False
+			}
+		}
+
 		Dialogues: {
 			Abom : {
 				Defeat: You really defeated me... not bad. Now do it again without getting hit. Oh, and Copper Shortsword only.
@@ -276,10 +346,17 @@ Mods: {
 				Graveyard: I hope all these graves lying around don't belong to you.
 				Mechanic1: "Can you please ask "
 				Mechanic2: " to stop touching my laser arm please."
+				EventOver: Hocus pocus, the event is over
+				CD: "I'm not feeling it right now, come back in {0} seconds."
+				NoEvent: I don't think there's an event right now.
 			}
 
 			Devi: {
 				Gift: This world looks tougher than usual, so you can have these on the house just this once! Talk to me if you need any tips, yeah?
+				HA: HA
+				HEE: HEE
+				HOO: HOO
+				HEH: HEH
 				Eridanus: UWAH! Please don't hurt... wait, it's just you. Don't scare me like that! And why is that THING following you?!
 				Nekomi: Ooh, that's my hoodie! So how is it? Comfy and great for gaming, right? Maybe you'll even go beat a boss without taking damage!
 				Defeat: Good work getting one over on me! Hope I didn't make you sweat too much. Keep at the grind - I wanna see how far you can go!
@@ -463,7 +540,13 @@ Mods: {
 				DD2Bartender: " keeps suggesting I drink some beer, something tells me he wouldn't like me when I'm drunk though."
 				DyeTrader: " wants to see what I would look like in blue... I don't know how to feel."
 			}
-
+					
+			Squirrel: {
+				BloodMoon: "[c/FF0000:You will suffer.]"
+				1: "*squeak*"
+				2: "*chitter*"
+				3: "*crunch crunch*"
+			}
 		}
 	}
 }

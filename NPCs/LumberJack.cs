@@ -156,7 +156,7 @@ namespace Fargowiltas.NPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = FargoUtils.IsChinese() ? "树木宝藏" : "Tree Treasures";
+            button2 = Language.GetTextValue("Mods.Fargowiltas.UI.TreeTreasures");
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)

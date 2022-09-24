@@ -46,55 +46,21 @@ namespace Fargowiltas
 
             if (update)
             {
-                string text = $"A new item has been unlocked in {seller}'s shop!";
-                if (IsChinese())
+                if (IsChinese)
+                    seller = seller.Replace("Deviantt", "戴薇安").Replace("Abominationn", "憎恶");
+                string text = Language.GetTextValue("Mods.Fargowiltas.MessageInfo.ItemUnlocked", seller);
+                if (Main.netMode == NetmodeID.SinglePlayer)
                 {
-                    if (seller == "Deviantt")
-                    {
-                        text = "戴薇安解锁了新商品！";
-                        if (Main.netMode == NetmodeID.SinglePlayer)
-                        {
-                            if (conditions)
-                                Main.NewText(text, color);
-                        }
-                        else if (Main.netMode == NetmodeID.Server)
-                        {
-                            if (conditions)
-                                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
-                            NetMessage.SendData(MessageID.WorldData); //sync world
-                        }
-                    }
-                    else
-                    {
-                        text = "憎恶解锁了新商品！";
-                        if (Main.netMode == NetmodeID.SinglePlayer)
-                        {
-                            if (conditions)
-                                Main.NewText(text, color);
-                        }
-                        else if (Main.netMode == NetmodeID.Server)
-                        {
-                            if (conditions)
-                                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
-                            NetMessage.SendData(MessageID.WorldData); //sync world
-                        }
-                    }
+                    if (conditions)
+                        Main.NewText(text, color);
+                }
+                else if (Main.netMode == NetmodeID.Server)
+                {
+                    if (conditions)
+                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
+                    NetMessage.SendData(MessageID.WorldData); //sync world
+                }
 
-                }
-                else
-                {
-                    if (Main.netMode == NetmodeID.SinglePlayer)
-                    {
-                        if (conditions)
-                            Main.NewText(text, color);
-                    }
-                    else if (Main.netMode == NetmodeID.Server)
-                    {
-                        if (conditions)
-                            ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), color);
-                        NetMessage.SendData(MessageID.WorldData); //sync world
-                    }
-                }
             }
         }
 
@@ -117,18 +83,7 @@ namespace Fargowiltas
 
         public static void PrintText(string text, int r, int g, int b) => PrintText(text, new Color(r, g, b));
 
-        public static bool IsChinesee => Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
-
-        public static bool IsChinese() =>  Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
-
-        public static string Loc(string en, string zh = null) => (IsChinese() && zh != null) ? zh : en;
-
-        public static string L10n(this string str, string key)
-        {
-            if (IsChinese())
-                return Language.GetTextValue("Mods.Fargowiltas." + key);
-            return str;
-        }
+        public static bool IsChinese => Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
 
         public static string GetTranslation(string key) => LocalizationLoader.GetOrCreateTranslation($"Mods.Fargowiltas.{key}").GetTranslation(Language.ActiveCulture);
     }

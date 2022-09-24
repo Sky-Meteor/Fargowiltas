@@ -332,21 +332,21 @@ namespace Fargowiltas.NPCs
             switch (shopNum)
             {
                 case 1:
-                    button = FargoUtils.IsChinese() ? "困难模式前" : "Pre Hardmode";
+                    button = Language.GetTextValue("Mods.Fargowiltas.UI.PreHardmode");
                     break;
 
                 case 2:
-                    button = FargoUtils.IsChinese() ? "困难模式" : "Hardmode";
+                    button = Language.GetTextValue("Mods.Fargowiltas.UI.Hardmode");
                     break;
 
                 default:
-                    button = FargoUtils.IsChinese() ? "月亮领主后" : "Post Moon Lord";
+                    button = Language.GetTextValue("Mods.Fargowiltas.UI.PostMoonLord");
                     break;
             }
 
             if (Main.hardMode)
             {
-                button2 = FargoUtils.IsChinese() ? "切换商店" : "Cycle Shop";
+                button2 = Language.GetTextValue("Mods.Fargowiltas.UI.CycleShop");
             }
 
             if (NPC.downedMoonlord)

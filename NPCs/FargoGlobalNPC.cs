@@ -1355,7 +1355,7 @@ namespace Fargowiltas.NPCs
 
             if (npc.type == NPCID.DD2Betsy && !PandoraActive)
             {
-                FargoUtils.PrintText(FargoUtils.IsChinese() ? "双足翼龙已被击败！" : "Betsy has been defeated!", new Color(175, 75, 0));
+                FargoUtils.PrintText(Language.GetTextValue("Announcement.HasBeenDefeated_Single", Language.GetTextValue("NPCName.DD2Betsy")), new Color(175, 75, 0));
                 FargoWorld.DownedBools["betsy"] = true;
             }
 
@@ -1488,13 +1488,13 @@ namespace Fargowiltas.NPCs
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral((FargoUtils.IsChinese() ? "击杀数：" : "Killed: ") + Fargowiltas.SwarmKills), new Color(206, 12, 15));
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral((FargoUtils.IsChinese() ? "总计：" : "Total: ") + Fargowiltas.SwarmTotal), new Color(206, 12, 15));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmKilled") + Fargowiltas.SwarmKills), new Color(206, 12, 15));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmTotal") + Fargowiltas.SwarmTotal), new Color(206, 12, 15));
             }
             else
             {
-                Main.NewText((FargoUtils.IsChinese() ? "击杀数：" : "Killed: ") + Fargowiltas.SwarmKills, new Color(206, 12, 15));
-                Main.NewText((FargoUtils.IsChinese() ? "总计：" : "Total: ") + Fargowiltas.SwarmTotal, new Color(206, 12, 15));
+                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmKilled") + Fargowiltas.SwarmKills, new Color(206, 12, 15));
+                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmTotal") + Fargowiltas.SwarmTotal, new Color(206, 12, 15));
             }
 
             if (minion != -1 && NPC.CountNPCS(minion) >= Fargowiltas.SwarmSpawned)
@@ -1560,11 +1560,11 @@ namespace Fargowiltas.NPCs
             {
                 if (Main.netMode == NetmodeID.Server)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(FargoUtils.IsChinese() ? "这群怪物已被打败！" : "The swarm has been defeated!"), new Color(206, 12, 15));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmDefeated")), new Color(206, 12, 15));
                 }
                 else
                 {
-                    Main.NewText(FargoUtils.IsChinese() ? "这群怪物已被打败！" : "The swarm has been defeated!", new Color(206, 12, 15));
+                    Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmDefeated"), new Color(206, 12, 15));
                 }
 
                 for (int i = 0; i < Main.maxNPCs; i++)
