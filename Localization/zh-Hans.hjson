@@ -474,7 +474,7 @@ Mods: {
 			OverloadDestroyer: 地震触发器
 			OverloadedSlimeRain: 相当黏的晴雨表
 			OverloadEmpress: 草蛉罐
-			Overloader: 过载
+			Overloader: 过载能量
 			OverloadEye: 融合眼球
 			OverloadFish: 松露虫堆
 			OverloadFrostMoon: 调皮礼物袋
@@ -623,12 +623,16 @@ Mods: {
 			TownCat: “喵！”
 			TownBunny: “*小兔子声音*”
 
-			AltarExterminator: 破坏所有自然生成的恶魔祭坛和猩红祭坛
+			AltarExterminator: 
+				'''
+				破坏所有自然生成的恶魔祭坛和猩红祭坛
+				会导致新三矿大量生成和扩散邪恶/神圣地形等后果
+				'''
 			AutoHouse: 快速建造一间NPC房屋
 			BoomShuriken: 快速丢出炸药
 			CityBuster: 
 				'''
-				大面积破坏
+				大面积破坏物块
 				不会破坏背景墙
 				风险自担
 				'''
