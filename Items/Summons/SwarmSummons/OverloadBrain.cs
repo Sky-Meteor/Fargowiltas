@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadBrain : SwarmSummonBase
     {
-        public OverloadBrain() : base(NPCID.BrainofCthulhu, FargoUtils.IsChinese() ? "在这么多聪颖的大脑中间，你觉得自己很笨！" : "You feel dumb among so many brains!", 25, "GoreySpine")
+        public OverloadBrain() : base(NPCID.BrainofCthulhu, "You feel dumb among so many brains!", 25, "GoreySpine")
         {
         }
 

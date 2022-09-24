@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadDeer : SwarmSummonBase
     {
-        public OverloadDeer() : base(NPCID.Deerclops, FargoUtils.IsChinese() ? "永恒领域的生物大肆入侵！" : "The Constant takes over!", 50, "DeerThing2")
+        public OverloadDeer() : base(NPCID.Deerclops, "The Constant takes over!", 50, "DeerThing2")
         {
         }
 

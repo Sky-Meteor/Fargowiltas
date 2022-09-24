@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadPlant : SwarmSummonBase
     {
-        public OverloadPlant() : base(NPCID.Plantera, FargoUtils.IsChinese() ? "丛林万物的心跳合而为一！" : "The jungle beats as one!", 25, "PlanterasFruit")
+        public OverloadPlant() : base(NPCID.Plantera, "The jungle beats as one!", 25, "PlanterasFruit")
         {
         }
 

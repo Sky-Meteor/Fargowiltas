@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadDestroyer : SwarmSummonBase
     {
-        public OverloadDestroyer() : base(NPCID.TheDestroyer, FargoUtils.IsChinese() ? "整颗星球从核心开始颤抖！" : "The planet trembles from the core!", 10, "MechWorm")
+        public OverloadDestroyer() : base(NPCID.TheDestroyer, "The planet trembles from the core!", 10, "MechWorm")
         {
         }
 

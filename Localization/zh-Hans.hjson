@@ -49,14 +49,14 @@ Mods: {
 				HateBiome: "我很讨厌{BiomeName}。"
 				LikeNPC: "那个女孩，{NPCName}，她是我妹妹……我击败过的事件比她多，但是她很不错。"
 				LikeNPC_Princess: "{NPCName}看起来真棒。"
-				LoveNPC: "那个家伙，{NPCName}，他是我哥哥……我击败过的boss比他多，但是他很强大。"
+				LoveNPC: "那个家伙，{NPCName}，他是我哥哥……我击败过的Boss比他多，但是他很强大。"
 				DislikeNPC: "我不喜欢{NPCName}。"
 				HateNPC: "{NPCName}毁了战斗的荣耀，我不想让她靠近我。"
 			}
 			Mutant: {
 				Content: 谢谢你的房子，我想。
 				NoHome: 房子没什么坏处，但我不介意。
-				LoveSpace: boss战之间的休息时间很不错。周围有很多人，我不明白这一点。
+				LoveSpace: Boss战之间的休息时间很不错。周围有很多人，我不明白这一点。
 				FarFromHome: 我会吃史莱姆和僵尸，但在家吃人类的食物也不错。
 				DislikeCrowded: 这里人太多了。他们似乎很沮丧，因为我一直在赢得我们的对视比赛。
 				HateCrowded: 如果在这个拥挤的小镇上再多一个人撞上我的脑子……不要介意。
@@ -199,7 +199,33 @@ Mods: {
 			PillarSummon: 天界柱已苏醒！
 			SpentLantern: 出现灯笼夜的概率恢复正常。
 			WeatherBalloon: 雨云遮住了天空。
+			Pinky: 粉史莱姆已苏醒！
+			AncientSeal: 所有Boss已苏醒！
+			DeathBringerFairy: 数个boss已苏醒！
+			MutantVoodoo: 数个boss已苏醒！
 
+			Swarms: {
+				Abeemination2: 震耳欲聋的嗡嗡声穿透了你！
+				BetsyEgg: 真正的撒旦大军来袭！
+				GoreySpine: 在这么多聪颖的大脑中间，你觉得自己很笨！
+				CultistSummon: 反抗的圣歌回响在你的耳畔！
+				ForbiddenTome: 你感觉你身在图书馆！
+				DeerThing2: 永恒领域的生物大肆入侵！
+				MechWorm: 整颗星球从核心开始颤抖！
+				PrismaticPrimrose: 弹幕天堂正在来临！
+				SuspiciousEye: 无数眼睛刺破面纱看透了你！
+				TruffleWorm2: 海洋被凶猛的猪们搅的天翻地覆！
+				LihzahrdPowerCell2: 古老的机器人接连从天上落下！
+				CelestialSigil2: 逼近死亡之风呢喃不已……
+				PlanterasFruit: 丛林万物的心跳合而为一！
+				MechSkull: 一股恶心的寒气笼罩着整个世界！
+				JellyCrystal: 欢迎来到名副其实的史莱姆雨！
+				SuspiciousSkull: 骨头的碰撞声从地牢中升腾而起！
+				SlimyCrown: 欢迎来到真正的史莱姆雨！
+				MechEye: 一群发光的虹膜唱着可怕的歌！
+				FleshyDoll: 一个血肉堡垒从深处升起！
+				WormyFood: 地面以公式化的精度颤动！
+			}
 
 			SiblingPylonNotNearSiblings: 目标晶塔需要三兄妹在附近才能使用
 			NearbySiblingPylonNotNearSiblings: 当前晶塔需要三兄妹在附近才能使用
@@ -448,7 +474,7 @@ Mods: {
 			OverloadDestroyer: 地震触发器
 			OverloadedSlimeRain: 相当黏的晴雨表
 			OverloadEmpress: 草蛉罐
-			Overloader: 过载
+			Overloader: 过载能量
 			OverloadEye: 融合眼球
 			OverloadFish: 松露虫堆
 			OverloadFrostMoon: 调皮礼物袋
@@ -462,7 +488,7 @@ Mods: {
 			OverloadPumpkinMoon: 闹鬼战利品
 			OverloadQueenSlime: 集群水晶
 			OverloadSkele: 骷髅项链
-			OverloadSlimeCrown: 群冠
+			OverloadSlimeCrown: 集群王冠
 			OverloadTwins: 全焦距晶状体
 			OverloadWall: 人偶包
 			OverloadWorm: 蠕虫串烧
@@ -597,12 +623,16 @@ Mods: {
 			TownCat: “喵！”
 			TownBunny: “*小兔子声音*”
 
-			AltarExterminator: 破坏所有自然生成的恶魔祭坛和猩红祭坛
+			AltarExterminator: 
+				'''
+				破坏所有自然生成的恶魔祭坛和猩红祭坛
+				会导致新三矿大量生成和扩散邪恶/神圣地形等后果
+				'''
 			AutoHouse: 快速建造一间NPC房屋
 			BoomShuriken: 快速丢出炸药
 			CityBuster: 
 				'''
-				大面积破坏
+				大面积破坏物块
 				不会破坏背景墙
 				风险自担
 				'''
@@ -729,7 +759,7 @@ Mods: {
 				只能在晚上使用
 				'''
 			MartianMemoryStick: 召唤火星飞碟
-			MatsuriLantern: 让每个无boss、无入侵事件的夜晚都是灯笼夜
+			MatsuriLantern: 让每个无Boss、无入侵事件的夜晚都是灯笼夜
 			NaughtyList: 
 				'''
 				召唤圣诞坦克
@@ -1061,7 +1091,7 @@ Mods: {
 				'''
 				用于合成过载召唤物
 				使用过载召唤物时，堆叠在一起的所有召唤物都会被消耗
-				消耗的越多，产生的boss就越多
+				消耗的越多，产生的Boss就越多
 				每击杀10个Boss就会掉落一个纪念章
 				每击杀100个Boss就会掉落一个强化剂
 				'''
@@ -1368,7 +1398,7 @@ Mods: {
 			Devi: {
 				Gift: 这个世界看起来比平时更艰难，所以我免费给你提供这些，仅此一次！如果你需要任何提示，请告诉我，好吗？
 				Eridanus: 呜哇！别伤害我……等等，是你啊……不要这样吓我！还有，为什么那东西在跟着你？！
-				Nekomi: 哦，那是我的连帽衫！所以感觉如何？舒适、很适合打游戏，对吧？也许你甚至能无伤打败一个boss！
+				Nekomi: 哦，那是我的连帽衫！所以感觉如何？舒适、很适合打游戏，对吧？也许你甚至能无伤打败一个Boss！
 				Defeat: 不错，你战胜了我！希望我没有让你太辛苦。坚持到底吧——我想要看看你能前行多远！
 				BloodMoon: 血月的影响？我不再是人类了，所以没有！
 				1: 你知道吗？唯一真正的音乐类型是死亡金属和艺术核心。

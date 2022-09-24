@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadGolem : SwarmSummonBase
     {
-        public OverloadGolem() : base(NPCID.Golem, FargoUtils.IsChinese() ? "古老的机器人接连从天上落下！" : "Ancient automatons come crashing down!", 25, "LihzahrdPowerCell2")
+        public OverloadGolem() : base(NPCID.Golem, "Ancient automatons come crashing down!", 25, "LihzahrdPowerCell2")
         {
         }
 

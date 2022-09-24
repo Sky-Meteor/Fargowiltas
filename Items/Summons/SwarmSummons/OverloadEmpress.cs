@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 {
     public class OverloadEmpress : SwarmSummonBase
     {
-        public OverloadEmpress() : base(NPCID.HallowBoss, FargoUtils.IsChinese() ? "子弹天堂正在来临！" : "Bullet heaven is descending!", 25, "PrismaticPrimrose")
+        public OverloadEmpress() : base(NPCID.HallowBoss, "Bullet heaven is descending!", 25, "PrismaticPrimrose")
         {
         }
 
