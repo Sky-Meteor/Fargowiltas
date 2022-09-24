@@ -1260,61 +1260,6 @@ Mods: {
 
 
 		NPCName: {
-			Summons: {
-				Ogre: 食人魔
-				Betsy: 双足翼龙
-				Everscream: 常绿尖叫怪
-				DarkMage: 黑暗魔法师
-				HeadlessHorseman: 无头骑士
-				IceQueen: 冰雪女王
-				MartianSaucer: 火星飞碟
-				SantaNK1: 圣诞坦克
-				MourningWood: 哀木
-				Pumpking: 南瓜王
-				Medusa: 蛇发女妖
-				UndeadMiner: 不死矿工
-				Dreadnautilus: 恐惧鹦鹉螺
-				BloodEel: 血鳗鱼
-				Wyvern: 飞龙
-				Clown: 小丑
-				IceGolem: 冰雪巨人
-				CorruptMimic: 腐化宝箱怪
-				CrimsonMimic: 猩红宝箱怪
-				RedDevil: 红魔鬼
-				RainbowSlime: 彩虹史莱姆
-				DoctorBones: 骷髅博士
-				SandElemental: 沙尘精
-				Gnome: 侏儒
-				GoblinScout: 哥布林侦察兵
-				GoldenSlime: 金史莱姆
-				Paladin: 圣骑士
-				HallowedMimic: 神圣宝箱怪
-				Nymph: 宁芙
-				HemogoblinShark: 血浆哥布林鲨鱼
-				Tim: 蒂姆
-				JungleMimic: 丛林宝箱怪
-				BoneLee: 骷髅李小龙
-				Moth: 蛾
-				Mothron: 蛾怪
-				Nailhead: 钉头
-				PirateCaptain: 海盗船长
-				FlyingDutchman: 荷兰飞盗船
-				RuneWizard: 符文法师
-				GoblinSummoner: 哥布林召唤师
-				DungeonSlime: 地牢史莱姆
-				Mimic: 宝箱怪
-				Digger: 挖掘怪
-				GiantWorm: 巨型蠕虫
-				LunaticCultist: 拜月教邪教徒
-				QueenSlime: 史莱姆皇后
-				Plantera: 世纪之花
-				FairyQueen: 光之女皇
-				DungeonGuardian: 地牢守卫
-				Skeletron: 骷髅王
-				Deerclops: 独眼巨鹿
-
-			}
-
 			Abominationn: 憎恶
 			Deviantt: 戴薇安
 			LumberJack: 伐木工
