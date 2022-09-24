@@ -81,6 +81,6 @@ namespace Fargowiltas.Items.Summons
 
             return false;
         }
-        protected static string LocalizedName(string name) => Language.GetTextValue($"Mods.Fargowiltas.NPCName.Summons.{name}");
+        protected static string LocalizedName(string name) => Language.GetTextValue($"NPCName.{name}");
     }
 }
