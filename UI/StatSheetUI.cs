@@ -77,7 +77,7 @@ namespace Fargowiltas.UI
             int Crit(DamageClass damageClass) => (int)player.GetTotalCritChance(damageClass);
 
             AddStat("MeleeDamage", Damage(DamageClass.Melee).ToString(), ItemID.CopperBroadsword);
-            AddStat("MeleeCrit", Crit(DamageClass.Melee), ItemID.CopperBroadsword);
+            AddStat("MeleeCritical", Crit(DamageClass.Melee), ItemID.CopperBroadsword);
             AddStat("MeleeSpeed", (int)(1f / player.GetAttackSpeed(DamageClass.Melee) * 100), ItemID.CopperBroadsword);
             AddStat("RangedDamage", Damage(DamageClass.Ranged), ItemID.CopperBow);
             AddStat("RangedCritical", Crit(DamageClass.Ranged), ItemID.CopperBow);

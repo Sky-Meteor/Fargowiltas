@@ -1333,7 +1333,7 @@ Mods: {
 				HintText: 搜索……
 				
 				MeleeDamage: "近战伤害：{0}%"
-				MeleeCrit: "近战暴击率：{0}%"
+				MeleeCritical: "近战暴击率：{0}%"
 				MeleeSpeed: "近战速度：{0}%"
 				RangedDamage: "远程伤害：{0}%"
 				RangedCritical: "远程暴击率：{0}%"
