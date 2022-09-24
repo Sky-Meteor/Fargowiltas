@@ -12,7 +12,7 @@ namespace Fargowiltas.Items.Summons.Mutant
 
         public override int NPCType => NPCID.QueenSlimeBoss;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "史莱姆皇后" : "Queen Slime";
+        public override string NPCName => LocalizedName("QueenSlime");
 
         public override void SetStaticDefaults()
         {
