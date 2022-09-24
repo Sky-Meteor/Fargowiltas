@@ -344,7 +344,7 @@ Mods: {
 				22: It's not like I don't enjoy your company, but can you buy something?
 				23: I have slain one thousand humans! Huh? You're a human? There's so much blood on your hands..
 				Graveyard: I hope all these graves lying around don't belong to you.
-				Mechanic1: "Can you please ask {0} to stop touching my laser arm please."
+				Mechanic: "Can you please ask {0} to stop touching my laser arm please."
 				EventOver: Hocus pocus, the event is over
 				CD: "I'm not feeling it right now, come back in {0} seconds."
 				NoEvent: I don't think there's an event right now.
