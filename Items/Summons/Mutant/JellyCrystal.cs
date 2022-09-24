@@ -12,7 +12,7 @@ namespace Fargowiltas.Items.Summons.Mutant
 
         public override int NPCType => NPCID.QueenSlimeBoss;
 
-        public override string NPCName => LocalizedName("QueenSlime");
+        public override string NPCName => LocalizedName("QueenSlimeBoss");
 
         public override void SetStaticDefaults()
         {

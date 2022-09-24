@@ -10,7 +10,7 @@ namespace Fargowiltas.Items.Summons
 
         public override int NPCType => NPCID.EaterofWorldsHead;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "世界吞噬怪" : "Eater of Worlds";
+        public override string NPCName => LocalizedName("EaterofWorldsHead");
 
         public override void SetStaticDefaults()
         {

@@ -70,11 +70,11 @@ namespace Fargowiltas.Items.Summons
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.HasAwoken", NPCName)), new Color(175, 75, 255));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Announcement.HasAwoken", NPCName)), new Color(175, 75, 255));
             }
             else if (NPCType != NPCID.KingSlime)
             {
-                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.HasAwoken", NPCName), new Color(175, 75, 255));
+                Main.NewText(Language.GetTextValue("Announcement.HasAwoken", NPCName), new Color(175, 75, 255));
             }
 
             SoundEngine.PlaySound(SoundID.Roar, player.position);

@@ -16,7 +16,7 @@ namespace Fargowiltas.Items.Summons
 
         public override int NPCType => NPCID.EyeofCthulhu;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "克苏鲁之眼" : "Eye of Cthulhu";
+        public override string NPCName => LocalizedName("EyeofCthulhu");
 
         public override bool ResetTimeWhenUsed => !NPC.downedBoss1;
 

@@ -6,7 +6,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => NPCID.PirateShip;
 
-        public override string NPCName => LocalizedName("FlyingDutchman");
+        public override string NPCName => LocalizedName("PirateShip");
 
         public override void SetStaticDefaults()
         {

@@ -16,7 +16,7 @@ namespace Fargowiltas.Items.Summons
 
         public override int NPCType => NPCID.SkeletronPrime;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "机械骷髅王" : "Skeletron Prime";
+        public override string NPCName => LocalizedName("SkeletronPrime");
 
         public override bool ResetTimeWhenUsed => !NPC.downedMechBoss3;
 

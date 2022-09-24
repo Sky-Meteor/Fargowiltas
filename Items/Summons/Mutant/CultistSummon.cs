@@ -6,7 +6,7 @@ namespace Fargowiltas.Items.Summons.Mutant
     {
         public override int NPCType => NPCID.CultistBoss;
 
-        public override string NPCName => LocalizedName("LunaticCultist");
+        public override string NPCName => LocalizedName("CultistBoss");
 
         public override void SetStaticDefaults()
         {

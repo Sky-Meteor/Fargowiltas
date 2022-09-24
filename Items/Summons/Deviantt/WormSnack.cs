@@ -7,7 +7,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override int NPCType => Main.hardMode ? NPCID.DiggerHead : NPCID.GiantWormHead;
 
-        public override string NPCName => Main.hardMode ? LocalizedName("Digger") : LocalizedName("GiantWorm");
+        public override string NPCName => Main.hardMode ? LocalizedName("DiggerHead") : LocalizedName("GiantWormHead");
 
         public override void SetStaticDefaults()
         {

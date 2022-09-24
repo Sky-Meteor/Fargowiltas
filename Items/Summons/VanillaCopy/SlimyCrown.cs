@@ -11,7 +11,7 @@ namespace Fargowiltas.Items.Summons
 
         public override int NPCType => NPCID.KingSlime;
 
-        public override string NPCName => FargoUtils.IsChinese() ? "史莱姆王" : "King Slime";
+        public override string NPCName => LocalizedName("KingSlime");
 
         public override void SetStaticDefaults()
         {
