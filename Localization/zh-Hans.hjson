@@ -686,7 +686,7 @@ Mods: {
 			PylonCleaner: 
 				'''
 				净化所有晶塔周围的区域
-				在神圣晶塔处使用蓝溶液，在其他晶塔处使用绿溶液
+				在神圣晶塔处使用蓝溶液，蘑菇晶塔处使用深蓝溶液，其他晶塔处使用绿溶液
 				'''
 			SuperDummy: 
 				'''
@@ -1257,7 +1257,8 @@ Mods: {
 				Gnome: 侏儒
 				GoblinScout: 哥布林侦察兵
 				GoldenSlime: 金史莱姆
-				
+				Deerclops: 独眼巨鹿
+
 			}
 
 			Abominationn: 憎恶
