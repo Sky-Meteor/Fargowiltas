@@ -4,7 +4,10 @@ using Fargowiltas.Items.Tiles;
 using Fargowiltas.Items.Vanity;
 using Fargowiltas.Projectiles;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
@@ -25,6 +28,11 @@ namespace Fargowiltas.NPCs
         //    name = "LumberJack";
         //    return mod.Properties.Autoload;
         //}
+
+        public override ITownNPCProfile TownNPCProfile()
+        {
+            return new LumberJackProfile();
+        }
 
         public override void SetStaticDefaults()
         {
@@ -272,7 +280,7 @@ namespace Fargowiltas.NPCs
                             player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 5);
                         }
 
-                        
+
                         //add ladybug if its windy
                         //add rat if in graveyard
                     }
@@ -432,5 +440,24 @@ namespace Fargowiltas.NPCs
                 }
             }
         }
+    }
+
+    public class LumberJackProfile : ITownNPCProfile
+    {
+        public int RollVariation() => 0;
+        public string GetNameForVariant(NPC npc) => npc.getNewNPCName();
+
+        public Asset<Texture2D> GetTextureNPCShouldUse(NPC npc)
+        {
+            if (npc.IsABestiaryIconDummy && !npc.ForcePartyHatOn)
+                return ModContent.Request<Texture2D>("Fargowiltas/NPCs/LumberJack");
+
+            if (npc.altTexture == 1)
+                return ModContent.Request<Texture2D>("Fargowiltas/NPCs/LumberJack_Party");
+
+            return ModContent.Request<Texture2D>("Fargowiltas/NPCs/LumberJack");
+        }
+
+        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("Fargowiltas/NPCs/LumberJack_Head");
     }
 }
