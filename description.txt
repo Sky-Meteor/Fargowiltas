@@ -1,6 +1,10 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
+NEW UPDATE - V 2.8.6
+-Added Semistation
+-Removed class stations and Slice of Cake from Omnistation due to inventory unlims
+
 NEW UPDATE - V 2.8.5
 -Added Pylon Cleaner
 -Added Altar Exterminator

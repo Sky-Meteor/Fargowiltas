@@ -24,7 +24,6 @@ namespace Fargowiltas.Items.Tiles
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Omnistation");
             AddMapEntry(color, name);
-            TileID.Sets.DisableSmartCursor[Type] = true;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
@@ -43,41 +42,41 @@ namespace Fargowiltas.Items.Tiles
             }
         }
 
-        public override void MouseOver(int i, int j)
-        {
-            Player player = Main.LocalPlayer;
-            player.noThrow = 2;
-            player.cursorItemIconEnabled = true;
-            player.cursorItemIconID = ItemType<Omnistation>();
-        }
+        //public override void MouseOver(int i, int j)
+        //{
+        //    Player player = Main.LocalPlayer;
+        //    player.noThrow = 2;
+        //    player.cursorItemIconEnabled = true;
+        //    player.cursorItemIconID = ItemType<Omnistation>();
+        //}
 
-        public override bool RightClick(int i, int j)
-        {
-            Item item = Main.LocalPlayer.HeldItem;
-            if (item.CountsAsClass(DamageClass.Melee))
-            {
-                Main.LocalPlayer.AddBuff(BuffID.Sharpened, 60 * 60 * 10);
-            }
+        //public override bool RightClick(int i, int j)
+        //{
+        //    Item item = Main.LocalPlayer.HeldItem;
+        //    if (item.CountsAsClass(DamageClass.Melee))
+        //    {
+        //        Main.LocalPlayer.AddBuff(BuffID.Sharpened, 60 * 60 * 10);
+        //    }
 
-            if (item.CountsAsClass(DamageClass.Ranged))
-            {
-                Main.LocalPlayer.AddBuff(BuffID.AmmoBox, 60 * 60 * 10);
-            }
+        //    if (item.CountsAsClass(DamageClass.Ranged))
+        //    {
+        //        Main.LocalPlayer.AddBuff(BuffID.AmmoBox, 60 * 60 * 10);
+        //    }
 
-            if (item.CountsAsClass(DamageClass.Magic))
-            {
-                Main.LocalPlayer.AddBuff(BuffID.Clairvoyance, 60 * 60 * 10);
-            }
+        //    if (item.CountsAsClass(DamageClass.Magic))
+        //    {
+        //        Main.LocalPlayer.AddBuff(BuffID.Clairvoyance, 60 * 60 * 10);
+        //    }
 
-            if (item.CountsAsClass(DamageClass.Summon))
-            {
-                Main.LocalPlayer.AddBuff(BuffID.Bewitched, 60 * 60 * 10);
-            }
+        //    if (item.CountsAsClass(DamageClass.Summon))
+        //    {
+        //        Main.LocalPlayer.AddBuff(BuffID.Bewitched, 60 * 60 * 10);
+        //    }
 
-            SoundEngine.PlaySound(SoundID.Item44, new Vector2(i * 16 + 8, j * 16 + 8));
+        //    SoundEngine.PlaySound(SoundID.Item44, new Vector2(i * 16 + 8, j * 16 + 8));
 
-            return true;
-        }
+        //    return true;
+        //}
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {

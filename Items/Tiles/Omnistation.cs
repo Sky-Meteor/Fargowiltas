@@ -18,8 +18,8 @@ namespace Fargowiltas.Items.Tiles
             DisplayName.SetDefault("Omnistation");
             Tooltip.SetDefault(@"Can be reused infinitely
 Effects of all vanilla buff stations
-Grants Honey and Sugar Rush when touched
-Right click while holding a weapon for its respective buff");
+Grants Honey when touched
+Greatly increases luck when nearby");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -40,18 +40,10 @@ Right click while holding a weapon for its respective buff");
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.Sunflower, 5)
-                .AddIngredient(ItemID.Campfire, 5)
-                .AddIngredient(ItemID.HeartLantern, 5)
-                .AddIngredient(ItemID.StarinaBottle, 5)
+                .AddIngredient(ModContent.ItemType<Semistation>())
                 .AddIngredient(ItemID.HoneyBucket, 5)
-                .AddIngredient(ItemID.SharpeningStation, 3)
-                .AddIngredient(ItemID.AmmoBox, 3)
-                .AddIngredient(ItemID.CrystalBall, 3)
-                .AddIngredient(ItemID.BewitchingTable, 3)
                 .AddIngredient(ItemID.GardenGnome, 3)
                 .AddIngredient(ItemID.CatBast, 3)
-                .AddIngredient(ItemID.SliceOfCake, 3)
                 .AddIngredient(ItemID.GoldLadyBug, 3)
                 .AddIngredient(bar, 10)
                 .AddTile(TileID.MythrilAnvil)
