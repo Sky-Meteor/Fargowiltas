@@ -246,9 +246,9 @@ Mods: {
 			Lure5: "[i:2373] [c/AAAAAA:This rod fires 5 lures]"
 			TorchGod1: "[i:5043] [c/AAAAAA:Automatically swaps placed torches to boost luck]"
 			TorchGod2: "[i:5043] [c/AAAAAA:Obeys true torch luck when replacing torches, which may differ from default choices]"
-			Unlimited30: "[i:87] [c/AAAAAA:Unlimited buff at 30 stack in inventory, Piggy Bank, or Safe]"
-			Unlimited15: "[i:87] [c/AAAAAA:Unlimited buff at 15 stack in inventory, Piggy Bank, or Safe]"
-			PiggyBankAcc: "[i:87] [c/AAAAAA:Works from Piggy Bank and Safe]"
+			Unlimited30: "[i:87] [c/AAAAAA:Unlimited buff at 30 stack in inventory, Piggy Bank, or Void Bag]"
+			Unlimited15: "[i:87] [c/AAAAAA:Unlimited buff at 15 stack in inventory, Piggy Bank, or Void Bag]"
+			PiggyBankAcc: "[i:87] [c/AAAAAA:Works from Piggy Bank and Void Bag]"
 
 			MapSingle: Reveals the whole map
 			MapMulti: Reveals an area of the map around you

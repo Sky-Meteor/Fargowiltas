@@ -584,9 +584,9 @@ Mods: {
 			Lure5: "[i:2373] [c/AAAAAA:能抛出五条鱼线]"
 			TorchGod1: "[i:5043] [c/AAAAAA:自动替换已放置的火把来增加运气]"
 			TorchGod2: "[i:5043] [c/AAAAAA:替换火把遵循火把运气，可能会与默认的选择有不同]"
-			Unlimited30: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠30个时获得无尽增益]"
-			Unlimited15: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠15个时获得无尽增益]"
-			PiggyBankAcc: "[i:87] [c/AAAAAA:在猪猪存钱罐和保险箱中同样生效]"
+			Unlimited30: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或虚空袋中的此物品堆叠30个时获得无尽增益]"
+			Unlimited15: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或虚空袋中的此物品堆叠15个时获得无尽增益]"
+			PiggyBankAcc: "[i:87] [c/AAAAAA:在猪猪存钱罐和虚空袋中同样生效]"
 
 			ChlorophyteQuiver: 撞墙后弹回
 			HolyQuiver: 碰撞时召唤陨星
