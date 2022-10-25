@@ -84,10 +84,10 @@ namespace Fargowiltas
             dialogueTracker = new DevianttDialogueTracker();
             dialogueTracker.AddVanillaDialogue();
 
-            HomeKey = KeybindLoader.RegisterKeybind(this, GetTranslation("Keybind.Home"), "Home");
-            RodKey = KeybindLoader.RegisterKeybind(this, GetTranslation("Keybind.Rod"), "E");
-            CustomKey = KeybindLoader.RegisterKeybind(this, GetTranslation("Keybind.Custom"), "K");
-            StatKey = KeybindLoader.RegisterKeybind(this, GetTranslation("Keybind.Stat"), "M");
+            HomeKey = KeybindLoader.RegisterKeybind(this, "Home", "Home");
+            RodKey = KeybindLoader.RegisterKeybind(this, "Rod", "E");
+            CustomKey = KeybindLoader.RegisterKeybind(this, "Custom", "K");
+            StatKey = KeybindLoader.RegisterKeybind(this, "Stat", "M");
 
             _userInterfaceManager = new UIManager();
             _userInterfaceManager.LoadUI();
