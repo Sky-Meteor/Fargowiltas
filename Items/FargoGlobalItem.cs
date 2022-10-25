@@ -283,7 +283,7 @@ namespace Fargowiltas.Items
 
         public static void TryUnlimBuff(Item item, Player player)
         {
-            if (item.IsAir)
+            if (item.IsAir || !GetInstance<FargoConfig>().UnlimitedPotionBuffsOn120)
                 return;
 
             if (item.stack >= 30 && item.buffType != 0)
@@ -316,10 +316,7 @@ namespace Fargowiltas.Items
         static int[] Construction = { ItemID.Toolbelt, ItemID.Toolbox, ItemID.ExtendoGrip, ItemID.PaintSprayer, ItemID.BrickLayer, ItemID.PortableCementMixer, ItemID.ActuationAccessory, ItemID.ArchitectGizmoPack };
         public static void TryPiggyBankAcc(Item item, Player player)
         {
-            if (item.IsAir)
-                return;
-
-            if (item.maxStack > 1)
+            if (item.IsAir || item.maxStack > 1 || !GetInstance<FargoConfig>().PiggyBankAcc)
                 return;
 
             if (Informational.Contains(item.type))

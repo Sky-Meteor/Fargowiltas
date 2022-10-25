@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace Fargowiltas.Items.Summons.Deviantt
 {
@@ -20,6 +21,20 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override bool CanUseItem(Player player)
         {
             return !Main.dayTime || player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight || player.ZoneUnderworldHeight;
+        }
+
+        public override void AddRecipes()
+        {
+            if (ModContent.TryFind("Fargowiltas/Deviantt", out ModItem modItem))
+            {
+                CreateRecipe()
+                    .AddIngredient(ItemID.MiningHelmet)
+                    .AddIngredient(ItemID.SpelunkerPotion)
+                    .AddIngredient(ItemID.GoldCoin, 3)
+                    .AddIngredient(modItem.Type)
+                    .AddTile(TileID.CookingPots)
+                    .Register();
+            }
         }
     }
 }

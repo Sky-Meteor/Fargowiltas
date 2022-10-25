@@ -158,7 +158,7 @@ namespace Fargowiltas
                     FargoGlobalItem.TryUnlimBuff(item, Player);
                 }
 
-                foreach (Item item in Player.bank2.item)
+                foreach (Item item in Player.bank4.item)
                 {
                     FargoGlobalItem.TryUnlimBuff(item, Player);
                 }
@@ -171,7 +171,7 @@ namespace Fargowiltas
                     FargoGlobalItem.TryPiggyBankAcc(item, Player);
                 }
 
-                foreach (Item item in Player.bank2.item)
+                foreach (Item item in Player.bank4.item)
                 {
                     FargoGlobalItem.TryPiggyBankAcc(item, Player);
                 }

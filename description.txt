@@ -3,6 +3,9 @@ There are several other items such as infinite ammos, craftable instant builds f
 
 NEW UPDATE - V 2.8.6
 -Added Semistation
+-Added recipe for Attactive Ore
+-Fixed unlimited buffs working even when toggled off
+-Safe replaced with Void Bag as alternative for unlimited buff storage
 -Removed class stations and Slice of Cake from Omnistation due to inventory unlims
 
 NEW UPDATE - V 2.8.5
