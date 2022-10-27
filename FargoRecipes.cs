@@ -1186,8 +1186,9 @@ namespace Fargowiltas
 
             Recipe.Create(CaughtNPCItem.CaughtTownies[NPCID.TravellingMerchant]).
             AddIngredient(null, "Merchant").
-            AddIngredient(ItemID.DynastyWood).
-            AddTile(TileID.AlchemyTable).
+            AddIngredient(ItemID.GoldCoin, 50).
+            AddIngredient(ItemID.BlueDye).
+            AddTile(TileID.DyeVat).
             Register();
 
             Recipe.Create(ItemID.BloodbathDye, 2).
