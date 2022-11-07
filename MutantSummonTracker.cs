@@ -24,10 +24,11 @@ namespace Fargowiltas
         public const float SkeletronPrime = 11f;
         public const float Plantera = 12f;
         public const float Golem = 13f;
-        public const float EmpressOfLight = 14f;
-        public const float DukeFishron = 15f;
-        public const float LunaticCultist = 16f;
-        public const float Moonlord = 17f;
+        public const float Betsy = 14f;
+        public const float EmpressOfLight = 15f;
+        public const float DukeFishron = 16f;
+        public const float LunaticCultist = 17f;
+        public const float Moonlord = 18f;
 
         internal List<MutantSummonInfo> SortedSummons;
         internal List<MutantSummonInfo> EventSummons;
