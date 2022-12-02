@@ -164,26 +164,6 @@ namespace Fargowiltas.Items
                     tooltips.Add(line);
                 }
             }
-
-            if(item.type == ItemType<Summons.MapViewer>())
-            {
-                for (int i = 0; i < tooltips.Count; i++)
-                {
-                    if (tooltips[i].Text == "Reveals the whole map")
-                    {
-                        tooltips.Remove(tooltips[i]);
-                        if (Main.netMode != NetmodeID.MultiplayerClient)
-                        {
-                            tooltips.Insert(i, new TooltipLine(Mod, "MapViewerTooltip", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.MapSingle")));
-                        }
-                        else
-                        {
-                            tooltips.Insert(i, new TooltipLine(Mod, "MapViewerTooltip", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.MapMulti")));
-                        }
-                    }
-                        
-                }
-            }
         }
 
         public override void SetDefaults(Item item)
