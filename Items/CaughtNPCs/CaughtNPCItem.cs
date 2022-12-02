@@ -186,12 +186,37 @@ namespace Fargowiltas.Items.CaughtNPCs
 
     public class CaughtGlobalNPC : GlobalNPC
     {
+        private static HashSet<int> npcCatchableWasFalse;
+
+        public override void Load()
+        {
+            npcCatchableWasFalse = new HashSet<int>();
+        }
+
+        public override void Unload()
+        {
+            if (npcCatchableWasFalse != null)
+            {
+                foreach (var type in npcCatchableWasFalse)
+                {
+                    //Failing to unload this properly causes it to bleed into un-fargowiltas gameplay, causing various issues such as clients not being able to join a server
+                    Main.npcCatchable[type] = false;
+                }
+                npcCatchableWasFalse = null;
+            }
+        }
+
         public override void SetDefaults(NPC npc)
         {
-            if (CaughtNPCItem.CaughtTownies.ContainsKey(npc.type) && ModContent.GetInstance<FargoConfig>().CatchNPCs)
+            int type = npc.type;
+            if (CaughtNPCItem.CaughtTownies.ContainsKey(type) && ModContent.GetInstance<FargoConfig>().CatchNPCs)
             {
-                npc.catchItem = (short)CaughtNPCItem.CaughtTownies.FirstOrDefault(x => x.Key.Equals(npc.type)).Value;
-                Main.npcCatchable[npc.type] = true;
+                npc.catchItem = (short)CaughtNPCItem.CaughtTownies.FirstOrDefault(x => x.Key.Equals(type)).Value;
+                if (!Main.npcCatchable[type])
+                {
+                    npcCatchableWasFalse.Add(type);
+                    Main.npcCatchable[type] = true;
+                }
             }
         }
     }

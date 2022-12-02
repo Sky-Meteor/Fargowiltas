@@ -28,7 +28,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
             if (ModContent.TryFind("Fargowiltas/Deviantt", out ModItem modItem))
             {
                 CreateRecipe()
-                    .AddIngredient(ItemID.MiningHelmet)
+                    .AddIngredient(ItemID.DeadMansChest)
+					.AddIngredient(ItemID.MiningHelmet)
                     .AddIngredient(ItemID.SpelunkerPotion)
                     .AddIngredient(ItemID.GoldCoin, 3)
                     .AddIngredient(modItem.Type)

@@ -81,7 +81,12 @@ namespace Fargowiltas
             "gnome",
             "redDevil",
             "goldenSlime",
-            "goblinScout"
+            "goblinScout",
+            "pumpking",
+            "mourningWood",
+            "iceQueen",
+            "santank",
+            "everscream"
        };
 
         public override void PreWorldGen()

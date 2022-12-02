@@ -3,9 +3,23 @@ There are several other items such as infinite ammos, craftable instant builds f
 
 NEW UPDATE - V 2.8.6
 -Added Semistation
+-Added Omni-Bridgifier
+-Added Pylon Cleaner sprite
+-Added Altar Exterminator sprite
 -Added recipe for Attactive Ore
+-Added notifications for unlocking Abominationn spawners for Pumpkin/Frost Moon enemies
+-Queen Bee now forces Jungle biome when alive like Plantera
+-City Buster no longer rolls
+-Demolitionist sells Boom Shurikens for slightly more than their crafting cost
+-Witch Doctor sells Bewitching Table post-Skeletron
+-Updated Boom Shuriken tooltip
+-Updated Half Instavator tooltip to clarify it does not work below some depth
+-Adjusted recipe for Holy Grail
+-Adjusted Lumberjack's Tree Treasures to provide more critters more easily
+-Crucible of Cosmos incorporates Golden Dipping Vat
 -Fixed unlimited buffs working even when toggled off
 -Removed class stations and Slice of Cake from Omnistation due to inventory unlims
+-Reduced stack requirement for unlimited class stations and Slice of Cake from 15 to 3
 -Made recipe easier for crafting Merchant into Travelling Merchant
 
 NEW UPDATE - V 2.8.5

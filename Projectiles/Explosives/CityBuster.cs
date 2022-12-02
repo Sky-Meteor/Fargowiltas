@@ -31,6 +31,12 @@ namespace Fargowiltas.Projectiles.Explosives
             return false;
         }
 
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            Projectile.velocity.X = 0;
+            return base.OnTileCollide(oldVelocity);
+        }
+
         public override void Kill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Item15, Projectile.Center);

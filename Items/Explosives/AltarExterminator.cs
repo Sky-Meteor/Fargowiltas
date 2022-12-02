@@ -8,8 +8,6 @@ namespace Fargowiltas.Items.Explosives
 {
     public class AltarExterminator : ModItem
     {
-        public override string Texture => "Fargowiltas/Items/Placeholder";
-
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Altar Exterminator");

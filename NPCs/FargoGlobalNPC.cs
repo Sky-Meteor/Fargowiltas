@@ -15,6 +15,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using Fargowiltas.Items.Explosives;
 
 namespace Fargowiltas.NPCs
 {
@@ -65,6 +66,7 @@ namespace Fargowiltas.NPCs
         public static int eaterBoss = -1;
         public static int brainBoss = -1;
         public static int plantBoss = -1;
+        public static int beeBoss = -1;
 
         public override bool InstancePerEntity => true;
 
@@ -116,6 +118,10 @@ namespace Fargowiltas.NPCs
 
                 case NPCID.Plantera:
                     plantBoss = npc.whoAmI;
+                    break;
+
+                case NPCID.QueenBee:
+                    beeBoss = npc.whoAmI;
                     break;
 
                 //                case NPCID.TheDestroyer:
@@ -493,6 +499,7 @@ namespace Fargowiltas.NPCs
                         break;
 
                     case NPCID.Demolitionist:
+                        AddItem(ref nextSlot, ItemType<BoomShuriken>(), Item.buyPrice(0, 0, 1, 25));
                         if (Main.hardMode)
                         {
                             AddItem(ref nextSlot, ItemID.CopperOre);
@@ -522,6 +529,24 @@ namespace Fargowiltas.NPCs
                             AddItem(ref nextSlot, ItemID.ChlorophyteOre);
                         }
 
+                        break;
+
+                    case NPCID.WitchDoctor:
+                        if (NPC.downedBoss3)
+                        {
+                            bool alreadySellsTable = false;
+                            foreach(Item item in shop.item)
+                            {
+                                if (!item.IsAir && item.type == ItemID.BewitchingTable)
+                                {
+                                    alreadySellsTable = true;
+                                    break;
+                                }
+                            }
+
+                            if (!alreadySellsTable)
+                                AddItem(ref nextSlot, ItemID.BewitchingTable);
+                        }
                         break;
 
                     case NPCID.Steampunker:
@@ -1308,6 +1333,26 @@ namespace Fargowiltas.NPCs
 
                 case NPCID.HeadlessHorseman:
                     FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "headlessHorseman");
+                    break;
+
+                case NPCID.Pumpking:
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "pumpking");
+                    break;
+
+                case NPCID.MourningWood:
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "mourningWood");
+                    break;
+
+                case NPCID.IceQueen:
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "iceQueen");
+                    break;
+
+                case NPCID.SantaNK1:
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "santank");
+                    break;
+
+                case NPCID.Everscream:
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "everscream");
                     break;
 
                 case NPCID.ZombieMerman:

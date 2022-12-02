@@ -221,8 +221,10 @@ namespace Fargowiltas
                 Player.ZoneCrimson = true;
             }
 
-            if (FargoGlobalNPC.SpecificBossIsAlive(ref FargoGlobalNPC.plantBoss, NPCID.Plantera)
+            if ((FargoGlobalNPC.SpecificBossIsAlive(ref FargoGlobalNPC.plantBoss, NPCID.Plantera)
                 && Player.Distance(Main.npc[FargoGlobalNPC.plantBoss].Center) < 3000)
+                || (FargoGlobalNPC.SpecificBossIsAlive(ref FargoGlobalNPC.beeBoss, NPCID.QueenBee)
+                && Player.Distance(Main.npc[FargoGlobalNPC.beeBoss].Center) < 3000))
             {
                 Player.ZoneJungle = true;
             }

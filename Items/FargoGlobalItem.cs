@@ -137,7 +137,7 @@ namespace Fargowiltas.Items
                             || item.type == ItemID.BewitchingTable
                             || item.type == ItemID.SliceOfCake)
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Unlimited15"));
+                        line = new TooltipLine(Mod, "TooltipUnlim", Language.GetTextValue("Mods.Fargowiltas.ItemTooltip.Unlimited3"));
                         tooltips.Add(line);
                     }
                 }
@@ -297,7 +297,7 @@ namespace Fargowiltas.Items
                     player.GetModPlayer<FargoPlayer>().luckPotionBoost = Math.Max(player.GetModPlayer<FargoPlayer>().luckPotionBoost, 0.2f);
             }
 
-            if (item.stack >= 15)
+            if (item.stack >= 3)
             {
                 if (item.type == ItemID.SharpeningStation)
                     player.AddBuff(BuffID.Sharpened, 2);

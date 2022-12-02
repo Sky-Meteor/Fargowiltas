@@ -128,8 +128,8 @@ Mods: {
 			UnlimitedHeader: Unlimited
 			UnlimitedAmmo: "[i:771] Unlimited Ammo at 3996+ in Hardmode"
 			UnlimitedConsumableWeapons: "[i:42] Unlimited Consumable Weapons at 3996+ in Hardmode"
-			UnlimitedPotionBuffsOn120: "[i:292] Unlimited Buffs at 30/15+ when carried"
-			UnlimitedPotionBuffsOn120Tooltip: 30+ for potions, 15+ for class stations (e.g. Sharpening Table)
+			UnlimitedPotionBuffsOn120: "[i:292] Unlimited Buffs when carried in certain stacks"
+			UnlimitedPotionBuffsOn120Tooltip: 30+ for potions, 3+ for class stations (e.g. Sharpening Table) and Slice of Cake
 
 			MiscHeader: Miscellaneous
 			ExtraBuffSlots: "[i:3000] Additional Buff Slots"
@@ -247,7 +247,7 @@ Mods: {
 			TorchGod1: "[i:5043] [c/AAAAAA:Automatically swaps placed torches to boost luck]"
 			TorchGod2: "[i:5043] [c/AAAAAA:Obeys true torch luck when replacing torches, which may differ from default choices]"
 			Unlimited30: "[i:87] [c/AAAAAA:Unlimited buff at 30 stack in inventory, Piggy Bank, or Void Bag]"
-			Unlimited15: "[i:87] [c/AAAAAA:Unlimited buff at 15 stack in inventory, Piggy Bank, or Void Bag]"
+			Unlimited3: "[i:87] [c/AAAAAA:Unlimited buff at 3 stack in inventory, Piggy Bank, or Void Bag]"
 			PiggyBankAcc: "[i:87] [c/AAAAAA:Works from Piggy Bank and Void Bag]"
 
 			MapSingle: Reveals the whole map

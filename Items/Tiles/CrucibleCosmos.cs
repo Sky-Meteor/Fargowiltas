@@ -50,6 +50,7 @@ namespace Fargowiltas.Items.Tiles
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<MultitaskCenter>())
                 .AddIngredient(ModContent.ItemType<ElementalAssembler>())
+				.AddIngredient(ModContent.ItemType<GoldenDippingVat>())
                 .AddRecipeGroup("Fargowiltas:AnyForge")
                 .AddRecipeGroup("Fargowiltas:AnyHMAnvil")
                 .AddRecipeGroup("Fargowiltas:AnyBookcase")

@@ -249,40 +249,60 @@ namespace Fargowiltas.NPCs
                 }
                 else if (player.ZoneRockLayerHeight || player.ZoneDirtLayerHeight)
                 {
-                    quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Cave");
+					if (Main.rand.NextBool(2))
+					{
+						quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Gem");
 
-                    itemType = Main.rand.Next(new int[] { ItemID.Diamond, ItemID.Ruby, ItemID.Amethyst, ItemID.Emerald, ItemID.Sapphire, ItemID.Topaz, ItemID.Amber });
-                    player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 15);
-                    itemType = Main.rand.Next(new int[] { ItemID.GemSquirrelDiamond, ItemID.GemSquirrelAmber, ItemID.GemSquirrelAmethyst, ItemID.GemSquirrelEmerald, ItemID.GemSquirrelRuby, ItemID.GemSquirrelSapphire, ItemID.GemSquirrelTopaz, ItemID.GemBunnyAmber, ItemID.GemBunnyAmethyst, ItemID.GemBunnyDiamond, ItemID.GemBunnyEmerald, ItemID.GemBunnyRuby, ItemID.GemBunnySapphire, ItemID.GemBunnyTopaz });
-                    player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 5);
+						for (int i = 0; i < 5; i++)
+						{
+							itemType = Main.rand.Next(new int[] { ItemID.Diamond, ItemID.Ruby, ItemID.Amethyst, ItemID.Emerald, ItemID.Sapphire, ItemID.Topaz, ItemID.Amber });
+							player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 3);
+							
+							itemType = Main.rand.Next(new int[] { ItemID.GemSquirrelDiamond, ItemID.GemSquirrelAmber, ItemID.GemSquirrelAmethyst, ItemID.GemSquirrelEmerald, ItemID.GemSquirrelRuby, ItemID.GemSquirrelSapphire, ItemID.GemSquirrelTopaz, ItemID.GemBunnyAmber, ItemID.GemBunnyAmethyst, ItemID.GemBunnyDiamond, ItemID.GemBunnyEmerald, ItemID.GemBunnyRuby, ItemID.GemBunnySapphire, ItemID.GemBunnyTopaz });
+							player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 1);
+						}
+					}
+					else
+					{
+						quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Mouse");
+						itemType = ItemID.Mouse;
+						player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 5);
+					}
                 }
                 //purity, most common option likely
                 else// if (player.position.Y > Main.worldSurface)
                 {
                     if (Main.dayTime)
                     {
-                        //butterfly
-                        if (Main.rand.Next(2) == 0)
+						if (Main.WindyEnoughForKiteDrops && Main.rand.NextBool(2)) //ladybug
+						{
+							quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Ladybug");
+							itemType = ItemID.LadyBug;
+							player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 5);
+						}
+                        else if (Main.rand.NextBool(3)) //butterfly
                         {
-                            quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.DayTime1");
-                            itemType = Main.rand.Next(new int[] { ItemID.JuliaButterfly, ItemID.MonarchButterfly, ItemID.PurpleEmperorButterfly, ItemID.RedAdmiralButterfly, ItemID.SulphurButterfly, ItemID.TreeNymphButterfly, ItemID.UlyssesButterfly, ItemID.ZebraSwallowtailButterfly });
-                            player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 5);
+                            quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.Butterfly");
+							for (int i = 0; i < 5; i++)
+                            {
+								itemType = Main.rand.Next(new int[] { ItemID.JuliaButterfly, ItemID.MonarchButterfly, ItemID.PurpleEmperorButterfly, ItemID.RedAdmiralButterfly, ItemID.SulphurButterfly, ItemID.TreeNymphButterfly, ItemID.UlyssesButterfly, ItemID.ZebraSwallowtailButterfly });
+								player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType);
+							}
                         }
-                        else if (Main.rand.Next(20) == 0)
+                        else if (Main.rand.NextBool(20))
                         {
-                            quote = "";
+                            quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.EucaluptusSap");
                             player.QuickSpawnItem(player.GetSource_OpenItem(ItemID.EucaluptusSap), ItemID.EucaluptusSap);
                         }
                         else
                         {
-                            quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.DayTime2");
-                            itemType = Main.rand.Next(new int[] { ItemID.Grasshopper, ItemID.Squirrel, ItemID.SquirrelRed, ItemID.Bird, ItemID.BlueJay, ItemID.Cardinal });
-                            player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType, 5);
+                            quote = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Lumber.DayTime");
+							for (int i = 0; i < 5; i++)
+                            {
+								itemType = Main.rand.Next(new int[] { ItemID.Grasshopper, ItemID.Squirrel, ItemID.SquirrelRed, ItemID.Bird, ItemID.BlueJay, ItemID.Cardinal });
+								player.QuickSpawnItem(player.GetSource_OpenItem(itemType), itemType);
+							}
                         }
-
-
-                        //add ladybug if its windy
-                        //add rat if in graveyard
                     }
                     else
                     {
