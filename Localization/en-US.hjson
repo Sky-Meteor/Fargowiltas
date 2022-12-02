@@ -445,9 +445,12 @@ Mods: {
 				Snow: This neck of the woods is pretty eh? Here I've got some of my favorite wood for you.
 				Beach: Even on vacation, I always fit in a little chopping. A couple annoying birds fell out of a palm tree. Take them off my hands.. maybe cook them up?
 				Underworld: I looked around here for a while and didn't find any trees. I did find these little guys though. Maybe you'll want them?
-				Cave: I certainly didn't expect to find such wonderful trees down here. Check this out.
-				DayTime1: Back in the day, people used to forge butterflies into powerful gear. We try to forget those days... but here have one.
-				DayTime2: These little critters are always falling out of the trees I cut down. Maybe you can find a use for them?
+				Gem: I certainly didn't expect to find such wonderful trees down here. Check this out.
+				Mouse: Went for a long haul today, but there were only so many of those strange trees to go around. I did find a lot of these, why don't you give some of them a new home?
+				Ladybug: Seems like the wind brought a bunch of these out of hiding. Some people say they're good luck. All I know is, the only luck I need is a sharp axe!
+				Butterfly: Back in the day, people used to forge butterflies into powerful gear. We try to forget those days... but here have one.
+				EucaluptusSap: I found this, but I'm not a sappy person. You can have it instead.
+				DayTime: These little critters are always falling out of the trees I cut down. Maybe you can find a use for them?
 				NightTime: Chopping trees at night is always relaxing... well except for the flying eyeballs. Have one of these little guys to keep you company.
 				Rest: I'm resting after a good day of chopping, come back tomorrow and maybe I'll have something else for you.
 			}

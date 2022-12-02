@@ -1514,9 +1514,12 @@ Mods: {
 				Snow: 这个树林的脖子很漂亮吧？在这里，我给你搞了些我最喜欢的木头。
 				Beach: 即使在度假，我也总会抽出时间来砍一小点树。几对恼人的鸟从一棵棕榈树上掉了下来，把它们从我手中拿走……也许可以把它们煮了吃？
 				Underworld: 我在这里看了一会儿，什么树都没找到。不过我确实找到了这些小家伙。也许你会想要它们？
-				Cave: 我真没想到我能在这里找到这么牛逼的树。看看这个。
-				DayTime1: 过去的日子里，人们常常将蝴蝶锻造成强大的装备。我们试图忘记那些日子……但这里有一只。
-				DayTime2: 这些小动物总是从我砍倒的树上掉下来。也许你可以找到它们的用途？
+				Gem: 我真没想到我能在这里找到这么牛x的树。看看这个。
+				Mouse: Went for a long haul today, but there were only so many of those strange trees to go around. I did find a lot of these, why don't you give some of them a new home?
+				Ladybug: Seems like the wind brought a bunch of these out of hiding. Some people say they're good luck. All I know is, the only luck I need is a sharp axe!
+				Butterfly: 过去的日子里，人们常常将蝴蝶锻造成强大的装备。我们试图忘记那些日子……但这里有一只。
+				EucaluptusSap: I found this, but I'm not a sappy person. You can have it instead.
+				DayTime: 这些小动物总是从我砍倒的树上掉下来。也许你可以找到它们的用途？
 				NightTime: 晚上砍树总是很放松的……好吧，除了这些飞来飞去的眼球。让这些小家伙中的一个陪陪你。
 				Rest: 我砍了一天的好东西，现在正在休息呢。明天再来，也许我会给你点别的东西。
 			}
