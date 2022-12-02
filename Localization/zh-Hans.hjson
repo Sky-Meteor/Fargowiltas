@@ -128,8 +128,8 @@ Mods: {
 			UnlimitedHeader: 无限效果
 			UnlimitedAmmo: "[i:771] 在困难模式中，背包中的某种弹药多于3996时不消耗"
 			UnlimitedConsumableWeapons: "[i:42] 在困难模式中，某种消耗品武器多于3996时不消耗"
-			UnlimitedPotionBuffsOn120: "[i:292] 携带30/15以上增益物品时获得无尽时长的增益"
-			UnlimitedPotionBuffsOn120Tooltip: 对于药水需要30瓶，对于职业增益站（比如利器站）需要15台
+			UnlimitedPotionBuffsOn120: "[i:292] 携带一定数量以上增益物品时获得无尽时长的增益"
+			UnlimitedPotionBuffsOn120Tooltip: 对于药水需要30瓶，对于职业增益站（如利器站）与蛋糕块需要3个
 
 			MiscHeader: 杂项
 			ExtraBuffSlots: "[i:3000] 额外增益栏上限"
@@ -356,7 +356,7 @@ Mods: {
 			TownCat: 城镇猫咪
 			TownBunny: 城镇兔兔
 
-			AltarExterminator: 祭坛根除者
+			AltarExterminator: 祭坛终结者
 			AutoHouse: 快速房屋
 			BoomShuriken: 爆炸手里剑
 			CityBuster: 城市克星
@@ -369,6 +369,7 @@ Mods: {
 			LihzahrdInstactuationBomb: 丛林神庙炸弹
 			MiniInstaBridge: 迷你速建平台
 			ObsidianInstaBridge: 黑曜石速建平台
+			OmniBridgifier: 万用平台转化器
 			
 			BattleCry: 战争号角
 			DeathFruit: 死亡果实
@@ -376,7 +377,7 @@ Mods: {
 			MapViewer: 失落的王之地图
 			ModeToggle: 世界令牌
 			PortableSundial: 便携式日晷
-			PylonCleaner: 晶塔清洁器
+			PylonCleaner: 洁晶灵
 			SuperDummy: 超级假人
 
 			CorruptRenewal: 腐化领域
@@ -646,7 +647,12 @@ Mods: {
 				会导致新三矿大量生成和扩散邪恶/神圣地形等后果
 				'''
 			AutoHouse: 快速建造一间NPC房屋
-			BoomShuriken: 快速丢出炸药
+			BoomShuriken: 
+				'''
+				快速丢出爆炸手里剑
+				手里剑的破坏能力取决于背包里最强镐的镐力
+				“挖穿任何东西的最快方式永远是把它们炸飞！”
+				'''
 			CityBuster: 
 				'''
 				大面积破坏物块
@@ -664,6 +670,7 @@ Mods: {
 			HalfInstavator: 
 				'''
 				投掷一枚炸弹，建造一条直通地狱的半程通道
+				在一定深度下不会生效
 				如果下面有任何重要建筑物，请不要使用
 				'''
 			InstaBridge: 
@@ -702,6 +709,12 @@ Mods: {
 				同时清除平台正上方的区域
 				平台出现在鼠标位置
 				附近有重要建筑物时请勿使用
+				'''
+			OmniBridgifier: 
+				'''
+				可以被无限次重复使用
+				把你所站的平台升级为带有万能增益站的平台
+				不会建造平台
 				'''
 
 			BattleCry: 
@@ -1273,8 +1286,8 @@ Mods: {
 			ElementalAssemblerSheet: 元素装配台
 			GoldenDippingVatSheet: 金染缸
 			MultitaskCenterSheet: 多功能合成桌
-			OmnistationSheet: 万用增益站
-			OmnistationSheet2: 万用增益站
+			OmnistationSheet: 万能增益站
+			OmnistationSheet2: 万能增益站
 			RegalStatueSheet: 富豪雕像
 			SemistationSheet: 多功能增益站
 			SiblingPylonTile: 血亲晶塔
@@ -1292,7 +1305,7 @@ Mods: {
 
 		ProjectileName: {
 			//爆裂物弹幕
-			AltarExterminatorProj: 祭坛根除者
+			AltarExterminatorProj: 祭坛终结者
 			CityBuster: 城市克星
 			DoubleObsInstaBridgeProj: 双重黑曜石速建平台
 			InstabridgeProj: 速建平台
@@ -1515,10 +1528,10 @@ Mods: {
 				Beach: 即使在度假，我也总会抽出时间来砍一小点树。几对恼人的鸟从一棵棕榈树上掉了下来，把它们从我手中拿走……也许可以把它们煮了吃？
 				Underworld: 我在这里看了一会儿，什么树都没找到。不过我确实找到了这些小家伙。也许你会想要它们？
 				Gem: 我真没想到我能在这里找到这么牛x的树。看看这个。
-				Mouse: Went for a long haul today, but there were only so many of those strange trees to go around. I did find a lot of these, why don't you give some of them a new home?
-				Ladybug: Seems like the wind brought a bunch of these out of hiding. Some people say they're good luck. All I know is, the only luck I need is a sharp axe!
+				Mouse: 今天我走了很远，但周围只有许多那种奇怪的树。我找到了这些，为什么不给他们一个新家呢？
+				Ladybug: 看上去风把这些虫子从藏身地带了出来。有些人说他们代表着好运。我只知道，我需要的所有好运就是一把锋利的斧头！
 				Butterfly: 过去的日子里，人们常常将蝴蝶锻造成强大的装备。我们试图忘记那些日子……但这里有一只。
-				EucaluptusSap: I found this, but I'm not a sappy person. You can have it instead.
+				EucaluptusSap: 我找到了这个，但我不是一个多愁善感的人。你可以替我带着它。
 				DayTime: 这些小动物总是从我砍倒的树上掉下来。也许你可以找到它们的用途？
 				NightTime: 晚上砍树总是很放松的……好吧，除了这些飞来飞去的眼球。让这些小家伙中的一个陪陪你。
 				Rest: 我砍了一天的好东西，现在正在休息呢。明天再来，也许我会给你点别的东西。
