@@ -1336,23 +1336,23 @@ namespace Fargowiltas.NPCs
                     break;
 
                 case NPCID.Pumpking:
-                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "pumpking");
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, NPC.downedHalloweenKing, "pumpking");
                     break;
 
                 case NPCID.MourningWood:
-                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "mourningWood");
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, NPC.downedHalloweenTree, "mourningWood");
                     break;
 
                 case NPCID.IceQueen:
-                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "iceQueen");
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, NPC.downedChristmasIceQueen, "iceQueen");
                     break;
 
                 case NPCID.SantaNK1:
-                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "santank");
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, NPC.downedChristmasSantank, "santank");
                     break;
 
                 case NPCID.Everscream:
-                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, "everscream");
+                    FargoUtils.TryDowned(npc, "Abominationn", Color.Orange, NPC.downedChristmasTree, "everscream");
                     break;
 
                 case NPCID.ZombieMerman:

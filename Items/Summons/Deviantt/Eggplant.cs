@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace Fargowiltas.Items.Summons.Deviantt
 {
@@ -20,6 +21,27 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override bool CanUseItem(Player player)
         {
             return !Main.dayTime || player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight || player.ZoneUnderworldHeight;
+        }
+
+        public override void AddRecipes()
+        {
+            if (ModContent.TryFind("Fargowiltas/Deviantt", out ModItem modItem))
+            {
+                void Recipe(int fruit)
+                {
+                    CreateRecipe()
+                        .AddIngredient(fruit)
+                        .AddIngredient(ItemID.JungleSpores, 4)
+                        .AddIngredient(ItemID.Vine, 2)
+                        .AddIngredient(ItemID.JungleGrassSeeds, 2)
+                        .AddIngredient(modItem.Type)
+                        .AddTile(TileID.Anvils)
+                        .Register();
+                }
+
+                Recipe(ItemID.Mango);
+                Recipe(ItemID.Pineapple);
+            }
         }
     }
 }

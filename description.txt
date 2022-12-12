@@ -7,6 +7,7 @@ NEW UPDATE - V 2.8.6
 -Added Pylon Cleaner sprite
 -Added Altar Exterminator sprite
 -Added recipe for Attactive Ore
+-Added recipe for Eggplant
 -Added notifications for unlocking Abominationn spawners for Pumpkin/Frost Moon enemies
 -Queen Bee now forces Jungle biome when alive like Plantera
 -City Buster no longer rolls
