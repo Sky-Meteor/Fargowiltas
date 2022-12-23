@@ -352,19 +352,23 @@ Mods: {
 
 			Devi: {
 				Gift: This world looks tougher than usual, so you can have these on the house just this once! Talk to me if you need any tips, yeah?
+				Bee: IT'S THE FUNNY BEE WORLD!
 				HA: HA
 				HEE: HEE
 				HOO: HOO
 				HEH: HEH
+				HAH: HAH
 				Eridanus: UWAH! Please don't hurt... wait, it's just you. Don't scare me like that! And why is that THING following you?!
 				Nekomi: Ooh, that's my hoodie! So how is it? Comfy and great for gaming, right? Maybe you'll even go beat a boss without taking damage!
 				Defeat: Good work getting one over on me! Hope I didn't make you sweat too much. Keep at the grind - I wanna see how far you can go!
+				Stinky: Wow, you smell rancid. When's the last time you took a shower, stinky?
+				Love: "You're making too many hearts at me! Sorry, we're only at bond level {0} right now!"
 				BloodMoon: The blood moon's effects? I'm not human anymore, so nope!
 				1: Did you know? The only real music genres are death metal and artcore.
 				2: I'll have you know I'm over a hundred Fargo years old! Don't ask me how long a Fargo year is.
 				3: I might be able to afford a taller body if you keep buying!
 				4: Where's that screm cat?
-				5: "! I saw something rodent-y just now! You don't have a hamster infestation, right? Right!?"
+				5: "{0}! I saw something rodent-y just now! You don't have a hamster infestation, right? Right!?"
 				6: You're the Terrarian? Honestly, I was expecting someone a little... taller.
 				7: Don't look at me like that! The only thing I've deviated from is my humanity.
 				8: Rip and tear and buy from me for more things to rip and tear!
@@ -375,6 +379,9 @@ Mods: {
 				13: Hmm, I can tell! You've killed a lot, but you haven't killed enough!
 				14: Why the extra letter, you ask? Only the strongest sibling is allowed to remove their own!
 				15: The more rare things you kill, the more stuff I sell! Simple, right?
+				16: Oh, hi! I, uh, definitely don't have any Stink Potions on me right now! Not that I normally would!
+				17: No, I'm totally not throwing Love Potions while you're not looking! Um, I mean... oh, just buy something!
+				HardMode: Shower thought. If I put you in a meat grinder and all that's left is two Dye... I'd probably be rich! Not that I would, not to you, specifically, I mean... never mind!
 				Mutant1: "Can you tell {0} to put some clothes on?"
 				Mutant2: "One day, I'll sell a summon for myself! ...Just kidding. That's {0}'s job."
 				Lumber: "What's that? You want to fight {0}? ...even I know better than to try."

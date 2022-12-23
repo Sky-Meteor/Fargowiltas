@@ -216,7 +216,7 @@ namespace Fargowiltas.NPCs
             if (Main.notTheBeesWorld)
             {
                 string LocalizedText(string text) => Language.GetTextValue($"Mods.Fargowiltas.Dialogues.Devi.{text}");
-                string text = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Bee");
+                string text = LocalizedText("Bee");
                 int max = Main.rand.Next(10, 50);
                 for (int i = 0; i < max; i++)
                     text += Language.GetTextValue("Mods.Fargowiltas.UI.space") + LocalizedText(Main.rand.Next(new string[] { "HA", "HA", "HEE", "HOO", "HEH", "HAH" }));
@@ -236,16 +236,16 @@ namespace Fargowiltas.NPCs
             if (NPC.homeless && canSayDefeatQuote && Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DownedDevi"))
             {
                 canSayDefeatQuote = false;
-                return "Good work getting one over on me! Hope I didn't make you sweat too much. Keep at the grind - I wanna see how far you can go!";
+                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Defeat");
             }
 
             if (Main.rand.NextBool())
             {
                 if (Main.LocalPlayer.stinky)
-                    return "Wow, you smell rancid. When's the last time you took a shower, stinky?";
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Stinky");
 
                 if (Main.LocalPlayer.loveStruck)
-                    return $"You're making too many hearts at me! Sorry, we're only at bond level {Main.rand.Next(2, 8)} right now!";
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Love", Main.rand.Next(2, 8));
 
                 if (Main.bloodMoon)
                     return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.BloodMoon");
@@ -257,7 +257,7 @@ namespace Fargowiltas.NPCs
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.2"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.3"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.4"),
-                Main.LocalPlayer.name + Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.5"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.5", Main.LocalPlayer.name),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.6"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.7"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.8"),
@@ -268,13 +268,13 @@ namespace Fargowiltas.NPCs
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.13"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.14"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.15"),
-                "Oh, hi! I, uh, definitely don't have any Stink Potions on me right now! Not that I normally would!",
-                "No, I'm totally not throwing Love Potions while you're not looking! Um, I mean... oh, just buy something!",
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.16"),
+                Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.17"),
             };
 
             if (Main.hardMode)
             {
-                dialogue.Add("Shower thought. If I put you in a meat grinder and all that's left is two Dye... I'd probably be rich! Not that I would, not to you, specifically, I mean... never mind!");
+                dialogue.Add("Mods.Fargowiltas.Dialogues.Devi.HardMode");
             }
 
             int mutant = NPC.FindFirstNPC(NPCType<Mutant>());
