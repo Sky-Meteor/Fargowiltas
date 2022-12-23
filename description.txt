@@ -18,6 +18,7 @@ NEW UPDATE - V 2.8.6
 -Adjusted recipe for Holy Grail
 -Adjusted Lumberjack's Tree Treasures to provide more critters more easily
 -Crucible of Cosmos incorporates Golden Dipping Vat
+-Lihzahrd Instactuation Bomb now also works if you stand a short distance away from altar
 -Fixed unlimited buffs working even when toggled off
 -Removed class stations and Slice of Cake from Omnistation due to inventory unlims
 -Reduced stack requirement for unlimited class stations and Slice of Cake from 15 to 3

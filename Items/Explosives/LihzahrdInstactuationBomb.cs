@@ -35,19 +35,35 @@ Only works in the Jungle Temple and after Plantera is defeated");
             Item.shoot = ModContent.ProjectileType<LihzahrdInstactuationBombProj>();
         }
 
-        public override bool CanUseItem(Player player)
+        Vector2 NearbyAltar(Player player)
         {
-            Tile tile = Framing.GetTileSafely(player.Center);
-            return tile.TileType == TileID.LihzahrdAltar && tile.WallType == WallID.LihzahrdBrickUnsafe && NPC.downedPlantBoss;
+            Vector2 startPos = player.Bottom;
+            startPos.Y -= 8;
+
+            for (int i = 0; i <= 8; i++) //check up to this many blocks away
+            {
+                for (int j = -1; j <= 1; j += 2) //check on both sides
+                {
+                    Vector2 pos = startPos;
+                    pos.X += 16 * i * j;
+                    Tile tile = Framing.GetTileSafely(pos);
+                    if (tile.TileType == TileID.LihzahrdAltar && tile.WallType == WallID.LihzahrdBrickUnsafe
+                        && Collision.CanHitLine(player.Center, 0, 0, pos, 0, 0))
+                        return pos;
+                }
+            }
+
+            return default;
         }
+
+        public override bool CanUseItem(Player player)
+            => NPC.downedPlantBoss && NearbyAltar(player) != default;
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            Tile tile = Framing.GetTileSafely(player.Center);
-            if (tile.TileType == TileID.LihzahrdAltar && tile.WallType == WallID.LihzahrdBrickUnsafe && NPC.downedPlantBoss)
-            {
-                Projectile.NewProjectile(player.GetSource_ItemUse(source.Item), player.Bottom - Vector2.UnitY * 8f, Vector2.Zero, type, 0, 0, player.whoAmI);
-            }
+            Vector2 altarPos = NearbyAltar(player);
+            if (altarPos != default)
+                Projectile.NewProjectile(player.GetSource_ItemUse(source.Item), altarPos, Vector2.Zero, type, 0, 0, player.whoAmI);
             return false;
         }
 

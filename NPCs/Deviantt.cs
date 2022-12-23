@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Fargowiltas.Items.Summons.Deviantt;
 using Fargowiltas.Projectiles;
 using Fargowiltas.ShoppingBiomes;
@@ -19,6 +20,7 @@ namespace Fargowiltas.NPCs
     {
         private bool canSayDefeatQuote = true;
         private int defeatQuoteTimer = 900;
+        private int trolling;
 
         //public override bool Autoload(ref string name)
         //{
@@ -59,7 +61,9 @@ namespace Fargowiltas.NPCs
             {
                 SpecificallyImmuneTo = new int[]
                 {
-                    BuffID.Suffocation
+                    BuffID.Suffocation,
+                    BuffID.Lovestruck,
+                    BuffID.Stinky
                 }
             });
         }
@@ -115,6 +119,82 @@ namespace Fargowiltas.NPCs
                 defeatQuoteTimer--;
             else
                 canSayDefeatQuote = false;
+
+            if (++trolling > 60 * 60)
+            {
+                trolling = -Main.rand.Next(30 * 60);
+
+                DoALittleTrolling();
+            }
+        }
+
+        void DoALittleTrolling()
+        {
+            if (Main.netMode == NetmodeID.MultiplayerClient)
+                return;
+
+            //no trolling when possible danger
+            if (FargoGlobalNPC.AnyBossAlive()
+                || Main.npc.Any(n => n.active && n.damage > 0 && !n.friendly && NPC.Distance(n.Center) < 1200)
+                || NPC.life < NPC.lifeMax)
+                return;
+
+            if (NPC.ai[0] == 10) //actual attack anim
+                return;
+
+            Vector2 targetPos = default;
+
+            const float maxRange = 600f;
+            float targetDistance = maxRange;
+
+            void TryUpdateTarget(Vector2 possibleTarget)
+            {
+                if (targetDistance > NPC.Distance(possibleTarget)
+                    && Collision.CanHitLine(NPC.Center, 0, 0, possibleTarget, 0, 0))
+                {
+                    Tile tileBelow = Framing.GetTileSafely(possibleTarget + 32f * Vector2.UnitY);
+                    if (tileBelow.HasUnactuatedTile && Main.tileSolid[tileBelow.TileType] && !Main.tileSolidTop[tileBelow.TileType])
+                    {
+                        targetPos = possibleTarget;
+                        targetDistance = NPC.Distance(possibleTarget);
+                    }
+                }
+            }
+
+            //pick a target
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                if (Main.npc[i].active && Main.npc[i].friendly && Main.npc[i].townNPC
+                    && Main.npc[i].life == Main.npc[i].lifeMax
+                    && i != NPC.whoAmI)
+                    TryUpdateTarget(Main.npc[i].Center);
+            }
+            for (int i = 0; i < Main.maxPlayers; i++)
+            {
+                if (Main.player[i].active && !Main.player[i].dead && !Main.player[i].ghost
+                    && Main.player[i].statLife == Main.player[i].statLifeMax2)
+                    TryUpdateTarget(Main.player[i].Center);
+            }
+
+            if (targetPos != default)
+            {
+                float distanceRatio = targetDistance / maxRange;
+
+                //account for gravity
+                targetPos.Y += 16f;
+                targetPos.Y -= 20f * 3 * distanceRatio * distanceRatio;
+                Vector2 vel = (8f + 12f * distanceRatio) * NPC.DirectionTo(targetPos);
+
+                int type = Main.rand.NextBool() ? ProjectileID.LovePotion : ProjectileID.FoulPotion;
+                int p = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.Center, vel, type, 0, 0f, Main.myPlayer);
+                Main.projectile[p].npcProj = true;
+
+                NPC.spriteDirection = NPC.direction = targetPos.X < NPC.Center.X ? -1 : 1;
+                NPC.ai[0] = 10; //trick vanilla ai into thinking devi has just attacked, but dont actually attack
+                NPC.ai[1] = NPCID.Sets.AttackTime[NPC.type] - 1; //sets localai[3] = 0 if exactly AttackTime
+                NPC.localAI[3] = 300f; //counts up from zero and attacks at some threshold if left alone
+                NPC.netUpdate = true;
+            }
         }
 
         public override List<string> SetNPCNameList()
@@ -136,10 +216,10 @@ namespace Fargowiltas.NPCs
             if (Main.notTheBeesWorld)
             {
                 string LocalizedText(string text) => Language.GetTextValue($"Mods.Fargowiltas.Dialogues.Devi.{text}");
-                string text = LocalizedText("HA");
+                string text = Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.Bee");
                 int max = Main.rand.Next(10, 50);
                 for (int i = 0; i < max; i++)
-                    text += Language.GetTextValue("Mods.Fargowiltas.UI.space") + Main.rand.Next(new string[] { LocalizedText("HA"), LocalizedText("HA"), LocalizedText("HA"), LocalizedText("HEE"), LocalizedText("HOO"), LocalizedText("HEH") });
+                    text += Language.GetTextValue("Mods.Fargowiltas.UI.space") + LocalizedText(Main.rand.Next(new string[] { "HA", "HA", "HEE", "HOO", "HEH", "HAH" }));
                 text += Language.GetTextValue("Mods.Fargowiltas.MessageInfo.BattleCry.!");
                 return text;
             }
@@ -159,9 +239,16 @@ namespace Fargowiltas.NPCs
                 return "Good work getting one over on me! Hope I didn't make you sweat too much. Keep at the grind - I wanna see how far you can go!";
             }
 
-            if (Main.bloodMoon && Main.rand.NextBool(2))
+            if (Main.rand.NextBool())
             {
-                return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.BloodMoon");
+                if (Main.LocalPlayer.stinky)
+                    return "Wow, you smell rancid. When's the last time you took a shower, stinky?";
+
+                if (Main.LocalPlayer.loveStruck)
+                    return $"You're making too many hearts at me! Sorry, we're only at bond level {Main.rand.Next(2, 8)} right now!";
+
+                if (Main.bloodMoon)
+                    return Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.BloodMoon");
             }
 
             List<string> dialogue = new List<string>
@@ -181,7 +268,14 @@ namespace Fargowiltas.NPCs
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.13"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.14"),
                 Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.15"),
+                "Oh, hi! I, uh, definitely don't have any Stink Potions on me right now! Not that I normally would!",
+                "No, I'm totally not throwing Love Potions while you're not looking! Um, I mean... oh, just buy something!",
             };
+
+            if (Main.hardMode)
+            {
+                dialogue.Add("Shower thought. If I put you in a meat grinder and all that's left is two Dye... I'd probably be rich! Not that I would, not to you, specifically, I mean... never mind!");
+            }
 
             int mutant = NPC.FindFirstNPC(NPCType<Mutant>());
             if (mutant != -1)
