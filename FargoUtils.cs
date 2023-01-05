@@ -85,6 +85,6 @@ namespace Fargowiltas
 
         public static bool IsChinese => Language.ActiveCulture.LegacyId == (int)GameCulture.CultureName.Chinese;
 
-        public static string GetTranslation(string key) => LocalizationLoader.GetOrCreateTranslation($"Mods.Fargowiltas.{key}").GetTranslation(Language.ActiveCulture);
+        public static string GetTranslation(string key, bool fargoKey = true) => LocalizationLoader.GetOrCreateTranslation(fargoKey ? $"Mods.Fargowiltas.{key}" : key).GetTranslation(Language.ActiveCulture);
     }
 }
