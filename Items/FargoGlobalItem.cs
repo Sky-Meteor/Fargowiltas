@@ -156,8 +156,14 @@ namespace Fargowiltas.Items
                     string text = Regex.Replace(sellType.ToString(), "([a-z])([A-Z])", "$1 $2");
                     if (FargoUtils.IsChinese)
                     {
-                        text = text.Replace("Craftable Materials Sold", "售卖可合成材料").Replace("Sold By Squirrel", "高帽松鼠售卖")
-                            .Replace("Some Materials Sold", "售卖部分材料").Replace("Sold At Thirty Stack", "堆叠30个时售卖");
+                        if (text == "Craftable Materials Sold")
+                            text = "售卖可合成材料";
+                        else if (text == "Sold By Squirrel")
+                            text = "高帽松鼠售卖";
+                        else if (text == "Some Materials Sold")
+                            text = "售卖部分材料";
+                        else if (text == "Sold At Thirty Stack")
+                            text = "堆叠30个时售卖";
                     }
                     line = new TooltipLine(Mod, "TooltipSquirrel",
                     $"[i:{CaughtNPCs.CaughtNPCItem.CaughtTownies[NPCType<Squirrel>()]}] [c/AAAAAA:{text}]");

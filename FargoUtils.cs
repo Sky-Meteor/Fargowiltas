@@ -47,7 +47,12 @@ namespace Fargowiltas
             if (update)
             {
                 if (IsChinese)
-                    seller = seller.Replace("Deviantt", "戴薇安").Replace("Abominationn", "憎恶");
+                {
+                    if (seller.Contains("Deviantt"))
+                        seller = seller.Replace("Deviantt", "戴薇安");
+                    else
+                        seller = seller.Replace("Abominationn", "憎恶");
+                }
                 string text = Language.GetTextValue("Mods.Fargowiltas.MessageInfo.ItemUnlocked", seller);
                 if (Main.netMode == NetmodeID.SinglePlayer)
                 {
