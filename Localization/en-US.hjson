@@ -231,6 +231,11 @@ Mods: {
 		}
 
 		ItemTooltip: {
+			MapSingle: Reveals the whole map
+			MapMulti: Reveals an area of the map around you
+		}
+
+		ExpandedTooltips: {
 			FountainTooltip: "[i:909] [c/AAAAAA:Forces surrounding biome state to {0} upon activation]"
 			Ocean: Ocean
 			Desert: Desert
@@ -250,8 +255,10 @@ Mods: {
 			Unlimited3: "[i:87] [c/AAAAAA:Unlimited buff at 3 stack in inventory, Piggy Bank, or Void Bag]"
 			PiggyBankAcc: "[i:87] [c/AAAAAA:Works from Piggy Bank and Void Bag]"
 
-			MapSingle: Reveals the whole map
-			MapMulti: Reveals an area of the map around you
+			SoldBySquirrel: "Sold By Squirrel"
+			SomeMaterialsSold: "Some Materials Sold"
+			CraftableMaterialsSold: "Craftable Materials Sold"
+			SoldAtThirtyStack: "Sold At Thirty Stack"
 		}
 
 		MapObject: {
