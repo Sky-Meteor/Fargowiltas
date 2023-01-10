@@ -19,12 +19,12 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
         private int npcType;
         private readonly int maxSpawn; //energizer swarms are this size
-        private readonly string spawnMessage;
+        //private readonly string spawnMessage;
         private readonly string material;
         protected SwarmSummonBase(int npcType, string spawnMessage, int maxSpawn, string material)// spawnMessage is unused now
         {
             this.npcType = npcType;
-            this.spawnMessage = Language.GetTextValue($"Mods.Fargowiltas.MessageInfo.Swarms.{material}");
+            //this.spawnMessage = spawnMessage;
             this.maxSpawn = maxSpawn;
             this.material = material;
         }
@@ -111,6 +111,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
             // Kill whole stack
             player.inventory[player.selectedItem].stack = 0;
 
+            string spawnMessage = Language.GetTextValue($"Mods.Fargowiltas.MessageInfo.Swarms.{material}");
             if (Main.netMode == NetmodeID.Server)
             {
                 ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(spawnMessage), new Color(175, 75, 255));
