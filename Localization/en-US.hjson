@@ -214,6 +214,28 @@ Mods: {
 			OverloadPumpkinMoon2: The Pumpkin Moon is rising...
 			OverloadPumpkinMoonWave: "Wave: 15: Everything"
 
+			Swarms: {
+				Abeemination2: "A deafening buzz pierces through you!"
+				BetsyEgg: "The real Old One's Army is attacking!"
+				GoreySpine: "You feel dumb among so many brains!"
+				CultistSummon: "Defeaning chants fill your ears!"
+				ForbiddenTome: "You feel like you're in a library!"
+				DeerThing2: "The Constant takes over!"
+				MechWorm: "The planet trembles from the core!"
+				PrismaticPrimrose: "Bullet heaven is descending!"
+				SuspiciousEye: "Countless eyes pierce the veil staring in your direction!"
+				TruffleWorm2: "The ocean swells with ferocious pigs!"
+				LihzahrdPowerCell2: "Ancient automatons come crashing down!"
+				CelestialSigil2: "The wind whispers of death's approach!"
+				PlanterasFruit: "The jungle beats as one!"
+				MechSkull: "A sickly chill envelops the world!"
+				JellyCrystal: "Welcome to the truer slime rain!"
+				SuspiciousSkull: "A great clammering of bones rises from the dungeon!"
+				SlimyCrown: "Welcome to the true slime rain!"
+				MechEye: "A legion of glowing iris sing a dreadful song!"
+				FleshyDoll: "A fortress of flesh arises from the depths!"
+				WormyFood: "The ground shifts with formulated precision!"
+			}
 			SwarmKilled: "Killed: {0}"
 			SwarmTotal: "Total: {0}"
 			SwarmDefeated: The swarm has been defeated!

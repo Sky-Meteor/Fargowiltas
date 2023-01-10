@@ -7,6 +7,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using Terraria.IO;
+using System.IO;
 
 namespace Fargowiltas.Items.Summons.SwarmSummons
 {
@@ -19,17 +21,12 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
         private readonly int maxSpawn; //energizer swarms are this size
         private readonly string spawnMessage;
         private readonly string material;
-        
-        protected SwarmSummonBase(int npcType, string spawnMessage, int maxSpawn, string material)
+        protected SwarmSummonBase(int npcType, string spawnMessage, int maxSpawn, string material)// spawnMessage is unused now
         {
             this.npcType = npcType;
-            ModTranslation message = LocalizationLoader.CreateTranslation($"Mods.Fargowiltas.MessageInfo.Swarms.{material}");
-            message.SetDefault(spawnMessage);
-            message.AddTranslation((int)GameCulture.CultureName.Chinese, FargoUtils.GetTranslation($"MessageInfo.Swarms.{material}"));
-            LocalizationLoader.AddTranslation(message);
-            this.spawnMessage = message.GetTranslation(Language.ActiveCulture);
+            this.spawnMessage = Language.GetTextValue($"Mods.Fargowiltas.MessageInfo.Swarms.{material}");
             this.maxSpawn = maxSpawn;
-            this.material = material;
+            this.material = material;           
         }
 
         public override void SetDefaults()
