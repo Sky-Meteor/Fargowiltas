@@ -26,7 +26,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
             this.npcType = npcType;
             this.spawnMessage = Language.GetTextValue($"Mods.Fargowiltas.MessageInfo.Swarms.{material}");
             this.maxSpawn = maxSpawn;
-            this.material = material;           
+            this.material = material;
         }
 
         public override void SetDefaults()
