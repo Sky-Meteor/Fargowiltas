@@ -214,8 +214,8 @@ Mods: {
 			OverloadPumpkinMoon2: The Pumpkin Moon is rising...
 			OverloadPumpkinMoonWave: "Wave: 15: Everything"
 
-			SwarmKilled: "Killed: "
-			SwarmTotal: "Total: "
+			SwarmKilled: "Killed: {0}"
+			SwarmTotal: "Total: {0}"
 			SwarmDefeated: The swarm has been defeated!
 
 			ItemUnlocked: "A new item has been unlocked in {0}'s shop!"

@@ -46,7 +46,7 @@ namespace Fargowiltas.Items.Summons.Mutant
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.MutantVoodoo")), new Color(175, 75, 255));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.MutantVoodoo"), new Color(175, 75, 255));
             }
             else
             {

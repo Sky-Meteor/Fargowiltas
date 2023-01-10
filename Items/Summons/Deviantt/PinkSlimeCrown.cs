@@ -45,7 +45,7 @@ namespace Fargowiltas.Items.Summons.Deviantt
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Pinky")), new Color(175, 75, 255));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.Pinky"), new Color(175, 75, 255));
             }
             else
             {

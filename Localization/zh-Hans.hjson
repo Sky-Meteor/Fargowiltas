@@ -236,8 +236,8 @@ Mods: {
 				FleshyDoll: 一个血肉堡垒从深处升起！
 				WormyFood: 地面以公式化的精度颤动！
 			}
-			SwarmKilled: "击杀数："
-			SwarmTotal: "总计："
+			SwarmKilled: "击杀数：{0}"
+			SwarmTotal: "总计：{0}"
 			SwarmDefeated: 这群怪物已被打败！
 
 			ItemUnlocked: "{0}解锁了新商品！"

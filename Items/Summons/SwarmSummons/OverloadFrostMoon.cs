@@ -44,7 +44,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                 if (Main.netMode == 2)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon1")), new Color(175, 75, 255));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon1"), new Color(175, 75, 255));
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
             {
                 if (Main.netMode == 2)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon2")), new Color(50, 255, 130));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.OverloadFrostMoon2"), new Color(50, 255, 130));
                 }
                 else
                 {
@@ -72,7 +72,7 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
                     if (Main.netMode == 2)
                     {
-                        ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.OverloadFrostMoonWave")), new Color(175, 75, 255));
+                        ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.OverloadFrostMoonWave"), new Color(175, 75, 255));
                     }
                     else
                     {

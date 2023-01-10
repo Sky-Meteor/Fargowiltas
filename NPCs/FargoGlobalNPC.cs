@@ -1533,13 +1533,13 @@ namespace Fargowiltas.NPCs
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmKilled") + Fargowiltas.SwarmKills), new Color(206, 12, 15));
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmTotal") + Fargowiltas.SwarmTotal), new Color(206, 12, 15));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.SwarmKilled", Fargowiltas.SwarmKills), new Color(206, 12, 15));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.SwarmTotal", Fargowiltas.SwarmTotal), new Color(206, 12, 15));
             }
             else
             {
-                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmKilled") + Fargowiltas.SwarmKills, new Color(206, 12, 15));
-                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmTotal") + Fargowiltas.SwarmTotal, new Color(206, 12, 15));
+                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmKilled", Fargowiltas.SwarmKills), new Color(206, 12, 15));
+                Main.NewText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmTotal", Fargowiltas.SwarmTotal), new Color(206, 12, 15));
             }
 
             if (minion != -1 && NPC.CountNPCS(minion) >= Fargowiltas.SwarmSpawned)
@@ -1605,7 +1605,7 @@ namespace Fargowiltas.NPCs
             {
                 if (Main.netMode == NetmodeID.Server)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.SwarmDefeated")), new Color(206, 12, 15));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.Fargowiltas.MessageInfo.SwarmDefeated"), new Color(206, 12, 15));
                 }
                 else
                 {

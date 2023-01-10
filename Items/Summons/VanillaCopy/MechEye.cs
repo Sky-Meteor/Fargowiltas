@@ -61,7 +61,7 @@ namespace Fargowiltas.Items.Summons
 
                 if (Main.netMode == NetmodeID.Server)
                 {
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("LegacyMisc.48")), new Color(175, 75, 255));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("LegacyMisc.48"), new Color(175, 75, 255));// twins spawn message
                 }
                 else
                 {
