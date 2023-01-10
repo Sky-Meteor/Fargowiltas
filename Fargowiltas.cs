@@ -552,7 +552,7 @@ namespace Fargowiltas
                         else
                         if (Main.netMode == NetmodeID.Server)
                         {
-                            ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Announcement.HasAwoken", new object[] { NetworkText.FromLiteral(npcName) }), new Color(175, 75, 255));
+                            ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Announcement.HasAwoken", NetworkText.FromLiteral(npcName)), new Color(175, 75, 255));
                         }
                     }
                 }

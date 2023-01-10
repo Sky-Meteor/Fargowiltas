@@ -70,7 +70,7 @@ namespace Fargowiltas.Items.Summons
 
             if (Main.netMode == NetmodeID.Server)
             {
-                ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Language.GetTextValue("Announcement.HasAwoken", NPCName)), new Color(175, 75, 255));
+                ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Announcement.HasAwoken", NPCName), new Color(175, 75, 255));
             }
             else if (NPCType != NPCID.KingSlime)
             {
