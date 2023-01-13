@@ -274,7 +274,7 @@ namespace Fargowiltas.NPCs
 
             if (Main.hardMode)
             {
-                dialogue.Add("Mods.Fargowiltas.Dialogues.Devi.HardMode");
+                dialogue.Add(Language.GetTextValue("Mods.Fargowiltas.Dialogues.Devi.HardMode"));
             }
 
             int mutant = NPC.FindFirstNPC(NPCType<Mutant>());
