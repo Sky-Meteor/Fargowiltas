@@ -115,15 +115,15 @@ Mods: {
 			SaferBoundNPCs: "[i:1274] 可救援的NPC不会受到接触伤害"
 
 			SeasonsHeader: 季节性事件
-			Halloween: "[i:1774] 开启万圣节"
-			Christmas: "[i:1869] 开启圣诞节"
+			Halloween: "[i:1774] 万圣节"
+			Christmas: "[i:1869] 圣诞节"
 
 			SeedsHeader: 秘密世界种子
-			DrunkWorld: "[i:353] 开启醉酒世界：05162020"
-			BeeWorld: "[i:1133] 开启Not the bees"
-			WorthyWorld: "[i:2107] 开启For the worthy"
-			CelebrationWorld: "[i:3732] 开启庆典世界：Celebrationmk10/05162021/05162011"
-			ConstantWorld: "[i:5109] 开启永恒领域：The constant"
+			DrunkWorld: "[i:353] 醉酒世界（05162020）"
+			BeeWorld: "[i:1133] 蜜蜂世界（Not the bees）"
+			WorthyWorld: "[i:2107] For the worthy"
+			CelebrationWorld: "[i:3732] 庆典世界（Celebrationmk10/05162021/05162011）"
+			ConstantWorld: "[i:5109] 永恒领域（The constant）"
 
 			UnlimitedHeader: 无限效果
 			UnlimitedAmmo: "[i:771] 在困难模式中，背包中的某种弹药多于3996时不消耗"
