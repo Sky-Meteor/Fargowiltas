@@ -115,15 +115,15 @@ Mods: {
 			SaferBoundNPCs: "[i:1274] Rescuable Town NPCs take no contact damage"
 
 			SeasonsHeader: Seasons
-			Halloween: "[i:1774] Halloween Season Active"
-			Christmas: "[i:1869] Christmas Season Active"
+			Halloween: "[i:1774] Halloween Season"
+			Christmas: "[i:1869] Christmas Season"
 
 			SeedsHeader: Secret World Seeds
-			DrunkWorld: "[i:353] Drunk World Active"
-			BeeWorld: "[i:1133] Bee World Active"
-			WorthyWorld: "[i:2107] For the Worthy World Active"
-			CelebrationWorld: "[i:3732] Celebration World Active"
-			ConstantWorld: "[i:5109] Constant World Active"
+			DrunkWorld: "[i:353] Drunk World"
+			BeeWorld: "[i:1133] Bee World"
+			WorthyWorld: "[i:2107] For the Worthy World"
+			CelebrationWorld: "[i:3732] Celebration World"
+			ConstantWorld: "[i:5109] Constant World"
 
 			UnlimitedHeader: Unlimited
 			UnlimitedAmmo: "[i:771] Unlimited Ammo at 3996+ in Hardmode"

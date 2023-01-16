@@ -221,7 +221,7 @@ namespace Fargowiltas.Items
 
         public override void PostUpdate(Item item)
         {
-            if (GetInstance<FargoConfig>().Halloween && GetInstance<FargoConfig>().Christmas && firstTick)
+            if (GetInstance<FargoConfig>().Halloween == SeasonSelections.AlwaysOn && GetInstance<FargoConfig>().Christmas == SeasonSelections.AlwaysOn && firstTick)
             {
                 if (Array.IndexOf(Hearts, item.type) >= 0)
                 {

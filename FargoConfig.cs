@@ -47,33 +47,40 @@ namespace Fargowiltas
 
         [Header("$Mods.Fargowiltas.Config.SeasonsHeader")]
         [Label("$Mods.Fargowiltas.Config.Halloween")]
-        [DefaultValue(true)]
-        public bool Halloween;
+        [DefaultValue(0)]
+        [DrawTicks]
+        public SeasonSelections Halloween;
 
         [Label("$Mods.Fargowiltas.Config.Christmas")]
-        [DefaultValue(true)]
-        public bool Christmas;
+        [DefaultValue(0)]
+        [DrawTicks]
+        public SeasonSelections Christmas;
 
         [Header("$Mods.Fargowiltas.Config.SeedsHeader")]
         [Label("$Mods.Fargowiltas.Config.DrunkWorld")]
-        [DefaultValue(false)]
-        public bool DrunkWorld;
+        [DefaultValue(0)]
+        [DrawTicks]
+        public SeasonSelections DrunkWorld;
 
         [Label("$Mods.Fargowiltas.Config.BeeWorld")]
-        [DefaultValue(false)]
-        public bool BeeWorld;
+        [DefaultValue(0)]
+        [DrawTicks]
+        public SeasonSelections BeeWorld;
 
         [Label("$Mods.Fargowiltas.Config.WorthyWorld")]
-        [DefaultValue(false)]
-        public bool WorthyWorld;
+        [DefaultValue(0)]
+        [DrawTicks]
+        public SeasonSelections WorthyWorld;
 
         [Label("$Mods.Fargowiltas.Config.CelebrationWorld")]
-        [DefaultValue(false)]
-        public bool CelebrationWorld;
+        [DefaultValue(0)]
+        [DrawTicks]
+        public SeasonSelections CelebrationWorld;
 
         [Label("$Mods.Fargowiltas.Config.ConstantWorld")]
-        [DefaultValue(false)]
-        public bool ConstantWorld;
+        [DefaultValue(0)]
+        [DrawTicks]
+        public SeasonSelections ConstantWorld;
 
         [Header("$Mods.Fargowiltas.Config.UnlimitedHeader")]
         [Label("$Mods.Fargowiltas.Config.UnlimitedAmmo")]

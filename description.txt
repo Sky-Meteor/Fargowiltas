@@ -1,6 +1,9 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
+NEW UPDATE - V 2.8.7
+-Added an additional option to holiday and seed settings. It can be set to Normal which means it behaves with no modifications.
+
 NEW UPDATE - V 2.8.6
 -Added Semistation
 -Added Omni-Bridgifier
@@ -22,6 +25,7 @@ NEW UPDATE - V 2.8.6
 -Fixed unlimited buffs working even when toggled off
 -Removed class stations and Slice of Cake from Omnistation due to inventory unlims
 -Reduced stack requirement for unlimited class stations and Slice of Cake from 15 to 3
+<<<<<<< HEAD
 -Made recipe easier for crafting Merchant into Travelling Merchant
 
 NEW UPDATE - V 2.8.5

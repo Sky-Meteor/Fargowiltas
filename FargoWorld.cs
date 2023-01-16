@@ -91,11 +91,11 @@ namespace Fargowiltas
 
         public override void PreWorldGen()
         {
-            Main.drunkWorld = GetInstance<FargoConfig>().DrunkWorld;
-            Main.notTheBeesWorld = GetInstance<FargoConfig>().BeeWorld;
-            Main.getGoodWorld = GetInstance<FargoConfig>().WorthyWorld;
-            Main.tenthAnniversaryWorld = GetInstance<FargoConfig>().CelebrationWorld;
-            Main.dontStarveWorld = GetInstance<FargoConfig>().ConstantWorld;
+            setWorldBool(GetInstance<FargoConfig>().DrunkWorld, ref Main.drunkWorld) ;
+            setWorldBool(GetInstance<FargoConfig>().BeeWorld, ref Main.notTheBeesWorld);
+            setWorldBool(GetInstance<FargoConfig>().WorthyWorld, ref Main.getGoodWorld);
+            setWorldBool(GetInstance<FargoConfig>().CelebrationWorld, ref Main.tenthAnniversaryWorld);
+            setWorldBool(GetInstance<FargoConfig>().ConstantWorld, ref Main.dontStarveWorld);
 
             foreach (string tag in tags)
             {
@@ -103,6 +103,21 @@ namespace Fargowiltas
             }
 
             WoodChopped = 0;
+        }
+
+        private void setWorldBool(SeasonSelections toggle, ref bool flag)
+        {
+            switch (toggle)
+            {
+                case SeasonSelections.AlwaysOn:
+                    flag = true;
+                    break;
+                case SeasonSelections.AlwaysOff:
+                    flag = false;
+                    break;
+                case SeasonSelections.Normal:
+                    break;
+            }
         }
 
         private void ResetFlags()
@@ -189,21 +204,24 @@ namespace Fargowiltas
         public override void PostUpdateWorld()
         {
             // seasonals
-            Main.halloween = GetInstance<FargoConfig>().Halloween;
-            Main.xMas = GetInstance<FargoConfig>().Christmas;
-            //seeds
-            Main.drunkWorld = GetInstance<FargoConfig>().DrunkWorld;
-            Main.notTheBeesWorld = GetInstance<FargoConfig>().BeeWorld;
-            Main.getGoodWorld = GetInstance<FargoConfig>().WorthyWorld;
-            Main.tenthAnniversaryWorld = GetInstance<FargoConfig>().CelebrationWorld;
-            Main.dontStarveWorld = GetInstance<FargoConfig>().ConstantWorld;
+            //SeasonSelections halloween = GetInstance<FargoConfig>().Halloween;
+            //SeasonSelections xmas = GetInstance<FargoConfig>().Christmas;
 
+
+            setWorldBool(GetInstance<FargoConfig>().Halloween, ref Main.halloween);
+            setWorldBool(GetInstance<FargoConfig>().Christmas, ref Main.xMas);
+
+            //seeds
+            setWorldBool(GetInstance<FargoConfig>().DrunkWorld, ref Main.drunkWorld);
+            setWorldBool(GetInstance<FargoConfig>().BeeWorld, ref Main.notTheBeesWorld);
+            setWorldBool(GetInstance<FargoConfig>().WorthyWorld, ref Main.getGoodWorld);
+            setWorldBool(GetInstance<FargoConfig>().CelebrationWorld, ref Main.tenthAnniversaryWorld);
+            setWorldBool(GetInstance<FargoConfig>().ConstantWorld, ref Main.dontStarveWorld);
 
             if (Matsuri)
             {
                 LanternNight.NextNightIsLanternNight = true;
             }
-
 
             // swarm reset in case something goes wrong
             if (Main.netMode != NetmodeID.MultiplayerClient && Fargowiltas.SwarmActive
