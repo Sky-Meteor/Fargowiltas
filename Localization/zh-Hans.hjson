@@ -114,6 +114,10 @@ Mods: {
 			NPCSales: "[i:267] NPC卖额外商品"
 			SaferBoundNPCs: "[i:1274] 可救援的NPC不会受到接触伤害"
 
+			SeasonSelectionNormal: 正常
+			SeasonSelectionAlwaysOn: 常开
+			SeasonSelectionAlwaysOff: 常关
+
 			SeasonsHeader: 季节性事件
 			Halloween: "[i:1774] 万圣节"
 			Christmas: "[i:1869] 圣诞节"
