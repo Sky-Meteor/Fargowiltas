@@ -46,6 +46,12 @@ namespace Fargowiltas.Tiles
 
             if (type == TileID.Trees && !fail && !(FargoWorld.DownedBools.TryGetValue("lumberjack", out bool down) && down))
             {
+                //if (!FargoWorld.DownedBools["lumberjack"])
+                //{
+                //    NPC.NewNPC(NPC.GetSource_TownSpawn, );
+
+                //    FargoWorld.DownedBools["lumberjack"] = true;
+                //}
                 FargoWorld.WoodChopped++;
 
                 if (FargoWorld.WoodChopped > 500)

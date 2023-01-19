@@ -24,12 +24,12 @@ namespace Fargowiltas.Items.Vanity
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.KingSlimeMask)
                 .AddIngredient(ItemID.SkeletronMask)
                 .AddIngredient(ItemID.DestroyerMask)
                 .AddIngredient(ItemID.SkeletronPrimeMask)
                 .AddIngredient(ItemID.TwinMask)
                 .AddIngredient(ItemID.GolemMask)
+                .AddIngredient(ItemID.DukeFishronMask)
                 .AddIngredient(ItemID.FairyQueenMask)
                 .AddIngredient(ItemID.BossMaskMoonlord)
                 .AddTile(TileID.TinkerersWorkbench)

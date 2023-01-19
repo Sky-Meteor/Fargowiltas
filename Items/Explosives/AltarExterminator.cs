@@ -38,14 +38,14 @@ namespace Fargowiltas.Items.Explosives
                 .AddIngredient(ItemID.DemoniteBar, 10)
                 .AddIngredient(ItemID.ShadowScale, 5)
                 .AddIngredient(ItemID.Pwnhammer)
-                .AddTile(TileID.MythrilAnvil)
+                .AddTile(TileID.Anvils)
                 .Register();
 
             CreateRecipe()
                 .AddIngredient(ItemID.CrimtaneBar, 10)
                 .AddIngredient(ItemID.TissueSample, 5)
                 .AddIngredient(ItemID.Pwnhammer)
-                .AddTile(TileID.MythrilAnvil)
+                .AddTile(TileID.Anvils)
                 .Register();
         }
     }

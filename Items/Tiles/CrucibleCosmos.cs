@@ -59,6 +59,7 @@ namespace Fargowiltas.Items.Tiles
                 .AddIngredient(ItemID.BlendOMatic)
                 .AddIngredient(ItemID.MeatGrinder)
                 .AddIngredient(ItemID.SteampunkBoiler)
+                .AddIngredient(ItemID.LesionStation)
                 .AddIngredient(ItemID.FleshCloningVaat)
                 .AddIngredient(ItemID.LihzahrdFurnace)
                 .AddIngredient(ItemID.LunarCraftingStation)

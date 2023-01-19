@@ -519,7 +519,9 @@ namespace Fargowiltas
             AddBannerToItemRecipe(ItemID.GraniteFlyerBanner, ItemID.NightVisionHelmet);
             AddBannerToItemRecipe(ItemID.HarpyBanner, ItemID.GiantHarpyFeather, tile: TileID.MythrilAnvil);
             AddBannerToItemRecipe(ItemID.HellbatBanner, ItemID.MagmaStone);
-            AddBannerToItemRecipe(ItemID.HornetBanner, ItemID.TatteredBeeWing, tile: TileID.MythrilAnvil);
+            AddBannerToItemRecipe(ItemID.HornetBanner, ItemID.TatteredBeeWing, tile: TileID.MythrilAnvil, item2type: ItemID.HallowedBar);
+            AddBannerToItemRecipe(ItemID.RedDevilBanner, ItemID.UnholyTrident, tile: TileID.MythrilAnvil, item2type: ItemID.HallowedBar);
+            AddBannerToItemRecipe(ItemID.RedDevilBanner, ItemID.FireFeather, tile: TileID.MythrilAnvil, item2type: ItemID.HallowedBar);
             AddBannerToItemRecipe(ItemID.IceBatBanner, ItemID.DepthMeter);
             AddBannerToItemRecipe(ItemID.IceTortoiseBanner, ItemID.FrozenTurtleShell, tile: TileID.MythrilAnvil);
             AddBannerToItemRecipe(ItemID.IcyMermanBanner, ItemID.FrostStaff, tile: TileID.MythrilAnvil);
@@ -597,7 +599,7 @@ namespace Fargowiltas
             AddBannerToItemsRecipe(ItemID.PaladinBanner, new int[] { ItemID.PaladinsHammer, ItemID.PaladinsShield }, tile: TileID.MythrilAnvil);
             AddBannerToItemsRecipe(ItemID.PenguinBanner, new int[] { ItemID.PedguinHat, ItemID.PedguinShirt, ItemID.PedguinPants });
             AddBannerToItemsRecipe(ItemID.PirateBanner, new int[] { ItemID.SailorHat, ItemID.SailorShirt, ItemID.SailorPants }, tile: TileID.MythrilAnvil);
-            AddBannerToItemsRecipe(ItemID.RedDevilBanner, new int[] { ItemID.UnholyTrident, ItemID.FireFeather }, tile: TileID.MythrilAnvil);
+            
 			AddBannerToItemsRecipe(ItemID.SkeletonArcherBanner, new int[] { ItemID.MagicQuiver, ItemID.Marrow}, tile: TileID.MythrilAnvil);
             AddBannerToItemsRecipe(ItemID.SkeletonSniperBanner, new int[] { ItemID.RifleScope, ItemID.SniperRifle }, tile: TileID.MythrilAnvil);
             AddBannerToItemsRecipe(ItemID.TacticalSkeletonBanner, new int[] { ItemID.TacticalShotgun, ItemID.SWATHelmet }, tile: TileID.MythrilAnvil);

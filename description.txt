@@ -3,6 +3,11 @@ There are several other items such as infinite ammos, craftable instant builds f
 
 NEW UPDATE - V 2.8.7
 -Added an additional option to holiday and seed settings. It can be set to Normal which means it behaves with no modifications.
+-Replaced King Slime Mask with Duke Fishron Mask in Mutant Body vanity recipe
+-Altar Exterminator is now crafted at any Anvil
+-Added a Hallowed Bar to the Tattered Bee Wing, Fire Feather, and Unholy Trident recipes
+-Added the Decay Chamber to the Crucible of the Cosmos
+-The Lumberjack now sells Bamboo
 
 NEW UPDATE - V 2.8.6
 -Added Semistation

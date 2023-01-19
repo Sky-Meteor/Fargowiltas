@@ -32,12 +32,12 @@ namespace Fargowiltas.Items.Tiles
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, ModContent.ItemType<WoodenToken>());
         }
 
-        /*public override void NearbyEffects(int i, int j, bool closer)
-        {
-            if (!FargoWorld.MovedLumberjack)
-            {
-                FargoWorld.MovedLumberjack = true;
-            }
-        }*/
+        //public override void NearbyEffects(int i, int j, bool closer)
+        //{
+        //    if (!FargoWorld.MovedLumberjack)
+        //    {
+        //        FargoWorld.MovedLumberjack = true;
+        //    }
+        //}
     }
 }
