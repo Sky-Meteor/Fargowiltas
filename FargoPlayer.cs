@@ -149,6 +149,22 @@ namespace Fargowiltas
             }
         }
 
+        public override void UpdateEquips()
+        {
+            if (GetInstance<FargoConfig>().PiggyBankAcc)
+            {
+                foreach (Item item in Player.bank.item)
+                {
+                    FargoGlobalItem.TryPiggyBankAcc(item, Player);
+                }
+
+                foreach (Item item in Player.bank2.item)
+                {
+                    FargoGlobalItem.TryPiggyBankAcc(item, Player);
+                }
+            }
+        }
+
         public override void PostUpdateBuffs()
         {
             if (GetInstance<FargoConfig>().UnlimitedPotionBuffsOn120)
@@ -164,18 +180,6 @@ namespace Fargowiltas
                 }
             }
 
-            if (GetInstance<FargoConfig>().PiggyBankAcc)
-            {
-                foreach (Item item in Player.bank.item)
-                {
-                    FargoGlobalItem.TryPiggyBankAcc(item, Player);
-                }
-
-                foreach (Item item in Player.bank2.item)
-                {
-                    FargoGlobalItem.TryPiggyBankAcc(item, Player);
-                }
-            }
         }
 
         public override void PostUpdateEquips()
