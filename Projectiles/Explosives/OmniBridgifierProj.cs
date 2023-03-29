@@ -10,6 +10,10 @@ namespace Fargowiltas.Projectiles.Explosives
 {
     public class OmniBridgifierProj : ModProjectile
     {
+        protected virtual int TileHeight => 4;
+        protected virtual int Placeable => Projectile.ai[0] == 0 ? ModContent.TileType<OmnistationSheet>() : ModContent.TileType<OmnistationSheet2>();
+        protected virtual bool Replaceable(int TileType) => TileType == ModContent.TileType<OmnistationSheet>() || TileType == ModContent.TileType<OmnistationSheet2>();
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Omni-Bridgifier");
@@ -43,7 +47,7 @@ namespace Fargowiltas.Projectiles.Explosives
             {
                 for (int i = -1; i <= 0; i++)
                 {
-                    for (int j = -4; j < 0; j++)
+                    for (int j = -TileHeight; j < 0; j++)
                     {
                         int x = xPos + i;
                         int y = yPos + j;
@@ -57,9 +61,9 @@ namespace Fargowiltas.Projectiles.Explosives
                     }
                 }
 
-                WorldGen.PlaceTile(xPos, yPos - 2, Projectile.ai[0] == 0 ? ModContent.TileType<OmnistationSheet>() : ModContent.TileType<OmnistationSheet2>());
+                WorldGen.PlaceTile(xPos, yPos - TileHeight / 2, Placeable);
                 if (Main.netMode == NetmodeID.Server)
-                    NetMessage.SendTileSquare(-1, xPos - 1, yPos - 4, 2, 4);
+                    NetMessage.SendTileSquare(-1, xPos - 1, yPos - TileHeight, 2, TileHeight);
 
                 return true;
             }
@@ -84,7 +88,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
                             //reset interval if it finds an omni already placed
                             Tile tileAbove = Framing.GetTileSafely(xPosition, yPosition - 1);
-                            if (tileAbove != null && (tileAbove.TileType == ModContent.TileType<OmnistationSheet>() || tileAbove.TileType == ModContent.TileType<OmnistationSheet2>()))
+                            if (tileAbove != null && Replaceable(tileAbove.TileType))
                             {
                                 i = interval;
                             }
