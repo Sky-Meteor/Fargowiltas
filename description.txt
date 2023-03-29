@@ -1,6 +1,15 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
+NEW UPDATE - V 2.8.8
+-Adjusted boss values to match Boss Checklist again
+-Fixed Renewals sometimes deleting blocks when used in unloaded chunks in multiplayer
+-Fixed item hotkeys e.g. Rod of Discord being usable when they shouldn't
+-Added Semi-Bridgifier
+-Fixed segment issues caused by using Wormy Food and Some Kind of Metallic Worm
+-Reduced enemy spawner multiplayer desync issues
+-Deathbringer Fairy and Ancient Seal specify they must be used at night
+
 NEW UPDATE - V 2.8.7
 -Added an additional option to holiday and seed settings. It can be set to Normal which means it behaves with no modifications.
 -Replaced King Slime Mask with Duke Fishron Mask in Mutant Body vanity recipe

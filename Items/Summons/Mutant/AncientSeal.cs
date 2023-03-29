@@ -16,6 +16,7 @@ namespace Fargowiltas.Items.Summons.Mutant
         {
             DisplayName.SetDefault("Ancient Seal");
             Tooltip.SetDefault("Summons ALL the bosses modded included" +
+                               "\nCan only be used at night" +
                                "\n'Use at your own risk'");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }

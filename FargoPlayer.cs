@@ -397,7 +397,7 @@ namespace Fargowiltas
                 autoRevertSelectedItem = true;
                 Player.selectedItem = index;
                 Player.controlUseItem = true;
-                if (use)
+                if (use && CombinedHooks.CanUseItem(Player, Player.inventory[Player.selectedItem]))
                 {
                     Player.ItemCheck(Main.myPlayer);
                 }

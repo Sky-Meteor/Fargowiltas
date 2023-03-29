@@ -53,9 +53,13 @@ namespace Fargowiltas.Projectiles
             float[] speedX = { 0, 0, 5, 5, 5, -5, -5, -5 };
             float[] speedY = { 5, -5, 0, 5, -5, 0, 5, -5 };
 
-            for (int i = 0; i < 8; i++)
+            //because these projs may apparently delete blocks if spawned in unloaded chunks far away from players in mp
+            if (Main.netMode == NetmodeID.SinglePlayer)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], projType, 0, 0, Main.myPlayer);
+                for (int i = 0; i < 8; i++)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], projType, 0, 0, Main.myPlayer);
+                }
             }
 
             if (supreme)
