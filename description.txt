@@ -7,6 +7,7 @@ NEW UPDATE - V 2.8.8
 -Fixed item hotkeys e.g. Rod of Discord being usable when they shouldn't
 -Added Semi-Bridgifier
 -Fixed segment issues caused by using Wormy Food and Some Kind of Metallic Worm
+-Fixed Portable Sundial right click not working in multiplayer
 -Reduced enemy spawner multiplayer desync issues
 -Deathbringer Fairy and Ancient Seal specify they must be used at night
 
