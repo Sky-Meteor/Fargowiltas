@@ -58,15 +58,16 @@ namespace Fargowiltas.Items.Misc
             if (player.altFunctionUse == ItemAlternativeFunctionID.ActivatedAndUsed)
             {
                 Main.sundialCooldown = 0;
+                SoundEngine.PlaySound(SoundID.Item4, player.position);
+
                 if (Main.netMode == NetmodeID.MultiplayerClient)
                 {
-                    NetMessage.SendData(MessageID.WorldData, number: Main.myPlayer, number2: 3f);
+                    NetMessage.SendData(MessageID.MiscDataSync, number: Main.myPlayer, number2: 3f);
                     return true;
                 }
 
                 Main.fastForwardTime = true;
                 NetMessage.SendData(MessageID.WorldData);
-                SoundEngine.PlaySound(SoundID.Item4, player.position);
             }
             else
             {
