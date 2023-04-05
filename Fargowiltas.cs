@@ -119,6 +119,8 @@ namespace Fargowiltas
             ItemID.Sets.BannerStrength = ItemID.Sets.Factory.CreateCustomSet(new ItemID.BannerEffect(1f));
             
             On.Terraria.Recipe.FindRecipes += FindRecipes_ElementalAssemblerGraveyardHack;
+            On.Terraria.WorldGen.CountTileTypesInArea += CountTileTypesInArea_PurityTotemHack;
+            On.Terraria.SceneMetrics.ExportTileCountsToMain += ExportTileCountsToMain_PurityTotemHack;
         }
 
         private static void FindRecipes_ElementalAssemblerGraveyardHack(
@@ -133,6 +135,43 @@ namespace Fargowiltas
             orig(canDelayCheck);
 
             Main.LocalPlayer.ZoneGraveyard = oldZoneGraveyard;
+        }
+
+        //for town npc housing check, independent from player biome
+        private static void CountTileTypesInArea_PurityTotemHack(
+            On.Terraria.WorldGen.orig_CountTileTypesInArea orig,
+            int[] tileTypeCounts, int startX, int endX, int startY, int endY)
+        {
+            orig(tileTypeCounts, startX, endX, startY, endY);
+
+            if (tileTypeCounts[ModContent.TileType<PurityTotemSheet>()] > 0)
+            {
+                const int sunflowerWeight = 5;
+                tileTypeCounts[TileID.Sunflower] += PurityTotemSheet.TILES_NEGATED / sunflowerWeight;
+            }
+        }
+
+        //for current biome
+        private void ExportTileCountsToMain_PurityTotemHack(
+            On.Terraria.SceneMetrics.orig_ExportTileCountsToMain orig,
+            SceneMetrics self)
+        {
+            orig(self);
+
+            //for visible biome effect
+            if (self.GetTileCount((ushort)ModContent.TileType<PurityTotemSheet>()) > 0)
+            {
+                const int tilesNegated = PurityTotemSheet.TILES_NEGATED;
+
+                //reduce biome counts, floor at zero
+                self.BloodTileCount = Math.Max(self.BloodTileCount - tilesNegated, 0);
+                self.EvilTileCount = Math.Max(self.EvilTileCount - tilesNegated, 0);
+                self.GraveyardTileCount = Math.Max(self.GraveyardTileCount - tilesNegated, 0);
+
+                //reenable if disabled by graveyard
+                if (self.GetTileCount(TileID.Sunflower) > 0)
+                    self.HasSunflower = true;
+            }
         }
 
         public override void Unload()

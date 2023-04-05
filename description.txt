@@ -1,6 +1,9 @@
 This is a Quality of life mod that adds the Mutant town NPC who sells boss summons of nearly every mod
 There are several other items such as infinite ammos, craftable instant builds for common world infrastructure like skybridges, obsidian underworld bridges, hellevators, unlimited potions, increased spawn rates toggle item, and more!
 
+NEW UPDATE - V 2.8.9
+-Added Purity Totem
+
 NEW UPDATE - V 2.8.8
 -Adjusted boss values to match Boss Checklist again
 -Fixed Renewals sometimes deleting blocks when used in unloaded chunks in multiplayer
