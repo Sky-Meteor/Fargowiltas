@@ -12,7 +12,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Mini Instabridge");
+            // DisplayName.SetDefault("Mini Instabridge");
         }
 
         public override void SetDefaults()

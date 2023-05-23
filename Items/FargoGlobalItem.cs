@@ -10,6 +10,7 @@ using Fargowiltas.NPCs;
 using Fargowiltas.Items.Ammos.Rockets;
 using System.Text.RegularExpressions;
 using System.Linq;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.Localization;
 
 namespace Fargowiltas.Items
@@ -172,51 +173,37 @@ namespace Fargowiltas.Items
             }
         }
 
-        public override void OpenVanillaBag(string context, Player player, int arg)
+        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
-            switch (arg)
+            switch (item.type)
             {
                 case ItemID.KingSlimeBossBag:
-                    if (Main.rand.NextBool(25))
-                    {
-                        player.QuickSpawnItem(player.GetSource_OpenItem(ItemID.SlimeStaff), ItemID.SlimeStaff);
-                    }
-
+                    itemLoot.Add(ItemDropRule.Common(ItemID.SlimeStaff, 25));
                     break;
 
                 case ItemID.WoodenCrate:
-                //case Pearlwood
-                    if (Main.rand.NextBool(40))
-                    {
-                        int drop = Main.rand.Next(new int[] { ItemID.Spear, ItemID.Blowpipe, ItemID.WandofSparking, ItemID.WoodenBoomerang });
-                        player.QuickSpawnItem(player.GetSource_OpenItem(drop), drop);
-                    }
+                    itemLoot.Add(ItemDropRule.OneFromOptions(40, ItemID.Spear, ItemID.Blowpipe, ItemID.WandofSparking, ItemID.WoodenBoomerang));
 
                     break;
 
                 case ItemID.GoldenCrate:
-                //case Titanium
-                    if (Main.rand.NextBool(10))
-                    {
-                        int drop = Main.rand.Next( new int[] { ItemID.BandofRegeneration, ItemID.MagicMirror, ItemID.CloudinaBottle, ItemID.EnchantedBoomerang, ItemID.ShoeSpikes, ItemID.FlareGun, ItemID.HermesBoots, ItemID.LavaCharm, ItemID.SandstorminaBottle, ItemID.FlyingCarpet });
-                        player.QuickSpawnItem(player.GetSource_OpenItem(drop), drop);
-                    }
+                    itemLoot.Add(ItemDropRule.OneFromOptions(10, ItemID.BandofRegeneration, ItemID.MagicMirror, ItemID.CloudinaBottle, ItemID.EnchantedBoomerang, ItemID.ShoeSpikes, ItemID.FlareGun, ItemID.HermesBoots, ItemID.LavaCharm, ItemID.SandstorminaBottle, ItemID.FlyingCarpet));
+                    itemLoot.Add(ItemDropRule.Common(ItemID.Sundial, 20));
 
-                    if (Main.rand.NextBool(20) && !Main.hardMode)
-                    {
-                        player.QuickSpawnItem(player.GetSource_OpenItem(ItemID.Sundial), ItemID.Sundial);
-                    }
-
-                        break;
+                    break;
             }
 
-            if (context == "lockBox")
+            //TODO Lockbox drops:
+            /*
+            if (context == lockBox)
             {
                 if (Main.rand.NextBool(7))
                 {
                     player.QuickSpawnItem(player.GetSource_OpenItem(ItemID.Valor), ItemID.Valor);
                 }
             }
+            */
+
         }
 
         public override void PostUpdate(Item item)
@@ -296,11 +283,18 @@ namespace Fargowiltas.Items
 
             if (Informational.Contains(item.type))
             {
-                player.VanillaUpdateInventory(item);
+                //TODO: this doesn't work.
+                player.GrantPrefixBenefits(item);
+                //player.ApplyEquipFunctional(item, false);
+                //player.VanillaUpdateInventory(item);
             }
             else if (Construction.Contains(item.type))
             {
-                player.ApplyEquipFunctional(item, false);
+                Item fakeItem = new Item();
+                fakeItem.SetDefaults(item.type);
+                //TODO: this doesn't work. maybe use GrantPrefixBenefits
+                player.ApplyEquipFunctional(fakeItem, true);
+                //player.VanillaUpdateEquip(fakeItem)/* tModPorter Note: Removed. Use either GrantPrefixBenefits (if Item.accessory) or GrantArmorBenefits (for armor slots) */;
             }
         }
 

@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Goblin Scrap");
-            Tooltip.SetDefault("Summons Goblin Scout");
+            // DisplayName.SetDefault("Goblin Scrap");
+            // Tooltip.SetDefault("Summons Goblin Scout");
         }
     }
 }

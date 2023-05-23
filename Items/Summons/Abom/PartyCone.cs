@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Party Cone");
-            Tooltip.SetDefault("Starts a Party!\nNeeds at least 5 town NPCs to use");
+            // DisplayName.SetDefault("Party Cone");
+            // Tooltip.SetDefault("Starts a Party!\nNeeds at least 5 town NPCs to use");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

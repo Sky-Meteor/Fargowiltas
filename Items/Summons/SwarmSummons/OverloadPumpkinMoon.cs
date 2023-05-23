@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Overloaded Pumpkin Moon Medallion");
-            Tooltip.SetDefault("Summons an Overloaded Pumpkin Moon\nUse again to stop the event");
+            // DisplayName.SetDefault("Overloaded Pumpkin Moon Medallion");
+            // Tooltip.SetDefault("Summons an Overloaded Pumpkin Moon\nUse again to stop the event");
         }
 
         public override void SetDefaults()

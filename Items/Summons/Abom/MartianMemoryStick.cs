@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.Abom
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Martian Memory Stick");
-            Tooltip.SetDefault("Summons Martian Saucer");
+            // DisplayName.SetDefault("Martian Memory Stick");
+            // Tooltip.SetDefault("Summons Martian Saucer");
         }
     }
 }

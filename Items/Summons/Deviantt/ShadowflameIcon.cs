@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Shadowflame Icon");
-            Tooltip.SetDefault("Summons Goblin Summoner" +
-                               "\nOnly usable during Goblin Army");
+            // DisplayName.SetDefault("Shadowflame Icon");
+            /* Tooltip.SetDefault("Summons Goblin Summoner" +
+                               "\nOnly usable during Goblin Army"); */
         }
 
         public override bool CanUseItem(Player player)

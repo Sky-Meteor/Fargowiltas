@@ -100,7 +100,7 @@ namespace Fargowiltas
                 {
                     // If the player is in multiplayer, request a spawn
                     // This will only work if NPCID.Sets.MPAllowedEnemies[type] is true, set in NPC code
-                    NetMessage.SendData(MessageID.SpawnBoss, number: player.whoAmI, number2: bossType);
+                    NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, number: player.whoAmI, number2: bossType);
                 }
             }
         }

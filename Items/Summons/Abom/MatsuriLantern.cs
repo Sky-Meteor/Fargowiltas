@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Matsuri Lantern");
-            Tooltip.SetDefault("Makes every night a Lantern Night when possible");
+            // DisplayName.SetDefault("Matsuri Lantern");
+            // Tooltip.SetDefault("Makes every night a Lantern Night when possible");
 
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(6, 4));
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;

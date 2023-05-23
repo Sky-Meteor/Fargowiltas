@@ -11,7 +11,7 @@ namespace Fargowiltas.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fake Heart");
+            // DisplayName.SetDefault("Fake Heart");
         }
 
         public override void SetDefaults()
@@ -114,7 +114,7 @@ namespace Fargowiltas.Projectiles
             Projectile.rotation = Projectile.velocity.ToRotation() - (float)Math.PI / 2;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(BuffID.Lovestruck, 600);
         }

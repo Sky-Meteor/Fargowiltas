@@ -9,8 +9,8 @@ namespace Fargowiltas.Buffs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Semistation");
-            Description.SetDefault("Effects of some vanilla stations");
+            // DisplayName.SetDefault("Semistation");
+            // Description.SetDefault("Effects of some vanilla stations");
             Main.buffNoSave[Type] = true;
             Main.buffNoTimeDisplay[Type] = true;
         }

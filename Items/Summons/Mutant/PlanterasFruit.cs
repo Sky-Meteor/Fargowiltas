@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.Mutant
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Plantera's Fruit");
-            Tooltip.SetDefault("Summons Plantera");
+            // DisplayName.SetDefault("Plantera's Fruit");
+            // Tooltip.SetDefault("Summons Plantera");
         }
 
         public override void AddRecipes()

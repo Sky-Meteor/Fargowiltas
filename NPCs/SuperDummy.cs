@@ -9,7 +9,7 @@ namespace Fargowiltas.NPCs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Super Dummy");
+            // DisplayName.SetDefault("Super Dummy");
             NPCID.Sets.NPCBestiaryDrawModifiers bestiaryData = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
             {
                 Hide = true
@@ -39,7 +39,8 @@ namespace Fargowiltas.NPCs
             {
                 NPC.life = 0;
                 NPC.HitEffect();
-                NPC.StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
+                NPC.SimpleStrikeNPC(int.MaxValue, 0, false, 0, null, false, 0, true);
+                //NPC.StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
             }
         }
 

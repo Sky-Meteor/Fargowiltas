@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Demonic Plushie");
-            Tooltip.SetDefault("Summons Red Devil" +
-                               "\nOnly usable in the Underworld");
+            // DisplayName.SetDefault("Demonic Plushie");
+            /* Tooltip.SetDefault("Summons Red Devil" +
+                               "\nOnly usable in the Underworld"); */
         }
 
         public override bool CanUseItem(Player player)

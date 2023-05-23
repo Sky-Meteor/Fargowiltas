@@ -17,8 +17,8 @@ namespace Fargowiltas.Items.Summons.Mutant
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Jelly Crystal");
-            Tooltip.SetDefault("Summons Queen Slime");
+            // DisplayName.SetDefault("Jelly Crystal");
+            // Tooltip.SetDefault("Summons Queen Slime");
         }
 
         public override void AddRecipes()

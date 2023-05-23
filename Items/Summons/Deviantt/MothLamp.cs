@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Moth Lamp");
-            Tooltip.SetDefault("Summons Moth");
+            // DisplayName.SetDefault("Moth Lamp");
+            // Tooltip.SetDefault("Summons Moth");
         }
     }
 }

@@ -17,8 +17,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Some Kind of Metallic Eye");
-            Tooltip.SetDefault("Summons the Twins");
+            // DisplayName.SetDefault("Some Kind of Metallic Eye");
+            // Tooltip.SetDefault("Summons the Twins");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

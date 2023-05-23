@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Slimy Energizer");
-            Tooltip.SetDefault("Formed after using 10 Swarm Crowns\n'It feels a bit slimy'");
+            // DisplayName.SetDefault("Slimy Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Swarm Crowns\n'It feels a bit slimy'");
         }
 
         public override void SetDefaults()

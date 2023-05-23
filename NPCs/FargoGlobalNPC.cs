@@ -88,7 +88,7 @@ namespace Fargowiltas.NPCs
         //            }
         //        }
 
-        public override bool? CanHitNPC(NPC npc, NPC target)
+        public override bool CanHitNPC(NPC npc, NPC target)/* tModPorter Suggestion: Return true instead of null */
         {
             if (target.dontTakeDamage && target.type == NPCType<Squirrel>())
                 return false;
@@ -103,7 +103,8 @@ namespace Fargowiltas.NPCs
         {
             if (npc.boss)
             {
-                boss = npc.whoAmI;
+                //TODO: boss is apparently not defined here
+                //boss = npc.whoAmI;
             }
 
             switch (npc.type)
@@ -321,8 +322,10 @@ namespace Fargowiltas.NPCs
                 npc.dontTakeDamage = false; //always vulnerable in swarm
         }
 
-        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        public override void ModifyActiveShop(NPC npc, string shopName, Item[] items)
         {
+            //TODO: fix shops i didn't touch these at all
+
             Player player = Main.LocalPlayer;
 
             if (GetInstance<FargoConfig>().NPCSales)
@@ -331,15 +334,15 @@ namespace Fargowiltas.NPCs
                 {
                     if (next >= 40)
                         return;
-
+                    /*
                     shop.item[next].SetDefaults(itemID);
                     if (customPrice != -1)
                         shop.item[next].shopCustomPrice = customPrice;
-
+                    */
                     next++;
                 }
-
-                switch (type)
+                /*
+                switch (npc.type)
                 {
                     case NPCID.PartyGirl:
                         if (BirthdayParty.PartyIsUp)
@@ -627,7 +630,9 @@ namespace Fargowiltas.NPCs
                         if (NPC.downedGolemBoss)
                             AddItem(ref nextSlot, ItemID.SuperManaPotion);
                         break;
+                    
                 }
+                */
             }
         }
 
@@ -1029,7 +1034,7 @@ namespace Fargowiltas.NPCs
                     {
                         if (Main.rand.NextBool(3))
                             Item.NewItem(npc.GetSource_Loot(), npc.Hitbox, Main.rand.Next(new int[] {
-                                ItemID.EldMelter,
+                                ItemID.ElfMelter,
                                 ItemID.ChainGun
                             }));
                     }
@@ -1412,11 +1417,12 @@ namespace Fargowiltas.NPCs
             return true;
         }
 
-        public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
         {
             if (GetInstance<FargoConfig>().RottenEggs && projectile.type == ProjectileID.RottenEgg && npc.townNPC)
             {
-                damage *= 20;
+                modifiers.FinalDamage *= 20;
+                //damage *= 20;
             }
         }
 
@@ -1548,7 +1554,8 @@ namespace Fargowiltas.NPCs
                 {
                     if (Main.npc[i].active && Main.npc[i].type == minion)
                     {
-                        Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                        Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                        //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                     }
                 }
             }
@@ -1577,7 +1584,8 @@ namespace Fargowiltas.NPCs
                         {
                             if (Main.npc[i].type == minion)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                         else
@@ -1585,7 +1593,8 @@ namespace Fargowiltas.NPCs
                             // Pandora
                             if (Array.IndexOf(Bosses, Main.npc[i].type) == -1 && !Main.npc[i].boss)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                     }
@@ -1618,7 +1627,8 @@ namespace Fargowiltas.NPCs
                     if (kill.active && !kill.friendly && kill.type != NPCID.LunarTowerNebula && kill.type != NPCID.LunarTowerSolar && kill.type != NPCID.LunarTowerStardust && kill.type != NPCID.LunarTowerVortex)
                     {
                         Main.npc[i].GetGlobalNPC<FargoGlobalNPC>().NoLoot = true;
-                        Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                        Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                        //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                     }
                 }
 
@@ -1662,7 +1672,8 @@ namespace Fargowiltas.NPCs
                         {
                             if (Main.npc[i].type == minion)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                         else
@@ -1670,7 +1681,8 @@ namespace Fargowiltas.NPCs
                             // Pandora
                             if (Array.IndexOf(Bosses, Main.npc[i].type) == -1 && !Main.npc[i].boss)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                     }

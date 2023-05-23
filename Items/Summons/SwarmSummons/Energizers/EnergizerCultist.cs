@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Insanity Energizer");
-            Tooltip.SetDefault("Formed after using 10 Zealot's Madness\n'You're probably insane'");
+            // DisplayName.SetDefault("Insanity Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Zealot's Madness\n'You're probably insane'");
         }
 
         public override void SetDefaults()

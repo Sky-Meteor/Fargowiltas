@@ -10,7 +10,7 @@ namespace Fargowiltas.Items.Vanity
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Abominationn Body");
+            // DisplayName.SetDefault("Abominationn Body");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

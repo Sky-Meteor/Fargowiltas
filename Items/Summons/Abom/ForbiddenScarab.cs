@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.Abom
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Forbidden Scarab");
-            Tooltip.SetDefault("Starts a Sandstorm");
+            // DisplayName.SetDefault("Forbidden Scarab");
+            // Tooltip.SetDefault("Starts a Sandstorm");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

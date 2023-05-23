@@ -17,8 +17,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Truffly Worm");
-            Tooltip.SetDefault("Summons Duke Fishron without fishing");
+            // DisplayName.SetDefault("Truffly Worm");
+            // Tooltip.SetDefault("Summons Duke Fishron without fishing");
         }
 
         public override void AddRecipes()

@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Goblin War Banner");
-            Tooltip.SetDefault("Summons an Overloaded Goblin Invasion\nUse again to stop the event");
+            // DisplayName.SetDefault("Goblin War Banner");
+            // Tooltip.SetDefault("Summons an Overloaded Goblin Invasion\nUse again to stop the event");
         }
 
         public override void SetDefaults()

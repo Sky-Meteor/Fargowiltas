@@ -34,7 +34,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Rocket I Bag");
+            // DisplayName.SetDefault("Endless Rocket I Bag");
         }
     }
 
@@ -48,7 +48,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Rocket II Bag");
+            // DisplayName.SetDefault("Endless Rocket II Bag");
         }
     }
 
@@ -62,7 +62,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Rocket III Bag");
+            // DisplayName.SetDefault("Endless Rocket III Bag");
         }
     }
 
@@ -76,7 +76,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Rocket IV Bag");
+            // DisplayName.SetDefault("Endless Rocket IV Bag");
         }
     }
 
@@ -90,7 +90,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Cluster Rocket I Bag");
+            // DisplayName.SetDefault("Endless Cluster Rocket I Bag");
         }
         public override string Texture => "Fargowiltas/Items/Placeholder";
     }
@@ -105,7 +105,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Cluster Rocket II Bag");
+            // DisplayName.SetDefault("Endless Cluster Rocket II Bag");
         }
         public override string Texture => "Fargowiltas/Items/Placeholder";
     }
@@ -160,7 +160,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Mini Nuke I Bag");
+            // DisplayName.SetDefault("Endless Mini Nuke I Bag");
         }
         public override string Texture => "Fargowiltas/Items/Placeholder";
     }
@@ -175,7 +175,7 @@ namespace Fargowiltas.Items.Ammos.Rockets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Mini Nuke II Bag");
+            // DisplayName.SetDefault("Endless Mini Nuke II Bag");
         }
         public override string Texture => "Fargowiltas/Items/Placeholder";
     }

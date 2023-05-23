@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Naughty Present Sack");
-            Tooltip.SetDefault("Summons an Overloaded Frost Moon\nUse again to stop the event");
+            // DisplayName.SetDefault("Naughty Present Sack");
+            // Tooltip.SetDefault("Summons an Overloaded Frost Moon\nUse again to stop the event");
         }
 
         public override void SetDefaults()

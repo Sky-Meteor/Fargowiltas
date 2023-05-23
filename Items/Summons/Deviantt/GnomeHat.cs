@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Gnome Hat");
-            Tooltip.SetDefault("Summons Gnome");
+            // DisplayName.SetDefault("Gnome Hat");
+            // Tooltip.SetDefault("Summons Gnome");
         }
     }
 }

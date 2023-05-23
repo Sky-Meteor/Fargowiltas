@@ -10,7 +10,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Shuriken");
+            // DisplayName.SetDefault("Shuriken");
         }
 
         public override void SetDefaults()
@@ -25,7 +25,7 @@ namespace Fargowiltas.Projectiles.Explosives
             AIType = 48;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Projectile.timeLeft = 0;
         }

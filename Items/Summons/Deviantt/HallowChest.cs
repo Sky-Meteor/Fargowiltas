@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Hallow Chest");
-            Tooltip.SetDefault("Summons Hallowed Mimic");
+            // DisplayName.SetDefault("Hallow Chest");
+            // Tooltip.SetDefault("Summons Hallowed Mimic");
         }
     }
 }

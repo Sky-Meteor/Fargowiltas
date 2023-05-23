@@ -23,8 +23,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Some Kind of Metallic Worm");
-            Tooltip.SetDefault("Summons the Destroyer");
+            // DisplayName.SetDefault("Some Kind of Metallic Worm");
+            // Tooltip.SetDefault("Summons the Destroyer");
         }
 
         public override bool CanUseItem(Player player) => !Main.dayTime && !NPC.AnyNPCs(NPCType);

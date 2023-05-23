@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wormy Energizer");
-            Tooltip.SetDefault("Formed after using 10 Worm Chickens\n'It's a little squishy'");
+            // DisplayName.SetDefault("Wormy Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Worm Chickens\n'It's a little squishy'");
         }
 
         public override void SetDefaults()

@@ -19,8 +19,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Pink Slime Crown");
-            Tooltip.SetDefault("Summons Pinky");
+            // DisplayName.SetDefault("Pink Slime Crown");
+            // Tooltip.SetDefault("Summons Pinky");
         }
 
         public override void SetDefaults()

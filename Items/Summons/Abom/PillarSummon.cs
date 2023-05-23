@@ -14,8 +14,8 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Outsider's Portal");
-            Tooltip.SetDefault("Summons the Celestial Pillars");
+            // DisplayName.SetDefault("Outsider's Portal");
+            // Tooltip.SetDefault("Summons the Celestial Pillars");
         }
 
         public override void SetDefaults()

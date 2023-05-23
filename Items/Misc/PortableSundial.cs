@@ -11,11 +11,11 @@ namespace Fargowiltas.Items.Misc
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Portable Sundial");
-            Tooltip.SetDefault("Left click to instantly change time" +
+            // DisplayName.SetDefault("Portable Sundial");
+            /* Tooltip.SetDefault("Left click to instantly change time" +
                                "\nTime cycles between dawn, noon, dusk, and midnight" +
                                "\nRight click to activate the Enchanted Sundial effect" +
-                               "\nCycling to dawn will reset travelling merchant's shops");
+                               "\nCycling to dawn will reset travelling merchant's shops"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -50,7 +50,8 @@ namespace Fargowiltas.Items.Misc
                 Item.useTime = 30;
             }
 
-            return !Main.fastForwardTime;
+            //return !Main.fastForwardTime/* tModPorter Note: Removed. Suggestion: IsFastForwardingTime(), fastForwardTimeToDawn or fastForwardTimeToDusk */;
+            return !Main.IsFastForwardingTime();
         }
 
         public override bool? UseItem(Player player)
@@ -66,7 +67,12 @@ namespace Fargowiltas.Items.Misc
                     return true;
                 }
 
-                Main.fastForwardTime = true;
+                //Main.fastForwardTime/* tModPorter Note: Removed. Suggestion: IsFastForwardingTime(), fastForwardTimeToDawn or fastForwardTimeToDusk */ = true;
+                //TODO: Bro they up and removed the fastForwardTime bool we can't just set it to true idk what to do we can make it fast forward to dawn or dusk but that's probably not what vanilla sundial does is it i'll just make it fast forward to night if it's day and day if it's night
+                if (Main.dayTime)
+                    Main.fastForwardTimeToDusk = true;
+                else
+                    Main.fastForwardTimeToDawn = true;
                 NetMessage.SendData(MessageID.WorldData);
             }
             else

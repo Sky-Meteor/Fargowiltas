@@ -4,6 +4,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Default;
 using Terraria.ObjectData;
@@ -54,19 +55,23 @@ namespace Fargowiltas.Items.Tiles
 			// Adds functionality for proximity of pylons; if this is true, then being near this tile will count as being near a pylon for the teleportation process.
 			AddToArray(ref TileID.Sets.CountsAsPylon);
 
-			ModTranslation pylonName = CreateMapEntryName(); //Name is in the localization file
+			LocalizedText pylonName = CreateMapEntryName(); //Name is in the localization file
 			AddMapEntry(Color.White, pylonName);
 		}
 
-		public override int? IsPylonForSale(int npcType, Player player, bool isNPCHappyEnough)
-		{
+		//TODO: shop stuff, idk
+		
+		//public override NPCShop.Entry GetNPCShopEntry()/* tModPorter See ExamplePylonTile for an example. To register to specific NPC shops, use the new shop system directly in ModNPC.AddShop, GlobalNPC.ModifyShop or ModSystem.PostAddRecipes */
+		//{
+			/*
 			return isNPCHappyEnough && (npcType == ModContent.NPCType<Mutant>() || npcType == ModContent.NPCType<Abominationn>() || npcType == ModContent.NPCType<Deviantt>())
 				&& NPC.AnyNPCs(ModContent.NPCType<Mutant>())
 				&& NPC.AnyNPCs(ModContent.NPCType<Abominationn>())
 				&& NPC.AnyNPCs(ModContent.NPCType<Deviantt>())
 				? ModContent.ItemType<SiblingPylon>()
 				: null;
-		}
+			*/
+		//}
 
 		public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
 

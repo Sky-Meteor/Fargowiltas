@@ -1784,7 +1784,7 @@ namespace Fargowiltas
 
             //santa nk1
             CreateTreasureBagRecipes(ItemID.SantaNK1Trophy,
-                ItemID.EldMelter,
+                ItemID.ElfMelter,
                 ItemID.ChainGun
             );
 
@@ -1922,7 +1922,7 @@ namespace Fargowiltas
             Recipe.Create(ItemID.AbigailsFlower)
                .AddIngredient(ItemID.Deathweed, 5)
                .AddTile(TileID.Tombstones)
-               .AddCondition(Recipe.Condition.InGraveyardBiome)
+               .AddCondition(Condition.InGraveyard)
                .Register();
 
             Recipe.Create(ItemID.SandstorminaBottle)

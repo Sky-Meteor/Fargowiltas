@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -19,8 +19,8 @@ namespace Fargowiltas.Items.Tiles
             Main.tileNoAttach[Type] = true;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
             TileObjectData.addTile(Type);
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Crucible of the Cosmos");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Crucible of the Cosmos");
             AddMapEntry(new Color(200, 200, 200), name);
             TileID.Sets.DisableSmartCursor[Type] = true;
             //counts as

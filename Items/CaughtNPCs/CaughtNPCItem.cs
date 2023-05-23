@@ -62,8 +62,8 @@ namespace Fargowiltas.Items.CaughtNPCs
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault(Regex.Replace(_name, "([A-Z])", " $1").Trim());
-            Tooltip.SetDefault(NpcQuote);
+            // DisplayName.SetDefault(Regex.Replace(_name, "([A-Z])", " $1").Trim());
+            // Tooltip.SetDefault(NpcQuote);
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(6, Main.npcFrameCount[AssociatedNpcId]));
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 

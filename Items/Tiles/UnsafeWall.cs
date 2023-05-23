@@ -21,8 +21,8 @@ namespace Fargowiltas.Items.Tiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault(name);
-            Tooltip.SetDefault("Allows area-specific enemies to spawn");
+            // DisplayName.SetDefault(name);
+            // Tooltip.SetDefault("Allows area-specific enemies to spawn");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 400;
         }
 

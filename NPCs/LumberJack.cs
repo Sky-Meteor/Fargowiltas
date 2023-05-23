@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Fargowiltas.Items.Tiles;
 using Fargowiltas.Items.Vanity;
+using Fargowiltas.Items.Weapons;
 using Fargowiltas.Projectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -36,7 +37,7 @@ namespace Fargowiltas.NPCs
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("LumberJack");
+            // DisplayName.SetDefault("LumberJack");
 
             Main.npcFrameCount[NPC.type] = 25;
 
@@ -92,7 +93,7 @@ namespace Fargowiltas.NPCs
             //}
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs, int money)
+        public override bool CanTownNPCSpawn(int numTownNPCs)/* tModPorter Suggestion: Copy the implementation of NPC.SpawnAllowed_Merchant in vanilla if you to count money, and be sure to set a flag when unlocked, so you don't count every tick. */
         {
             return GetInstance<FargoConfig>().Lumber && FargoWorld.DownedBools.TryGetValue("lumberjack", out bool down) && down;
         }
@@ -167,13 +168,15 @@ namespace Fargowiltas.NPCs
             button2 = Language.GetTextValue("Mods.Fargowiltas.UI.TreeTreasures");
         }
 
-        public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+        public const string ShopName = "Shop";
+
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
         {
             Player player = Main.LocalPlayer;
 
             if (firstButton)
             {
-                shop = true;
+                shopName = ShopName;
                 return;
             }
 
@@ -336,85 +339,34 @@ namespace Fargowiltas.NPCs
             }
         }
 
-        public override void SetupShop(Chest shop, ref int nextSlot)
+        public override void AddShops()
         {
-            shop.item[nextSlot].SetDefaults(ItemID.WoodPlatform);
-            shop.item[nextSlot].shopCustomPrice = 5;
-            nextSlot++;
+            var npcShop = new NPCShop(Type, ShopName)
+                .Add(new Item(ItemID.WoodPlatform) { shopCustomPrice = Item.buyPrice(copper: 5) })
+                .Add(new Item(ItemID.Wood) { shopCustomPrice = Item.buyPrice(copper: 10) })
+                .Add(new Item(ItemID.BorealWood) { shopCustomPrice = Item.buyPrice(copper: 10) })
+                .Add(new Item(ItemID.RichMahogany) { shopCustomPrice = Item.buyPrice(copper: 15) })
+                .Add(new Item(ItemID.PalmWood) { shopCustomPrice = Item.buyPrice(copper: 15) })
+                .Add(new Item(ItemID.Ebonwood) { shopCustomPrice = Item.buyPrice(copper: 15) })
+                .Add(new Item(ItemID.Shadewood) { shopCustomPrice = Item.buyPrice(copper: 15) })
+                .Add(new Item(ItemID.Pearlwood) { shopCustomPrice = Item.buyPrice(copper: 20) })
+                .Add(new Item(ItemID.SpookyWood) { shopCustomPrice = Item.buyPrice(copper: 50) }, Condition.DownedPumpking)
+                .Add(new Item(ItemID.Cactus) { shopCustomPrice = Item.buyPrice(copper: 10) })
+                .Add(new Item(ItemID.BambooBlock) { shopCustomPrice = Item.buyPrice(copper: 10) })
+                .Add(new Item(ItemID.LivingWoodWand) { shopCustomPrice = Item.buyPrice(copper: 10000) })
+                .Add(new Item(ItemType<LumberjackMask>()) { shopCustomPrice = Item.buyPrice(copper: 10000) })
+                .Add(new Item(ItemType<LumberjackBody>()) { shopCustomPrice = Item.buyPrice(copper: 10000) })
+                .Add(new Item(ItemType<LumberjackPants>()) { shopCustomPrice = Item.buyPrice(copper: 10000) })
+                .Add(new Item(ItemType<Items.Weapons.LumberJaxe>()) { shopCustomPrice = Item.buyPrice(copper: 10000) })
+                .Add(new Item(ItemID.SharpeningStation) { shopCustomPrice = Item.buyPrice(copper: 100000) })
+                .Add(new Item(ItemType<WoodenToken>()) { shopCustomPrice = Item.buyPrice(copper: 10000) })
+                ;
 
-            shop.item[nextSlot].SetDefaults(ItemID.Wood);
-            shop.item[nextSlot].shopCustomPrice = 10;
-            nextSlot++;
+            npcShop.Register();
+        }
 
-            shop.item[nextSlot].SetDefaults(ItemID.BorealWood);
-            shop.item[nextSlot].shopCustomPrice = 10;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.RichMahogany);
-            shop.item[nextSlot].shopCustomPrice = 15;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.PalmWood);
-            shop.item[nextSlot].shopCustomPrice = 15;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.Ebonwood);
-            shop.item[nextSlot].shopCustomPrice = 15;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.Shadewood);
-            shop.item[nextSlot].shopCustomPrice = 15;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.Pearlwood);
-            shop.item[nextSlot].shopCustomPrice = 20;
-            nextSlot++;
-
-            if (NPC.downedHalloweenKing)
-            {
-                shop.item[nextSlot].SetDefaults(ItemID.SpookyWood);
-                shop.item[nextSlot].shopCustomPrice = 50;
-                nextSlot++;
-            }
-
-
-            shop.item[nextSlot].SetDefaults(ItemID.Cactus);
-            shop.item[nextSlot].shopCustomPrice = 10;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.BambooBlock);
-            shop.item[nextSlot].shopCustomPrice = 10;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.LivingWoodWand);
-            shop.item[nextSlot].shopCustomPrice = 10000;
-            nextSlot++;
-
-
-
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<LumberjackMask>());
-            shop.item[nextSlot].shopCustomPrice = 10000;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<LumberjackBody>());
-            shop.item[nextSlot].shopCustomPrice = 10000;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<LumberjackPants>());
-            shop.item[nextSlot].shopCustomPrice = 10000;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.LumberJaxe>());
-            shop.item[nextSlot].shopCustomPrice = 10000;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ItemID.SharpeningStation);
-            shop.item[nextSlot].shopCustomPrice = 100000;
-            nextSlot++;
-
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<WoodenToken>());
-            shop.item[nextSlot].shopCustomPrice = 10000;
-            nextSlot++;
+        public override void ModifyActiveShop(string shopName, Item[] items)
+        {
         }
 
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
@@ -431,7 +383,7 @@ namespace Fargowiltas.NPCs
 
         public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
         {
-            projType = ModContent.ProjectileType<LumberJaxe>();
+            projType = ModContent.ProjectileType<Projectiles.LumberJaxe>();
             attackDelay = 1;
         }
 
@@ -446,13 +398,13 @@ namespace Fargowiltas.NPCs
             FargoWorld.DownedBools["lumberjack"] = true;
         }
 
-        public override void HitEffect(int hitDirection, double damage)
+        public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0)
             {
                 for (int k = 0; k < 8; k++)
                 {
-                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, 2.5f * hitDirection, -2.5f, Scale: 0.8f);
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, 2.5f * hit.HitDirection, -2.5f, Scale: 0.8f);
                 }
 
                 if (!Main.dedServ)
@@ -469,9 +421,9 @@ namespace Fargowiltas.NPCs
             }
             else
             {
-                for (int k = 0; k < damage / NPC.lifeMax * 50.0; k++)
+                for (int k = 0; k < hit.Damage / NPC.lifeMax * 50.0; k++)
                 {
-                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, hitDirection, -1f, Scale: 0.6f);
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, hit.HitDirection, -1f, Scale: 0.6f);
                 }
             }
         }
