@@ -1,4 +1,4 @@
-﻿# You may find this .hjson file approach to translations easier for your mod.
+# You may find this .hjson file approach to translations easier for your mod.
 # .hjson files contain translations for the language specified in the filename. (Make sure this file is UTF-8 encoded only.)
 # The possible languages are: English ("en-US"), German ("de-DE"), Italian ("it-IT"), French ("fr-FR"), Spanish ("es-ES"), Russian ("ru-RU"), Chinese ("zh-Hans"), Portuguese ("pt-BR"), and Polish ("pl-PL")
 # Here in ExampleMod we have organized these files in a folder called Localization. A single file per language makes it extremely easy to to integrate and maintain translations.
@@ -8,7 +8,6 @@
 
 Mods: {
 	Fargowiltas: {
-		
 		Bestiary: {
 			Deviantt: 她提供敌怪召唤物和一些帮助（如果她想）。这个乐观又充满活力的生物喜爱钱的程度和喜爱暴力的程度相同。她有一点畸形。
 			Abominationn: 他可以控制天气和停止入侵，但他很懒惰，并且他的武器和手融合在一起。好消息是，他不需要吃东西。当他靠近时，门神奇地打开了。
@@ -16,7 +15,7 @@ Mods: {
 			LumberJack: 他是一个非常普通的，喜欢收集小动物和砍任何树的伐木工。但他是否有不为人知之处？神秘的神力？或许没有……
 			Squirrel: 当这个矮小利落的小动物注意到你的背包中有价值的物品时，它会售卖它的的复制品。它不会告诉你它从哪得到的这些东西，不过这基本上是因为它不会说话。
 		}
-		
+
 		#This is what displays during all of an NPC's happiness levels. Note that the localization key for these should always be "TownNPCMood.*NPCName*.*Mood*" or else it won't display properly.
 		TownNPCMood: {
 			Deviantt: {
@@ -26,16 +25,17 @@ Mods: {
 				FarFromHome: 我想我的房子就在那边……除非你正带我去什么地方？
 				DislikeCrowded: 人越多越好，但我开始觉得有点挤了。
 				HateCrowded: 我甚至不能把腿踢出去而不碰到别人。
-				LikeBiome: "哈哈哈，关于{BiomeName}的一些东西只是出于某种原因让我无法控制地笑了起来！"
+				LikeBiome: 哈哈哈，关于{BiomeName}的一些东西只是出于某种原因让我无法控制地笑了起来！
 				LoveBiome: 天上的星星太美了，我很喜欢看它们划过天空！
 				DislikeBiome: 我们能去比这儿暖和的地方吗？
 				HateBiome: 我想住在别的地方！这太可怕了，我正冒着暴风雨！
 				LikeNPC: "{NPCName}是我的大哥，但不是最大的。他酷毙了！"
-				LikeNPC_Princess: "我要找时间再去看看{NPCName}，这儿有个女孩钩住了我！"
+				LikeNPC_Princess: 我要找时间再去看看{NPCName}，这儿有个女孩钩住了我！
 				LoveNPC: "{NPCName}在这！那是我的老大哥，他不是最酷的吗？！"
-				DislikeNPC: "我受不了像{NPCName}那样的女孩，感觉她到这儿来只是为某个特定的观众。"
-				HateNPC: "就在我们之间。你有没有想过把{NPCName}扔回你找到他的地方？"
+				DislikeNPC: 我受不了像{NPCName}那样的女孩，感觉她到这儿来只是为某个特定的观众。
+				HateNPC: 就在我们之间。你有没有想过把{NPCName}扔回你找到他的地方？
 			}
+
 			Abominationn: {
 				Content: 我很满意。
 				NoHome: 给我一个住所，我会降低价格。
@@ -43,16 +43,17 @@ Mods: {
 				FarFromHome: 我可以飞回我家，但我真的不想被人看到。
 				DislikeCrowded: 周围的人太多了，他们一直在戳我的脸。
 				HateCrowded: 你知道在周围这么多人的情况下，拿着镰刀不割伤任何人有多难吗？
-				LikeBiome: "我喜欢{BiomeName}，这是一个拥有我兄弟翅膀的好对手的家。"
-				LoveBiome: "我非常喜欢太空，我们在着陆前先到达了这里。"
-				DislikeBiome: "这儿有太多弱小的敌人生活在{BiomeName}。"
-				HateBiome: "我很讨厌{BiomeName}。"
-				LikeNPC: "那个女孩，{NPCName}，她是我妹妹……我击败过的事件比她多，但是她很不错。"
+				LikeBiome: 我喜欢{BiomeName}，这是一个拥有我兄弟翅膀的好对手的家。
+				LoveBiome: 我非常喜欢太空，我们在着陆前先到达了这里。
+				DislikeBiome: 这儿有太多弱小的敌人生活在{BiomeName}。
+				HateBiome: 我很讨厌{BiomeName}。
+				LikeNPC: 那个女孩，{NPCName}，她是我妹妹……我击败过的事件比她多，但是她很不错。
 				LikeNPC_Princess: "{NPCName}看起来真棒。"
-				LoveNPC: "那个家伙，{NPCName}，他是我哥哥……我击败过的Boss比他多，但是他很强大。"
-				DislikeNPC: "我不喜欢{NPCName}。"
+				LoveNPC: 那个家伙，{NPCName}，他是我哥哥……我击败过的Boss比他多，但是他很强大。
+				DislikeNPC: 我不喜欢{NPCName}。
 				HateNPC: "{NPCName}毁了战斗的荣耀，我不想让她靠近我。"
 			}
+
 			Mutant: {
 				Content: 谢谢你的房子，我想。
 				NoHome: 房子没什么坏处，但我不介意。
@@ -60,16 +61,17 @@ Mods: {
 				FarFromHome: 我会吃史莱姆和僵尸，但在家吃人类的食物也不错。
 				DislikeCrowded: 这里人太多了。他们似乎很沮丧，因为我一直在赢得我们的对视比赛。
 				HateCrowded: 如果在这个拥挤的小镇上再多一个人撞上我的脑子……不要介意。
-				LikeBiome: "我们都从{BiomeName}开始，这是个好地方。"
-				LoveBiome: "住在这儿很舒服，但是你什么时候能找到我的神殿？"
+				LikeBiome: 我们都从{BiomeName}开始，这是个好地方。
+				LoveBiome: 住在这儿很舒服，但是你什么时候能找到我的神殿？
 				DislikeBiome: "{BiomeName}应该给我留下深刻印象吗？大仙灵不会，这是肯定的。"
-				HateBiome: "你想要更昂贵的召唤物吗？让我住在{BiomeName}意味着更贵的召唤物。"
-				LikeNPC: "我忘了{NPCName}是什么时候加入这个家庭的，但她已经赢得了她的位置。"
+				HateBiome: 你想要更昂贵的召唤物吗？让我住在{BiomeName}意味着更贵的召唤物。
+				LikeNPC: 我忘了{NPCName}是什么时候加入这个家庭的，但她已经赢得了她的位置。
 				LikeNPC_Princess: "{NPCName}看起来很友好。"
 				LoveNPC: "{NPCName}和我打了很多次仗，可惜没有机会再打了。"
-				DislikeNPC: "为什么{NPCName}在这儿？那好吧，不要直视他的眼睛，他不会吓到你的……"
+				DislikeNPC: 为什么{NPCName}在这儿？那好吧，不要直视他的眼睛，他不会吓到你的……
 				HateNPC: "{NPCName}需要在我用我的洞察者之前离开。"
 			}
+
 			LumberJack: {
 				Content: 我很高兴只要世界上有需要砍伐的木头。
 				NoHome: 没有一个小木屋可以回家的伐木工人是不完整的！
@@ -78,15 +80,16 @@ Mods: {
 				DislikeCrowded: 我觉得这里越来越挤了。
 				HateCrowded: 周围人太多了。没什么会比砍掉一个人更能破坏一个砍树的好心情。
 				LikeBiome: "{BiomeName}里大量的树让人成为一个快乐的伐木工人。"
-				LoveBiome: "在{BiomeName}没有什么能比得上老式的伐木工了！"
-				DislikeBiome: "在{BiomeName}没什么能砍的!"
-				HateBiome: "在{BiomeName}什么都砍不了!"
-				LikeNPC: "我砍倒了树，{NPCName}种了更多，我们是完美的搭档。"
+				LoveBiome: 在{BiomeName}没有什么能比得上老式的伐木工了！
+				DislikeBiome: 在{BiomeName}没什么能砍的!
+				HateBiome: 在{BiomeName}什么都砍不了!
+				LikeNPC: 我砍倒了树，{NPCName}种了更多，我们是完美的搭档。
 				LikeNPC_Princess: "{NPCName}用斧头比我想象中要更好！"
-				LoveNPC: "我很高兴{NPCName}了解砍倒大树的美妙之处。"
+				LoveNPC: 我很高兴{NPCName}了解砍倒大树的美妙之处。
 				DislikeNPC: "{NPCName}告诉我要开始拥抱树木……所以我教会了我的斧头为我拥抱树木。"
 				HateNPC: "{NPCName}一点也不懂我的意思。炸掉森林不是伐木！"
 			}
+
 			Squirrel: {
 				Content: *表达满足的吱吱声*
 				NoHome: *因无家可归而悲哀的吱吱声*
@@ -108,33 +111,27 @@ Mods: {
 
 		Config: {
 			CanSpawn: 可以生成
-
 			TownNPCsHeader: 城镇NPC
 			CatchNPCs: "[i:267] 可以抓城镇NPC"
 			NPCSales: "[i:267] NPC卖额外商品"
 			SaferBoundNPCs: "[i:1274] 可救援的NPC不会受到接触伤害"
-
 			SeasonSelectionNormal: 正常
 			SeasonSelectionAlwaysOn: 常开
 			SeasonSelectionAlwaysOff: 常关
-
 			SeasonsHeader: 季节性事件
 			Halloween: "[i:1774] 万圣节"
 			Christmas: "[i:1869] 圣诞节"
-
 			SeedsHeader: 秘密世界种子
 			DrunkWorld: "[i:353] 醉酒世界（05162020）"
 			BeeWorld: "[i:1133] 蜜蜂世界（Not the bees）"
 			WorthyWorld: "[i:2107] For the worthy"
 			CelebrationWorld: "[i:3732] 庆典世界（Celebrationmk10/05162021/05162011）"
 			ConstantWorld: "[i:5109] 永恒领域（The constant）"
-
 			UnlimitedHeader: 无限效果
 			UnlimitedAmmo: "[i:771] 在困难模式中，背包中的某种弹药多于3996时不消耗"
 			UnlimitedConsumableWeapons: "[i:42] 在困难模式中，某种消耗品武器多于3996时不消耗"
 			UnlimitedPotionBuffsOn120: "[i:292] 携带一定数量以上增益物品时获得无尽时长的增益"
 			UnlimitedPotionBuffsOn120Tooltip: 对于药水需要30瓶，对于职业增益站（如利器站）与蛋糕块需要3个
-
 			MiscHeader: 杂项
 			ExtraBuffSlots: "[i:3000] 额外增益栏上限"
 			ExpandedTooltips: "[i:171] 更多说明模组改动的物品信息"
@@ -150,11 +147,16 @@ Mods: {
 			PiggyBankAcc: "[i:87] 信息饰品和建筑饰品在猪猪存钱罐中生效"
 			FasterLavaFishing: "[i:4881] 岩浆中钓鱼速度加快"
 			TorchGodEX: "[i:5043] 火把神的恩宠自动替换放置的火把和已放置的火把"
-			TorchGodEXTooltip: "替换遵循火把运气，可能会和火把神的恩宠的默认选择有所不同"
+			TorchGodEXTooltip: 替换遵循火把运气，可能会和火把神的恩宠的默认选择有所不同
 			DebuffOpacity: "[i:1612] 减益显示不透明度"
 			DebuffFaderRatio: "[i:1612] 减益持续时间显示衰减强度"
 			TransparentFriendlyProjectiles: "[i:1309] 友好弹幕不透明度"
-			TransparentFriendlyProjectilesTooltip: "把原版的视频质量设置为中/低以获得最佳体验"
+			TransparentFriendlyProjectilesTooltip: 把原版的视频质量设置为中/低以获得最佳体验
+			// Mutant: "[i:5443] [c/ffffff:{$Mods.Fargowiltas.NPCName.Mutant}{$Mods.Fargowiltas.Config.CanSpawn}]"
+			// Abom: "[i:5432] [c/ffffff:{$Mods.Fargowiltas.NPCName.Abominationn}{$Mods.Fargowiltas.Config.CanSpawn}]"
+			// Devi: "[i:5436] [c/ffffff:{$Mods.Fargowiltas.NPCName.Deviantt}{$Mods.Fargowiltas.Config.CanSpawn}]"
+			// Lumber: "[i:5440] [c/ffffff:{$Mods.Fargowiltas.NPCName.LumberJack}{$Mods.Fargowiltas.Config.CanSpawn}]"
+			// Squirrel: "[i:239] [c/ffffff:{$Mods.Fargowiltas.NPCName.Squirrel}{$Mods.Fargowiltas.Config.CanSpawn}]"
 		}
 
 		RecipeGroups: {
@@ -181,7 +183,7 @@ Mods: {
 			Rain: 雨停了！
 			HasAwoken: "{0}已苏醒！"
 			HaveAwoken: "{0}已苏醒！"
-			
+
 			BattleCry: {
 				Battle: 战争
 				Calming: 镇静
@@ -192,7 +194,7 @@ Mods: {
 				Text: "{0}号角已对{2}{1}{3}"
 			}
 
-			InstantResearch: "已研究{0}个物品"
+			InstantResearch: 已研究{0}个物品
 			Expert: 专家模式已开启！
 			Master: 大师模式已开启！
 			Journey: 旅行模式已开启！
@@ -207,16 +209,15 @@ Mods: {
 			AncientSeal: 所有Boss已苏醒！
 			DeathBringerFairy: 数个boss已苏醒！
 			MutantVoodoo: 数个boss已苏醒！
-
 			OverloadFrostMoon1: 霜月消逝……
 			OverloadFrostMoon2: 霜月正在升起……
-			OverloadFrostMoonWave: "波数：20：一切"
+			OverloadFrostMoonWave: 波数：20：一切
 			OverloadGoblins: 哥布林们冷静下来了……
 			OverloadMartians: 火星人们冷静下来了……
 			OverloadPirates: 海盗们冷静下来了……
 			OverloadPumpkinMoon1: 南瓜月消逝……
 			OverloadPumpkinMoon2: 南瓜月正在升起……
-			OverloadPumpkinMoonWave: "波数：15：一切"
+			OverloadPumpkinMoonWave: 波数：15：一切
 
 			Swarms: {
 				Abeemination2: 震耳欲聋的嗡嗡声穿透了你！
@@ -240,1045 +241,1934 @@ Mods: {
 				FleshyDoll: 一个血肉堡垒从深处升起！
 				WormyFood: 地面以公式化的精度颤动！
 			}
-			SwarmKilled: "击杀数：{0}"
-			SwarmTotal: "总计：{0}"
-			SwarmDefeated: 这群怪物已被打败！
 
+			SwarmKilled: 击杀数：{0}
+			SwarmTotal: 总计：{0}
+			SwarmDefeated: 这群怪物已被打败！
 			ItemUnlocked: "{0}解锁了新商品！"
 			SiblingPylonNotNearSiblings: 目标晶塔需要三兄妹在附近才能使用
 			NearbySiblingPylonNotNearSiblings: 当前晶塔需要三兄妹在附近才能使用
 		}
 
+		Keybinds: {
+			Home.DisplayName: 快速回家
+			Rod.DisplayName: 快捷混沌传送杖
+			Custom.DisplayName: 快捷使用背包左下角物品
+			Stat.DisplayName: 打开属性统计表
+
+			Mods: {
+				Fargowiltas: {
+					Keybind: {
+						// Stat.DisplayName: Mods. Fargowiltas. Keybind. Stat
+						// Custom.DisplayName: Mods. Fargowiltas. Keybind. Custom
+						// Rod.DisplayName: Mods. Fargowiltas. Keybind. Rod
+						// Home.DisplayName: Mods. Fargowiltas. Keybind. Home
+					}
+				}
+			}
+		}
+
 		Keybind: {
-			Home: 快速回家
-			Rod: 快捷混沌传送杖
-			Custom: 快捷使用背包左下角物品
-			Stat: 打开属性统计表
+			// Stat: Mods.Fargowiltas.Keybind.Stat
+			// Custom: Mods.Fargowiltas.Keybind.Custom
+			// Rod: Mods.Fargowiltas.Keybind.Rod
+			// Home: Mods.Fargowiltas.Keybind.Home
 		}
 
-		BuffName: {
-			Omnistation: 万能增益站
-			Semistation: 多功能增益站
-			WoodDrop: 掉落木头
-		}
+		Items: {
+			MapSingle.Tooltip: 显示整个地图
+			MapMulti.Tooltip: 显示你周围的地图区域
 
-		BuffDescription: {
-			Omnistation: 拥有部分原版增益站的效果
-			Semistation: 拥有部分原版增益站的效果
-		}
+			ChlorophyteQuiver: {
+				Tooltip: 撞墙后弹回
+				DisplayName: 无尽叶绿箭袋
+			}
 
-		ItemName: {
-			BoneQuiver: 无尽骨箭袋
-			ChlorophyteQuiver: 无尽叶绿箭袋
-			CursedQuiver: 无尽诅咒箭袋
-			FlameQuiver: 无尽烈焰箭袋
-			FrostburnQuiver: 无尽霜冻箭袋
-			HellfireQuiver: 无尽狱炎箭袋
-			HolyQuiver: 无尽圣箭袋
-			IchorQuiver: 无尽灵液箭袋
-			JesterQuiver: 无尽小丑箭袋
-			LuminiteQuiver: 无尽夜明箭袋
-			UnholyQuiver: 无尽邪箭袋
-			VenomQuiver: 无尽毒液箭袋
+			HolyQuiver: {
+				Tooltip: 碰撞时召唤陨星
+				DisplayName: 无尽圣箭袋
+			}
 
-			ChlorophytePouch: 无尽叶绿弹袋
-			CrystalPouch: 无尽水晶弹袋
-			CursedPouch: 无尽诅咒弹袋
-			ExplosivePouch: 无尽爆破弹袋
-			GoldenPouch: 无尽金弹袋
-			IchorPouch: 无尽灵液弹袋
-			LuminitePouch: 无尽夜明弹袋
-			MeteorPouch: 无尽流星弹袋
-			NanoPouch: 无尽纳米弹袋
-			PartyPouch: 无尽派对弹袋
-			SilverPouch: 无尽银弹袋
-			TungstenPouch: 无尽钨弹袋
-			VelocityPouch: 无尽高速弹袋
-			VenomPouch: 无尽毒液弹袋
+			IchorQuiver: {
+				Tooltip: 降低目标的防御力
+				DisplayName: 无尽灵液箭袋
+			}
 
-			CopperCoinBag: 无尽铜币袋
-			SilverCoinBag: 无尽银币袋
-			GoldCoinBag: 无尽金币袋
-			PlatinumCoinBag: 无尽铂金币袋
+			LuminiteQuiver: {
+				Tooltip: “以音速射下它们！”
+				DisplayName: 无尽夜明箭袋
+			}
 
-			CrystalDartBox: 无尽水晶镖盒
-			CursedDartBox: 无尽诅咒镖盒
-			IchorDartBox: 无尽灵液镖盒
-			PoisonDartBox: 无尽毒镖盒
+			ChlorophytePouch: {
+				Tooltip: 追杀敌人
+				DisplayName: 无尽叶绿弹袋
+			}
 
-			Rocket1Bag: 无尽一级火箭包
-			Rocket2Bag: 无尽二级火箭包
-			Rocket3Bag: 无尽三级火箭包
-			Rocket4Bag: 无尽四级火箭包
-			ClusterRocket1Bag: 无尽一级集束火箭包
-			ClusterRocket2Bag: 无尽二级集束火箭包
-			DryRocketBag: 无尽干火箭包
-			WetRocketBag: 无尽潮湿火箭包
-			LavaRocketBag: 无尽熔岩火箭包
-			HoneyRocketBag: 无尽蜂蜜火箭包
-			MiniNuke1Bag: 无尽一级迷你核弹包
-			MiniNuke2Bag: 无尽二级迷你核弹包
+			CrystalPouch: {
+				Tooltip: 碰撞时产生水晶碎片
+				DisplayName: 无尽水晶弹袋
+			}
 
-			BrittleBone: 易碎骨头
-			GelPack: 无尽凝胶包
-			StarPouch: 无尽星星袋
+			ExplosivePouch: {
+				Tooltip: 碰撞时爆炸
+				DisplayName: 无尽爆破弹袋
+			}
 
-			Abominationn: 憎恶
-			Angler: 渔夫
-			ArmsDealer: 军火商
-			Clothier: 服装商
-			Cyborg: 机器侠
-			Demolitionist: 爆破专家
-			Deviantt: 戴薇安
-			Dryad: 树妖
-			DyeTrader: 染料商
-			GoblinTinkerer: 哥布林工匠
-			Golfer: 高尔夫球手
-			Guide: 向导
-			LumberJack: 伐木工
-			Mechanic: 机械师
-			Merchant: 商人
-			Mutant: 突变体
-			Nurse: 护士
-			Painter: 油漆工
-			PartyGirl: 派对女孩
-			Pirate: 海盗
-			SantaClaus: 圣诞老人
-			SkeletonMerchant: 骷髅商人
-			Squirrel: 高顶礼帽松鼠
-			Steampunker: 蒸汽朋克人
-			Stylist: 发型师
-			Tavernkeep: 酒馆老板
-			TaxCollector: 税收官
-			TravellingMerchant: 旅商
-			Truffle: 松露人
-			WitchDoctor: 巫医
-			Wizard: 巫师
-			Zoologist: 动物学家
-			Princess: 公主
-			TownDog: 城镇狗狗
-			TownCat: 城镇猫咪
-			TownBunny: 城镇兔兔
+			GoldenPouch: {
+				Tooltip: 杀死的敌人会掉落更多的钱
+				DisplayName: 无尽金弹袋
+			}
 
-			AltarExterminator: 祭坛终结者
-			AutoHouse: 快速房屋
-			BoomShuriken: 爆炸手里剑
-			CityBuster: 城市克星
-			DoubleObsidianInstabridge: 双重黑曜石速建平台
-			GraveBuster: 墓碑克星
-			HalfInstavator: 半程地狱直通车
-			InstaBridge: 速建平台
-			InstaTrack: 速建轨道
-			Instavator: 地狱直通车
-			LihzahrdInstactuationBomb: 丛林神庙炸弹
-			MiniInstaBridge: 迷你速建平台
-			ObsidianInstaBridge: 黑曜石速建平台
-			OmniBridgifier: 万能平台转化器
-			SemiBridgifier: 多功能平台转化器
-			
-			BattleCry: 战争号角
-			DeathFruit: 死亡果实
-			InstantResearch: 一键研究
-			MapViewer: 失落的王之地图
-			ModeToggle: 世界令牌
-			PortableSundial: 便携式日晷
-			PylonCleaner: 洁晶灵
-			SuperDummy: 超级假人
+			IchorPouch: {
+				Tooltip: 降低目标的防御力
+				DisplayName: 无尽灵液弹袋
+			}
 
-			CorruptRenewal: 腐化领域
-			CorruptRenewalSupreme: 腐化维度
-			CrimsonRenewal: 猩红领域
-			CrimsonRenewalSupreme: 猩红维度
-			HallowRenewal: 神圣领域
-			HallowRenewalSupreme: 神圣维度
-			MushroomRenewal: 发光蘑菇领域
-			MushroomRenewalSupreme: 发光蘑菇维度
-			PurityRenewal: 纯净领域
-			PurityRenewalSupreme: 纯净维度
+			LuminitePouch: {
+				Tooltip: “鬼怪排成行，一发百中……”
+				DisplayName: 无尽夜明弹袋
+			}
 
-			Anemometer: 风速计
-			BatteredClub: 重击棍
-			BetsyEgg: 龙蛋
-			FestiveOrnament: 节日装饰
-			ForbiddenScarab: 禁忌圣甲虫
-			ForbiddenTome: 禁忌之书
-			HeadofMan: 无头骑士的头
-			IceKingsRemains: 寒冰领主的遗物
-			MartianMemoryStick: 火星记忆棒
-			MatsuriLantern: 祭典灯笼
-			NaughtyList: 捣蛋清单
-			PartyCone: 派对帽
-			PillarSummon: 异界之门
-			RunawayProbe: 逃亡的探测器
-			SlimyBarometer: 黏糊糊的晴雨表
-			SpentLantern: 燃尽的灯笼
-			SpookyBranch: 诡异树枝
-			SuspiciousLookingScythe: 可疑的镰刀
-			WeatherBalloon: 气象气球
+			NanoPouch: {
+				Tooltip: 造成困惑
+				DisplayName: 无尽纳米弹袋
+			}
 
-			AmalgamatedSkull: 聚合头骨
-			AmalgamatedSpirit: 聚合灵魂
-			AthenianIdol: 雅典神像
-			AttractiveOre: 吸引人的矿物
-			BloodSushiPlatter: 血寿司拼盘
-			BloodUrchin: 血海胆
-			CloudSnack: 白云棉花糖
-			ClownLicense: 小丑资格证
-			CoreoftheFrostCore: 极寒核
-			CorruptChest: 腐化宝箱
-			CrimsonChest: 猩红宝箱
-			DemonicPlushie: 恶魔玩具
-			DilutedRainbowMatter: 稀释彩虹物质
-			Eggplant: 茄子
-			ForbiddenForbiddenFragment: 讳忌碎片
-			GnomeHat: 侏儒帽
-			GoblinScrap: 哥布林破布
-			GoldenSlimeCrown: 金史莱姆王冠
-			GrandCross: 圣之十字
-			HallowChest: 神圣宝箱
-			HeartChocolate: 心之巧克力
-			HemoclawCrab: 血浆蟹饵
-			HolyGrail: 圣杯
-			JungleChest: 丛林宝箱
-			LeesHeadband: 李小龙头带
-			MothLamp: 引蛾灯
-			MothronEgg: 蛾怪蛋
-			Pincushion: 针垫
-			PinkSlimeCrown: 迷之粉色王冠
-			PirateFlag: 海盗旗
-			PlunderedBooty: 掠夺的赃物
-			RuneOrb: 符文宝珠
-			ShadowflameIcon: 暗影火焰符章
-			SlimyLockBox: 黏黏的上锁箱子
-			SuspiciousLookingChest: 可疑的箱子
-			SuspiciousLookingLure: 可疑的鱼饵
-			WormSnack: 蠕虫小吃
+			PartyPouch: {
+				Tooltip: 碰撞时爆炸成彩纸
+				DisplayName: 无尽派对弹袋
+			}
 
-			AncientSeal: 古代符章
-			CultistSummon: 拜月教徒的遗物
-			DeathBringerFairy: 告死精灵
-			FleshyDoll: 血肉娃娃
-			JellyCrystal: 胶状水晶
-			MechanicalAmalgam: 机械融合体
-			MutantVoodoo: 突变体巫毒娃娃
-			PlanterasFruit: 世纪之果
-			PrismaticPrimrose: 棱晶玫瑰
-			SuspiciousSkull: 可疑头骨
+			VenomPouch: {
+				Tooltip: 对目标施放酸性毒液
+				DisplayName: 无尽毒液弹袋
+			}
 
-			EnergizerBee: 蜂王强化剂
-			EnergizerBetsy: 翼龙强化剂
-			EnergizerBrain: 大脑强化剂
-			EnergizerCultist: 教徒强化剂
-			EnergizerDarkMage: 神秘强化剂
-			EnergizerDeer: 巨鹿强化剂
-			EnergizerDestroy: 毁灭强化剂
-			EnergizerDG: 骸骨强化剂
-			EnergizerEmpress: 仙灵强化剂
-			EnergizerEye: 视觉强化剂
-			EnergizerFish: 猪鲨强化剂
-			EnergizerGolem: 蜥蜴强化剂
-			EnergizerMoon: 月球强化剂
-			EnergizerPlant: 绿叶强化剂
-			EnergizerPrime: 统帅强化剂
-			EnergizerQueenSlime: 结晶强化剂
-			EnergizerSkele: 头骨强化剂
-			EnergizerSlime: 粘滑强化剂
-			EnergizerTwins: 双子强化剂
-			EnergizerWall: 血肉强化剂
-			EnergizerWorm: 蠕虫强化剂
+			AltarExterminator: {
+				Tooltip:
+					'''
+					破坏所有自然生成的恶魔祭坛和猩红祭坛
+					会导致新三矿大量生成和幻灵大量生成等后果
+					'''
+				DisplayName: 祭坛终结者
+			}
 
-			OverloadBee: 过载幼虫
-			OverloadBetsy: 龙蛋盒
-			OverloadBrain: 头脑风暴
-			OverloadCultist: 狂热者暴动
-			OverloadDarkMage: 绝对禁忌之书
-			OverloadDeer: 融合巨鹿
-			OverloadDestroyer: 地震触发器
-			OverloadedSlimeRain: 相当黏的晴雨表
-			OverloadEmpress: 草蛉罐
-			Overloader: 过载能量
-			OverloadEye: 融合眼球
-			OverloadFish: 松露虫堆
-			OverloadFrostMoon: 调皮礼物袋
-			OverloadGoblins: 过载哥布林战旗
-			OverloadGolem: 符文能量电池
-			OverloadMartians: 火星人通讯卫星
-			OverloadMoon: 符文铭文
-			OverloadPirates: 海盗的赏金
-			OverloadPlant: 丛林之心
-			OverloadPrime: 统帅控制芯片
-			OverloadPumpkinMoon: 闹鬼战利品
-			OverloadQueenSlime: 集群水晶
-			OverloadSkele: 骷髅项链
-			OverloadSlimeCrown: 集群王冠
-			OverloadTwins: 全焦距晶状体
-			OverloadWall: 人偶包
-			OverloadWorm: 蠕虫串烧
+			AutoHouse: {
+				Tooltip: 快速建造一间NPC房屋
+				DisplayName: 快速房屋
+			}
 
-			Abeemination2: 令人憎恶的蜜蜂
-			CelestialSigil2: 天魔印记
-			DeerThing2: 华鹿
-			GoreySpine: 红斑脊椎
-			LihzahrdPowerCell2: 蜥蜴电池包
-			MechEye: 某种金属眼睛
-			MechSkull: 某种金属头骨
-			MechWorm: 某种金属蠕虫
-			SlimyCrown: 黏糊糊的王冠
-			SuspiciousEye: 似乎可疑的眼球
-			TruffleWorm2: 松露蠕虫
-			WormyFood: 蠕虫食物
-			
-			CrucibleCosmos: 宇宙坩埚
-			DemonAltar: 恶魔祭坛
-			CrimsonAltar: 猩红祭坛
-			EchPainting: Ech猫绘画
-			ElementalAssembler: 元素装配台
-			GoldenDippingVat: 金染缸
-			MultitaskCenter: 多功能合成桌
-			Omnistation: 万能增益站
-			Omnistation2: 万能增益站
-			PurityTotem: 纯净图腾
-			RegalStatue: 帝王雕像
-			Semistation: 多功能增益站
-			SiblingPylon: 血亲晶塔
-			UnsafeBlueSlabWall: 危险蓝板墙
-			UnsafeBlueTileWall: 危险蓝瓷砖墙
-			UnsafeBlueBrickWall: 危险蓝砖墙
-			UnsafeGreenSlabWall: 危险蓝板墙
-			UnsafeGreenTileWall: 危险蓝瓷砖墙
-			UnsafeGreenBrickWall: 危险蓝砖墙
-			UnsafePinkSlabWall: 危险粉板墙
-			UnsafePinkTileWall: 危险粉瓷砖墙
-			UnsafePinkBrickWall: 危险粉砖墙
-			UnsafeLihzahrdBrickWall: 危险丛林蜥蜴砖墙
-			UnsafeSpiderWall: 危险蜘蛛墙
-			UnsafeMarbleWall: 危险大理石墙
-			UnsafeGraniteWall: 危险花岗岩墙
-			WalkingRick: 走路的Rick
-			WoodenToken: 木牌
+			BoomShuriken: {
+				Tooltip:
+					'''
+					快速丢出爆炸手里剑
+					手里剑的破坏能力取决于背包里最强镐的镐力
+					“挖穿任何东西的最快方式永远是把它们炸飞！”
+					'''
+				DisplayName: 爆炸手里剑
+			}
 
-			AbominationnBody: 憎恶之躯
-			AbominationnMask: 憎恶面具
-			AbominationnPants: 憎恶裤子
-			AbominationnScythe: 憎恶之镰
-			DevianttBody: 戴薇安的身体
-			DevianttMask: 戴薇安的面具
-			DevianttPants: 戴薇安的裤子
-			LumberHat: 伐木工帽
-			LumberjackBody: 伐木工身体
-			LumberjackMask: 伐木工面具
-			LumberjackPants: 伐木工裤
-			MutantBody: 突变躯体
-			MutantMask: 突变面具
-			MutantPants: 突变裤
+			CityBuster: {
+				Tooltip:
+					'''
+					大面积破坏物块
+					不会破坏背景墙
+					风险自担
+					'''
+				DisplayName: 城市克星
+			}
 
-			LumberJaxe: 伐木斧
-		}
+			DoubleObsidianInstabridge: {
+				Tooltip:
+					'''
+					建造2条横跨整个世界的黑曜石平台
+					同时清除平台之间和平台上方的区域
+					下方的平台出现在鼠标位置
+					附近有重要建筑物时请勿使用
+					'''
+				DisplayName: 双重黑曜石速建平台
+			}
 
-		ItemTooltip: {
-			ChlorophyteQuiver: 撞墙后弹回
-			HolyQuiver: 碰撞时召唤陨星
-			IchorQuiver: 降低目标的防御力
-			LuminiteQuiver: “以音速射下它们！”
+			GraveBuster: {
+				Tooltip: 大面积破坏墓碑
+				DisplayName: 墓碑克星
+			}
 
-			ChlorophytePouch: 追杀敌人
-			CrystalPouch: 碰撞时产生水晶碎片
-			ExplosivePouch: 碰撞时爆炸
-			GoldenPouch: 杀死的敌人会掉落更多的钱
-			IchorPouch: 降低目标的防御力
-			LuminitePouch: “鬼怪排成行，一发百中……”
-			NanoPouch: 造成困惑
-			PartyPouch: 碰撞时爆炸成彩纸
-			VenomPouch: 对目标施放酸性毒液
+			HalfInstavator: {
+				Tooltip:
+					'''
+					投掷一枚炸弹，建造一条直通地狱的半程通道
+					在一定深度下不会生效
+					如果下面有任何重要建筑物，请不要使用
+					'''
+				DisplayName: 半程地狱直通车
+			}
 
-			Abominationn: “我当然希望我是一个Boss……”
-			Angler: “你是个优秀的得力仆从！”
-			ArmsDealer: “哥们，把手从我的枪上拿开！”
-			Clothier: “再次感谢你帮我解了诅咒。”
-			Cyborg: “射弹击中我的运动执行机构会严重降低我的探险效率。”
-			Demolitionist: “今天是个找死的好日子！”
-			Deviantt: “感受痛苦吧……受虐时别忘了来我这买新东西！”
-			Dryad: “注意安全！泰拉瑞亚需要你！”
-			DyeTrader: “亲爱的，你的穿着太单调了。”
-			GoblinTinkerer: “想找工具大师？我就是啊！”
-			Golfer: “早起的鸟儿有虫吃，靠前的球洞有球吃。”
-			Guide: “他们说，有个人会告诉你如何在这地方上生存……”
-			LumberJack: “我早餐吃了碗‘木’片……没就着牛奶”
-			Mechanic: “一定要多买些电线！”
-			Merchant: “你是说黄金？我会从你身上弄走。”
-			Mutant: “你很幸运，我站在你这边。”
-			Nurse: “让我看看哪里受伤了。”
-			Painter: “我知道青绿色和蓝绿色之间的差别。但我不会告诉你。”
-			PartyGirl: “我们得谈谈。这……聚会的事。”
-			Pirate: “别碰我的战利品，淘气鬼！”
-			SantaClaus: “什么？你认为我不是真的？”
-			SkeletonMerchant: “你肯定想不到大家扔了些什么给我……想买点？”
-			Squirrel: *吱吱*
-			Steampunker: “给我一些装备！”
-			Stylist: “你今天到底有没有梳过头发？”
-			Tavernkeep: “我在这是要干嘛啊……”
-			TaxCollector: “你又来了？你是想要更多钱吧！？”
-			TravellingMerchant: “我卖的商品来自可能根本就不存在的地方！”
-			Truffle: “感觉镇上的每个人都有点古怪。”
-			WitchDoctor: “我是啥医？我是巫医。”
-			Wizard: “想让我从你耳朵后面掏出一个钱币吗？不想？好吧。”
-			Zoologist: “我非常喜欢动物！”
-			Princess: “粉红色是任何人都梦寐以求的最佳颜色！”
-			TownDog: “汪汪！”
-			TownCat: “喵！”
-			TownBunny: “*小兔子声音*”
+			InstaBridge: {
+				Tooltip:
+					'''
+					建造一条横跨整个世界的平台
+					同时清除平台正上方的区域
+					平台出现在鼠标位置
+					附近有重要建筑物时请勿使用
+					'''
+				DisplayName: 速建平台
+			}
 
-			AltarExterminator: 
-				'''
-				破坏所有自然生成的恶魔祭坛和猩红祭坛
-				会导致新三矿大量生成和幻灵大量生成等后果
-				'''
-			AutoHouse: 快速建造一间NPC房屋
-			BoomShuriken: 
-				'''
-				快速丢出爆炸手里剑
-				手里剑的破坏能力取决于背包里最强镐的镐力
-				“挖穿任何东西的最快方式永远是把它们炸飞！”
-				'''
-			CityBuster: 
-				'''
-				大面积破坏物块
-				不会破坏背景墙
-				风险自担
-				'''
-			DoubleObsidianInstabridge: 
-				'''
-				建造2条横跨整个世界的黑曜石平台
-				同时清除平台之间和平台上方的区域
-				下方的平台出现在鼠标位置
-				附近有重要建筑物时请勿使用
-				'''
-			GraveBuster: 大面积破坏墓碑
-			HalfInstavator: 
-				'''
-				投掷一枚炸弹，建造一条直通地狱的半程通道
-				在一定深度下不会生效
-				如果下面有任何重要建筑物，请不要使用
-				'''
-			InstaBridge: 
-				'''
-				建造一条横跨整个世界的平台
-				同时清除平台正上方的区域
-				平台出现在鼠标位置
-				附近有重要建筑物时请勿使用
-				'''
-			InstaTrack: 
-				'''
-				建造一条横跨整个世界的矿车轨道
-				同时清除轨道正上方的区域
-				轨道出现在鼠标位置
-				附近有重要建筑物时请勿使用
-				'''
-			Instavator: 
-				'''
-				投掷一枚炸弹，建造一条直通地狱的通道
-				如果下面有任何重要建筑物，请不要使用
-				'''
-			LihzahrdInstactuationBomb: 
-				'''
-				站在丛林祭坛前使用时，清除丛林蜥蜴祭坛周围的空间
-				虚化丛林蜥蜴砖并摧毁其他物块
-				仅能在世纪之花被击败后，在丛林神庙中使用
-				'''
-			MiniInstaBridge: 
-				'''
-				在鼠标的高度建造一条长平台
-				不会破坏任何方块
-				'''
-			ObsidianInstaBridge: 
-				'''
-				建造一条横跨整个世界的黑曜石平台
-				同时清除平台正上方的区域
-				平台出现在鼠标位置
-				附近有重要建筑物时请勿使用
-				'''
-			OmniBridgifier: 
-				'''
-				可以被无限次重复使用
-				把你所站的平台升级为带有万能增益站的平台
-				不会建造平台
-				'''
-			SemiBridgifier: 
-				'''
-				可以被无限次重复使用
-				把你所站的平台升级为带有多功能增益站的平台
-				不会建造平台
-				'''
+			InstaTrack: {
+				Tooltip:
+					'''
+					建造一条横跨整个世界的矿车轨道
+					同时清除轨道正上方的区域
+					轨道出现在鼠标位置
+					附近有重要建筑物时请勿使用
+					'''
+				DisplayName: 速建轨道
+			}
 
-			BattleCry: 
-				'''
-				左键使用使刷怪率提高 10 倍
-				右键使用使刷怪率降低 10 倍
-				'''
-			DeathFruit: 
-				'''
-				永久性地降低20点最大生命值
-				对于用过其他模组中一次性的、增加最大生命值的物品的角色，效果不可逆
-				'''
-			InstantResearch: 
-				'''
-				调 试 用 物 品
-				研究所有物品
-				'''
-			MapSingle: 显示整个地图
-			MapMulti: 显示你周围的地图区域
-			ModeToggle: 切换世界难度
-			PortableSundial: 
-				'''
-				左键单击可立即切换时间
-				可以在黎明，中午，黄昏和午夜之间切换时间
-				右键点击可激活魔法日晷效果
-				切换到黎明会重置旅行商人的商店
-				'''
-			PylonCleaner: 
-				'''
-				净化所有晶塔周围的区域
-				在神圣晶塔处使用蓝溶液，蘑菇晶塔处使用深蓝溶液，其他晶塔处使用绿溶液
-				'''
-			SuperDummy: 
-				'''
-				在你的光标处产生一个超级假人
-				与普通训练假人相同，但仆从和追踪弹幕会以其为目标
-				会触发一些武器的“击中效果”
-				右击移除所有生成的超级假人
-				最多可以同时生成50个超级假人
-				'''
-			
-			CorruptRenewal: 使一大片区域变为腐化之地
-			CorruptRenewalSupreme: 使整个世界变为腐化之地
-			CrimsonRenewal: 使一大片区域变为猩红之地
-			CrimsonRenewalSupreme: 使整个世界变为猩红之地
-			HallowRenewal: 使一大片区域变为神圣之地
-			HallowRenewalSupreme: 使整个世界变为神圣之地
-			MushroomRenewal: 使一大片区域变为发光蘑菇地
-			MushroomRenewalSupreme: 使整个世界变为发光蘑菇地
-			PurityRenewal: 净化一大片区域
-			PurityRenewalSupreme: 净化整个世界
+			Instavator: {
+				Tooltip:
+					'''
+					投掷一枚炸弹，建造一条直通地狱的通道
+					如果下面有任何重要建筑物，请不要使用
+					'''
+				DisplayName: 地狱直通车
+			}
 
-			Anemometer: 召唤大风天
-			BatteredClub: 召唤食人魔
-			BetsyEgg: 召唤双足翼龙
-			FestiveOrnament: 
-				'''
-				召唤常绿尖叫怪
-				只能在晚上使用
-				'''
-			ForbiddenScarab: 召唤沙尘暴
-			ForbiddenTome: 召唤黑暗魔法师
-			HeadofMan: 
-				'''
-				召唤无头骑士
-				只能在晚上使用
-				'''
-			IceKingsRemains: 
-				'''
-				召唤冰雪女王
-				只能在晚上使用
-				'''
-			MartianMemoryStick: 召唤火星飞碟
-			MatsuriLantern: 让每个无Boss、无入侵事件的夜晚都是灯笼夜
-			NaughtyList: 
-				'''
-				召唤圣诞坦克
-				只能在晚上使用
-				'''
-			PartyCone: 
-				'''
-				开派对吧！
-				至少有5个城镇NPC时才能使用
-				'''
-			PillarSummon: 召唤天界柱
-			RunawayProbe: 召唤火星暴乱
-			SlimyBarometer: 召唤史莱姆雨
-			SpentLantern: 停用祭典灯笼的效果
-			SpookyBranch: 
-				'''
-				召唤哀木
-				只能在晚上使用
-				'''
-			SuspiciousLookingScythe: 
-				'''
-				召唤南瓜王
-				只能在晚上使用
-				'''
-			WeatherBalloon: 召唤下雨
+			LihzahrdInstactuationBomb: {
+				Tooltip:
+					'''
+					站在丛林祭坛前使用时，清除丛林蜥蜴祭坛周围的空间
+					虚化丛林蜥蜴砖并摧毁其他物块
+					仅能在世纪之花被击败后，在丛林神庙中使用
+					'''
+				DisplayName: 丛林神庙炸弹
+			}
 
-			AmalgamatedSkull: 
-				'''
-				召唤一批骷髅枪手
-				只能在晚上或地下使用
-				'''
-			AmalgamatedSpirit: 
-				'''
-				召唤一批骷髅法师
-				只能在晚上或地下使用
-				'''
-			AthenianIdol: 
-				'''
-				召唤蛇发女妖
-				只能在晚上或地下使用
-				'''
-			AttractiveOre: 
-				'''
-				召唤不死矿工
-				只能在晚上或地下使用
-				'''
-			BloodSushiPlatter: 
-				'''
-				召唤恐惧鹦鹉螺
-				只能在血月期间使用
-				'''
-			BloodUrchin:
-				'''
-				召唤血鳗鱼
-				只能在血月期间使用
-				'''
-			CloudSnack: 召唤飞龙
-			ClownLicense: 
-				'''
-				召唤小丑
-				只能在晚上或地下使用
-				'''
-			CoreoftheFrostCore: 召唤冰雪巨人
-			CorruptChest: 召唤腐化宝箱怪
-			CrimsonChest: 召唤猩红宝箱怪
-			DemonicPlushie: 
-				'''
-				召唤红魔鬼
-				只能在地狱使用
-				'''
-			DilutedRainbowMatter: 召唤彩虹史莱姆
-			Eggplant: 
-				'''
-				召唤骷髅博士
-				只能在晚上或地下使用
-				'''
-			ForbiddenForbiddenFragment: 召唤沙尘精
-			GnomeHat: 召唤侏儒
-			GoblinScrap: 召唤哥布林侦察兵
-			GoldenSlimeCrown: 召唤金史莱姆
-			GrandCross: 
-				'''
-				召唤圣骑士
-				只能在晚上或地下使用
-				'''
-			HallowChest: 召唤神圣宝箱怪
-			HeartChocolate: 
-				'''
-				召唤宁芙
-				只能在晚上或地下使用
-				'''
-			HemoclawCrab: 
-				'''
-				召唤血浆哥布林鲨鱼
-				只能在血月期间使用
-				'''
-			HolyGrail: 
-				'''
-				召唤蒂姆
-				只能在晚上或地下使用
-				'''
-			JungleChest: 召唤丛林宝箱怪
-			LeesHeadband: 
-				'''
-				召唤骷髅李小龙
-				只能在晚上或地下使用
-				'''
-			MothLamp: 召唤蛾
-			MothronEgg: 
-				'''
-				召唤蛾怪
-				只能在日食期间使用
-				'''
-			Pincushion: 
-				'''
-				召唤钉头
-				只能在日食期间使用
-				'''
-			PinkSlimeCrown: 召唤粉史莱姆
-			PirateFlag: 召唤海盗船长
-			PlunderedBooty: 召唤荷兰飞盗船
-			RuneOrb: 
-				'''
-				召唤符文巫师
-				只能在晚上或地下使用
-				'''
-			ShadowflameIcon: 
-				'''
-				召唤哥布林召唤师
-				只能在哥布林入侵期间使用
-				'''
-			SlimyLockBox: 召唤地牢史莱姆
-			SuspiciousLookingChest: 
-				'''
-				召唤宝箱怪
-				在地下雪原中可召唤冰雪宝箱怪
-				'''
-			SuspiciousLookingLure: 
-				'''
-				召唤游荡眼球怪鱼和僵尸人鱼
-				只能在晚上使用
-				'''
-			WormSnack: 
-				'''
-				在困难模式之前召唤巨型蠕虫
-				在困难模式中召唤挖掘怪
-				只能在地下使用
-				'''
-			
-			AncientSeal: 
-				'''
-				召唤所有Boss，包括其他Mod中的
-				只能在晚上使用
-				“后果自负”
-				'''
-			CultistSummon: 
-				'''
-				召唤拜月教邪教徒
-				如果你已经击败过拜月教邪教徒，击败后不生成天界柱
-				'''
-			DeathBringerFairy: 
-				'''
-				召唤所有困难模式前的Boss
-				只能在晚上使用
-				某些Boss只有在特定的生物群落中才会被召唤
-				'''
-			FleshyDoll: 
-				'''
-				召唤血肉之墙
-				只在地狱中生效
-				'''
-			JellyCrystal: 召唤史莱姆皇后
-			MechanicalAmalgam: 召唤三个机械Boss
-			MutantVoodoo: 召唤所有原版Boss
-			PlanterasFruit: 召唤世纪之花
-			PrismaticPrimrose: 召唤光之女皇
-			SuspiciousSkull: 
-				'''
-				在不杀死服装商的情况下召唤骷髅王
-				在白天会召唤地牢守卫
-				'''
+			MiniInstaBridge: {
+				Tooltip:
+					'''
+					在鼠标的高度建造一条长平台
+					不会破坏任何方块
+					'''
+				DisplayName: 迷你速建平台
+			}
 
-			EnergizerBee: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadBee]过载幼虫后获得
-				“闻起来像蜂蜜”
-				'''
-			EnergizerBetsy: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadBetsy]龙蛋盒后获得
-				“你感觉你已经等了三千年”
-				'''
-			EnergizerBrain: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadBrain]头脑风暴后获得
-				“你仍然觉得自己很傻”
-				'''
-			EnergizerCultist: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadCultist]狂热者暴动后获得
-				“你可能疯了”
-				'''
-			EnergizerDarkMage: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadDarkMage]绝对禁忌之书后获得
-				“你感觉你已经等了一千年”
-				'''
-			EnergizerDeer: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadDeer]融合巨鹿后获得
-				“它使你饥饿”
-				'''
-			EnergizerDestroy: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadDestroyer]地震触发器后获得
-				“它让你有了一种想毁灭东西的冲动”
-				'''
-			EnergizerDG: 
-				'''
-				击败十轮白天的[i:Fargowiltas/OverloadSkele]骷髅项链后获得
-				“让你想起一头卑鄙的母牛”
-				'''
-			EnergizerEmpress: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadEmpress]草蛉罐后获得
-				“观察它的时候佩戴护目镜”
-				'''
-			EnergizerEye: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadEye]融合眼球后获得
-				“它似乎在看着你”
-				'''
-			EnergizerFish: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadFish]松露虫堆后获得
-				“你很满意”
-				'''
-			EnergizerGolem: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadGolem]符文能量电池后获得
-				“你希望它拼写为‘TechDirito’”
-				'''
-			EnergizerMoon: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadMoon]符文铭文后形成
-				“你在享受奶酪”
-				'''
-			EnergizerPlant: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadPlant]丛林之心后获得
-				“变成一片叶子？听起来很不错”
-				'''
-			EnergizerPrime: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadPrime]统帅控制芯片后获得
-				“感觉就像一个全新的自己”
-				'''
-			EnergizerQueenSlime: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadQueenSlime]集群水晶后获得
-				“感觉非常粘”
-				'''
-			EnergizerSkele: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadSkele]骷髅项链后获得
-				“让你想起一头牛”
-				'''
-			EnergizerSlime: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadSlimeCrown]集群王冠后获得
-				“感觉有点粘”
-				'''
-			EnergizerTwins: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadTwins]全焦距晶状体后获得
-				“你希望你拥有更多”
-				'''
-			EnergizerWall: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadWall]人偶包后获得
-				“你感到幽闭恐惧”
-				'''
-			EnergizerWorm: 
-				'''
-				击败十轮[i:Fargowiltas/OverloadWorm]蠕虫串烧后获得
-				“有点黏”
-				'''
+			ObsidianInstaBridge: {
+				Tooltip:
+					'''
+					建造一条横跨整个世界的黑曜石平台
+					同时清除平台正上方的区域
+					平台出现在鼠标位置
+					附近有重要建筑物时请勿使用
+					'''
+				DisplayName: 黑曜石速建平台
+			}
 
-			OverloadBee: 
-				'''
-				召唤十只蜂王
-				只会掉落宝藏袋
-				'''
-			OverloadBetsy: 
-				'''
-				召唤十只双足翼龙
-				只会掉落宝藏袋
-				'''
-			OverloadBrain: 
-				'''
-				召唤十个克苏鲁之脑
-				只会掉落宝藏袋
-				'''
-			OverloadCultist: 
-				'''
-				召唤十个拜月教邪教徒
-				只会掉落宝藏袋
-				'''
-			OverloadDarkMage: 召唤十只黑暗魔法师
-			OverloadDeer: 
-				'''
-				召唤十只独眼巨鹿
-				只会掉落宝藏袋
-				'''
-			OverloadDestroyer: 
-				'''
-				召唤十只毁灭者
-				只会掉落宝藏袋
-				'''
-			OverloadedSlimeRain: 
-				'''
-				召唤过载的史莱姆雨
-				再次使用以停止事件
-				'''
-			OverloadEmpress: 
-				'''
-				召唤十只光之女皇
-				只会掉落宝藏袋
-				'''
-			Overloader: 
-				'''
-				用于合成过载召唤物
-				使用过载召唤物时，堆叠在一起的所有召唤物都会被消耗
-				消耗的越多，产生的Boss就越多
-				每击杀10个Boss就会掉落一个纪念章
-				每击杀100个Boss就会掉落一个强化剂
-				'''
-			OverloadEye: 
-				'''
-				召唤十只克苏鲁之眼
-				只会掉落宝藏袋
-				'''
-			OverloadFish: 
-				'''
-				召唤十个猪龙鱼公爵
-				只会掉落宝藏袋
-				'''
-			OverloadFrostMoon: 
-				'''
-				召唤霜月事件，直接从第20波开始且刷怪率大幅增加
-				再次使用以停止事件
-				'''
-			OverloadGoblins: 
-				'''
-				召唤过载的哥布林入侵事件
-				再次使用以停止事件
-				'''
-			OverloadGolem: 
-				'''
-				召唤十个石巨人
-				只会掉落宝藏袋
-				'''
-			OverloadMartians: 
-				'''
-				召唤过载的火星暴乱事件
-				再次使用以停止事件
-				'''
-			OverloadMoon: 
-				'''
-				召唤十个月亮领主
-				只会掉落宝藏袋
-				'''
-			OverloadPirates: 
-				'''
-				召唤过载量的海盗入侵事件
-				再次使用以停止事件
-				'''
-			OverloadPlant: 
-				'''
-				召唤十个世纪之花
-				只会掉落宝藏袋
-				'''
-			OverloadPrime: 
-				'''
-				召唤十个机械骷髅王
-				只会掉落宝藏袋
-				'''
-			OverloadPumpkinMoon: 
-				'''
-				召唤南瓜月事件，直接从第15波开始且刷怪率大幅增加
-				再次使用以停止事件
-				'''
-			OverloadQueenSlime: 
-				'''
-				召唤十只史莱姆皇后
-				只会掉落宝藏袋
-				'''
-			OverloadSkele: 
-				'''
-				在夜晚召唤十个骷髅王
-				在白天召唤十个地牢守卫
-				只会掉落宝藏袋
-				'''
-			OverloadSlimeCrown: 
-				'''
-				召唤十只史莱姆王
-				只会掉落宝藏袋
-				'''
-			OverloadTwins: 
-				'''
-				召唤十个双子魔眼
-				只会掉落宝藏袋
-				'''
-			OverloadWall: 
-				'''
-				召唤十道血肉之墙
-				只会掉落宝藏袋
-				'''
-			OverloadWorm: 
-				'''
-				召唤十个世界吞噬怪
-				只会掉落宝藏袋
-				'''
+			OmniBridgifier: {
+				Tooltip:
+					'''
+					可以被无限次重复使用
+					把你所站的平台升级为带有万能增益站的平台
+					不会建造平台
+					'''
+				DisplayName: 万能平台转化器
+			}
 
-			Abeemination2: 在任何生物群落中召唤蜂后
-			CelestialSigil2: 立即召唤月亮领主
-			DeerThing2: 在任何生物群落中召唤独眼巨鹿
-			GoreySpine: 在任何生物群落中召唤克苏鲁之脑
-			LihzahrdPowerCell2: 在没有祭坛的情况下召唤石巨人
-			MechEye: 召唤双子魔眼
-			MechSkull: 召唤机械骷髅王
-			MechWorm: 召唤毁灭者
-			SlimyCrown: 召唤史莱姆王
-			SuspiciousEye: 召唤克苏鲁之眼
-			TruffleWorm2: 不钓鱼就召唤猪龙鱼公爵
-			WormyFood: 在任何生物群落中召唤世界吞噬怪
+			SemiBridgifier: {
+				Tooltip:
+					'''
+					可以被无限次重复使用
+					把你所站的平台升级为带有多功能增益站的平台
+					不会建造平台
+					'''
+				DisplayName: 多功能平台转化器
+			}
 
-			CrucibleCosmos: 
-				'''
-				包含几乎所有制作环境
-				“它似乎隐藏着巨大的力量”
-				'''
-			ElementalAssembler: 拥有几个基本制作站的功能
-			GoldenDippingVat: 用于制作金动物
-			MultitaskCenter: 拥有几个基本制作站的功能
-			Omnistation: 
-				'''
-				可以被无限次重复使用
-				拥有部分原版增益站的效果
-				接触时给予蜂蜜增益
-				在附近时大幅提高运气
-				'''
-			Omnistation2: 
-				'''
-				可以被无限次重复使用
-				拥有部分原版增益站的效果
-				接触时给予蜂蜜增益
-				在附近时大幅提高运气
-				'''
-			PurityTotem: 
-				'''
-				可以被无限次重复使用
-				允许城镇NPC居住在邪恶生物群落中
-				防止邪恶物块形成邪恶生物群落
-				防止墓碑形成墓地生物群落
-				'''
-			RegalStatue: 在附近时城镇NPC会极快地重生
-			Semistation:
-				'''
-				可以被无限次重复使用
-				拥有部分原版增益站的效果
-				'''
-			SiblingPylon: 
-				'''
-				当附近有突变体，憎恶和戴薇安时可以传送至另一个晶塔
-				只能放置一个
-				'''
-			UnsafeBlueSlabWall: 允许区域特有的敌怪生成
-			UnsafeBlueTileWall: 允许区域特有的敌怪生成
-			UnsafeBlueBrickWall: 允许区域特有的敌怪生成
-			UnsafeGreenSlabWall: 允许区域特有的敌怪生成
-			UnsafeGreenTileWall: 允许区域特有的敌怪生成
-			UnsafeGreenBrickWall: 允许区域特有的敌怪生成
-			UnsafePinkSlabWall: 允许区域特有的敌怪生成
-			UnsafePinkTileWall: 允许区域特有的敌怪生成
-			UnsafePinkBrickWall: 允许区域特有的敌怪生成
-			UnsafeLihzahrdBrickWall: 允许区域特有的敌怪生成
-			UnsafeSpiderWall: 允许区域特有的敌怪生成
-			UnsafeMarbleWall: 允许区域特有的敌怪生成
-			UnsafeGraniteWall: 允许区域特有的敌怪生成
-			WoodenToken: “真正的木材爱好者的标志”
+			BattleCry: {
+				Tooltip:
+					'''
+					左键使用使刷怪率提高 10 倍
+					右键使用使刷怪率降低 10 倍
+					'''
+				DisplayName: 战争号角
+			}
 
-			LumberJaxe: 
-				'''
-				被击中的敌人死亡时会掉落木头
-				“挥舞斧头的真正英雄的武器”
-				'''
+			DeathFruit: {
+				Tooltip:
+					'''
+					永久性地降低20点最大生命值
+					对于用过其他模组中一次性的、增加最大生命值的物品的角色，效果不可逆
+					'''
+				DisplayName: 死亡果实
+			}
+
+			InstantResearch: {
+				Tooltip:
+					'''
+					调 试 用 物 品
+					研究所有物品
+					'''
+				DisplayName: 一键研究
+			}
+
+			MapViewer: {
+				// Tooltip: Reveals the map
+				DisplayName: 失落的王之地图
+			}
+
+			ModeToggle: {
+				Tooltip: 切换世界难度
+				DisplayName: 世界令牌
+			}
+
+			PortableSundial: {
+				Tooltip:
+					'''
+					左键单击可立即切换时间
+					可以在黎明，中午，黄昏和午夜之间切换时间
+					右键点击可激活魔法日晷效果
+					切换到黎明会重置旅行商人的商店
+					'''
+				DisplayName: 便携式日晷
+			}
+
+			PylonCleaner: {
+				Tooltip:
+					'''
+					净化所有晶塔周围的区域
+					在神圣晶塔处使用蓝溶液，蘑菇晶塔处使用深蓝溶液，其他晶塔处使用绿溶液
+					'''
+				DisplayName: 洁晶灵
+			}
+
+			SuperDummy: {
+				Tooltip:
+					'''
+					在你的光标处产生一个超级假人
+					与普通训练假人相同，但仆从和追踪弹幕会以其为目标
+					会触发一些武器的“击中效果”
+					右击移除所有生成的超级假人
+					最多可以同时生成50个超级假人
+					'''
+				DisplayName: 超级假人
+			}
+
+			CorruptRenewal: {
+				Tooltip: 使一大片区域变为腐化之地
+				DisplayName: 腐化领域
+			}
+
+			CorruptRenewalSupreme: {
+				Tooltip: 使整个世界变为腐化之地
+				DisplayName: 腐化维度
+			}
+
+			CrimsonRenewal: {
+				Tooltip: 使一大片区域变为猩红之地
+				DisplayName: 猩红领域
+			}
+
+			CrimsonRenewalSupreme: {
+				Tooltip: 使整个世界变为猩红之地
+				DisplayName: 猩红维度
+			}
+
+			HallowRenewal: {
+				Tooltip: 使一大片区域变为神圣之地
+				DisplayName: 神圣领域
+			}
+
+			HallowRenewalSupreme: {
+				Tooltip: 使整个世界变为神圣之地
+				DisplayName: 神圣维度
+			}
+
+			MushroomRenewal: {
+				Tooltip: 使一大片区域变为发光蘑菇地
+				DisplayName: 发光蘑菇领域
+			}
+
+			MushroomRenewalSupreme: {
+				Tooltip: 使整个世界变为发光蘑菇地
+				DisplayName: 发光蘑菇维度
+			}
+
+			PurityRenewal: {
+				Tooltip: 净化一大片区域
+				DisplayName: 纯净领域
+			}
+
+			PurityRenewalSupreme: {
+				Tooltip: 净化整个世界
+				DisplayName: 纯净维度
+			}
+
+			Abeemination2: {
+				Tooltip: 在任何生物群落中召唤蜂后
+				DisplayName: 令人憎恶的蜜蜂
+			}
+
+			Anemometer: {
+				Tooltip: 召唤大风天
+				DisplayName: 风速计
+			}
+
+			BatteredClub: {
+				Tooltip: 召唤食人魔
+				DisplayName: 重击棍
+			}
+
+			BetsyEgg: {
+				Tooltip: 召唤双足翼龙
+				DisplayName: 龙蛋
+			}
+
+			FestiveOrnament: {
+				Tooltip:
+					'''
+					召唤常绿尖叫怪
+					只能在晚上使用
+					'''
+				DisplayName: 节日装饰
+			}
+
+			ForbiddenScarab: {
+				Tooltip: 召唤沙尘暴
+				DisplayName: 禁忌圣甲虫
+			}
+
+			ForbiddenTome: {
+				Tooltip: 召唤黑暗魔法师
+				DisplayName: 禁忌之书
+			}
+
+			HeadofMan: {
+				Tooltip:
+					'''
+					召唤无头骑士
+					只能在晚上使用
+					'''
+				DisplayName: 无头骑士的头
+			}
+
+			IceKingsRemains: {
+				Tooltip:
+					'''
+					召唤冰雪女王
+					只能在晚上使用
+					'''
+				DisplayName: 寒冰领主的遗物
+			}
+
+			MartianMemoryStick: {
+				Tooltip: 召唤火星飞碟
+				DisplayName: 火星记忆棒
+			}
+
+			MatsuriLantern: {
+				Tooltip: 让每个无Boss、无入侵事件的夜晚都是灯笼夜
+				DisplayName: 祭典灯笼
+			}
+
+			NaughtyList: {
+				Tooltip:
+					'''
+					召唤圣诞坦克
+					只能在晚上使用
+					'''
+				DisplayName: 捣蛋清单
+			}
+
+			PartyCone: {
+				Tooltip:
+					'''
+					开派对吧！
+					至少有5个城镇NPC时才能使用
+					'''
+				DisplayName: 派对帽
+			}
+
+			PillarSummon: {
+				Tooltip: 召唤天界柱
+				DisplayName: 异界之门
+			}
+
+			RunawayProbe: {
+				Tooltip: 召唤火星暴乱
+				DisplayName: 逃亡的探测器
+			}
+
+			SlimyBarometer: {
+				Tooltip: 召唤史莱姆雨
+				DisplayName: 黏糊糊的晴雨表
+			}
+
+			SpentLantern: {
+				Tooltip: 停用祭典灯笼的效果
+				DisplayName: 燃尽的灯笼
+			}
+
+			SpookyBranch: {
+				Tooltip:
+					'''
+					召唤哀木
+					只能在晚上使用
+					'''
+				DisplayName: 诡异树枝
+			}
+
+			SuspiciousLookingScythe: {
+				Tooltip:
+					'''
+					召唤南瓜王
+					只能在晚上使用
+					'''
+				DisplayName: 可疑的镰刀
+			}
+
+			WeatherBalloon: {
+				Tooltip: 召唤下雨
+				DisplayName: 气象气球
+			}
+
+			CelestialSigil2: {
+				Tooltip: 立即召唤月亮领主
+				DisplayName: 天魔印记
+			}
+
+			DeerThing2: {
+				Tooltip: 在任何生物群落中召唤独眼巨鹿
+				DisplayName: 华鹿
+			}
+
+			AmalgamatedSkull: {
+				Tooltip:
+					'''
+					召唤一批骷髅枪手
+					只能在晚上或地下使用
+					'''
+				DisplayName: 聚合头骨
+			}
+
+			AmalgamatedSpirit: {
+				Tooltip:
+					'''
+					召唤一批骷髅法师
+					只能在晚上或地下使用
+					'''
+				DisplayName: 聚合灵魂
+			}
+
+			AthenianIdol: {
+				Tooltip:
+					'''
+					召唤蛇发女妖
+					只能在晚上或地下使用
+					'''
+				DisplayName: 雅典神像
+			}
+
+			AttractiveOre: {
+				Tooltip:
+					'''
+					召唤不死矿工
+					只能在晚上或地下使用
+					'''
+				DisplayName: 吸引人的矿物
+			}
+
+			BloodSushiPlatter: {
+				Tooltip:
+					'''
+					召唤恐惧鹦鹉螺
+					只能在血月期间使用
+					'''
+				DisplayName: 血寿司拼盘
+			}
+
+			BloodUrchin: {
+				Tooltip:
+					'''
+					召唤血鳗鱼
+					只能在血月期间使用
+					'''
+				DisplayName: 血海胆
+			}
+
+			CloudSnack: {
+				Tooltip: 召唤飞龙
+				DisplayName: 白云棉花糖
+			}
+
+			ClownLicense: {
+				Tooltip:
+					'''
+					召唤小丑
+					只能在晚上或地下使用
+					'''
+				DisplayName: 小丑资格证
+			}
+
+			CoreoftheFrostCore: {
+				Tooltip: 召唤冰雪巨人
+				DisplayName: 极寒核
+			}
+
+			CorruptChest: {
+				Tooltip: 召唤腐化宝箱怪
+				DisplayName: 腐化宝箱
+			}
+
+			CrimsonChest: {
+				Tooltip: 召唤猩红宝箱怪
+				DisplayName: 猩红宝箱
+			}
+
+			DemonicPlushie: {
+				Tooltip:
+					'''
+					召唤红魔鬼
+					只能在地狱使用
+					'''
+				DisplayName: 恶魔玩具
+			}
+
+			DilutedRainbowMatter: {
+				Tooltip: 召唤彩虹史莱姆
+				DisplayName: 稀释彩虹物质
+			}
+
+			Eggplant: {
+				Tooltip:
+					'''
+					召唤骷髅博士
+					只能在晚上或地下使用
+					'''
+				DisplayName: 茄子
+			}
+
+			ForbiddenForbiddenFragment: {
+				Tooltip: 召唤沙尘精
+				DisplayName: 讳忌碎片
+			}
+
+			GnomeHat: {
+				Tooltip: 召唤侏儒
+				DisplayName: 侏儒帽
+			}
+
+			GoblinScrap: {
+				Tooltip: 召唤哥布林侦察兵
+				DisplayName: 哥布林破布
+			}
+
+			GoldenSlimeCrown: {
+				Tooltip: 召唤金史莱姆
+				DisplayName: 金史莱姆王冠
+			}
+
+			GrandCross: {
+				Tooltip:
+					'''
+					召唤圣骑士
+					只能在晚上或地下使用
+					'''
+				DisplayName: 圣之十字
+			}
+
+			HallowChest: {
+				Tooltip: 召唤神圣宝箱怪
+				DisplayName: 神圣宝箱
+			}
+
+			HeartChocolate: {
+				Tooltip:
+					'''
+					召唤宁芙
+					只能在晚上或地下使用
+					'''
+				DisplayName: 心之巧克力
+			}
+
+			HemoclawCrab: {
+				Tooltip:
+					'''
+					召唤血浆哥布林鲨鱼
+					只能在血月期间使用
+					'''
+				DisplayName: 血浆蟹饵
+			}
+
+			HolyGrail: {
+				Tooltip:
+					'''
+					召唤蒂姆
+					只能在晚上或地下使用
+					'''
+				DisplayName: 圣杯
+			}
+
+			JungleChest: {
+				Tooltip: 召唤丛林宝箱怪
+				DisplayName: 丛林宝箱
+			}
+
+			LeesHeadband: {
+				Tooltip:
+					'''
+					召唤骷髅李小龙
+					只能在晚上或地下使用
+					'''
+				DisplayName: 李小龙头带
+			}
+
+			MothLamp: {
+				Tooltip: 召唤蛾
+				DisplayName: 引蛾灯
+			}
+
+			MothronEgg: {
+				Tooltip:
+					'''
+					召唤蛾怪
+					只能在日食期间使用
+					'''
+				DisplayName: 蛾怪蛋
+			}
+
+			Pincushion: {
+				Tooltip:
+					'''
+					召唤钉头
+					只能在日食期间使用
+					'''
+				DisplayName: 针垫
+			}
+
+			PinkSlimeCrown: {
+				Tooltip: 召唤粉史莱姆
+				DisplayName: 迷之粉色王冠
+			}
+
+			PirateFlag: {
+				Tooltip: 召唤海盗船长
+				DisplayName: 海盗旗
+			}
+
+			PlunderedBooty: {
+				Tooltip: 召唤荷兰飞盗船
+				DisplayName: 掠夺的赃物
+			}
+
+			RuneOrb: {
+				Tooltip:
+					'''
+					召唤符文巫师
+					只能在晚上或地下使用
+					'''
+				DisplayName: 符文宝珠
+			}
+
+			ShadowflameIcon: {
+				Tooltip:
+					'''
+					召唤哥布林召唤师
+					只能在哥布林入侵期间使用
+					'''
+				DisplayName: 暗影火焰符章
+			}
+
+			SlimyLockBox: {
+				Tooltip: 召唤地牢史莱姆
+				DisplayName: 黏黏的上锁箱子
+			}
+
+			SuspiciousLookingChest: {
+				Tooltip:
+					'''
+					召唤宝箱怪
+					在地下雪原中可召唤冰雪宝箱怪
+					'''
+				DisplayName: 可疑的箱子
+			}
+
+			SuspiciousLookingLure: {
+				Tooltip:
+					'''
+					召唤游荡眼球怪鱼和僵尸人鱼
+					只能在晚上使用
+					'''
+				DisplayName: 可疑的鱼饵
+			}
+
+			WormSnack: {
+				Tooltip:
+					'''
+					在困难模式之前召唤巨型蠕虫
+					在困难模式中召唤挖掘怪
+					只能在地下使用
+					'''
+				DisplayName: 蠕虫小吃
+			}
+
+			GoreySpine: {
+				Tooltip: 在任何生物群落中召唤克苏鲁之脑
+				DisplayName: 红斑脊椎
+			}
+
+			MechEye: {
+				Tooltip: 召唤双子魔眼
+				DisplayName: 某种金属眼睛
+			}
+
+			MechSkull: {
+				Tooltip: 召唤机械骷髅王
+				DisplayName: 某种金属头骨
+			}
+
+			MechWorm: {
+				Tooltip: 召唤毁灭者
+				DisplayName: 某种金属蠕虫
+			}
+
+			AncientSeal: {
+				Tooltip:
+					'''
+					召唤所有Boss，包括其他Mod中的
+					只能在晚上使用
+					“后果自负”
+					'''
+				DisplayName: 古代符章
+			}
+
+			CultistSummon: {
+				Tooltip:
+					'''
+					召唤拜月教邪教徒
+					如果你已经击败过拜月教邪教徒，击败后不生成天界柱
+					'''
+				DisplayName: 拜月教徒的遗物
+			}
+
+			DeathBringerFairy: {
+				Tooltip:
+					'''
+					召唤所有困难模式前的Boss
+					只能在晚上使用
+					某些Boss只有在特定的生物群落中才会被召唤
+					'''
+				DisplayName: 告死精灵
+			}
+
+			FleshyDoll: {
+				Tooltip:
+					'''
+					召唤血肉之墙
+					只在地狱中生效
+					'''
+				DisplayName: 血肉娃娃
+			}
+
+			JellyCrystal: {
+				Tooltip: 召唤史莱姆皇后
+				DisplayName: 胶状水晶
+			}
+
+			MechanicalAmalgam: {
+				Tooltip: 召唤三个机械Boss
+				DisplayName: 机械融合体
+			}
+
+			MutantVoodoo: {
+				Tooltip: 召唤所有原版Boss
+				DisplayName: 突变体巫毒娃娃
+			}
+
+			PlanterasFruit: {
+				Tooltip: 召唤世纪之花
+				DisplayName: 世纪之果
+			}
+
+			PrismaticPrimrose: {
+				Tooltip: 召唤光之女皇
+				DisplayName: 棱晶玫瑰
+			}
+
+			SuspiciousSkull: {
+				Tooltip:
+					'''
+					在不杀死服装商的情况下召唤骷髅王
+					在白天会召唤地牢守卫
+					'''
+				DisplayName: 可疑头骨
+			}
+
+			SlimyCrown: {
+				Tooltip: 召唤史莱姆王
+				DisplayName: 黏糊糊的王冠
+			}
+
+			SuspiciousEye: {
+				Tooltip: 召唤克苏鲁之眼
+				DisplayName: 似乎可疑的眼球
+			}
+
+			EnergizerBee: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadBee]过载幼虫后获得
+					“闻起来像蜂蜜”
+					'''
+				DisplayName: 蜂王强化剂
+			}
+
+			EnergizerBetsy: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadBetsy]龙蛋盒后获得
+					“你感觉你已经等了三千年”
+					'''
+				DisplayName: 翼龙强化剂
+			}
+
+			EnergizerBrain: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadBrain]头脑风暴后获得
+					“你仍然觉得自己很傻”
+					'''
+				DisplayName: 大脑强化剂
+			}
+
+			EnergizerCultist: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadCultist]狂热者暴动后获得
+					“你可能疯了”
+					'''
+				DisplayName: 教徒强化剂
+			}
+
+			EnergizerDarkMage: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadDarkMage]绝对禁忌之书后获得
+					“你感觉你已经等了一千年”
+					'''
+				DisplayName: 神秘强化剂
+			}
+
+			EnergizerDeer: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadDeer]融合巨鹿后获得
+					“它使你饥饿”
+					'''
+				DisplayName: 巨鹿强化剂
+			}
+
+			EnergizerDestroy: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadDestroyer]地震触发器后获得
+					“它让你有了一种想毁灭东西的冲动”
+					'''
+				DisplayName: 毁灭强化剂
+			}
+
+			EnergizerDG: {
+				Tooltip:
+					'''
+					击败十轮白天的[i:Fargowiltas/OverloadSkele]骷髅项链后获得
+					“让你想起一头卑鄙的母牛”
+					'''
+				DisplayName: 骸骨强化剂
+			}
+
+			EnergizerEmpress: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadEmpress]草蛉罐后获得
+					“观察它的时候佩戴护目镜”
+					'''
+				DisplayName: 仙灵强化剂
+			}
+
+			EnergizerEye: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadEye]融合眼球后获得
+					“它似乎在看着你”
+					'''
+				DisplayName: 视觉强化剂
+			}
+
+			EnergizerFish: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadFish]松露虫堆后获得
+					“你很满意”
+					'''
+				DisplayName: 猪鲨强化剂
+			}
+
+			EnergizerGolem: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadGolem]符文能量电池后获得
+					“你希望它拼写为‘TechDirito’”
+					'''
+				DisplayName: 蜥蜴强化剂
+			}
+
+			EnergizerMoon: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadMoon]符文铭文后形成
+					“你在享受奶酪”
+					'''
+				DisplayName: 月球强化剂
+			}
+
+			EnergizerPlant: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadPlant]丛林之心后获得
+					“变成一片叶子？听起来很不错”
+					'''
+				DisplayName: 绿叶强化剂
+			}
+
+			EnergizerPrime: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadPrime]统帅控制芯片后获得
+					“感觉就像一个全新的自己”
+					'''
+				DisplayName: 统帅强化剂
+			}
+
+			EnergizerQueenSlime: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadQueenSlime]集群水晶后获得
+					“感觉非常粘”
+					'''
+				DisplayName: 结晶强化剂
+			}
+
+			EnergizerSkele: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadSkele]骷髅项链后获得
+					“让你想起一头牛”
+					'''
+				DisplayName: 头骨强化剂
+			}
+
+			EnergizerSlime: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadSlimeCrown]集群王冠后获得
+					“感觉有点粘”
+					'''
+				DisplayName: 粘滑强化剂
+			}
+
+			EnergizerTwins: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadTwins]全焦距晶状体后获得
+					“你希望你拥有更多”
+					'''
+				DisplayName: 双子强化剂
+			}
+
+			EnergizerWall: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadWall]人偶包后获得
+					“你感到幽闭恐惧”
+					'''
+				DisplayName: 血肉强化剂
+			}
+
+			EnergizerWorm: {
+				Tooltip:
+					'''
+					击败十轮[i:Fargowiltas/OverloadWorm]蠕虫串烧后获得
+					“有点黏”
+					'''
+				DisplayName: 蠕虫强化剂
+			}
+
+			OverloadBee: {
+				Tooltip:
+					'''
+					召唤十只蜂王
+					只会掉落宝藏袋
+					'''
+				DisplayName: 过载幼虫
+			}
+
+			OverloadBetsy: {
+				Tooltip:
+					'''
+					召唤十只双足翼龙
+					只会掉落宝藏袋
+					'''
+				DisplayName: 龙蛋盒
+			}
+
+			OverloadBrain: {
+				Tooltip:
+					'''
+					召唤十个克苏鲁之脑
+					只会掉落宝藏袋
+					'''
+				DisplayName: 头脑风暴
+			}
+
+			OverloadCultist: {
+				Tooltip:
+					'''
+					召唤十个拜月教邪教徒
+					只会掉落宝藏袋
+					'''
+				DisplayName: 狂热者暴动
+			}
+
+			OverloadDarkMage: {
+				Tooltip: 召唤十只黑暗魔法师
+				DisplayName: 绝对禁忌之书
+			}
+
+			OverloadDeer: {
+				Tooltip:
+					'''
+					召唤十只独眼巨鹿
+					只会掉落宝藏袋
+					'''
+				DisplayName: 融合巨鹿
+			}
+
+			OverloadDestroyer: {
+				Tooltip:
+					'''
+					召唤十只毁灭者
+					只会掉落宝藏袋
+					'''
+				DisplayName: 地震触发器
+			}
+
+			OverloadedSlimeRain: {
+				Tooltip:
+					'''
+					召唤过载的史莱姆雨
+					再次使用以停止事件
+					'''
+				DisplayName: 相当黏的晴雨表
+			}
+
+			OverloadEmpress: {
+				Tooltip:
+					'''
+					召唤十只光之女皇
+					只会掉落宝藏袋
+					'''
+				DisplayName: 草蛉罐
+			}
+
+			Overloader: {
+				Tooltip:
+					'''
+					用于合成过载召唤物
+					使用过载召唤物时，堆叠在一起的所有召唤物都会被消耗
+					消耗的越多，产生的Boss就越多
+					每击杀10个Boss就会掉落一个纪念章
+					每击杀100个Boss就会掉落一个强化剂
+					'''
+				DisplayName: 过载能量
+			}
+
+			OverloadEye: {
+				Tooltip:
+					'''
+					召唤十只克苏鲁之眼
+					只会掉落宝藏袋
+					'''
+				DisplayName: 融合眼球
+			}
+
+			OverloadFish: {
+				Tooltip:
+					'''
+					召唤十个猪龙鱼公爵
+					只会掉落宝藏袋
+					'''
+				DisplayName: 松露虫堆
+			}
+
+			OverloadFrostMoon: {
+				Tooltip:
+					'''
+					召唤霜月事件，直接从第20波开始且刷怪率大幅增加
+					再次使用以停止事件
+					'''
+				DisplayName: 调皮礼物袋
+			}
+
+			OverloadGoblins: {
+				Tooltip:
+					'''
+					召唤过载的哥布林入侵事件
+					再次使用以停止事件
+					'''
+				DisplayName: 过载哥布林战旗
+			}
+
+			OverloadGolem: {
+				Tooltip:
+					'''
+					召唤十个石巨人
+					只会掉落宝藏袋
+					'''
+				DisplayName: 符文能量电池
+			}
+
+			OverloadMartians: {
+				Tooltip:
+					'''
+					召唤过载的火星暴乱事件
+					再次使用以停止事件
+					'''
+				DisplayName: 火星人通讯卫星
+			}
+
+			OverloadMoon: {
+				Tooltip:
+					'''
+					召唤十个月亮领主
+					只会掉落宝藏袋
+					'''
+				DisplayName: 符文铭文
+			}
+
+			OverloadPirates: {
+				Tooltip:
+					'''
+					召唤过载量的海盗入侵事件
+					再次使用以停止事件
+					'''
+				DisplayName: 海盗的赏金
+			}
+
+			OverloadPlant: {
+				Tooltip:
+					'''
+					召唤十个世纪之花
+					只会掉落宝藏袋
+					'''
+				DisplayName: 丛林之心
+			}
+
+			OverloadPrime: {
+				Tooltip:
+					'''
+					召唤十个机械骷髅王
+					只会掉落宝藏袋
+					'''
+				DisplayName: 统帅控制芯片
+			}
+
+			OverloadPumpkinMoon: {
+				Tooltip:
+					'''
+					召唤南瓜月事件，直接从第15波开始且刷怪率大幅增加
+					再次使用以停止事件
+					'''
+				DisplayName: 闹鬼战利品
+			}
+
+			OverloadQueenSlime: {
+				Tooltip:
+					'''
+					召唤十只史莱姆皇后
+					只会掉落宝藏袋
+					'''
+				DisplayName: 集群水晶
+			}
+
+			OverloadSkele: {
+				Tooltip:
+					'''
+					在夜晚召唤十个骷髅王
+					在白天召唤十个地牢守卫
+					只会掉落宝藏袋
+					'''
+				DisplayName: 骷髅项链
+			}
+
+			OverloadSlimeCrown: {
+				Tooltip:
+					'''
+					召唤十只史莱姆王
+					只会掉落宝藏袋
+					'''
+				DisplayName: 集群王冠
+			}
+
+			OverloadTwins: {
+				Tooltip:
+					'''
+					召唤十个双子魔眼
+					只会掉落宝藏袋
+					'''
+				DisplayName: 全焦距晶状体
+			}
+
+			OverloadWall: {
+				Tooltip:
+					'''
+					召唤十道血肉之墙
+					只会掉落宝藏袋
+					'''
+				DisplayName: 人偶包
+			}
+
+			OverloadWorm: {
+				Tooltip:
+					'''
+					召唤十个世界吞噬怪
+					只会掉落宝藏袋
+					'''
+				DisplayName: 蠕虫串烧
+			}
+
+			TruffleWorm2: {
+				Tooltip: 不钓鱼就召唤猪龙鱼公爵
+				DisplayName: 松露蠕虫
+			}
+
+			LihzahrdPowerCell2: {
+				Tooltip: 在没有祭坛的情况下召唤石巨人
+				DisplayName: 蜥蜴电池包
+			}
+
+			WormyFood: {
+				Tooltip: 在任何生物群落中召唤世界吞噬怪
+				DisplayName: 蠕虫食物
+			}
+
+			CrucibleCosmos: {
+				Tooltip:
+					'''
+					包含几乎所有制作环境
+					“它似乎隐藏着巨大的力量”
+					'''
+				DisplayName: 宇宙坩埚
+			}
+
+			EchPainting: {
+				// Tooltip: "'Groalt W. Fai'"
+				DisplayName: Ech猫绘画
+			}
+
+			ElementalAssembler: {
+				Tooltip: 拥有几个基本制作站的功能
+				DisplayName: 元素装配台
+			}
+
+			GoldenDippingVat: {
+				Tooltip: 用于制作金动物
+				DisplayName: 金染缸
+			}
+
+			MultitaskCenter: {
+				Tooltip: 拥有几个基本制作站的功能
+				DisplayName: 多功能合成桌
+			}
+
+			Omnistation: {
+				Tooltip:
+					'''
+					可以被无限次重复使用
+					拥有部分原版增益站的效果
+					接触时给予蜂蜜增益
+					在附近时大幅提高运气
+					'''
+				DisplayName: 万能增益站
+			}
+
+			Omnistation2: {
+				Tooltip:
+					'''
+					可以被无限次重复使用
+					拥有部分原版增益站的效果
+					接触时给予蜂蜜增益
+					在附近时大幅提高运气
+					'''
+				DisplayName: 万能增益站
+			}
+
+			RegalStatue: {
+				Tooltip: 在附近时城镇NPC会极快地重生
+				DisplayName: 帝王雕像
+			}
+
+			Semistation: {
+				Tooltip:
+					'''
+					可以被无限次重复使用
+					拥有部分原版增益站的效果
+					'''
+				DisplayName: 多功能增益站
+			}
+
+			SiblingPylon: {
+				Tooltip:
+					'''
+					当附近有突变体，憎恶和戴薇安时可以传送至另一个晶塔
+					只能放置一个
+					'''
+				DisplayName: 血亲晶塔
+			}
+
+			UnsafeBlueBrickWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险蓝砖墙
+			}
+
+			UnsafeBlueSlabWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险蓝板墙
+			}
+
+			UnsafeBlueTileWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险蓝瓷砖墙
+			}
+
+			UnsafeGraniteWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险花岗岩墙
+			}
+
+			UnsafeGreenBrickWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险蓝砖墙
+			}
+
+			UnsafeGreenSlabWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险蓝板墙
+			}
+
+			UnsafeGreenTileWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险蓝瓷砖墙
+			}
+
+			UnsafeLihzahrdBrickWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险丛林蜥蜴砖墙
+			}
+
+			UnsafeMarbleWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险大理石墙
+			}
+
+			UnsafePinkBrickWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险粉砖墙
+			}
+
+			UnsafePinkSlabWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险粉板墙
+			}
+
+			UnsafePinkTileWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险粉瓷砖墙
+			}
+
+			UnsafeSpiderWall: {
+				Tooltip: 允许区域特有的敌怪生成
+				DisplayName: 危险蜘蛛墙
+			}
+
+			WalkingRick: {
+				// Tooltip: "'Kien R. Oco'"
+				DisplayName: 走路的Rick
+			}
+
+			WoodenToken: {
+				Tooltip: “真正的木材爱好者的标志”
+				DisplayName: 木牌
+			}
+
+			LumberJaxe: {
+				Tooltip:
+					'''
+					被击中的敌人死亡时会掉落木头
+					“挥舞斧头的真正英雄的武器”
+					'''
+				DisplayName: 伐木斧
+			}
+
+			Abominationn: {
+				Tooltip: “我当然希望我是一个Boss……”
+				DisplayName: 憎恶
+			}
+
+			Angler: {
+				Tooltip: “你是个优秀的得力仆从！”
+				DisplayName: 渔夫
+			}
+
+			ArmsDealer: {
+				Tooltip: “哥们，把手从我的枪上拿开！”
+				DisplayName: 军火商
+			}
+
+			Clothier: {
+				Tooltip: “再次感谢你帮我解了诅咒。”
+				DisplayName: 服装商
+			}
+
+			Cyborg: {
+				Tooltip: “射弹击中我的运动执行机构会严重降低我的探险效率。”
+				DisplayName: 机器侠
+			}
+
+			Demolitionist: {
+				Tooltip: “今天是个找死的好日子！”
+				DisplayName: 爆破专家
+			}
+
+			Deviantt: {
+				Tooltip: “感受痛苦吧……受虐时别忘了来我这买新东西！”
+				DisplayName: 戴薇安
+			}
+
+			Dryad: {
+				Tooltip: “注意安全！泰拉瑞亚需要你！”
+				DisplayName: 树妖
+			}
+
+			DyeTrader: {
+				Tooltip: “亲爱的，你的穿着太单调了。”
+				DisplayName: 染料商
+			}
+
+			GoblinTinkerer: {
+				Tooltip: “想找工具大师？我就是啊！”
+				DisplayName: 哥布林工匠
+			}
+
+			Golfer: {
+				Tooltip: “早起的鸟儿有虫吃，靠前的球洞有球吃。”
+				DisplayName: 高尔夫球手
+			}
+
+			Guide: {
+				Tooltip: “他们说，有个人会告诉你如何在这地方上生存……”
+				DisplayName: 向导
+			}
+
+			LumberJack: {
+				Tooltip: “我早餐吃了碗‘木’片……没就着牛奶”
+				DisplayName: 伐木工
+			}
+
+			Mechanic: {
+				Tooltip: “一定要多买些电线！”
+				DisplayName: 机械师
+			}
+
+			Merchant: {
+				Tooltip: “你是说黄金？我会从你身上弄走。”
+				DisplayName: 商人
+			}
+
+			Mutant: {
+				Tooltip: “你很幸运，我站在你这边。”
+				DisplayName: 突变体
+			}
+
+			Nurse: {
+				Tooltip: “让我看看哪里受伤了。”
+				DisplayName: 护士
+			}
+
+			Painter: {
+				Tooltip: “我知道青绿色和蓝绿色之间的差别。但我不会告诉你。”
+				DisplayName: 油漆工
+			}
+
+			PartyGirl: {
+				Tooltip: “我们得谈谈。这……聚会的事。”
+				DisplayName: 派对女孩
+			}
+
+			Pirate: {
+				Tooltip: “别碰我的战利品，淘气鬼！”
+				DisplayName: 海盗
+			}
+
+			SantaClaus: {
+				Tooltip: “什么？你认为我不是真的？”
+				DisplayName: 圣诞老人
+			}
+
+			SkeletonMerchant: {
+				Tooltip: “你肯定想不到大家扔了些什么给我……想买点？”
+				DisplayName: 骷髅商人
+			}
+
+			Squirrel: {
+				Tooltip: *吱吱*
+				DisplayName: 高顶礼帽松鼠
+			}
+
+			Steampunker: {
+				Tooltip: “给我一些装备！”
+				DisplayName: 蒸汽朋克人
+			}
+
+			Stylist: {
+				Tooltip: “你今天到底有没有梳过头发？”
+				DisplayName: 发型师
+			}
+
+			Tavernkeep: {
+				Tooltip: “我在这是要干嘛啊……”
+				DisplayName: 酒馆老板
+			}
+
+			TaxCollector: {
+				Tooltip: “你又来了？你是想要更多钱吧！？”
+				DisplayName: 税收官
+			}
+
+			TravellingMerchant: {
+				Tooltip: “我卖的商品来自可能根本就不存在的地方！”
+				DisplayName: 旅商
+			}
+
+			Truffle: {
+				Tooltip: “感觉镇上的每个人都有点古怪。”
+				DisplayName: 松露人
+			}
+
+			WitchDoctor: {
+				Tooltip: “我是啥医？我是巫医。”
+				DisplayName: 巫医
+			}
+
+			Wizard: {
+				Tooltip: “想让我从你耳朵后面掏出一个钱币吗？不想？好吧。”
+				DisplayName: 巫师
+			}
+
+			Zoologist: {
+				Tooltip: “我非常喜欢动物！”
+				DisplayName: 动物学家
+			}
+
+			Princess: {
+				Tooltip: “粉红色是任何人都梦寐以求的最佳颜色！”
+				DisplayName: 公主
+			}
+
+			TownDog: {
+				Tooltip: “汪汪！”
+				DisplayName: 城镇狗狗
+			}
+
+			TownCat: {
+				Tooltip: “喵！”
+				DisplayName: 城镇猫咪
+			}
+
+			TownBunny: {
+				Tooltip: “*小兔子声音*”
+				DisplayName: 城镇兔兔
+			}
+
+			PurityTotem: {
+				Tooltip:
+					'''
+					可以被无限次重复使用
+					允许城镇NPC居住在邪恶生物群落中
+					防止邪恶物块形成邪恶生物群落
+					防止墓碑形成墓地生物群落
+					'''
+				DisplayName: 纯净图腾
+			}
+
+			BoneQuiver: {
+				DisplayName: 无尽骨箭袋
+				// Tooltip: ""
+			}
+
+			CursedQuiver: {
+				DisplayName: 无尽诅咒箭袋
+				// Tooltip: ""
+			}
+
+			FlameQuiver: {
+				DisplayName: 无尽烈焰箭袋
+				// Tooltip: ""
+			}
+
+			FrostburnQuiver: {
+				DisplayName: 无尽霜冻箭袋
+				// Tooltip: ""
+			}
+
+			HellfireQuiver: {
+				DisplayName: 无尽狱炎箭袋
+				// Tooltip: ""
+			}
+
+			JesterQuiver: {
+				DisplayName: 无尽小丑箭袋
+				// Tooltip: ""
+			}
+
+			UnholyQuiver: {
+				DisplayName: 无尽邪箭袋
+				// Tooltip: ""
+			}
+
+			VenomQuiver: {
+				DisplayName: 无尽毒液箭袋
+				// Tooltip: ""
+			}
+
+			BrittleBone: {
+				DisplayName: 易碎骨头
+				// Tooltip: ""
+			}
+
+			CursedPouch: {
+				DisplayName: 无尽诅咒弹袋
+				// Tooltip: ""
+			}
+
+			MeteorPouch: {
+				DisplayName: 无尽流星弹袋
+				// Tooltip: ""
+			}
+
+			SilverPouch: {
+				DisplayName: 无尽银弹袋
+				// Tooltip: ""
+			}
+
+			TungstenPouch: {
+				DisplayName: 无尽钨弹袋
+				// Tooltip: ""
+			}
+
+			VelocityPouch: {
+				DisplayName: 无尽高速弹袋
+				// Tooltip: ""
+			}
+
+			CopperCoinBag: {
+				DisplayName: 无尽铜币袋
+				// Tooltip: ""
+			}
+
+			GoldCoinBag: {
+				DisplayName: 无尽金币袋
+				// Tooltip: ""
+			}
+
+			PlatinumCoinBag: {
+				DisplayName: 无尽铂金币袋
+				// Tooltip: ""
+			}
+
+			SilverCoinBag: {
+				DisplayName: 无尽银币袋
+				// Tooltip: ""
+			}
+
+			CrystalDartBox: {
+				DisplayName: 无尽水晶镖盒
+				// Tooltip: ""
+			}
+
+			CursedDartBox: {
+				DisplayName: 无尽诅咒镖盒
+				// Tooltip: ""
+			}
+
+			IchorDartBox: {
+				DisplayName: 无尽灵液镖盒
+				// Tooltip: ""
+			}
+
+			PoisonDartBox: {
+				DisplayName: 无尽毒镖盒
+				// Tooltip: ""
+			}
+
+			GelPack: {
+				DisplayName: 无尽凝胶包
+				// Tooltip: ""
+			}
+
+			ClusterRocket1Bag: {
+				DisplayName: 无尽一级集束火箭包
+				// Tooltip: ""
+			}
+
+			ClusterRocket2Bag: {
+				DisplayName: 无尽二级集束火箭包
+				// Tooltip: ""
+			}
+
+			DryRocketBag: {
+				DisplayName: 无尽干火箭包
+				// Tooltip: ""
+			}
+
+			HoneyRocketBag: {
+				DisplayName: 无尽蜂蜜火箭包
+				// Tooltip: ""
+			}
+
+			LavaRocketBag: {
+				DisplayName: 无尽熔岩火箭包
+				// Tooltip: ""
+			}
+
+			MiniNuke1Bag: {
+				DisplayName: 无尽一级迷你核弹包
+				// Tooltip: ""
+			}
+
+			MiniNuke2Bag: {
+				DisplayName: 无尽二级迷你核弹包
+				// Tooltip: ""
+			}
+
+			Rocket1Bag: {
+				DisplayName: 无尽一级火箭包
+				// Tooltip: ""
+			}
+
+			Rocket2Bag: {
+				DisplayName: 无尽二级火箭包
+				// Tooltip: ""
+			}
+
+			Rocket3Bag: {
+				DisplayName: 无尽三级火箭包
+				// Tooltip: ""
+			}
+
+			Rocket4Bag: {
+				DisplayName: 无尽四级火箭包
+				// Tooltip: ""
+			}
+
+			WetRocketBag: {
+				DisplayName: 无尽潮湿火箭包
+				// Tooltip: ""
+			}
+
+			StarPouch: {
+				DisplayName: 无尽星星袋
+				// Tooltip: ""
+			}
+
+			CrimsonAltar: {
+				DisplayName: 猩红祭坛
+				// Tooltip: ""
+			}
+
+			DemonAltar: {
+				DisplayName: 恶魔祭坛
+				// Tooltip: ""
+			}
+
+			AbominationnBody: {
+				DisplayName: 憎恶之躯
+				// Tooltip: ""
+			}
+
+			AbominationnMask: {
+				DisplayName: 憎恶面具
+				// Tooltip: ""
+			}
+
+			AbominationnPants: {
+				DisplayName: 憎恶裤子
+				// Tooltip: ""
+			}
+
+			AbominationnScythe: {
+				DisplayName: 憎恶之镰
+				// Tooltip: ""
+			}
+
+			DevianttBody: {
+				DisplayName: 戴薇安的身体
+				// Tooltip: ""
+			}
+
+			DevianttMask: {
+				DisplayName: 戴薇安的面具
+				// Tooltip: ""
+			}
+
+			DevianttPants: {
+				DisplayName: 戴薇安的裤子
+				// Tooltip: ""
+			}
+
+			LumberHat: {
+				DisplayName: 伐木工帽
+				// Tooltip: ""
+			}
+
+			LumberjackBody: {
+				DisplayName: 伐木工身体
+				// Tooltip: ""
+			}
+
+			LumberjackMask: {
+				DisplayName: 伐木工面具
+				// Tooltip: ""
+			}
+
+			LumberjackPants: {
+				DisplayName: 伐木工裤
+				// Tooltip: ""
+			}
+
+			MutantBody: {
+				DisplayName: 突变躯体
+				// Tooltip: ""
+			}
+
+			MutantMask: {
+				DisplayName: 突变面具
+				// Tooltip: ""
+			}
+
+			MutantPants: {
+				DisplayName: 突变裤
+				// Tooltip: ""
+			}
 		}
 
 		ExpandedTooltips: {
@@ -1300,75 +2190,25 @@ Mods: {
 			Unlimited30: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠30个时获得无尽增益]"
 			Unlimited3: "[i:87] [c/AAAAAA:物品栏，猪猪存钱罐或保险箱中的此物品堆叠3个时获得无尽增益]"
 			PiggyBankAcc: "[i:87] [c/AAAAAA:在猪猪存钱罐和保险箱中同样生效]"
-
-			SoldBySquirrel: "高顶礼帽松鼠售卖"
-			SomeMaterialsSold: "售卖部分材料"
-			CraftableMaterialsSold: "售卖可合成材料"
-			SoldAtThirtyStack: "堆叠30个时售卖"
-		}
-		
-		MapObject: {
-			CrucibleCosmosSheet: 宇宙坩埚
-			DemonAltarSheet: 恶魔祭坛
-			CrimsonAltarSheet: 猩红祭坛
-			ElementalAssemblerSheet: 元素装配台
-			GoldenDippingVatSheet: 金染缸
-			MultitaskCenterSheet: 多功能合成桌
-			OmnistationSheet: 万能增益站
-			OmnistationSheet2: 万能增益站
-			PurityTotemSheet: 纯净图腾
-			RegalStatueSheet: 帝王雕像
-			SemistationSheet: 多功能增益站
-			SiblingPylonTile: 血亲晶塔
+			SoldBySquirrel: 高顶礼帽松鼠售卖
+			SomeMaterialsSold: 售卖部分材料
+			CraftableMaterialsSold: 售卖可合成材料
+			SoldAtThirtyStack: 堆叠30个时售卖
 		}
 
-
-		NPCName: {
-			Abominationn: 憎恶
-			Deviantt: 戴薇安
-			LumberJack: 伐木工
-			Mutant: 突变体
-			Squirrel: 高顶礼帽松鼠
-			SuperDummy: 超级假人
-		}
-
-		ProjectileName: {
-			//爆裂物弹幕
-			AltarExterminatorProj: 祭坛终结者
-			CityBuster: 城市克星
-			DoubleObsInstaBridgeProj: 双重黑曜石速建平台
-			InstabridgeProj: 速建平台
-			GraveBuster: 墓碑克星
-			HalfInstaProj: 半程地狱直通车
-			InstaProj: 速建者
-			InstatrackProj: 速建轨道
-			LihzahrdInstactuationBombProj: 丛林蜥蜴炸弹
-			MiniInstabridgeProj: 迷你速建平台
-			ObsInstabridgeProj: 黑曜石速建平台
-			OmniBridgifierProj: 万能平台转化器
-			SemiBridgifierProj: 多功能平台转化器
-			ShurikenProj: 手里剑
-			//其它弹幕
-			DeathScythe: 憎恶之镰
-			Explosion: 爆裂物破片
-			EyeProjectile: 游荡眼球
-			FakeHeart2Deviantt: 假心
-			FakeHeartDeviantt: 假心
-			FakeHeartMarkDeviantt: 假心
-			LumberJaxe: 伐木斧
-			MechEyeProjectile: 机械眼球
-			PhantasmalEyeProjectile: 幻影之眼
-			CorruptNukeProj: 腐化领域
-			CorruptNukeSupremeProj: 腐化维度
-			CrimsonNukeProj: 猩红领域
-			CrimsonNukeSupremeProj: 猩红维度
-			HallowNukeProj: 神圣领域
-			HallowNukeSupremeProj: 神圣维度
-			MushroomNukeProj: 发光蘑菇领域
-			MushroomNukeSupremeProj: 发光蘑菇维度
-			PurityNukeProj: 纯净领域
-			PurityNukeSupremeProj: 纯净维度
-			SpawnProj: 生成
+		Tiles: {
+			SiblingPylonTile.MapEntry: 血亲晶塔
+			CrucibleCosmosSheet.MapEntry: 宇宙坩埚
+			DemonAltarSheet.MapEntry: 恶魔祭坛
+			CrimsonAltarSheet.MapEntry: 猩红祭坛
+			ElementalAssemblerSheet.MapEntry: 元素装配台
+			GoldenDippingVatSheet.MapEntry: 金染缸
+			MultitaskCenterSheet.MapEntry: 多功能合成桌
+			OmnistationSheet.MapEntry: 万能增益站
+			OmnistationSheet2.MapEntry: 万能增益站
+			PurityTotemSheet.MapEntry: 纯净图腾
+			RegalStatueSheet.MapEntry: 帝王雕像
+			SemistationSheet.MapEntry: 多功能增益站
 		}
 
 		UI: {
@@ -1382,53 +2222,50 @@ Mods: {
 			CycleShop: 切换商店
 
 			StatSheet: {
+				#by steviegt6 / tomat
 				Name: 属性统计表
 				HintText: 搜索……
-				
-				MeleeDamage: "近战伤害：{0}%"
-				MeleeCritical: "近战暴击率：{0}%"
-				MeleeSpeed: "近战速度：{0}%"
-				RangedDamage: "远程伤害：{0}%"
-				RangedCritical: "远程暴击率：{0}%"
-				MagicDamage: "魔法伤害：{0}%"
-				MagicCritical: "魔法暴击率：{0}%"
-				ManaCostReduction: "魔力消耗减免：：{0}%"
-				SummonDamage: "召唤伤害：{0}%"
-				SummonCritical: "召唤暴击率：{0}%"
-				MaxMinions: "仆从数量上限：{0}"
-				MaxSentries: "哨兵数量上限：{0}"
-
-				ArmorPenetration: "盔甲穿透：{0}"
-				Aggro: "仇恨：{0}"
-				Life: "生命值上限：{0}"
-				LifeRegen: "生命再生：每秒{0}"
-				Mana: "魔力值上限：{0}"
-				ManaRegen: "魔力再生：每秒{0}"
-				Defense: "防御力：{0}"
-				DamageReduction: "伤害减免：{0}%"
-				Luck: "运气：{0}"
-				FishingQuests: "已完成钓鱼任务：{0}"
-				BattleCry: "战争号角效果：{0}"
+				MeleeDamage: 近战伤害：{0}%
+				MeleeCritical: 近战暴击率：{0}%
+				MeleeSpeed: 近战速度：{0}%
+				RangedDamage: 远程伤害：{0}%
+				RangedCritical: 远程暴击率：{0}%
+				MagicDamage: 魔法伤害：{0}%
+				MagicCritical: 魔法暴击率：{0}%
+				ManaCostReduction: 魔力消耗减免：：{0}%
+				SummonDamage: 召唤伤害：{0}%
+				SummonCritical: 召唤暴击率：{0}%
+				MaxMinions: 仆从数量上限：{0}
+				MaxSentries: 哨兵数量上限：{0}
+				ArmorPenetration: 盔甲穿透：{0}
+				Aggro: 仇恨：{0}
+				Life: 生命值上限：{0}
+				LifeRegen: 生命再生：每秒{0}
+				Mana: 魔力值上限：{0}
+				ManaRegen: 魔力再生：每秒{0}
+				Defense: 防御力：{0}
+				DamageReduction: 伤害减免：{0}%
+				Luck: 运气：{0}
+				FishingQuests: 已完成钓鱼任务：{0}
+				BattleCry: 战争号角效果：{0}
 				Battle: 战争
 				Calming: 镇静
 				None: 无
-				MaxSpeed: "最大速度：{0}%"
-
+				MaxSpeed: 最大速度：{0}%
 				???: ？？？
-				WingTime: "飞行时间：{0}"
-				WingTimeInfinite: "接近无限"
+				WingTime: 飞行时间：{0}
+				WingTimeInfinite: 接近无限
 				WingTimeSec: "{0}秒"
-				WingMaxSpeed: "最大飞行速度：{0}英里每小时"
-				WindAscentModifier: "翅膀上升速度：{0}%"
-				WingCanHover: "翅膀是否可水平悬停：{0}"
+				WingMaxSpeed: 最大飞行速度：{0}英里每小时
+				WindAscentModifier: 翅膀上升速度：{0}%
+				WingCanHover: 翅膀是否可水平悬停：{0}
 				True: 是
 				False: 否
 			}
 		}
 
-
 		Dialogues: {
-			Abom : {
+			Abom: {
 				Defeat: 你真的打败了我……不错。现在来试试无伤我吧。哦对了，只能用铜短剑。
 				Styx: 你穿的这套盔甲可真是怀旧……不，它不再合我身了。而且充满它的电池需要太长时间。
 				1: 我的镰刀是从哪里弄来的？
@@ -1457,9 +2294,9 @@ Mods: {
 				22: 我不是不喜欢你的陪伴，但你能买点东西吗！？
 				23: 我已经杀了一千人了……什么？？你还是人？你手上的鲜血有那么多……
 				Graveyard: 我希望周围所有的这些墓碑不是你的。
-				Mechanic: "你能去找{0}吗？请让她别碰我的激光胳膊了。"
+				Mechanic: 你能去找{0}吗？请让她别碰我的激光胳膊了。
 				EventOver: 天灵灵地灵灵，事件结束了！
-				CD: "我现在没有力气，{0}秒之后再来吧。"
+				CD: 我现在没有力气，{0}秒之后再来吧。
 				NoEvent: 我认为现在没有事件。
 			}
 
@@ -1475,7 +2312,7 @@ Mods: {
 				Nekomi: 哦，那是我的连帽衫！所以感觉如何？舒适、很适合打游戏，对吧？也许你甚至能无伤打败一个Boss！
 				Defeat: 不错，你战胜了我！希望我没有让你太辛苦。坚持到底吧——我想要看看你能前行多远！
 				Stinky: 哇，你闻起来像是变质了。你上次洗澡是什么时候？你身上太臭了。
-				Love: "你对我冒出太多爱心了！对不起，我们现在的亲密等级只有{0}！"
+				Love: 你对我冒出太多爱心了！对不起，我们现在的亲密等级只有{0}！
 				BloodMoon: 血月的影响？我不再是人类了，所以没有！
 				1: 你知道吗？唯一真正的音乐类型是死亡金属和艺术核心。
 				2: 我要让你知道我已经度过了一百多Fargo年了！别问我一Fargo年有多长。
@@ -1495,9 +2332,9 @@ Mods: {
 				16: 哦，嗨！我……呃，千万不要现在给我丢臭味药水！我一般不会那样！
 				17: 不，我完全不会在你不注意的时候丢爱情药水！呃，我的意思是……哦，买点东西吧！
 				HardMode: 我突然有个想法。如果我把你放进绞肉机，做到只剩下两个染料……我一定会发财！我不会那样做的，确切地说，不会对你……我的意思是……别管它了。
-				Mutant1: "你能让{0}穿上衣服吗？"
-				Mutant2: "总有一天，我会卖自己的召唤物！……开玩笑的。那是{0}的工作。"
-				Lumber: "啥？你想和{0}打？……连我都知道最好不要尝试。"
+				Mutant1: 你能让{0}穿上衣服吗？
+				Mutant2: 总有一天，我会卖自己的召唤物！……开玩笑的。那是{0}的工作。
+				Lumber: 啥？你想和{0}打？……连我都知道最好不要尝试。
 				Eternity: 拥抱痛苦吧……受虐时别忘了来我这买新东西！
 				DownedMutant: 啥？你想和我来真的？……啊这，我自己一个人不太会打架。
 				MutantSuggestion: 嘿，你已经快到最后了！准备好所有的魂饰品了吗？啥，你想和我大哥打？……应该能吧，如果他有理由这么做。
@@ -1555,7 +2392,7 @@ Mods: {
 				18: 红色是我最喜欢的颜色之一，仅次于木材色。
 				19: 这儿一直是法兰绒的季节。
 				20: 我很高兴我的木头让你脸上露出如此灿烂的笑容。
-				Nurse: "我总是看见{0}在我工作的时候看着我的二头肌。不知道她想不想要一些我的木头。"
+				Nurse: 我总是看见{0}在我工作的时候看着我的二头肌。不知道她想不想要一些我的木头。
 				LucyTheAxe: 来自那个宇宙的露西……有趣的东西正等着你呢。
 				Desert: 我在砍仙人掌的时候，这些东西向我扑过来，你为什么不好好处理它们？
 				Jungle: 这些红木树充满了生机，但一棵树只有一个意义：被砍掉。哦，是的，这些是从上一棵树上掉下来的。
@@ -1574,7 +2411,7 @@ Mods: {
 				NightTime: 晚上砍树总是很放松的……好吧，除了这些飞来飞去的眼球。让这些小家伙中的一个陪陪你。
 				Rest: 我砍了一天的好东西，现在正在休息呢。明天再来，也许我会给你点别的东西。
 			}
-			
+
 			Mutant: {
 				DefeatE: 恭喜。你真正地拥抱了永恒……至少，我认为你做到过？那么之后会发生什么？从这种无聊的境界飞升？与一只超凡的猫形生物战斗？毁灭世界？所有力量现在都掌握在你的手里。
 				Defeat: 我想，打得不错。我仍然想要伸展我的翅膀……我们下次认真战斗吧？
@@ -1636,35 +2473,255 @@ Mods: {
 				Night: 我会跟随并提供帮助，但我现在更愿意坐在那里。
 				PartyGirl: "{0}邀请了我，但我不明白为什么。"
 				NoPartyGirl: 我不知道大家对什么这么高兴，但只要没有人把我误认为是猪龙彩罐，我也很高兴。
-				Nurse: "每当我们独自一人时{0}都一直向我扔注射器！无论我叫她停下多少次！"
-				WitchDoctor: "请让{0}放弃“神秘”的技巧，我的意思是……哦！我明白了，你也制造了被污染的水之类的。"
-				Dryad: "为什么{0}的装扮让我的翅膀颤动？"
+				Nurse: 每当我们独自一人时{0}都一直向我扔注射器！无论我叫她停下多少次！
+				WitchDoctor: 请让{0}放弃“神秘”的技巧，我的意思是……哦！我明白了，你也制造了被污染的水之类的。
+				Dryad: 为什么{0}的装扮让我的翅膀颤动？
 				Stylist: "{0}曾经给了我一顶假发……我戴长发看起来很丑。"
 				Truffle: 那个变异蘑菇似乎是我喜欢的类型。
 				TaxCollector: "{0}一直向我要钱，但他不接受我交召唤物！"
-				Guide: "为什么当我靠近{0}时他总是害怕？"
-				Cyborg: "如果我们中有人会演奏乐器，我会叫上{0}，{1}和{2}来组建一支乐队。"
-				PartyGirl2: "兄弟，{0}的五彩纸屑总是粘在我的翅膀上。"
-				Demolitionist: "我很惊讶{0}还没有在地板上炸个洞，不过仔细想想这听起来很有趣。"
+				Guide: 为什么当我靠近{0}时他总是害怕？
+				Cyborg: 如果我们中有人会演奏乐器，我会叫上{0}，{1}和{2}来组建一支乐队。
+				PartyGirl2: 兄弟，{0}的五彩纸屑总是粘在我的翅膀上。
+				Demolitionist: 我很惊讶{0}还没有在地板上炸个洞，不过仔细想想这听起来很有趣。
 				DD2Bartender: "{0}一直建议我喝啤酒，但我喝醉了他也不会喜欢我。"
 				DyeTrader: "{0}想看看我穿蓝色衣服会是什么样子……我不知道什么感觉。"
 			}
 
 			Squirrel: {
 				BloodMoon: "[c/FF0000:你会受苦的。]"
-				1: "*吱吱*"
-				2: "*啾啾*"
-				3: "*嘎吱嘎吱*"
+				1: *吱吱*
+				2: *啾啾*
+				3: *嘎吱嘎吱*
 			}
+		}
+
+		Buffs: {
+			Omnistation: {
+				DisplayName: 万能增益站
+				Description: 拥有部分原版增益站的效果
+			}
+
+			Semistation: {
+				DisplayName: 多功能增益站
+				Description: 拥有部分原版增益站的效果
+			}
+
+			WoodDrop: {
+				DisplayName: 掉落木头
+				// Description: Mods.Fargowiltas.BuffDescription.WoodDrop
+			}
+		}
+
+		NPCs: {
+			Abominationn: {
+				DisplayName: 憎恶
+
+				TownNPCMood: {
+					// Princess_LovesNPC: I like {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// HateNPC: 我讨厌{NPCName}。
+					// DislikeNPC: 我不喜欢{NPCName}。
+					// LikeNPC: 我喜欢{NPCName}。
+					// LoveNPC: 我非常喜欢{NPCName}。
+					// HateBiome: 我讨厌{BiomeName}。
+					// DislikeBiome: 我不喜欢{BiomeName}。
+					// LikeBiome: 我喜欢{BiomeName}。
+					// LoveBiome: 我非常喜欢{BiomeName}。
+					// HateCrowded: 我讨厌这么拥挤。
+					// DislikeCrowded: 我不喜欢这么拥挤。
+					// LoveSpace: 我非常喜欢有这么大的空间。
+					// FarFromHome: 我离家太远了。
+					// NoHome: 我讨厌没有家。
+					// Content: 我很满足。
+				}
+			}
+
+			Deviantt: {
+				DisplayName: 戴薇安
+
+				TownNPCMood: {
+					// Princess_LovesNPC: I like {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// HateNPC: 我讨厌{NPCName}。
+					// DislikeNPC: 我不喜欢{NPCName}。
+					// LikeNPC: 我喜欢{NPCName}。
+					// LoveNPC: 我非常喜欢{NPCName}。
+					// HateBiome: 我讨厌{BiomeName}。
+					// DislikeBiome: 我不喜欢{BiomeName}。
+					// LikeBiome: 我喜欢{BiomeName}。
+					// LoveBiome: 我非常喜欢{BiomeName}。
+					// HateCrowded: 我讨厌这么拥挤。
+					// DislikeCrowded: 我不喜欢这么拥挤。
+					// LoveSpace: 我非常喜欢有这么大的空间。
+					// FarFromHome: 我离家太远了。
+					// NoHome: 我讨厌没有家。
+					// Content: 我很满足。
+				}
+			}
+
+			LumberJack: {
+				DisplayName: 伐木工
+
+				TownNPCMood: {
+					// Princess_LovesNPC: I like {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// HateNPC: 我讨厌{NPCName}。
+					// DislikeNPC: 我不喜欢{NPCName}。
+					// LikeNPC: 我喜欢{NPCName}。
+					// LoveNPC: 我非常喜欢{NPCName}。
+					// HateBiome: 我讨厌{BiomeName}。
+					// DislikeBiome: 我不喜欢{BiomeName}。
+					// LikeBiome: 我喜欢{BiomeName}。
+					// LoveBiome: 我非常喜欢{BiomeName}。
+					// HateCrowded: 我讨厌这么拥挤。
+					// DislikeCrowded: 我不喜欢这么拥挤。
+					// LoveSpace: 我非常喜欢有这么大的空间。
+					// FarFromHome: 我离家太远了。
+					// NoHome: 我讨厌没有家。
+					// Content: 我很满足。
+				}
+			}
+
+			Mutant: {
+				DisplayName: 突变体
+
+				TownNPCMood: {
+					// Princess_LovesNPC: I like {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// HateNPC: 我讨厌{NPCName}。
+					// DislikeNPC: 我不喜欢{NPCName}。
+					// LikeNPC: 我喜欢{NPCName}。
+					// LoveNPC: 我非常喜欢{NPCName}。
+					// HateBiome: 我讨厌{BiomeName}。
+					// DislikeBiome: 我不喜欢{BiomeName}。
+					// LikeBiome: 我喜欢{BiomeName}。
+					// LoveBiome: 我非常喜欢{BiomeName}。
+					// HateCrowded: 我讨厌这么拥挤。
+					// DislikeCrowded: 我不喜欢这么拥挤。
+					// LoveSpace: 我非常喜欢有这么大的空间。
+					// FarFromHome: 我离家太远了。
+					// NoHome: 我讨厌没有家。
+					// Content: 我很满足。
+				}
+			}
+
+			Squirrel: {
+				DisplayName: 高顶礼帽松鼠
+
+				TownNPCMood: {
+					// Princess_LovesNPC: I like {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// HateNPC: 我讨厌{NPCName}。
+					// DislikeNPC: 我不喜欢{NPCName}。
+					// LikeNPC: 我喜欢{NPCName}。
+					// LoveNPC: 我非常喜欢{NPCName}。
+					// HateBiome: 我讨厌{BiomeName}。
+					// DislikeBiome: 我不喜欢{BiomeName}。
+					// LikeBiome: 我喜欢{BiomeName}。
+					// LoveBiome: 我非常喜欢{BiomeName}。
+					// HateCrowded: 我讨厌这么拥挤。
+					// DislikeCrowded: 我不喜欢这么拥挤。
+					// LoveSpace: 我非常喜欢有这么大的空间。
+					// FarFromHome: 我离家太远了。
+					// NoHome: 我讨厌没有家。
+					// Content: 我很满足。
+				}
+			}
+
+			SuperDummy.DisplayName: 超级假人
+		}
+
+		Projectiles: {
+			CorruptNukeProj.DisplayName: 腐化领域
+			CorruptNukeSupremeProj.DisplayName: 腐化维度
+			CrimsonNukeProj.DisplayName: 猩红领域
+			CrimsonNukeSupremeProj.DisplayName: 猩红维度
+			DeathScythe.DisplayName: 憎恶之镰
+			Explosion.DisplayName: 爆裂物破片
+			AltarExterminatorProj.DisplayName: 祭坛终结者
+			// AutoHouseProj.DisplayName: Auto House Proj
+			CityBuster.DisplayName: 城市克星
+			DoubleObsInstaBridgeProj.DisplayName: 双重黑曜石速建平台
+			GraveBuster.DisplayName: 墓碑克星
+			HalfInstaProj.DisplayName: 半程地狱直通车
+			InstabridgeProj.DisplayName: 速建平台
+			// InstaHouseVisual.DisplayName: Insta House Visual
+			InstaProj.DisplayName: 速建者
+			InstatrackProj.DisplayName: 速建轨道
+			LihzahrdInstactuationBombProj.DisplayName: 丛林蜥蜴炸弹
+			MiniInstabridgeProj.DisplayName: 迷你速建平台
+			ObsInstabridgeProj.DisplayName: 黑曜石速建平台
+			OmniBridgifierProj.DisplayName: 万能平台转化器
+			SemiBridgifierProj.DisplayName: 多功能平台转化器
+			ShurikenProj.DisplayName: 手里剑
+			EyeProjectile.DisplayName: 游荡眼球
+			FakeHeart2Deviantt.DisplayName: 假心
+			FakeHeartDeviantt.DisplayName: 假心
+			FakeHeartMarkDeviantt.DisplayName: 假心
+			HallowNukeProj.DisplayName: 神圣领域
+			HallowNukeSupremeProj.DisplayName: 神圣维度
+			LumberJaxe.DisplayName: 伐木斧
+			MechEyeProjectile.DisplayName: 机械眼球
+			MushroomNukeProj.DisplayName: 发光蘑菇领域
+			MushroomNukeSupremeProj.DisplayName: 发光蘑菇维度
+			PhantasmalEyeProjectile.DisplayName: 幻影之眼
+			PurityNukeProj.DisplayName: 纯净领域
+			PurityNukeSupremeProj.DisplayName: 纯净维度
+			SpawnProj.DisplayName: 生成
+		}
+
+		Conditions: {
+			// Downed: Mods.Fargowiltas.Conditions.Downed
+			// SkeleGunDown: Mods.Fargowiltas.Conditions.SkeleGunDown
+			// PaladinDown: Mods.Fargowiltas.Conditions.PaladinDown
+			// LeeDown: Mods.Fargowiltas.Conditions.LeeDown
+			// MothronDown: Mods.Fargowiltas.Conditions.MothronDown
+			// NailheadDown: Mods.Fargowiltas.Conditions.NailheadDown
+			// PirateDown: Mods.Fargowiltas.Conditions.PirateDown
+			// SummonerDown: Mods.Fargowiltas.Conditions.SummonerDown
+			// BloodNautDown: Mods.Fargowiltas.Conditions.BloodNautDown
+			// BloodGoblinDown: Mods.Fargowiltas.Conditions.BloodGoblinDown
+			// BloodEelDown: Mods.Fargowiltas.Conditions.BloodEelDown
+			// BloodFishDown: Mods.Fargowiltas.Conditions.BloodFishDown
+			// DevilDown: Mods.Fargowiltas.Conditions.DevilDown
+			// SandDown: Mods.Fargowiltas.Conditions.SandDown
+			// IceGolemDown: Mods.Fargowiltas.Conditions.IceGolemDown
+			// MimicJungleDown: Mods.Fargowiltas.Conditions.MimicJungleDown
+			// MimicCrimsonDown: Mods.Fargowiltas.Conditions.MimicCrimsonDown
+			// MimicCorruptDown: Mods.Fargowiltas.Conditions.MimicCorruptDown
+			// MimicHallowDown: Mods.Fargowiltas.Conditions.MimicHallowDown
+			// MimicDown: Mods.Fargowiltas.Conditions.MimicDown
+			// RuneDown: Mods.Fargowiltas.Conditions.RuneDown
+			// WyvernDown: Mods.Fargowiltas.Conditions.WyvernDown
+			// RainbowSlimeDown: Mods.Fargowiltas.Conditions.RainbowSlimeDown
+			// MothDown: Mods.Fargowiltas.Conditions.MothDown
+			// NymphDown: Mods.Fargowiltas.Conditions.NymphDown
+			// ClownDown: Mods.Fargowiltas.Conditions.ClownDown
+			// MedusaDown: Mods.Fargowiltas.Conditions.MedusaDown
+			// DungeonSlimeDown: Mods.Fargowiltas.Conditions.DungeonSlimeDown
+			// GoldSlimeDown: Mods.Fargowiltas.Conditions.GoldSlimeDown
+			// GnomeDown: Mods.Fargowiltas.Conditions.GnomeDown
+			// TimDown: Mods.Fargowiltas.Conditions.TimDown
+			// MinerDown: Mods.Fargowiltas.Conditions.MinerDown
+			// DoctorDown: Mods.Fargowiltas.Conditions.DoctorDown
+			// ScoutDown: Mods.Fargowiltas.Conditions.ScoutDown
+			// PinkyDown: Mods.Fargowiltas.Conditions.PinkyDown
+			// WormDown: Mods.Fargowiltas.Conditions.WormDown
+			// PillarsDown: Mods.Fargowiltas.Conditions.PillarsDown
+			// BetsyDown: Mods.Fargowiltas.Conditions.BetsyDown
+			// OgreDown: Mods.Fargowiltas.Conditions.OgreDown
+			// MageDown: Mods.Fargowiltas.Conditions.MageDown
+			// DutchmanDown: Mods.Fargowiltas.Conditions.DutchmanDown
+			// BossDown: Mods.Fargowiltas.Conditions.BossDown
 		}
 	}
 }
 
 # this doesnt work rn
 TownNPCMood_Princess: {
-	LoveNPC_Fargowiltas/Abominationn: "{NPCName} tells great stories about his battles!"
-	LoveNPC_Fargowiltas/Deviantt: "{NPCName} is so fun, we could talk for hours!"
-	LoveNPC_Fargowiltas/Mutant: "{NPCName} has some amazing items, they're great for meeting new friends!"
-	LoveNPC_Fargowiltas/Squirrel: "{NPCName} is really adorable!"
-	LoveNPC_Fargowiltas/LumberJack: "{NPCName} is so strong, I want to try chopping wood some time!"
+	// LoveNPC_Fargowiltas/Abominationn: "{NPCName} tells great stories about his battles!"
+	// LoveNPC_Fargowiltas/Deviantt: "{NPCName} is so fun, we could talk for hours!"
+	// LoveNPC_Fargowiltas/Mutant: "{NPCName} has some amazing items, they're great for meeting new friends!"
+	// LoveNPC_Fargowiltas/Squirrel: "{NPCName} is really adorable!"
+	// LoveNPC_Fargowiltas/LumberJack: "{NPCName} is so strong, I want to try chopping wood some time!"
 }

@@ -124,7 +124,7 @@ namespace Fargowiltas.Tiles
 
                     if (replaceTorch)
                     {
-                        int correctTorch = Main.LocalPlayer.BiomeTorchPlaceStyle(0);
+                        /*int correctTorch = Main.LocalPlayer.BiomeTorchPlaceStyle(0);
                         if (correctTorch == (int)TorchStyle.Demon)
                             correctTorch = (int)TorchStyle.Bone; //because bone gives bonus in hell but demon doesnt????
                         else if (Main.LocalPlayer.ZoneBeach)
@@ -138,7 +138,7 @@ namespace Fargowiltas.Tiles
                             WorldGen.PlaceTile(i, j, TileID.Torches, false, false, Main.LocalPlayer.whoAmI, correctTorch);
                             if (Main.netMode == NetmodeID.MultiplayerClient)
                                 NetMessage.SendData(MessageID.TileManipulation, -1, -1, null, 1, i, j, TileID.Torches);
-                        }
+                        }*/
                     }
                 }
             }
