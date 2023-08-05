@@ -16,7 +16,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Omni-Bridgifier");
+            // DisplayName.SetDefault("Omni-Bridgifier");
         }
 
         public override void SetDefaults()

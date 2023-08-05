@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Diluted Rainbow Matter");
-            Tooltip.SetDefault("Summons Rainbow Slime");
+            // DisplayName.SetDefault("Diluted Rainbow Matter");
+            // Tooltip.SetDefault("Summons Rainbow Slime");
         }
     }
 }

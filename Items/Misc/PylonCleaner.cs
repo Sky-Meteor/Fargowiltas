@@ -14,8 +14,8 @@ namespace Fargowiltas.Items.Misc
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Pylon Cleaner");
-			Tooltip.SetDefault("Purifies the area around every pylon\nWill use Blue Solution on Hallow Pylon and Green Solution on others");
+			// DisplayName.SetDefault("Pylon Cleaner");
+			// Tooltip.SetDefault("Purifies the area around every pylon\nWill use Blue Solution on Hallow Pylon and Green Solution on others");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
 		}
 

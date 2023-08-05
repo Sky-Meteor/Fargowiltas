@@ -13,9 +13,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Eggplant");
-            Tooltip.SetDefault("Summons Doctor Bones" +
-                               "\nOnly usable at night or underground");
+            // DisplayName.SetDefault("Eggplant");
+            /* Tooltip.SetDefault("Summons Doctor Bones" +
+                               "\nOnly usable at night or underground"); */
         }
 
         public override bool CanUseItem(Player player)

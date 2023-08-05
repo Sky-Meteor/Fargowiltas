@@ -20,8 +20,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Golden Slime Crown");
-            Tooltip.SetDefault("Summons Golden Slime");
+            // DisplayName.SetDefault("Golden Slime Crown");
+            // Tooltip.SetDefault("Summons Golden Slime");
         }
 
         public override void AddRecipes()

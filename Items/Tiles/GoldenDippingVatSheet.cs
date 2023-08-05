@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -20,8 +21,8 @@ namespace Fargowiltas.Items.Tiles
             //TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Golden Dipping Vat");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Golden Dipping Vat");
             AddMapEntry(new Color(255, 215, 0), name);
 
             AnimationFrameHeight = 54;

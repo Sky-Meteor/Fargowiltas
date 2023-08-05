@@ -12,7 +12,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Altar Exterminator");
+            // DisplayName.SetDefault("Altar Exterminator");
         }
 
         public override void SetDefaults()

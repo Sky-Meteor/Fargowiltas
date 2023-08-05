@@ -13,7 +13,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Grave Buster");
+            // DisplayName.SetDefault("Grave Buster");
         }
 
         public override void SetDefaults()

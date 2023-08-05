@@ -16,7 +16,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Semi-Bridgifier");
+            // DisplayName.SetDefault("Semi-Bridgifier");
         }
     }
 }

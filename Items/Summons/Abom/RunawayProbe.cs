@@ -9,8 +9,8 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Runaway Probe");
-            Tooltip.SetDefault("Starts the Martian invasion");
+            // DisplayName.SetDefault("Runaway Probe");
+            // Tooltip.SetDefault("Starts the Martian invasion");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

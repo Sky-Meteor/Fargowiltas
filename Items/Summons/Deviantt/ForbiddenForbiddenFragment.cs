@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Forbidden Forbidden Fragment");
-            Tooltip.SetDefault("Summons Sand Elemental");
+            // DisplayName.SetDefault("Forbidden Forbidden Fragment");
+            // Tooltip.SetDefault("Summons Sand Elemental");
         }
     }
 }

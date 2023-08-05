@@ -9,7 +9,7 @@ namespace Fargowiltas.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("LumberJaxe");
+            // DisplayName.SetDefault("LumberJaxe");
         }
 
         public override void SetDefaults()
@@ -29,7 +29,7 @@ namespace Fargowiltas.Projectiles
             Projectile.rotation += 0.3f;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Projectile.Kill();
         }

@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Abom
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Festive Ornament");
-            Tooltip.SetDefault("Summons Everscream" +
-                               "\nOnly usable at night");
+            // DisplayName.SetDefault("Festive Ornament");
+            /* Tooltip.SetDefault("Summons Everscream" +
+                               "\nOnly usable at night"); */
         }
 
         public override bool CanUseItem(Player player) => !Main.dayTime;

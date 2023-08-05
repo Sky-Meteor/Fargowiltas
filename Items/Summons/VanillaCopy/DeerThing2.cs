@@ -17,8 +17,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Thing Deer");
-            Tooltip.SetDefault("Summons Deerclops in any biome");
+            // DisplayName.SetDefault("Thing Deer");
+            // Tooltip.SetDefault("Summons Deerclops in any biome");
         }
 
         public override void AddRecipes()

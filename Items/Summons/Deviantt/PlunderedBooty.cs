@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Plundered Booty");
-            Tooltip.SetDefault("Summons Flying Dutchman");
+            // DisplayName.SetDefault("Plundered Booty");
+            // Tooltip.SetDefault("Summons Flying Dutchman");
         }
     }
 }

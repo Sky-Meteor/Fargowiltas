@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.VanillaCopy
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Lihzahrd Battery Pack");
-            Tooltip.SetDefault("Summons the Golem without an altar");
+            // DisplayName.SetDefault("Lihzahrd Battery Pack");
+            // Tooltip.SetDefault("Summons the Golem without an altar");
         }
 
         public override bool CanUseItem(Player player)

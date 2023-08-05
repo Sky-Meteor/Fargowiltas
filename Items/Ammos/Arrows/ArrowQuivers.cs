@@ -14,7 +14,7 @@ namespace Fargowiltas.Items.Ammos.Arrows
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Bounces back after hitting a wall");
+            // Tooltip.SetDefault("Bounces back after hitting a wall");
         }
     }
 
@@ -45,7 +45,7 @@ namespace Fargowiltas.Items.Ammos.Arrows
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Summons falling stars on impact");
+            // Tooltip.SetDefault("Summons falling stars on impact");
         }
     }
 
@@ -56,7 +56,7 @@ namespace Fargowiltas.Items.Ammos.Arrows
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Decreases target's defense");
+            // Tooltip.SetDefault("Decreases target's defense");
         }
     }
 
@@ -67,7 +67,7 @@ namespace Fargowiltas.Items.Ammos.Arrows
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless Jester's Quiver");
+            // DisplayName.SetDefault("Endless Jester's Quiver");
         }
     }
 
@@ -78,7 +78,7 @@ namespace Fargowiltas.Items.Ammos.Arrows
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("'Shooting them down at the speed of sound!'");
+            // Tooltip.SetDefault("'Shooting them down at the speed of sound!'");
         }
     }
 

@@ -4,6 +4,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Default;
 using Terraria.ObjectData;
@@ -54,20 +55,24 @@ namespace Fargowiltas.Items.Tiles
 			// Adds functionality for proximity of pylons; if this is true, then being near this tile will count as being near a pylon for the teleportation process.
 			AddToArray(ref TileID.Sets.CountsAsPylon);
 
-			ModTranslation pylonName = CreateMapEntryName(); //Name is in the localization file
+			LocalizedText pylonName = CreateMapEntryName(); //Name is in the localization file
 			AddMapEntry(Color.White, pylonName);
 		}
 
-		public override int? IsPylonForSale(int npcType, Player player, bool isNPCHappyEnough)
-		{
-			return isNPCHappyEnough && (npcType == ModContent.NPCType<Mutant>() || npcType == ModContent.NPCType<Abominationn>() || npcType == ModContent.NPCType<Deviantt>())
+		
+		
+		//public override NPCShop.Entry GetNPCShopEntry()/* tModPorter See ExamplePylonTile for an example. To register to specific NPC shops, use the new shop system directly in ModNPC.AddShop, GlobalNPC.ModifyShop or ModSystem.PostAddRecipes */
+		/*{
+			
+			return Condition.HappyEnough && (npcType == ModContent.NPCType<Mutant>() || npcType == ModContent.NPCType<Abominationn>() || npcType == ModContent.NPCType<Deviantt>())
 				&& NPC.AnyNPCs(ModContent.NPCType<Mutant>())
 				&& NPC.AnyNPCs(ModContent.NPCType<Abominationn>())
 				&& NPC.AnyNPCs(ModContent.NPCType<Deviantt>())
 				? ModContent.ItemType<SiblingPylon>()
 				: null;
+			
 		}
-
+		*/
 		public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
 
 		public override bool RightClick(int i, int j)
@@ -132,7 +137,7 @@ namespace Fargowiltas.Items.Tiles
 		public override void DrawMapIcon(ref MapOverlayDrawContext context, ref string mouseOverText, TeleportPylonInfo pylonInfo, bool isNearPylon, Color drawColor, float deselectedScale, float selectedScale)
 		{
 			bool mouseOver = DefaultDrawMapIcon(ref context, mapIcon, pylonInfo.PositionInTiles.ToVector2() + new Vector2(1.5f, 2f), drawColor, deselectedScale, selectedScale);
-			DefaultMapClickHandle(mouseOver, pylonInfo, "Mods.Fargowiltas.ItemName.SiblingPylon", ref mouseOverText);
+			DefaultMapClickHandle(mouseOver, pylonInfo, "Mods.Fargowiltas.Items.SiblingPylon.DisplayName", ref mouseOverText);
 		}
 	}
 }

@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Corrupt Chest");
-            Tooltip.SetDefault("Summons Corrupt Mimic");
+            // DisplayName.SetDefault("Corrupt Chest");
+            // Tooltip.SetDefault("Summons Corrupt Mimic");
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Half Instavator");
+            // DisplayName.SetDefault("Half Instavator");
         }
 
         public override void SetDefaults()

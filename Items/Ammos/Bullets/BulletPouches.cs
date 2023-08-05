@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Chases after your enemy");
+            // Tooltip.SetDefault("Chases after your enemy");
         }
     }
 
@@ -20,7 +20,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Creates several crystal shards on impact");
+            // Tooltip.SetDefault("Creates several crystal shards on impact");
         }
     }
 
@@ -36,7 +36,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Explodes on impact");
+            // Tooltip.SetDefault("Explodes on impact");
         }
     }
 
@@ -47,7 +47,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Enemies killed will drop more money");
+            // Tooltip.SetDefault("Enemies killed will drop more money");
         }
     }
 
@@ -58,7 +58,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Decreases target's defense");
+            // Tooltip.SetDefault("Decreases target's defense");
         }
 
     }
@@ -69,7 +69,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("'Line 'em up and knock 'em down...'");
+            // Tooltip.SetDefault("'Line 'em up and knock 'em down...'");
         }
     }
 
@@ -85,7 +85,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Causes confusion");
+            // Tooltip.SetDefault("Causes confusion");
         }
     }
 
@@ -96,7 +96,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Explodes into confetti on impact");
+            // Tooltip.SetDefault("Explodes into confetti on impact");
         }
     }
 
@@ -118,7 +118,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Endless High Velocity Pouch");
+            // DisplayName.SetDefault("Endless High Velocity Pouch");
         }
 
         public override void SetDefaults()
@@ -135,7 +135,7 @@ namespace Fargowiltas.Items.Ammos.Bullets
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            Tooltip.SetDefault("Inflicts target with venom");
+            // Tooltip.SetDefault("Inflicts target with venom");
         }
     }
 }

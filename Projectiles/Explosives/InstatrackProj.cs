@@ -11,7 +11,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Instatrack");
+            // DisplayName.SetDefault("Instatrack");
         }
 
         public override void SetDefaults()

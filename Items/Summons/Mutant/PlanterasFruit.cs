@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.Mutant
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Plantera's Fruit");
-            Tooltip.SetDefault("Summons Plantera");
+            // DisplayName.SetDefault("Plantera's Fruit");
+            // Tooltip.SetDefault("Summons Plantera");
         }
 
         public override void AddRecipes()
@@ -26,6 +26,7 @@ namespace Fargowiltas.Items.Summons.Mutant
                .AddIngredient(ItemID.Moonglow, 5)
                .AddIngredient(ItemID.Blinkroot, 5)
                .AddTile(TileID.DemonAltar)
+               .DisableDecraft()
                .Register();
         }
     }

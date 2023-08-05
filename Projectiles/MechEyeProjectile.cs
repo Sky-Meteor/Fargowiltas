@@ -15,7 +15,7 @@ namespace Fargowiltas.Projectiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("MechEyeProjectile");
+            // DisplayName.SetDefault("MechEyeProjectile");
         }
 
         public override void SetDefaults()

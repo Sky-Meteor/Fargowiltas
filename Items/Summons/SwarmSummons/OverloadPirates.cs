@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Pirate's Bounty");
-            Tooltip.SetDefault("Summons an Overloaded Pirate Invasion\nUse again to stop the event");
+            // DisplayName.SetDefault("Pirate's Bounty");
+            // Tooltip.SetDefault("Summons an Overloaded Pirate Invasion\nUse again to stop the event");
         }
 
         public override void SetDefaults()

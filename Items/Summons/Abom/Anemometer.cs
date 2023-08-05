@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Anemometer");
-            Tooltip.SetDefault("Starts a Windy Day");
+            // DisplayName.SetDefault("Anemometer");
+            // Tooltip.SetDefault("Starts a Windy Day");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

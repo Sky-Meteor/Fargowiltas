@@ -15,11 +15,11 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Skull Chain Necklace");
-            Tooltip.SetDefault(
+            // DisplayName.SetDefault("Skull Chain Necklace");
+            /* Tooltip.SetDefault(
 @"Summons several Skeletrons during the night
 Summons several Dungeon Guardians during the day
-Only Treasure Bags will be dropped");
+Only Treasure Bags will be dropped"); */
         }
 
         public override bool CanUseItem(Player player)

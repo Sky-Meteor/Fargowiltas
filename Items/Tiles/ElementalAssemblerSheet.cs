@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -18,8 +19,8 @@ namespace Fargowiltas.Items.Tiles
             Main.tileNoAttach[Type] = true;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
             TileObjectData.addTile(Type);
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Elemental Assembler");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Elemental Assembler");
             AddMapEntry(new Color(200, 200, 200), name);
             TileID.Sets.DisableSmartCursor[Type] = true;
             //counts as

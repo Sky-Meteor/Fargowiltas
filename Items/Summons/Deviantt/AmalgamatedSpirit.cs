@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Amalgamated Spirit");
-            Tooltip.SetDefault("Summons the skeleton mages" +
-                               "\nOnly usable at night or underground");
+            // DisplayName.SetDefault("Amalgamated Spirit");
+            /* Tooltip.SetDefault("Summons the skeleton mages" +
+                               "\nOnly usable at night or underground"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

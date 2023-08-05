@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Clown License");
-            Tooltip.SetDefault("Summons Clown" +
-                               "\nOnly usable at night or underground");
+            // DisplayName.SetDefault("Clown License");
+            /* Tooltip.SetDefault("Summons Clown" +
+                               "\nOnly usable at night or underground"); */
         }
 
         public override bool CanUseItem(Player player)

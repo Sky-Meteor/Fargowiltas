@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Jungle Chest");
-            Tooltip.SetDefault("Summons Jungle Mimic");
+            // DisplayName.SetDefault("Jungle Chest");
+            // Tooltip.SetDefault("Summons Jungle Mimic");
         }
 
         public override void AddRecipes()

@@ -13,9 +13,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Heart Chocolate");
-            Tooltip.SetDefault("Summons Nymph" +
-                               "\nOnly usable at night or underground");
+            // DisplayName.SetDefault("Heart Chocolate");
+            /* Tooltip.SetDefault("Summons Nymph" +
+                               "\nOnly usable at night or underground"); */
         }
 
         public override bool CanUseItem(Player player)

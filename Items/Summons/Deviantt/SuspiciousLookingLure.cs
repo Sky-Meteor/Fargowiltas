@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Suspicious Looking Lure");
-            Tooltip.SetDefault("Summons Wandering Eye Fish and Zombie Merman" +
-                               "\nOnly usable at night");
+            // DisplayName.SetDefault("Suspicious Looking Lure");
+            /* Tooltip.SetDefault("Summons Wandering Eye Fish and Zombie Merman" +
+                               "\nOnly usable at night"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

@@ -9,8 +9,8 @@ namespace Fargowiltas.Items.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Half Instavator");
-            Tooltip.SetDefault("Drops a bomb that creates half a hellevator instantly\nWill not dig below a certain depth\nDo not use if any important building is below");
+            // DisplayName.SetDefault("Half Instavator");
+            // Tooltip.SetDefault("Drops a bomb that creates half a hellevator instantly\nWill not dig below a certain depth\nDo not use if any important building is below");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

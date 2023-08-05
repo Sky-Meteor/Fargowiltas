@@ -11,11 +11,11 @@ namespace Fargowiltas.Items.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Instatrack");
-            Tooltip.SetDefault("Creates a minecart track across the whole world" +
+            // DisplayName.SetDefault("Instatrack");
+            /* Tooltip.SetDefault("Creates a minecart track across the whole world" +
                                "\nAlso clears the area right above the tracks" +
                                "\nThe track appears at your cursor" +
-                               "\nDo not use if any important building is nearby");
+                               "\nDo not use if any important building is nearby"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
         }
 

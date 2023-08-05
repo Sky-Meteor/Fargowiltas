@@ -11,7 +11,7 @@ namespace Fargowiltas.Items.Tiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Demon Altar");
+            // DisplayName.SetDefault("Demon Altar");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -44,7 +44,7 @@ namespace Fargowiltas.Items.Tiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Crimson Altar");
+            // DisplayName.SetDefault("Crimson Altar");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

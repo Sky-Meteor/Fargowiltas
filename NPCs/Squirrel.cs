@@ -1,4 +1,6 @@
 using Fargowiltas.Items.Misc;
+using Fargowiltas.Items.Summons.Abom;
+using Fargowiltas.Items.Summons.Deviantt;
 using Fargowiltas.Items.Tiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -46,7 +48,7 @@ namespace Fargowiltas.NPCs
 
         public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Squirrel");
+			// DisplayName.SetDefault("Squirrel");
 			Main.npcFrameCount[NPC.type] = 6;
 			NPCID.Sets.ExtraFramesCount[NPC.type] = 9;
 			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
@@ -106,7 +108,7 @@ namespace Fargowiltas.NPCs
             NPC.dontTakeDamage = Main.bloodMoon;
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs, int money)
+        public override bool CanTownNPCSpawn(int numTownNPCs)/* tModPorter Suggestion: Copy the implementation of NPC.SpawnAllowed_Merchant in vanilla if you to count money, and be sure to set a flag when unlocked, so you don't count every tick. */
         {
             if (FargoGlobalNPC.AnyBossAlive())
             {
@@ -178,12 +180,14 @@ namespace Fargowiltas.NPCs
             }
         }
 
-		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+        public const string ShopName = "Shop";
+
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
 			if (firstButton)
 			{
-				shop = true;
-			}
+                shopName = ShopName;
+            }
             else
             {
                 /*if (Main.hardMode) //ask player why they don't have biocluster
@@ -436,14 +440,14 @@ namespace Fargowiltas.NPCs
 
         const int maxShop = 40;
 
-        public override void SetupShop(Chest shop, ref int nextSlot)
+        public override void AddShops()
         {
-            nextSlot = 0; //ignore pylon and anything else inserted into shop
+            var npcShop = new NPCShop(Type, ShopName);
+            int nextSlot = 0; //ignore pylon and anything else inserted into shop ( how does this work in new system?
 
             if (shopNum == 0 && TryFind("FargowiltasSouls/TopHatSquirrelCaught", out ModItem modItem)) //only on page 1
             {
-                shop.item[nextSlot].SetDefaults(modItem.Type);
-                shop.item[nextSlot].shopCustomPrice = Item.buyPrice(0, 10);
+                npcShop.Add(new Item(modItem.Type) { shopCustomPrice = Item.buyPrice(copper: 100000) });
                 nextSlot++;
             }
 
@@ -461,10 +465,13 @@ namespace Fargowiltas.NPCs
                 if (nextSlot >= maxShop) //only fill shop up to capacity
                     break;
 
-                shop.item[nextSlot].SetDefaults(type);
-                if (shop.item[nextSlot].makeNPC != 0)
+                Item item = new Item(type);
+                int price;
+                bool medals = false;
+
+                if (item.makeNPC != 0)
                 {
-                    shop.item[nextSlot].shopCustomPrice = Item.buyPrice(gold: 10);
+                    price = Item.buyPrice(gold: 10);
                     int[] pricier = new int[]
                     {
                         ItemID.TruffleWorm,
@@ -483,22 +490,40 @@ namespace Fargowiltas.NPCs
                         ItemID.GoldWaterStrider,
                         ItemID.GoldWorm
                     };
-                    if (pricier.Contains(shop.item[nextSlot].type))
-                        shop.item[nextSlot].shopCustomPrice *= 7;
-                    else if (shop.item[nextSlot].ModItem is Items.CaughtNPCs.CaughtNPCItem)
-                        shop.item[nextSlot].shopCustomPrice *= 3;
+                    if (pricier.Contains(item.type))
+                        price *= 7;
+                    else if (item.ModItem is Items.CaughtNPCs.CaughtNPCItem)
+                        price *= 3;
                 }
                 else if (type == ItemID.RodofDiscord)
                 {
-                    shop.item[nextSlot].shopCustomPrice = 250;
-                    shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
+                    price = 250;
+                    medals = true;
+                    //shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
                 }
                 else
                 {
-                    shop.item[nextSlot].shopCustomPrice = shop.item[nextSlot].value * 5;
+                    price = item.value * 5;
                 }
+
+                if (medals)
+                {
+                    npcShop.Add(new Item(type) { shopCustomPrice = Item.buyPrice(copper: price), shopSpecialCurrency = CustomCurrencyID.DefenderMedals });
+                }
+                else
+                {
+                    npcShop.Add(new Item(type) { shopCustomPrice = Item.buyPrice(copper: price)});
+                }
+
                 nextSlot++;
             }
+
+            npcShop.Register();
+        }
+
+        public override void ModifyActiveShop(string shopName, Item[] items)
+        {
+            
         }
 
         public override bool CheckDead()

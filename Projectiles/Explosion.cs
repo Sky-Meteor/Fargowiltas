@@ -10,7 +10,7 @@ namespace Fargowiltas.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Explosion");
+            // DisplayName.SetDefault("Explosion");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
         }

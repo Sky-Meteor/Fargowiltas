@@ -13,9 +13,9 @@ namespace Fargowiltas.Items.Misc
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Battle Cry");
-            Tooltip.SetDefault("Left click to toggle 10x increased spawn rates" +
-                               "\nRight click to toggle 10x decreased spawn rates");
+            // DisplayName.SetDefault("Battle Cry");
+            /* Tooltip.SetDefault("Left click to toggle 10x increased spawn rates" +
+                               "\nRight click to toggle 10x decreased spawn rates"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

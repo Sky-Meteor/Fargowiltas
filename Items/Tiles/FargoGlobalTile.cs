@@ -124,7 +124,8 @@ namespace Fargowiltas.Tiles
 
                     if (replaceTorch)
                     {
-                        int correctTorch = Main.LocalPlayer.BiomeTorchPlaceStyle(0);
+                        int style = 0;
+                        int correctTorch = Main.LocalPlayer.BiomeTorchPlaceStyle(ref type, ref style);
                         if (correctTorch == (int)TorchStyle.Demon)
                             correctTorch = (int)TorchStyle.Bone; //because bone gives bonus in hell but demon doesnt????
                         else if (Main.LocalPlayer.ZoneBeach)

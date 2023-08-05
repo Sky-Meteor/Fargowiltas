@@ -12,7 +12,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lihzahrd Instactuation Bomb");
+            // DisplayName.SetDefault("Lihzahrd Instactuation Bomb");
         }
 
         public override void SetDefaults()

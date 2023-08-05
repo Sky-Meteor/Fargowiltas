@@ -21,9 +21,9 @@ namespace Fargowiltas.Items.Summons.Mutant
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Suspicious Skull");
-            Tooltip.SetDefault("Summons Skeletron without killing the Clothier" +
-                               "\nSummons the Dungeon Guardian during the day");
+            // DisplayName.SetDefault("Suspicious Skull");
+            /* Tooltip.SetDefault("Summons Skeletron without killing the Clothier" +
+                               "\nSummons the Dungeon Guardian during the day"); */
         }
 
         public override bool CanUseItem(Player player) => true;

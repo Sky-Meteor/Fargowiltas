@@ -16,6 +16,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Fargowiltas.Items.Explosives;
+using Fargowiltas.Items.Summons.Abom;
 
 namespace Fargowiltas.NPCs
 {
@@ -88,7 +89,7 @@ namespace Fargowiltas.NPCs
         //            }
         //        }
 
-        public override bool? CanHitNPC(NPC npc, NPC target)
+        public override bool CanHitNPC(NPC npc, NPC target)/* tModPorter Suggestion: Return true instead of null */
         {
             if (target.dontTakeDamage && target.type == NPCType<Squirrel>())
                 return false;
@@ -321,99 +322,96 @@ namespace Fargowiltas.NPCs
                 npc.dontTakeDamage = false; //always vulnerable in swarm
         }
 
-        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        public override void ModifyShop(NPCShop shop)
         {
+
             Player player = Main.LocalPlayer;
 
             if (GetInstance<FargoConfig>().NPCSales)
             {
-                void AddItem(ref int next, int itemID, int customPrice = -1)
+                void AddItem(int itemID, int customPrice = -1)
                 {
-                    if (next >= 40)
-                        return;
-
-                    shop.item[next].SetDefaults(itemID);
                     if (customPrice != -1)
-                        shop.item[next].shopCustomPrice = customPrice;
-
-                    next++;
+                        shop.Add(new Item(itemID) { shopCustomPrice = customPrice });
+                    else
+                        shop.Add(itemID);
                 }
-
-                switch (type)
+                
+                switch (shop.NpcType)
                 {
                     case NPCID.PartyGirl:
                         if (BirthdayParty.PartyIsUp)
                         {
-                            AddItem(ref nextSlot, ItemID.SliceOfCake);
+                            AddItem(ItemID.SliceOfCake);
                         }
                         break;
 
                     case NPCID.Clothier:
-                        AddItem(ref nextSlot, ItemID.PharaohsMask, Item.buyPrice(gold: 1));
-                        AddItem(ref nextSlot, ItemID.PharaohsRobe, Item.buyPrice(gold: 1));
+                        AddItem(ItemID.PharaohsMask, Item.buyPrice(gold: 1));
+                        AddItem(ItemID.PharaohsRobe, Item.buyPrice(gold: 1));
 
                         if (player.anglerQuestsFinished >= 10)
                         {
-                            AddItem(ref nextSlot, ItemID.AnglerHat);
+                            AddItem(ItemID.AnglerHat);
 
                             if (player.anglerQuestsFinished >= 15)
                             {
-                                AddItem(ref nextSlot, ItemID.AnglerVest);
+                                AddItem(ItemID.AnglerVest);
 
                                 if (player.anglerQuestsFinished >= 20)
                                 {
-                                    AddItem(ref nextSlot, ItemID.AnglerPants);
+                                    AddItem(ItemID.AnglerPants);
                                 }
                             }
                         }
 
-                        AddItem(ref nextSlot, ItemID.BlueBrick, Item.buyPrice(silver: 1));
-                        AddItem(ref nextSlot, ItemType<UnsafeBlueBrickWall>(), Item.buyPrice(copper: 25));
-                        AddItem(ref nextSlot, ItemType<UnsafeBlueSlabWall>(), Item.buyPrice(copper: 25));
-                        AddItem(ref nextSlot, ItemType<UnsafeBlueTileWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemID.BlueBrick, Item.buyPrice(silver: 1));
+                        AddItem(ItemType<UnsafeBlueBrickWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemType<UnsafeBlueSlabWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemType<UnsafeBlueTileWall>(), Item.buyPrice(copper: 25));
 
-                        AddItem(ref nextSlot, ItemID.GreenBrick, Item.buyPrice(silver: 1));
-                        AddItem(ref nextSlot, ItemType<UnsafeGreenBrickWall>(), Item.buyPrice(copper: 25));
-                        AddItem(ref nextSlot, ItemType<UnsafeGreenSlabWall>(), Item.buyPrice(copper: 25));
-                        AddItem(ref nextSlot, ItemType<UnsafeGreenTileWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemID.GreenBrick, Item.buyPrice(silver: 1));
+                        AddItem(ItemType<UnsafeGreenBrickWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemType<UnsafeGreenSlabWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemType<UnsafeGreenTileWall>(), Item.buyPrice(copper: 25));
 
-                        AddItem(ref nextSlot, ItemID.PinkBrick, Item.buyPrice(silver: 1));
-                        AddItem(ref nextSlot, ItemType<UnsafePinkBrickWall>(), Item.buyPrice(copper: 25));
-                        AddItem(ref nextSlot, ItemType<UnsafePinkSlabWall>(), Item.buyPrice(copper: 25));
-                        AddItem(ref nextSlot, ItemType<UnsafePinkTileWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemID.PinkBrick, Item.buyPrice(silver: 1));
+                        AddItem(ItemType<UnsafePinkBrickWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemType<UnsafePinkSlabWall>(), Item.buyPrice(copper: 25));
+                        AddItem(ItemType<UnsafePinkTileWall>(), Item.buyPrice(copper: 25));
 
                         if (Main.LocalPlayer.inventory.Any(i => !i.IsAir && i.useAmmo == ItemID.Bone))
                         {
-                            AddItem(ref nextSlot, ItemType<Items.Ammos.BrittleBone>());
+                            AddItem(ItemType<Items.Ammos.BrittleBone>());
                         }
                         break;
 
                     case NPCID.Merchant:
                         if (player.anglerQuestsFinished >= 5)
                         {
-                            AddItem(ref nextSlot, ItemID.FuzzyCarrot);
+                            AddItem(ItemID.FuzzyCarrot);
 
                             if (player.anglerQuestsFinished >= 10)
                             {
-                                AddItem(ref nextSlot, ItemID.AnglerEarring);
-                                AddItem(ref nextSlot, ItemID.HighTestFishingLine);
-                                AddItem(ref nextSlot, ItemID.TackleBox);
-                                AddItem(ref nextSlot, ItemID.GoldenBugNet);
-                                AddItem(ref nextSlot, ItemID.FishHook);
+                                AddItem(ItemID.AnglerEarring);
+                                AddItem(ItemID.HighTestFishingLine);
+                                AddItem(ItemID.TackleBox);
+                                AddItem(ItemID.GoldenBugNet);
+                                AddItem(ItemID.FishHook);
 
                                 if (Main.hardMode)
                                 {
-                                    AddItem(ref nextSlot, ItemID.FinWings);
-                                    AddItem(ref nextSlot, ItemID.SuperAbsorbantSponge);
-                                    AddItem(ref nextSlot, ItemID.BottomlessBucket);
+                                    AddItem(ItemID.FinWings);
+                                    AddItem(ItemID.SuperAbsorbantSponge);
+                                    AddItem(ItemID.BottomlessBucket);
 
                                     if (player.anglerQuestsFinished >= 25)
                                     {
-                                        AddItem(ref nextSlot, ItemID.HotlineFishingHook);
+                                        AddItem(ItemID.HotlineFishingHook);
 
                                         if (player.anglerQuestsFinished >= 30)
                                         {
-                                            AddItem(ref nextSlot, ItemID.GoldenFishingRod);
+                                            AddItem(ItemID.GoldenFishingRod);
                                         }
                                     }
                                 }
@@ -422,7 +420,7 @@ namespace Fargowiltas.NPCs
 
                         if (Main.LocalPlayer.inventory.Any(i => !i.IsAir && i.useAmmo == AmmoID.Dart))
                         {
-                            AddItem(ref nextSlot, ItemID.Seed, 3);
+                            AddItem(ItemID.Seed, 3);
                         }
                         break;
 
@@ -430,103 +428,100 @@ namespace Fargowiltas.NPCs
 
                         if (player.ZoneDungeon)
                         {
-                            nextSlot = 15;
 
-                            AddItem(ref nextSlot, ItemID.BloodMoonRising);
-                            AddItem(ref nextSlot, ItemID.BoneWarp);
-                            AddItem(ref nextSlot, ItemID.TheCreationoftheGuide);
-                            AddItem(ref nextSlot, ItemID.TheCursedMan);
-                            AddItem(ref nextSlot, ItemID.TheDestroyer);
-                            AddItem(ref nextSlot, ItemID.Dryadisque);
-                            AddItem(ref nextSlot, ItemID.TheEyeSeestheEnd);
-                            AddItem(ref nextSlot, ItemID.FacingtheCerebralMastermind);
-                            AddItem(ref nextSlot, ItemID.GloryoftheFire);
-                            AddItem(ref nextSlot, ItemID.GoblinsPlayingPoker);
-                            AddItem(ref nextSlot, ItemID.GreatWave);
-                            AddItem(ref nextSlot, ItemID.TheGuardiansGaze);
-                            AddItem(ref nextSlot, ItemID.TheHangedMan);
-                            AddItem(ref nextSlot, ItemID.Impact);
-                            AddItem(ref nextSlot, ItemID.ThePersistencyofEyes);
-                            AddItem(ref nextSlot, ItemID.PoweredbyBirds);
-                            AddItem(ref nextSlot, ItemID.TheScreamer);
-                            AddItem(ref nextSlot, ItemID.SkellingtonJSkellingsworth);
-                            AddItem(ref nextSlot, ItemID.SparkyPainting);
-                            AddItem(ref nextSlot, ItemID.SomethingEvilisWatchingYou);
-                            AddItem(ref nextSlot, ItemID.StarryNight);
-                            AddItem(ref nextSlot, ItemID.TrioSuperHeroes);
-                            AddItem(ref nextSlot, ItemID.TheTwinsHaveAwoken);
-                            AddItem(ref nextSlot, ItemID.UnicornCrossingtheHallows);
+                            AddItem(ItemID.BloodMoonRising);
+                            AddItem(ItemID.BoneWarp);
+                            AddItem(ItemID.TheCreationoftheGuide);
+                            AddItem(ItemID.TheCursedMan);
+                            AddItem(ItemID.TheDestroyer);
+                            AddItem(ItemID.Dryadisque);
+                            AddItem(ItemID.TheEyeSeestheEnd);
+                            AddItem(ItemID.FacingtheCerebralMastermind);
+                            AddItem(ItemID.GloryoftheFire);
+                            AddItem(ItemID.GoblinsPlayingPoker);
+                            AddItem(ItemID.GreatWave);
+                            AddItem(ItemID.TheGuardiansGaze);
+                            AddItem(ItemID.TheHangedMan);
+                            AddItem(ItemID.Impact);
+                            AddItem(ItemID.ThePersistencyofEyes);
+                            AddItem(ItemID.PoweredbyBirds);
+                            AddItem(ItemID.TheScreamer);
+                            AddItem(ItemID.SkellingtonJSkellingsworth);
+                            AddItem(ItemID.SparkyPainting);
+                            AddItem(ItemID.SomethingEvilisWatchingYou);
+                            AddItem(ItemID.StarryNight);
+                            AddItem(ItemID.TrioSuperHeroes);
+                            AddItem(ItemID.TheTwinsHaveAwoken);
+                            AddItem(ItemID.UnicornCrossingtheHallows);
                         }
                         else if (player.ZoneRockLayerHeight || player.ZoneDirtLayerHeight)
                         {
-                            nextSlot = 19;
 
-                            AddItem(ref nextSlot, ItemID.AmericanExplosive);
-                            AddItem(ref nextSlot, ItemID.CrownoDevoursHisLunch);
-                            AddItem(ref nextSlot, ItemID.Discover);
-                            AddItem(ref nextSlot, ItemID.FatherofSomeone);
-                            AddItem(ref nextSlot, ItemID.FindingGold);
-                            AddItem(ref nextSlot, ItemID.GloriousNight);
-                            AddItem(ref nextSlot, ItemID.GuidePicasso);
-                            AddItem(ref nextSlot, ItemID.Land);
-                            AddItem(ref nextSlot, ItemID.TheMerchant);
-                            AddItem(ref nextSlot, ItemID.NurseLisa);
-                            AddItem(ref nextSlot, ItemID.OldMiner);
-                            AddItem(ref nextSlot, ItemID.RareEnchantment);
-                            AddItem(ref nextSlot, ItemID.Sunflowers);
-                            AddItem(ref nextSlot, ItemID.TerrarianGothic);
-                            AddItem(ref nextSlot, ItemID.Waldo);
+                            AddItem(ItemID.AmericanExplosive);
+                            AddItem(ItemID.CrownoDevoursHisLunch);
+                            AddItem(ItemID.Discover);
+                            AddItem(ItemID.FatherofSomeone);
+                            AddItem(ItemID.FindingGold);
+                            AddItem(ItemID.GloriousNight);
+                            AddItem(ItemID.GuidePicasso);
+                            AddItem(ItemID.Land);
+                            AddItem(ItemID.TheMerchant);
+                            AddItem(ItemID.NurseLisa);
+                            AddItem(ItemID.OldMiner);
+                            AddItem(ItemID.RareEnchantment);
+                            AddItem(ItemID.Sunflowers);
+                            AddItem(ItemID.TerrarianGothic);
+                            AddItem(ItemID.Waldo);
                         }
                         else if (player.ZoneUnderworldHeight)
                         {
-                            nextSlot = 19;
 
-                            AddItem(ref nextSlot, ItemID.DarkSoulReaper);
-                            AddItem(ref nextSlot, ItemID.Darkness);
-                            AddItem(ref nextSlot, ItemID.DemonsEye);
-                            AddItem(ref nextSlot, ItemID.FlowingMagma);
-                            AddItem(ref nextSlot, ItemID.HandEarth);
-                            AddItem(ref nextSlot, ItemID.ImpFace);
-                            AddItem(ref nextSlot, ItemID.LakeofFire);
-                            AddItem(ref nextSlot, ItemID.LivingGore);
-                            AddItem(ref nextSlot, ItemID.OminousPresence);
-                            AddItem(ref nextSlot, ItemID.ShiningMoon);
-                            AddItem(ref nextSlot, ItemID.Skelehead);
-                            AddItem(ref nextSlot, ItemID.TrappedGhost);
+                            AddItem(ItemID.DarkSoulReaper);
+                            AddItem(ItemID.Darkness);
+                            AddItem(ItemID.DemonsEye);
+                            AddItem(ItemID.FlowingMagma);
+                            AddItem(ItemID.HandEarth);
+                            AddItem(ItemID.ImpFace);
+                            AddItem(ItemID.LakeofFire);
+                            AddItem(ItemID.LivingGore);
+                            AddItem(ItemID.OminousPresence);
+                            AddItem(ItemID.ShiningMoon);
+                            AddItem(ItemID.Skelehead);
+                            AddItem(ItemID.TrappedGhost);
                         }
                         //deserttt
 
                         break;
 
                     case NPCID.Demolitionist:
-                        AddItem(ref nextSlot, ItemType<BoomShuriken>(), Item.buyPrice(0, 0, 1, 25));
+                        AddItem(ItemType<BoomShuriken>(), Item.buyPrice(0, 0, 1, 25));
                         if (Main.hardMode)
                         {
-                            AddItem(ref nextSlot, ItemID.CopperOre);
-                            AddItem(ref nextSlot, ItemID.TinOre);
-                            AddItem(ref nextSlot, ItemID.IronOre);
-                            AddItem(ref nextSlot, ItemID.LeadOre);
-                            AddItem(ref nextSlot, ItemID.SilverOre);
-                            AddItem(ref nextSlot, ItemID.TungstenOre);
-                            AddItem(ref nextSlot, ItemID.GoldOre);
-                            AddItem(ref nextSlot, ItemID.PlatinumOre);
+                            AddItem(ItemID.CopperOre);
+                            AddItem(ItemID.TinOre);
+                            AddItem(ItemID.IronOre);
+                            AddItem(ItemID.LeadOre);
+                            AddItem(ItemID.SilverOre);
+                            AddItem(ItemID.TungstenOre);
+                            AddItem(ItemID.GoldOre);
+                            AddItem(ItemID.PlatinumOre);
                         }
                         if (NPC.downedPlantBoss)
                         {
-                            AddItem(ref nextSlot, ItemID.Meteorite);
-                            AddItem(ref nextSlot, ItemID.DemoniteOre);
-                            AddItem(ref nextSlot, ItemID.CrimtaneOre);
-                            AddItem(ref nextSlot, ItemID.Hellstone);
+                            AddItem(ItemID.Meteorite);
+                            AddItem(ItemID.DemoniteOre);
+                            AddItem(ItemID.CrimtaneOre);
+                            AddItem(ItemID.Hellstone);
                         }
                         if (NPC.downedMoonlord)
                         {
-                            AddItem(ref nextSlot, ItemID.CobaltOre);
-                            AddItem(ref nextSlot, ItemID.PalladiumOre);
-                            AddItem(ref nextSlot, ItemID.MythrilOre);
-                            AddItem(ref nextSlot, ItemID.OrichalcumOre);
-                            AddItem(ref nextSlot, ItemID.AdamantiteOre);
-                            AddItem(ref nextSlot, ItemID.TitaniumOre);
-                            AddItem(ref nextSlot, ItemID.ChlorophyteOre);
+                            AddItem(ItemID.CobaltOre);
+                            AddItem(ItemID.PalladiumOre);
+                            AddItem(ItemID.MythrilOre);
+                            AddItem(ItemID.OrichalcumOre);
+                            AddItem(ItemID.AdamantiteOre);
+                            AddItem(ItemID.TitaniumOre);
+                            AddItem(ItemID.ChlorophyteOre);
                         }
 
                         break;
@@ -535,9 +530,9 @@ namespace Fargowiltas.NPCs
                         if (NPC.downedBoss3)
                         {
                             bool alreadySellsTable = false;
-                            foreach(Item item in shop.item)
+                            foreach(NPCShop.Entry entry in shop.Entries)
                             {
-                                if (!item.IsAir && item.type == ItemID.BewitchingTable)
+                                if (!entry.Item.IsAir && entry.Item.type == ItemID.BewitchingTable)
                                 {
                                     alreadySellsTable = true;
                                     break;
@@ -545,88 +540,91 @@ namespace Fargowiltas.NPCs
                             }
 
                             if (!alreadySellsTable)
-                                AddItem(ref nextSlot, ItemID.BewitchingTable);
+                                AddItem(ItemID.BewitchingTable);
                         }
                         break;
 
                     case NPCID.Steampunker:
-                        AddItem(ref nextSlot, WorldGen.crimson ? ItemID.PurpleSolution : ItemID.RedSolution);
+                        AddItem(WorldGen.crimson ? ItemID.PurpleSolution : ItemID.RedSolution);
                         break;
 
                     case NPCID.DyeTrader:
-                        FargoPlayer modPlayer = player.GetModPlayer<FargoPlayer>();
-                        if (modPlayer.FirstDyeIngredients["RedHusk"])
+                        if (player.TryGetModPlayer(out FargoPlayer modPlayer))
                         {
-                            AddItem(ref nextSlot, ItemID.RedHusk);
+                            if (modPlayer.FirstDyeIngredients["RedHusk"])
+                            {
+                                AddItem(ItemID.RedHusk);
+                            }
+                            if (modPlayer.FirstDyeIngredients["OrangeBloodroot"])
+                            {
+                                AddItem(ItemID.OrangeBloodroot);
+                            }
+                            if (modPlayer.FirstDyeIngredients["YellowMarigold"])
+                            {
+                                AddItem(ItemID.YellowMarigold);
+                            }
+                            if (modPlayer.FirstDyeIngredients["LimeKelp"])
+                            {
+                                AddItem(ItemID.LimeKelp);
+                            }
+                            if (modPlayer.FirstDyeIngredients["GreenMushroom"])
+                            {
+                                AddItem(ItemID.GreenMushroom);
+                            }
+                            if (modPlayer.FirstDyeIngredients["TealMushroom"])
+                            {
+                                AddItem(ItemID.TealMushroom);
+                            }
+                            if (modPlayer.FirstDyeIngredients["CyanHusk"])
+                            {
+                                AddItem(ItemID.CyanHusk);
+                            }
+                            if (modPlayer.FirstDyeIngredients["SkyBlueFlower"])
+                            {
+                                AddItem(ItemID.SkyBlueFlower);
+                            }
+                            if (modPlayer.FirstDyeIngredients["BlueBerries"])
+                            {
+                                AddItem(ItemID.BlueBerries);
+                            }
+                            if (modPlayer.FirstDyeIngredients["PurpleMucos"])
+                            {
+                                AddItem(ItemID.PurpleMucos);
+                            }
+                            if (modPlayer.FirstDyeIngredients["VioletHusk"])
+                            {
+                                AddItem(ItemID.VioletHusk);
+                            }
+                            if (modPlayer.FirstDyeIngredients["PinkPricklyPear"])
+                            {
+                                AddItem(ItemID.PinkPricklyPear);
+                            }
+                            if (modPlayer.FirstDyeIngredients["BlackInk"])
+                            {
+                                AddItem(ItemID.BlackInk);
+                            }
                         }
-                        if (modPlayer.FirstDyeIngredients["OrangeBloodroot"])
-                        {
-                            AddItem(ref nextSlot, ItemID.OrangeBloodroot);
-                        }
-                        if (modPlayer.FirstDyeIngredients["YellowMarigold"])
-                        {
-                            AddItem(ref nextSlot, ItemID.YellowMarigold);
-                        }
-                        if (modPlayer.FirstDyeIngredients["LimeKelp"])
-                        {
-                            AddItem(ref nextSlot, ItemID.LimeKelp);
-                        }
-                        if (modPlayer.FirstDyeIngredients["GreenMushroom"])
-                        {
-                            AddItem(ref nextSlot, ItemID.GreenMushroom);
-                        }
-                        if (modPlayer.FirstDyeIngredients["TealMushroom"])
-                        {
-                            AddItem(ref nextSlot, ItemID.TealMushroom);
-                        }
-                        if (modPlayer.FirstDyeIngredients["CyanHusk"])
-                        {
-                            AddItem(ref nextSlot, ItemID.CyanHusk);
-                        }
-                        if (modPlayer.FirstDyeIngredients["SkyBlueFlower"])
-                        {
-                            AddItem(ref nextSlot, ItemID.SkyBlueFlower);
-                        }
-                        if (modPlayer.FirstDyeIngredients["BlueBerries"])
-                        {
-                            AddItem(ref nextSlot, ItemID.BlueBerries);
-                        }
-                        if (modPlayer.FirstDyeIngredients["PurpleMucos"])
-                        {
-                            AddItem(ref nextSlot, ItemID.PurpleMucos);
-                        }
-                        if (modPlayer.FirstDyeIngredients["VioletHusk"])
-                        {
-                            AddItem(ref nextSlot, ItemID.VioletHusk);
-                        }
-                        if (modPlayer.FirstDyeIngredients["PinkPricklyPear"])
-                        {
-                            AddItem(ref nextSlot, ItemID.PinkPricklyPear);
-                        }
-                        if (modPlayer.FirstDyeIngredients["BlackInk"])
-                        {
-                            AddItem(ref nextSlot, ItemID.BlackInk);
-                        }
-
+                        
                         break;
 
                     case NPCID.Dryad:
                         if (Main.hardMode)
                         {
-                            AddItem(ref nextSlot, ItemID.NaturesGift, Item.buyPrice(gold: 20));
-                            AddItem(ref nextSlot, ItemID.JungleRose, Item.buyPrice(gold: 10));
+                            AddItem(ItemID.NaturesGift, Item.buyPrice(gold: 20));
+                            AddItem(ItemID.JungleRose, Item.buyPrice(gold: 10));
 
-                            AddItem(ref nextSlot, ItemID.StrangePlant1, Item.buyPrice(gold: 5));
-                            AddItem(ref nextSlot, ItemID.StrangePlant2, Item.buyPrice(gold: 5));
-                            AddItem(ref nextSlot, ItemID.StrangePlant3, Item.buyPrice(gold: 5));
-                            AddItem(ref nextSlot, ItemID.StrangePlant4, Item.buyPrice(gold: 5));
+                            AddItem(ItemID.StrangePlant1, Item.buyPrice(gold: 5));
+                            AddItem(ItemID.StrangePlant2, Item.buyPrice(gold: 5));
+                            AddItem(ItemID.StrangePlant3, Item.buyPrice(gold: 5));
+                            AddItem(ItemID.StrangePlant4, Item.buyPrice(gold: 5));
                         }
                         break;
 
                     case NPCID.Wizard:
                         if (NPC.downedGolemBoss)
-                            AddItem(ref nextSlot, ItemID.SuperManaPotion);
+                            AddItem(ItemID.SuperManaPotion);
                         break;
+                    
                 }
             }
         }
@@ -1029,7 +1027,7 @@ namespace Fargowiltas.NPCs
                     {
                         if (Main.rand.NextBool(3))
                             Item.NewItem(npc.GetSource_Loot(), npc.Hitbox, Main.rand.Next(new int[] {
-                                ItemID.EldMelter,
+                                ItemID.ElfMelter,
                                 ItemID.ChainGun
                             }));
                     }
@@ -1412,11 +1410,12 @@ namespace Fargowiltas.NPCs
             return true;
         }
 
-        public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
         {
             if (GetInstance<FargoConfig>().RottenEggs && projectile.type == ProjectileID.RottenEgg && npc.townNPC)
             {
-                damage *= 20;
+                modifiers.FinalDamage *= 20;
+                //damage *= 20;
             }
         }
 
@@ -1548,7 +1547,8 @@ namespace Fargowiltas.NPCs
                 {
                     if (Main.npc[i].active && Main.npc[i].type == minion)
                     {
-                        Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                        Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                        //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                     }
                 }
             }
@@ -1577,7 +1577,8 @@ namespace Fargowiltas.NPCs
                         {
                             if (Main.npc[i].type == minion)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                         else
@@ -1585,7 +1586,8 @@ namespace Fargowiltas.NPCs
                             // Pandora
                             if (Array.IndexOf(Bosses, Main.npc[i].type) == -1 && !Main.npc[i].boss)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                     }
@@ -1618,7 +1620,8 @@ namespace Fargowiltas.NPCs
                     if (kill.active && !kill.friendly && kill.type != NPCID.LunarTowerNebula && kill.type != NPCID.LunarTowerSolar && kill.type != NPCID.LunarTowerStardust && kill.type != NPCID.LunarTowerVortex)
                     {
                         Main.npc[i].GetGlobalNPC<FargoGlobalNPC>().NoLoot = true;
-                        Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                        Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                        //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                     }
                 }
 
@@ -1662,7 +1665,8 @@ namespace Fargowiltas.NPCs
                         {
                             if (Main.npc[i].type == minion)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                         else
@@ -1670,7 +1674,8 @@ namespace Fargowiltas.NPCs
                             // Pandora
                             if (Array.IndexOf(Bosses, Main.npc[i].type) == -1 && !Main.npc[i].boss)
                             {
-                                Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
+                                Main.npc[i].SimpleStrikeNPC(Main.npc[i].lifeMax, -Main.npc[i].direction, true, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(Main.npc[i].lifeMax, 0f, -Main.npc[i].direction, true);
                             }
                         }
                     }

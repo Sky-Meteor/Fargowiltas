@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Abom
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Suspicious Looking Scythe");
-            Tooltip.SetDefault("Summons Pumpking" +
-                               "\nOnly usable at night");
+            // DisplayName.SetDefault("Suspicious Looking Scythe");
+            /* Tooltip.SetDefault("Summons Pumpking" +
+                               "\nOnly usable at night"); */
         }
 
         public override bool CanUseItem(Player player) => !Main.dayTime;

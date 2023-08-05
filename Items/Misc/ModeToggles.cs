@@ -12,8 +12,8 @@ namespace Fargowiltas.Items.Misc
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("World Token");
-            Tooltip.SetDefault(@"Cycles difficulty modes");
+            // DisplayName.SetDefault("World Token");
+            // Tooltip.SetDefault(@"Cycles difficulty modes");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

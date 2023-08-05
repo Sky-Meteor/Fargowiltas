@@ -10,11 +10,11 @@ namespace Fargowiltas.Items.Tiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Purity Totem");
-            Tooltip.SetDefault(@"Can be reused infinitely
+            // DisplayName.SetDefault("Purity Totem");
+            /* Tooltip.SetDefault(@"Can be reused infinitely
 Allows town NPCs to inhabit evil biomes
 Prevents evil tiles from forming an evil biome
-Prevents tombstones from forming Graveyards");
+Prevents tombstones from forming Graveyards"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

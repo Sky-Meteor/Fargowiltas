@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Deer Amalgamation");
-            Tooltip.SetDefault("Summons several Deerclops\nOnly Treasure Bags will be dropped");
+            // DisplayName.SetDefault("Deer Amalgamation");
+            // Tooltip.SetDefault("Summons several Deerclops\nOnly Treasure Bags will be dropped");
         }
 
         public override bool CanUseItem(Player player)

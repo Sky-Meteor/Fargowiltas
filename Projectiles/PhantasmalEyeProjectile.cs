@@ -18,7 +18,7 @@ namespace Fargowiltas.Projectiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("PhantasmalEyeProjectile");
+            // DisplayName.SetDefault("PhantasmalEyeProjectile");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 4;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 2;
         }
@@ -37,7 +37,7 @@ namespace Fargowiltas.Projectiles
             Projectile.localNPCHitCooldown = 10;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(BuffID.Ichor, 240);
             target.AddBuff(BuffID.BetsysCurse, 240);

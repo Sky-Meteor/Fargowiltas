@@ -12,6 +12,7 @@ using Fargowiltas.Items.Vanity;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Personalities;
 using Fargowiltas.ShoppingBiomes;
+using Fargowiltas.Items.Tiles;
 
 namespace Fargowiltas.NPCs
 {
@@ -29,7 +30,7 @@ namespace Fargowiltas.NPCs
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Abominationn");
+            // DisplayName.SetDefault("Abominationn");
 
             Main.npcFrameCount[NPC.type] = 25;
             NPCID.Sets.ExtraFramesCount[NPC.type] = 9;
@@ -96,7 +97,7 @@ namespace Fargowiltas.NPCs
             NPC.buffImmune[BuffID.Suffocation] = true;
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs, int money)
+        public override bool CanTownNPCSpawn(int numTownNPCs)/* tModPorter Suggestion: Copy the implementation of NPC.SpawnAllowed_Merchant in vanilla if you to count money, and be sure to set a flag when unlocked, so you don't count every tick. */
         {
             if (Fargowiltas.ModLoaded["FargowiltasSouls"] && ((bool)ModLoader.GetMod("FargowiltasSouls").Call("MutantAlive") || (bool)ModLoader.GetMod("FargowiltasSouls").Call("AbomAlive")))
             {
@@ -184,11 +185,13 @@ namespace Fargowiltas.NPCs
             button2 = Language.GetTextValue("Mods.Fargowiltas.UI.CancelEvent");
         }
 
-        public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+        public const string ShopName = "Shop";
+
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
         {
             if (firstButton)
             {
-                shop = true;
+                shopName = ShopName;
             }
             else
             {
@@ -217,82 +220,44 @@ namespace Fargowiltas.NPCs
             }
         }
 
-        //public static void AddModItem(bool condition, string modName, string itemName, int price, ref Chest shop, ref int nextSlot)
-        //{
-        //    if (condition)
-        //    {
-        //        shop.item[nextSlot].SetDefaults(ModLoader.GetMod(modName).ItemType(itemName));
-        //        shop.item[nextSlot].shopCustomPrice = price;
-        //        nextSlot++;
-        //    }
-        //}
-
-        public static void AddItem(bool check, int item, int price, ref Chest shop, ref int nextSlot)
+        public override void AddShops()
         {
-            if (check)
-            {
-                shop.item[nextSlot].SetDefaults(item);
-                shop.item[nextSlot].shopCustomPrice = price;
-                nextSlot++;
-            }
+            var npcShop = new NPCShop(Type, ShopName)
+                .Add(new Item(ItemType<PartyCone>()) { shopCustomPrice = Item.buyPrice(copper: 10000) })
+                .Add(new Item(ItemType<WeatherBalloon>()) { shopCustomPrice = Item.buyPrice(copper: 20000) })
+                .Add(new Item(ItemType<Anemometer>()) { shopCustomPrice = Item.buyPrice(copper: 30000) })
+                .Add(new Item(ItemType<ForbiddenScarab>()) { shopCustomPrice = Item.buyPrice(copper: 30000) })
+                .Add(new Item(ItemType<SlimyBarometer>()) { shopCustomPrice = Item.buyPrice(copper: 40000) })
+                .Add(new Item(ItemID.BloodMoonStarter) { shopCustomPrice = Item.buyPrice(copper: 50000) })
+                .Add(new Item(ItemID.GoblinBattleStandard) { shopCustomPrice = Item.buyPrice(copper: 60000) })
+                .Add(new Item(ItemType<MatsuriLantern>()) { shopCustomPrice = Item.buyPrice(copper: 100000) }, new Condition("Mods.Fargowiltas.Conditions.BossDown", () => FargoWorld.DownedBools["boss"]))
+                .Add(new Item(ItemID.SnowGlobe) { shopCustomPrice = Item.buyPrice(copper: 150000) }, Condition.Hardmode)
+                .Add(new Item(ItemID.PirateMap) { shopCustomPrice = Item.buyPrice(copper: 200000) }, Condition.DownedPirates)
+                .Add(new Item(ItemType<PlunderedBooty>()) { shopCustomPrice = Item.buyPrice(copper: 150000) }, new Condition("Mods.Fargowiltas.Conditions.DutchmanDown", () => NPC.downedPirates && FargoWorld.DownedBools["flyingDutchman"]))
+                .Add(new Item(ItemID.SolarTablet) { shopCustomPrice = Item.buyPrice(copper: 200000) }, Condition.DownedMechBossAny)
+                .Add(new Item(ItemType<ForbiddenTome>()) { shopCustomPrice = Item.buyPrice(copper: 50000) }, new Condition("Mods.Fargowiltas.Conditions.MageDown", () => FargoWorld.DownedBools["darkMage"] || NPC.downedMechBossAny))
+                .Add(new Item(ItemType<BatteredClub>()) { shopCustomPrice = Item.buyPrice(copper: 150000) }, new Condition("Mods.Fargowiltas.Conditions.OgreDown", () => FargoWorld.DownedBools["ogre"] || NPC.downedGolemBoss))
+                .Add(new Item(ItemType<BetsyEgg>()) { shopCustomPrice = Item.buyPrice(copper: 400000) }, new Condition("Mods.Fargowiltas.Conditions.BetsyDown", () => FargoWorld.DownedBools["betsy"]))
+                .Add(new Item(ItemID.PumpkinMoonMedallion) { shopCustomPrice = Item.buyPrice(copper: 500000) }, Condition.DownedPumpking)
+                 .Add(new Item(ItemType<HeadofMan>()) { shopCustomPrice = Item.buyPrice(copper: 200000) }, new Condition("Mods.Fargowiltas.Conditions.BetsyDown", () => FargoWorld.DownedBools["headlessHorseman"]))
+                 .Add(new Item(ItemType<SpookyBranch>()) { shopCustomPrice = Item.buyPrice(copper: 200000) }, Condition.DownedMourningWood)
+                 .Add(new Item(ItemType<SuspiciousLookingScythe>()) { shopCustomPrice = Item.buyPrice(copper: 300000) }, Condition.DownedPumpking)
+                 .Add(new Item(ItemID.NaughtyPresent) { shopCustomPrice = Item.buyPrice(copper: 500000) }, Condition.DownedIceQueen)
+                 .Add(new Item(ItemType<FestiveOrnament>()) { shopCustomPrice = Item.buyPrice(copper: 200000) }, Condition.DownedEverscream)
+                 .Add(new Item(ItemType<NaughtyList>()) { shopCustomPrice = Item.buyPrice(copper: 200000) }, Condition.DownedSantaNK1)
+                 .Add(new Item(ItemType<IceKingsRemains>()) { shopCustomPrice = Item.buyPrice(copper: 300000) }, Condition.DownedIceQueen)
+                 .Add(new Item(ItemType<RunawayProbe>()) { shopCustomPrice = Item.buyPrice(copper: 500000) }, Condition.DownedGolem)
+                 .Add(new Item(ItemType<MartianMemoryStick>()) { shopCustomPrice = Item.buyPrice(copper: 300000) }, Condition.DownedMartians)
+                 .Add(new Item(ItemType<PillarSummon>()) { shopCustomPrice = Item.buyPrice(copper: 750000) }, new Condition("Mods.Fargowiltas.Conditions.PillarsDown", () => NPC.downedTowers))
+                 .Add(new Item(ItemType<AbominationnScythe>()) { shopCustomPrice = Item.buyPrice(copper: 50000) }, new Condition("Mods.Fargowiltas.Conditions.PillarsDown", () => NPC.downedTowers))
+                 .Add(new Item(ItemType<SiblingPylon>()), new Condition("Mods.Fargowiltas.Conditions.SiblingPylon",  () => (Condition.HappyEnough.IsMet() && NPC.AnyNPCs(NPCType<Mutant>()) && NPC.AnyNPCs(NPCType<Abominationn>())) && NPC.AnyNPCs(NPCType<Deviantt>())))
+            ;
+
+            npcShop.Register();
         }
 
-        //public static void AddItem(bool check, string mod, string item, int price, ref Chest shop, ref int nextSlot)
-        //{
-        //    if (!check || shop is null)
-        //    {
-        //        return;
-        //    }
-
-        //    shop.item[nextSlot].SetDefaults(ModLoader.GetMod(mod).ItemType(item));
-        //    shop.item[nextSlot].shopCustomPrice = price;
-
-        //    nextSlot++;
-        //}
-
-        public override void SetupShop(Chest shop, ref int nextSlot)
+        public override void ModifyActiveShop(string shopName, Item[] items)
         {
-            // Events
-            AddItem(true, ItemType<PartyCone>(), 10000, ref shop, ref nextSlot);
-            AddItem(true, ItemType<WeatherBalloon>(), 20000, ref shop, ref nextSlot);
-            AddItem(true, ItemType<Anemometer>(), 30000, ref shop, ref nextSlot);
-            AddItem(true, ItemType<ForbiddenScarab>(), 30000, ref shop, ref nextSlot);
-            AddItem(true, ItemType<SlimyBarometer>(), Item.buyPrice(0, 4), ref shop, ref nextSlot);
-            AddItem(true, ItemID.BloodMoonStarter, Item.buyPrice(0, 5), ref shop, ref nextSlot);
-            AddItem(true, ItemID.GoblinBattleStandard, Item.buyPrice(0, 6), ref shop, ref nextSlot);
-            
-            AddItem(FargoWorld.DownedBools["boss"], ItemType<MatsuriLantern>(), Item.buyPrice(10), ref shop, ref nextSlot);
-            
-            AddItem(Main.hardMode, ItemID.SnowGlobe, Item.buyPrice(0, 15), ref shop, ref nextSlot);
-            AddItem(NPC.downedPirates, ItemID.PirateMap, Item.buyPrice(0, 20), ref shop, ref nextSlot);
-            AddItem(NPC.downedPirates && FargoWorld.DownedBools["flyingDutchman"], ItemType<PlunderedBooty>(), Item.buyPrice(0, 15), ref shop, ref nextSlot);
-            AddItem(NPC.downedMechBossAny, ItemID.SolarTablet, Item.buyPrice(0, 20), ref shop, ref nextSlot);
-            AddItem(FargoWorld.DownedBools["darkMage"] || NPC.downedMechBossAny, ItemType<ForbiddenTome>(), Item.buyPrice(0, 5), ref shop, ref nextSlot);
-            AddItem(FargoWorld.DownedBools["ogre"] || NPC.downedGolemBoss, ItemType<BatteredClub>(), Item.buyPrice(0, 15), ref shop, ref nextSlot);
-            AddItem(FargoWorld.DownedBools["betsy"], ItemType<BetsyEgg>(), Item.buyPrice(0, 40), ref shop, ref nextSlot);
-
-            AddItem(NPC.downedHalloweenKing, ItemID.PumpkinMoonMedallion, Item.buyPrice(0, 50), ref shop, ref nextSlot);
-            AddItem(FargoWorld.DownedBools["headlessHorseman"], ItemType<HeadofMan>(), Item.buyPrice(0, 20), ref shop, ref nextSlot);
-            AddItem(NPC.downedHalloweenTree, ItemType<SpookyBranch>(), Item.buyPrice(0, 20), ref shop, ref nextSlot);
-            AddItem(NPC.downedHalloweenKing, ItemType<SuspiciousLookingScythe>(), Item.buyPrice(0, 30), ref shop, ref nextSlot);
-            
-            AddItem(NPC.downedChristmasIceQueen, ItemID.NaughtyPresent, Item.buyPrice(0, 50), ref shop, ref nextSlot);
-            AddItem(NPC.downedChristmasTree, ItemType<FestiveOrnament>(), Item.buyPrice(0, 20), ref shop, ref nextSlot);
-            AddItem(NPC.downedChristmasSantank, ItemType<NaughtyList>(), Item.buyPrice(0, 20), ref shop, ref nextSlot);
-            AddItem(NPC.downedChristmasIceQueen, ItemType<IceKingsRemains>(), Item.buyPrice(0, 30), ref shop, ref nextSlot);
-
-            AddItem(NPC.downedGolemBoss, ItemType<RunawayProbe>(), Item.buyPrice(0, 50), ref shop, ref nextSlot);
-            AddItem(NPC.downedMartians, ItemType<MartianMemoryStick>(), Item.buyPrice(0, 30), ref shop, ref nextSlot);
-            
-
-            AddItem(NPC.downedTowers, ItemType<PillarSummon>(), Item.buyPrice(0, 75), ref shop, ref nextSlot);
-
-            //foreach (MutantSummonInfo summon in Fargowiltas.summonTracker.EventSummons)
-            //{
-            //    AddItem(summon.downed(), summon.modSource, summon.itemName, summon.price, ref shop, ref nextSlot);
-            //}
-
-            AddItem(NPC.downedTowers, ItemType<AbominationnScythe>(), Item.buyPrice(0, 5), ref shop, ref nextSlot);
         }
 
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
@@ -322,13 +287,13 @@ namespace Fargowiltas.NPCs
             randomOffset = 2f;
         }
 
-        public override void HitEffect(int hitDirection, double damage)
+        public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0)
             {
                 for (int k = 0; k < 8; k++)
                 {
-                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, 2.5f * hitDirection, -2.5f, Scale: 0.8f);
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, 2.5f * hit.HitDirection, -2.5f, Scale: 0.8f);
                 }
 
                 if (!Main.dedServ)
@@ -345,9 +310,9 @@ namespace Fargowiltas.NPCs
             }
             else
             {
-                for (int k = 0; k < damage / NPC.lifeMax * 50.0; k++)
+                for (int k = 0; k < hit.Damage / NPC.lifeMax * 50.0; k++)
                 {
-                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, hitDirection, -1f, Scale: 0.6f);
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, hit.HitDirection, -1f, Scale: 0.6f);
                 }
             }
         }
