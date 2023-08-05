@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Vanity
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lumberjack Mask");
+            // DisplayName.SetDefault("Lumberjack Mask");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

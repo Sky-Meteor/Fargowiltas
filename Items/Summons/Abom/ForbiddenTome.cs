@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Abom
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Forbidden Tome");
-            Tooltip.SetDefault("Summons a Dark Mage");
+            // DisplayName.SetDefault("Forbidden Tome");
+            // Tooltip.SetDefault("Summons a Dark Mage");
         }
     }
 }

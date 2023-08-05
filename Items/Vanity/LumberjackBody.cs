@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Vanity
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lumberjack Body");
+            // DisplayName.SetDefault("Lumberjack Body");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -23,8 +23,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Some Kind of Metallic Skull");
-            Tooltip.SetDefault("Summons Skeletron Prime");
+            // DisplayName.SetDefault("Some Kind of Metallic Skull");
+            // Tooltip.SetDefault("Summons Skeletron Prime");
         }
 
         public override bool CanUseItem(Player player) => !Main.dayTime;

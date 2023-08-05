@@ -11,7 +11,7 @@ namespace Fargowiltas.Projectiles.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Obsidian Instabridge");
+            // DisplayName.SetDefault("Obsidian Instabridge");
         }
 
         public override void SetDefaults()

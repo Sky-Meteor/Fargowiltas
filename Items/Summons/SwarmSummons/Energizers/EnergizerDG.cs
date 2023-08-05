@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Extra Boney Energizer");
-            Tooltip.SetDefault("Formed after using 10 Skull Chain Necklaces\n'Reminds you of a mean cow'");
+            // DisplayName.SetDefault("Extra Boney Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Skull Chain Necklaces\n'Reminds you of a mean cow'");
         }
 
         public override string Texture => "Fargowiltas/Items/Summons/SwarmSummons/Energizers/EnergizerSkele";

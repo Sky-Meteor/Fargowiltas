@@ -11,7 +11,7 @@ namespace Fargowiltas.Projectiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Spawn");
+            // DisplayName.SetDefault("Spawn");
         }
 
         public override void SetDefaults()

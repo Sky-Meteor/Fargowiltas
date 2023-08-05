@@ -9,8 +9,8 @@ namespace Fargowiltas.Items.Tiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Golden Dipping Vat");
-            Tooltip.SetDefault("Used to craft Gold Critters");
+            // DisplayName.SetDefault("Golden Dipping Vat");
+            // Tooltip.SetDefault("Used to craft Gold Critters");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

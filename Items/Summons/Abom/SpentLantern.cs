@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Spent Lantern");
-            Tooltip.SetDefault("Deactivates Matsuri Lantern effect");
+            // DisplayName.SetDefault("Spent Lantern");
+            // Tooltip.SetDefault("Deactivates Matsuri Lantern effect");
 
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
@@ -43,7 +43,7 @@ namespace Fargowiltas.Items.Summons.Abom
         {
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<MatsuriLantern>())
-                .AddCondition(Recipe.Condition.NearWater)
+                .AddCondition(Condition.NearWater)
                 .Register();
         }
     }

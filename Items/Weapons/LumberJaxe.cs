@@ -10,9 +10,9 @@ namespace Fargowiltas.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("The Lumber Jaxe");
-            Tooltip.SetDefault("Hit enemies may drop wood when killed" +
-                               "\n'The former weapon of a true axe wielding hero'");
+            // DisplayName.SetDefault("The Lumber Jaxe");
+            /* Tooltip.SetDefault("Hit enemies may drop wood when killed" +
+                               "\n'The former weapon of a true axe wielding hero'"); */
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -33,7 +33,7 @@ namespace Fargowiltas.Items.Weapons
             Item.autoReuse = true;
         }
 
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(BuffType<Buffs.WoodDrop>(), 600);
         }

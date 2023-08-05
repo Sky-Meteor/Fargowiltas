@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Runic Power Cell");
-            Tooltip.SetDefault("Summons several Golems\nOnly Treasure Bags will be dropped");
+            // DisplayName.SetDefault("Runic Power Cell");
+            // Tooltip.SetDefault("Summons several Golems\nOnly Treasure Bags will be dropped");
         }
 
         public override bool CanUseItem(Player player)

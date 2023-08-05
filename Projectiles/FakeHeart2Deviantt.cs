@@ -13,7 +13,7 @@ namespace Fargowiltas.Projectiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fake Heart");
+            // DisplayName.SetDefault("Fake Heart");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 7;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 2;
         }
@@ -109,7 +109,7 @@ namespace Fargowiltas.Projectiles
             Projectile.rotation -= (float)Math.PI / 2;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.immune[Projectile.owner] = 5;
             target.AddBuff(BuffID.Lovestruck, 600);

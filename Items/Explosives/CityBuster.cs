@@ -8,10 +8,10 @@ namespace Fargowiltas.Items.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("City Buster");
-            Tooltip.SetDefault(@"Destroys a large area
+            // DisplayName.SetDefault("City Buster");
+            /* Tooltip.SetDefault(@"Destroys a large area
 Will not remove background walls
-Use at your own risk");
+Use at your own risk"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
         }
 

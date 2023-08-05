@@ -10,8 +10,8 @@ namespace Fargowiltas.Items.Explosives
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("InstaHouse");
-            Tooltip.SetDefault("Places an NPC house instantly");
+            // DisplayName.SetDefault("InstaHouse");
+            // Tooltip.SetDefault("Places an NPC house instantly");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

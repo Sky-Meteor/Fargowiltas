@@ -15,11 +15,11 @@ namespace Fargowiltas.Items.Tiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Omnistation");
-            Tooltip.SetDefault(@"Can be reused infinitely
+            // DisplayName.SetDefault("Omnistation");
+            /* Tooltip.SetDefault(@"Can be reused infinitely
 Effects of all vanilla buff stations
 Grants Honey when touched
-Greatly increases luck when nearby");
+Greatly increases luck when nearby"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Destruction Energizer");
-            Tooltip.SetDefault("Formed after using 10 Seismic Actuator\n'It makes you want to break some kids'");
+            // DisplayName.SetDefault("Destruction Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Seismic Actuator\n'It makes you want to break some kids'");
         }
 
         public override void SetDefaults()

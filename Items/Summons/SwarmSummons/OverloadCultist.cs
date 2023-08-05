@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Zealot's Madness");
-            Tooltip.SetDefault("Summons several Lunatic Cultists\nOnly Treasure Bags will be dropped");
+            // DisplayName.SetDefault("Zealot's Madness");
+            // Tooltip.SetDefault("Summons several Lunatic Cultists\nOnly Treasure Bags will be dropped");
         }
 
         public override bool CanUseItem(Player player)

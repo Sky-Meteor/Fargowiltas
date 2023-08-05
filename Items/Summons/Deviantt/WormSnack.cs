@@ -12,10 +12,10 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Worm Snack");
-            Tooltip.SetDefault(@"Summons Giant Worm in pre-Hardmode
+            // DisplayName.SetDefault("Worm Snack");
+            /* Tooltip.SetDefault(@"Summons Giant Worm in pre-Hardmode
 Summons Digger in Hardmode
-Only usable underground");
+Only usable underground"); */
         }
 
         public override bool CanUseItem(Player player)

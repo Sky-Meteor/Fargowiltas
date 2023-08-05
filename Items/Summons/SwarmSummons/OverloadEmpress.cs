@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Jar of Lacewings");
-            Tooltip.SetDefault("Summons several Empresses of Light\nOnly Treasure Bags will be dropped");
+            // DisplayName.SetDefault("Jar of Lacewings");
+            // Tooltip.SetDefault("Summons several Empresses of Light\nOnly Treasure Bags will be dropped");
         }
 
         public override bool CanUseItem(Player player)

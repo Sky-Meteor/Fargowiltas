@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Suspicious Looking Chest");
-            Tooltip.SetDefault("Summons Mimic"
-            + "\nSummons Ice Mimic when in snow biome");
+            // DisplayName.SetDefault("Suspicious Looking Chest");
+            /* Tooltip.SetDefault("Summons Mimic"
+            + "\nSummons Ice Mimic when in snow biome"); */
         }
     }
 }

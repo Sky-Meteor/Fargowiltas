@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Abom
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Ice King's Remains");
-            Tooltip.SetDefault("Summons Ice Queen" +
-                               "\nOnly usable at night");
+            // DisplayName.SetDefault("Ice King's Remains");
+            /* Tooltip.SetDefault("Summons Ice Queen" +
+                               "\nOnly usable at night"); */
         }
 
         public override bool CanUseItem(Player player) => !Main.dayTime;

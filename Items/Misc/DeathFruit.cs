@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Misc
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Death Fruit");
-			Tooltip.SetDefault("Permanently decreases maximum life by 20\nEffects may not be reversible for characters that have used modded life-increasing items");
+			// DisplayName.SetDefault("Death Fruit");
+			// Tooltip.SetDefault("Permanently decreases maximum life by 20\nEffects may not be reversible for characters that have used modded life-increasing items");
 		}
 
 		public override void SetDefaults()

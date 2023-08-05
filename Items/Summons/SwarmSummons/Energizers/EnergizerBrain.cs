@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Brainy Energizer");
-            Tooltip.SetDefault("Formed after using 10 Brain Storms\n'You still feel dumb'");
+            // DisplayName.SetDefault("Brainy Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Brain Storms\n'You still feel dumb'");
         }
 
         public override void SetDefaults()

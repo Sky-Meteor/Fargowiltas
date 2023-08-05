@@ -14,10 +14,10 @@ namespace Fargowiltas.Items.Summons.Mutant
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Ancient Seal");
-            Tooltip.SetDefault("Summons ALL the bosses modded included" +
+            // DisplayName.SetDefault("Ancient Seal");
+            /* Tooltip.SetDefault("Summons ALL the bosses modded included" +
                                "\nCan only be used at night" +
-                               "\n'Use at your own risk'");
+                               "\n'Use at your own risk'"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 
@@ -48,7 +48,7 @@ namespace Fargowiltas.Items.Summons.Mutant
             Projectile.NewProjectile(player.GetSource_ItemUse(source.Item), pos, Vector2.Zero, ModContent.ProjectileType<SpawnProj>(), 0, 0, Main.myPlayer, 1, 3);
 
             // Modded
-            for (int i = Main.maxNPCTypes; i < NPCLoader.NPCCount; i++)
+            for (int i = NPCID.Count; i < NPCLoader.NPCCount; i++)
             {
                 NPC npc = new NPC();
                 npc.SetDefaults(i);

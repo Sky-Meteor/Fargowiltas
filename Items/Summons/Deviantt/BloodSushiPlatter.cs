@@ -13,9 +13,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Blood Sushi Platter");
-            Tooltip.SetDefault("Summons Dreadnautilus" +
-                               "\nOnly usable during Blood Moon");
+            // DisplayName.SetDefault("Blood Sushi Platter");
+            /* Tooltip.SetDefault("Summons Dreadnautilus" +
+                               "\nOnly usable during Blood Moon"); */
         }
 
         public override bool CanUseItem(Player player)

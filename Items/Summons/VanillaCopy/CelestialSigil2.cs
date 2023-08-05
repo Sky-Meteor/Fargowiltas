@@ -17,8 +17,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Celestially Sigil");
-            Tooltip.SetDefault("Summons the Moon Lord instantly");
+            // DisplayName.SetDefault("Celestially Sigil");
+            // Tooltip.SetDefault("Summons the Moon Lord instantly");
         }
 
         public override void AddRecipes()

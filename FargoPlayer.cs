@@ -115,9 +115,9 @@ namespace Fargowiltas
             }
         }
 
-        public override void OnEnterWorld(Player player)
+        public override void OnEnterWorld()
         {
-            Items.Misc.BattleCry.SyncCry(player);
+            Items.Misc.BattleCry.SyncCry(Player);
         }
 
         public override void ResetEffects()
@@ -145,6 +145,10 @@ namespace Fargowiltas
 
             if (Fargowiltas.StatKey.JustPressed)
             {
+                if (!Main.playerInventory)
+                {
+                    Main.playerInventory = true;
+                }
                 Fargowiltas.UserInterfaceManager.ToggleStatSheet();
             }
         }
@@ -399,7 +403,9 @@ namespace Fargowiltas
                 Player.controlUseItem = true;
                 if (use && CombinedHooks.CanUseItem(Player, Player.inventory[Player.selectedItem]))
                 {
-                    Player.ItemCheck(Main.myPlayer);
+                    if (Player.whoAmI == Main.myPlayer)
+                        Player.ItemCheck();
+                    //Player.ItemCheck(Main.myPlayer);
                 }
             }
         }

@@ -7,8 +7,8 @@ namespace Fargowiltas.Items.Tiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wooden Token");
-            Tooltip.SetDefault("'The sign of a true wood lover'");
+            // DisplayName.SetDefault("Wooden Token");
+            // Tooltip.SetDefault("'The sign of a true wood lover'");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

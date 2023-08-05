@@ -11,8 +11,8 @@ namespace Fargowiltas.Items.Summons.Abom
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Slimy Barometer");
-            Tooltip.SetDefault("Starts the Slime Rain");
+            // DisplayName.SetDefault("Slimy Barometer");
+            // Tooltip.SetDefault("Starts the Slime Rain");
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

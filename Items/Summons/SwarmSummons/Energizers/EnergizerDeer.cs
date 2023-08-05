@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Deary Energizer");
-            Tooltip.SetDefault("Formed after using 10 Deer Amalgamations\n'Makes you hungry'");
+            // DisplayName.SetDefault("Deary Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Deer Amalgamations\n'Makes you hungry'");
         }
 
         public override void SetDefaults()

@@ -24,6 +24,7 @@ using Terraria.UI;
 using Terraria.Chat;
 using Fargowiltas.Items.Vanity;
 using static Fargowiltas.FargoUtils;
+using static tModPorter.ProgressUpdate;
 
 namespace Fargowiltas
 {
@@ -68,12 +69,13 @@ namespace Fargowiltas
 //            HookIntoLoad();
         }
 
-        public void AddToggle(String toggle, String name, int item, String color)
+        public void AddToggle(String toggle, String name, String item, String color)
         {
-            ModTranslation text = LocalizationLoader.CreateTranslation(toggle);
-            text.SetDefault("[i:" + item + "] [c/" + color + ":" + name + "]");
-
-            LocalizationLoader.AddTranslation(text);
+            
+            LocalizedText text = Language.GetOrRegister(toggle);
+            text.Format("[i:" + item + "] [c/" + color + ":" + name + "]");
+            Language.GetOrRegister(text.ToString());
+            
         }
 
         public override void Load()
@@ -107,24 +109,24 @@ namespace Fargowiltas
                 ModLoaded.Add(mod, false);
             }
 
-            AddToggle("Mods.Fargowiltas.Config.Mutant", "{$Mods.Fargowiltas.NPCName.Mutant}{$Mods.Fargowiltas.Config.CanSpawn}", ModContent.ItemType<MutantMask>(), "ffffff");
-            AddToggle("Mods.Fargowiltas.Config.Abom", "{$Mods.Fargowiltas.NPCName.Abominationn}{$Mods.Fargowiltas.Config.CanSpawn}", ModContent.ItemType<AbominationnMask>(), "ffffff");
-            AddToggle("Mods.Fargowiltas.Config.Devi", "{$Mods.Fargowiltas.NPCName.Deviantt}{$Mods.Fargowiltas.Config.CanSpawn}", ModContent.ItemType<DevianttMask>(), "ffffff");
-            AddToggle("Mods.Fargowiltas.Config.Lumber", "{$Mods.Fargowiltas.NPCName.LumberJack}{$Mods.Fargowiltas.Config.CanSpawn}", ModContent.ItemType<LumberjackMask>(), "ffffff");
-            AddToggle("Mods.Fargowiltas.Config.Squirrel", "{$Mods.Fargowiltas.NPCName.Squirrel}{$Mods.Fargowiltas.Config.CanSpawn}", ItemID.TopHat, "ffffff");
+            AddToggle("Mods.Fargowiltas.Config.Mutant", "{$Mods.Fargowiltas.NPCs.Mutant.DisplayName}{$Mods.Fargowiltas.Config.CanSpawn}", "Fargowiltas/MutantMask", "ffffff");
+            AddToggle("Mods.Fargowiltas.Config.Abom", "{$Mods.Fargowiltas.NPCs.Abominationn.DisplayName}{$Mods.Fargowiltas.Config.CanSpawn}", "Fargowiltas/AbominationMask", "ffffff");
+            AddToggle("Mods.Fargowiltas.Config.Devi", "{$Mods.Fargowiltas.NPCs.Deviantt.DisplayName}{$Mods.Fargowiltas.Config.CanSpawn}", "Fargowiltas/DevianttMask", "ffffff");
+            AddToggle("Mods.Fargowiltas.Config.Lumber", "{$Mods.Fargowiltas.NPCs.LumberJack.DisplayName}{$Mods.Fargowiltas.Config.CanSpawn}", "Fargowiltas/LumberjackMask", "ffffff");
+            AddToggle("Mods.Fargowiltas.Config.Squirrel", "{$Mods.Fargowiltas.NPCs.Squirrel.DisplayName}{$Mods.Fargowiltas.Config.CanSpawn}", ItemID.TopHat.ToString(), "ffffff");
 
             CaughtNPCItem.RegisterItems(this);
 
             // DD2 Banner Effect hack
             ItemID.Sets.BannerStrength = ItemID.Sets.Factory.CreateCustomSet(new ItemID.BannerEffect(1f));
             
-            On.Terraria.Recipe.FindRecipes += FindRecipes_ElementalAssemblerGraveyardHack;
-            On.Terraria.WorldGen.CountTileTypesInArea += CountTileTypesInArea_PurityTotemHack;
-            On.Terraria.SceneMetrics.ExportTileCountsToMain += ExportTileCountsToMain_PurityTotemHack;
+            Terraria.On_Recipe.FindRecipes += FindRecipes_ElementalAssemblerGraveyardHack;
+            Terraria.On_WorldGen.CountTileTypesInArea += CountTileTypesInArea_PurityTotemHack;
+            Terraria.On_SceneMetrics.ExportTileCountsToMain += ExportTileCountsToMain_PurityTotemHack;
         }
 
         private static void FindRecipes_ElementalAssemblerGraveyardHack(
-            On.Terraria.Recipe.orig_FindRecipes orig,
+            Terraria.On_Recipe.orig_FindRecipes orig,
             bool canDelayCheck)
         {
             bool oldZoneGraveyard = Main.LocalPlayer.ZoneGraveyard;
@@ -139,7 +141,7 @@ namespace Fargowiltas
 
         //for town npc housing check, independent from player biome
         private static void CountTileTypesInArea_PurityTotemHack(
-            On.Terraria.WorldGen.orig_CountTileTypesInArea orig,
+            Terraria.On_WorldGen.orig_CountTileTypesInArea orig,
             int[] tileTypeCounts, int startX, int endX, int startY, int endY)
         {
             orig(tileTypeCounts, startX, endX, startY, endY);
@@ -153,7 +155,7 @@ namespace Fargowiltas
 
         //for current biome
         private void ExportTileCountsToMain_PurityTotemHack(
-            On.Terraria.SceneMetrics.orig_ExportTileCountsToMain orig,
+            Terraria.On_SceneMetrics.orig_ExportTileCountsToMain orig,
             SceneMetrics self)
         {
             orig(self);
@@ -363,7 +365,8 @@ namespace Fargowiltas
                                 NPC npc = Main.npc[i];
                                 npc.life = 0;
                                 npc.HitEffect();
-                                Main.npc[i].StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
+                                Main.npc[i].SimpleStrikeNPC(int.MaxValue, 0, false, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
 
                                 if (Main.netMode == NetmodeID.Server)
                                     NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, i);
@@ -502,7 +505,8 @@ namespace Fargowiltas
                         {
                             Main.npc[i].dontTakeDamage = false;
                             Main.npc[i].GetGlobalNPC<FargoGlobalNPC>().NoLoot = true;
-                            Main.npc[i].StrikeNPCNoInteraction(int.MaxValue, 0f, 0);
+                            Main.npc[i].SimpleStrikeNPC(int.MaxValue, 0, false, 0, null, false, 0, true);
+                            //Main.npc[i].StrikeNPCNoInteraction(int.MaxValue, 0f, 0);
                         }
                     }
                     PrintText(Language.GetTextValue("Mods.Fargowiltas.MessageInfo.Towers"), 175, 75, 255);

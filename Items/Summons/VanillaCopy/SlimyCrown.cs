@@ -16,8 +16,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Slimy Crown");
-            Tooltip.SetDefault("Summons King Slime");
+            // DisplayName.SetDefault("Slimy Crown");
+            // Tooltip.SetDefault("Summons King Slime");
         }
 
         public override void AddRecipes()

@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Abom
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Naughty List");
-            Tooltip.SetDefault("Summons Santa-NK1" +
-                               "\nOnly usable at night");
+            // DisplayName.SetDefault("Naughty List");
+            /* Tooltip.SetDefault("Summons Santa-NK1" +
+                               "\nOnly usable at night"); */
         }
 
         public override bool CanUseItem(Player player) => !Main.dayTime;

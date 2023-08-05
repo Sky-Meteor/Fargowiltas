@@ -9,7 +9,7 @@ namespace Fargowiltas.Items.Vanity
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Deviantt Pants");
+            // DisplayName.SetDefault("Deviantt Pants");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

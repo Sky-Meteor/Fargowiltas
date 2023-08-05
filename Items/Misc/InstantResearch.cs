@@ -15,8 +15,8 @@ namespace Fargowiltas.Items.Misc
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Instant Research");
-			Tooltip.SetDefault("DEBUG ITEM\nResearches everything");
+			// DisplayName.SetDefault("Instant Research");
+			// Tooltip.SetDefault("DEBUG ITEM\nResearches everything");
 		}
 
 		public override void SetDefaults()

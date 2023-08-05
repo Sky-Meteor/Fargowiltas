@@ -13,12 +13,12 @@ namespace Fargowiltas.Items.Misc
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Super Dummy");
-            Tooltip.SetDefault("Spawns a super dummy at your cursor" +
+            // DisplayName.SetDefault("Super Dummy");
+            /* Tooltip.SetDefault("Spawns a super dummy at your cursor" +
                                "\nSame as regular Target Dummy except minions and projectiles detect and home onto it" +
                                "\nOn hit effects get triggered as well" +
                                "\nRight click to remove all spawned super dummies" +
-                               "\nCan spawn up to 50 super dummies at once");
+                               "\nCan spawn up to 50 super dummies at once"); */
 
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 
@@ -55,7 +55,8 @@ namespace Fargowiltas.Items.Misc
                                 NPC npc = Main.npc[i];
                                 npc.life = 0;
                                 npc.HitEffect();
-                                Main.npc[i].StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
+                                Main.npc[i].SimpleStrikeNPC(int.MaxValue, 0, false, 0, null, false, 0, true);
+                                //Main.npc[i].StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
                             }
                         }
                     }

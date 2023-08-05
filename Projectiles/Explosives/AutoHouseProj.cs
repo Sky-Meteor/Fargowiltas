@@ -252,7 +252,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
                     WorldGen.PlaceObject(xPosition, yPosition, TileID.Chairs, direction: side, style: placeStyle);
                     if (Main.netMode == NetmodeID.Server)
-                        NetMessage.SendData(MessageID.TileChange, -1, -1, null, 1, xPosition, yPosition, TileID.Chairs, placeStyle);
+                        NetMessage.SendData(MessageID.TileManipulation, -1, -1, null, 1, xPosition, yPosition, TileID.Chairs, placeStyle);
                 }
 
                 if (x == (7 * side))
@@ -302,7 +302,7 @@ namespace Fargowiltas.Projectiles.Explosives
 
                     WorldGen.PlaceTile(xPosition, yPosition, TileID.Tables, style: placeStyle);
                     if (Main.netMode == NetmodeID.Server)
-                        NetMessage.SendData(MessageID.TileChange, -1, -1, null, 1, xPosition, yPosition, TileID.Tables, placeStyle);
+                        NetMessage.SendData(MessageID.TileManipulation, -1, -1, null, 1, xPosition, yPosition, TileID.Tables, placeStyle);
                 }
             }
 
@@ -310,7 +310,7 @@ namespace Fargowiltas.Projectiles.Explosives
             {
                 WorldGen.PlaceTile(xPosition, yPosition, TileID.Torches, style: 5);
                 if (Main.netMode == NetmodeID.Server)
-                    NetMessage.SendData(MessageID.TileChange, -1, -1, null, 1, xPosition, yPosition, TileID.Torches);
+                    NetMessage.SendData(MessageID.TileManipulation, -1, -1, null, 1, xPosition, yPosition, TileID.Torches);
             }
         }
 

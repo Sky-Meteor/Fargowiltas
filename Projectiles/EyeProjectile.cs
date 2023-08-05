@@ -9,7 +9,7 @@ namespace Fargowiltas.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("EyeProjectile");
+            // DisplayName.SetDefault("EyeProjectile");
         }
 
         public override void SetDefaults()

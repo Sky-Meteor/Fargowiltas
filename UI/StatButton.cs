@@ -22,7 +22,7 @@ namespace Fargowiltas.UI
             IconHighlight.Left.Set(-2, 0f);
             IconHighlight.Top.Set(-2, 0f);
             IconHighlight.SetVisibility(1f, 0f);
-            IconHighlight.OnClick += IconHighlight_OnClick;
+            IconHighlight.OnLeftClick += IconHighlight_OnClick;
             Icon.Append(IconHighlight);
 
             base.OnActivate();

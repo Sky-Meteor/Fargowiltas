@@ -12,9 +12,9 @@ namespace Fargowiltas.Items.Summons.Deviantt
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Amalgamated Skull");
-            Tooltip.SetDefault("Summons the skeleton gunners" +
-                               "\nOnly usable at night or underground");
+            // DisplayName.SetDefault("Amalgamated Skull");
+            /* Tooltip.SetDefault("Summons the skeleton gunners" +
+                               "\nOnly usable at night or underground"); */
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
         }
 

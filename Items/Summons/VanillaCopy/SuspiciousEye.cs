@@ -23,8 +23,8 @@ namespace Fargowiltas.Items.Summons
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Eye That Could Be Seen As Suspicious");
-            Tooltip.SetDefault("Summons the Eye of Cthulhu");
+            // DisplayName.SetDefault("Eye That Could Be Seen As Suspicious");
+            // Tooltip.SetDefault("Summons the Eye of Cthulhu");
         }
 
         public override bool CanUseItem(Player player) => !Main.dayTime;

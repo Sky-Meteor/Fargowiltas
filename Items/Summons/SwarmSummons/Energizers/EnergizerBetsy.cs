@@ -6,8 +6,8 @@ namespace Fargowiltas.Items.Summons.SwarmSummons.Energizers
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Draco Energizer");
-            Tooltip.SetDefault("Formed after using 10 Dragon Egg Trays\n'You feel like you've waited three thousand years'");
+            // DisplayName.SetDefault("Draco Energizer");
+            // Tooltip.SetDefault("Formed after using 10 Dragon Egg Trays\n'You feel like you've waited three thousand years'");
         }
 
         public override void SetDefaults()
