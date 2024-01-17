@@ -324,6 +324,11 @@ namespace Fargowiltas.NPCs
 
         public override void AddShops()
         {
+            AddVanillaShop();
+        }
+
+        public void AddVanillaShop()
+        {
             var npcShop = new NPCShop(Type, ShopName);
 
             if (Fargowiltas.ModLoaded["FargowiltasSoulsDLC"] && TryFind("FargowiltasSoulsDLC", "PandorasBox", out ModItem pandorasBox))

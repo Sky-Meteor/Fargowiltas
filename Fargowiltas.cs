@@ -381,11 +381,11 @@ namespace Fargowiltas
                     //                            return true;
                     //                        return false;
                     case "AddDevianttHelpDialogue":
-                        dialogueTracker.AddDialogue(
-                            args[1] as string,
-                            (byte)args[2],
-                            args[3] as Predicate<string>
-                        );
+                        if (args[4].GetType() == typeof(string) && args[4].ToString().Length > 0)
+                            dialogueTracker.AddDialogue(args[1] as string, (byte)args[2], args[3] as Predicate<string>, args[4] as string);
+                        else
+                            dialogueTracker.AddDialogue(args[1] as string, (byte)args[2], args[3] as Predicate<string>);
+
                         break;
 
                     case "LowRenderProj":
@@ -411,6 +411,9 @@ namespace Fargowiltas
 
             switch (messageType)
             {
+                case 0:
+                    FargoNet.HandlePacket(reader, messageType);
+                    break;
                 // Regal statue
                 case 1:
                     {
