@@ -839,7 +839,7 @@ Mods: {
 				Tooltip:
 					'''
 					Left click to toggle 10x increased spawn rates
-					Right click to toggle 10x decreased spawn rates
+					Right click to toggle decreased spawn rates, improved through progression
 					'''
 				Battle: Battle
 				Calming: Calming
