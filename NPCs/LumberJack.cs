@@ -11,6 +11,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
@@ -392,6 +393,11 @@ namespace Fargowiltas.NPCs
         public override void OnKill()
         {
             FargoWorld.DownedBools["lumberjack"] = true;
+        }
+
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LumberHat>(), 3));
         }
 
         public override void HitEffect(NPC.HitInfo hit)

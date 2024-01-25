@@ -2160,7 +2160,7 @@ Mods: {
 			}
 
 			LumberHat: {
-				DisplayName: LumberJack Hat
+				DisplayName: Lumberjack's Hat
 				Tooltip: ""
 			}
 
@@ -2522,7 +2522,7 @@ Mods: {
 					Normal16: Inflicting suffering upon others is the most amusing thing there is.
 					Normal17: Irony is the best kind of humor, isn't that ironic?
 					Normal18: I like Cat... What do you mean who's Cat?
-					Normal19: Check the wiki if you need anything, the kirb is slowly getting it up to par.
+					Normal19: Check the wiki if you need anything, the star is slowly getting it up to par.
 					Normal20: I've heard tales of a legendary Diver... Anyway what was that about a giant jellyfish?
 					Normal21: Overloaded events...? Yeah, they're pretty cool.
 					Normal22: It's not like I don't enjoy your company, but can you buy something?
@@ -2621,11 +2621,11 @@ Mods: {
 					GoblinsCrimson: Watch out when you break your second Crimson Heart! It might attract the goblins, so prepare before you do it.
 					GoblinsCorruption: Watch out when you break your second Shadow Orb! It might attract the goblins, so prepare before you do it.
 					EOC: That big eyeball has the power of the moon, but it's too flashy for its own good! Learn to notice and focus only on the bits that threaten to hurt you.
-					Slime: Gonna fight that slime king soon? Crafting a Mini Instabridge or two might help, and mind the spike rain. Don't stay up and out of his range or he'll get mad, though!
+					Slime: Gonna fight that slime king soon? Crafting a Mini Instabridge or two might help, and mind the slimy rain. Don't stay up and out of his range or he'll get mad, though!
 					// Other
 					Auras: Seems like everyone's learning to project auras these days. If you look at the particles, you can see whether it'll affect you at close range or a distance!
 					Debuffs: There's probably a thousand items to protect against all these debuffs. It's a shame you don't have a thousand hands to carry them all at once!
-					SoulToggle: Don't forget you can turn off your soul toggles! They're all in that little wrench button right below your inventory. Those small buttons at the very bottom of the list include a recommended low-lag preset!
+					SoulToggle: Don't forget you can turn off your effect toggles! They're all in that little wrench button right below your inventory. Those small buttons at the very bottom of the list include a recommended low-lag preset!
 					LifeCrystals: I don't have any Life Crystals for you, but I think my big brother left some in the fat slime king. Maybe he'll share if you beat it up!
 					Fish: Watch out for those fish! Sharks will leave you alone if you leave them alone, but piranhas go wild when they smell blood. They can jump out of water to get you!
 					Underwater: The water is bogging you down? Never had an issue with it, personally... Have you tried breathing water instead of air?
@@ -2633,6 +2633,8 @@ Mods: {
 					SpaceSuffocation: Want to have a breath-holding contest? The empty vacuum of space would be perfect. No, I won't cheat by breathing water instead of air!
 					UndergroundHallow: That's a funny face you're making... Is the underground Hallow too disorienting? Try controlling gravity on your own and maybe it can't flip you by force!
 					LifeFruit: If you ask me, Plantera is really letting herself go. A diet of Chlorophyte Ore and Life Fruit isn't THAT healthy! Why don't you help her slim down?
+					CactusDamage: Those cacti can be pretty prickly! Feeling prickled? Try enchanting yourself with cactus essence and see how it goes!
+					RainLightning: Watch out for the lightning when it rains. It's good to pack an umbrella so you're not caught out and end up all wet! 
 				}
 
 				Census.SpawnCondition: Conditions unknown
@@ -2941,7 +2943,8 @@ Mods: {
 			MothronDown: After defeating a Mothron and all Mechanical Bosses
 			LeeDown: After defeating a Bone Lee and Plantera
 			PaladinDown: After defeating a Paladin and Plantera
-			SkeleGunDown: After defeating a Necromancer, Diabloist or Ragged Caster, After defeating Plantera
+			SkeleGunDown: After defeating a Skeleton Sniper, Tactical Skeleton or Skeleton Commando, After defeating Plantera
+			SkeleMagesDown: After defeating a Necromancer, Diabloist or Ragged Caster, After defeating Plantera
 			SiblingPylon: If all siblings are present
 			BossDown: After defeating any boss
 			DownedTheBoss: After the boss has been defeated

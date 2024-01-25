@@ -1029,7 +1029,7 @@ namespace Fargowiltas.NPCs
                     npcLoot.Add(ItemDropRule.Common(ItemID.Ale, 2, 4, 4));
                     break;
 
-                case NPCID.ArmsDealer:
+                case NPCID.Cyborg:
                     npcLoot.Add(ItemDropRule.Common(ItemID.NanoBullet, 4, 30, 30));
                     break;
 

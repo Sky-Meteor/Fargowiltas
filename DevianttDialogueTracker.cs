@@ -174,6 +174,12 @@ namespace Fargowiltas
             AddDialogue("SoulToggle", HelpDialogueType.Misc,
                 (name) => true);
 
+            AddDialogue("CactusDamage", HelpDialogueType.Environment,
+                (name) => true);
+
+            AddDialogue("RainLightning", HelpDialogueType.Environment,
+                (name) => true);
+
             //AddDialogue("Just so you know, ammos are less effective. Only a bit of their damage contributes to your total output!",
             //    HelpDialogueType.Misc, (name) => Main.LocalPlayer.HeldItem.CountsAsClass(DamageClass.Ranged));
 
