@@ -2497,14 +2497,17 @@ Mods: {
 				}
 
 				Chat: {
+					// Special
 					Defeat: You really defeated me... not bad. Now do it again without getting hit. Oh, and Copper Shortsword only.
 					MutantShimmer: He turned into a squirrel. Funniest thing I've ever seen.
 					StyxArmor: What nostalgic armor you're wearing... No, it doesn't fit on me anymore. And its battery takes too long to charge.
 					Graveyard: I hope all these graves lying around don't belong to you.
 					Mechanic: Can you please ask {0} to stop touching my laser arm please.
-					Normal1: Where'd I get my scythe from? {0}
-					Normal1PHM: Ask me later.
-					Normal1HM: You'll figure it out.
+					// Normal
+					Formattable1: Where'd I get my scythe from? {0}
+					Formatter1PHM: Ask me later.
+					Formatter1HM: You'll figure it out.
+					Normal1: I have slain one thousand humans! Huh? You're a human? There's so much blood on your hands..
 					Normal2: I have defeated everything in this land... nothing can beat me.
 					Normal3: Have you ever had a weapon stuck to your hand? It's not very handy.
 					Normal4: What happened to Yoramur? No idea who you're talking about.
@@ -2526,7 +2529,6 @@ Mods: {
 					Normal20: I've heard tales of a legendary Diver... Anyway what was that about a giant jellyfish?
 					Normal21: Overloaded events...? Yeah, they're pretty cool.
 					Normal22: It's not like I don't enjoy your company, but can you buy something?
-					Normal23: I have slain one thousand humans! Huh? You're a human? There's so much blood on your hands..
 					// Cancel Event
 					Canceled: Hocus pocus, the event is over.
 					CancelCD: I'm not feeling it right now, come back in {0} seconds.
@@ -2560,6 +2562,7 @@ Mods: {
 				}
 
 				Chat: {
+					// Special
 					GiveGifts: This world looks tougher than usual, so you can have these on the house just this once! Talk to me if you need any tips, yeah?
 					NTB: IT'S THE FUNNY BEE WORLD!
 					NTBHA: " HA"
@@ -2578,7 +2581,9 @@ Mods: {
 					Mutant2: One day, I'll sell a summon for myself! ...Just kidding. That's {0}'s job.
 					Lumber: What's that? You want to fight {0}? ...even I know better than to try.
 					EternityMode: Embrace suffering... and while you're at it, embrace another purchase!
-					Normal1: "{0}! I saw something rodent-y just now! You don't have a hamster infestation, right? Right!?"
+					// Normal
+					Formattable1: "{0}! I saw something rodent-y just now! You don't have a hamster infestation, right? Right!?"
+					Normal1: No, I'm totally not throwing Love Potions while you're not looking! Um, I mean... oh, just buy something!
 					Normal2: Did you know? The only real music genres are death metal and artcore.
 					Normal3: I'll have you know I'm over a hundred Fargo years old! Don't ask me how long a Fargo year is.
 					Normal4: I might be able to afford a taller body if you keep buying!
@@ -2594,7 +2599,6 @@ Mods: {
 					Normal14: Why the extra letter, you ask? Only the strongest sibling is allowed to remove their own!
 					Normal15: The more rare things you kill, the more stuff I sell! Simple, right?
 					Normal16: Oh, hi! I, uh, definitely don't have any Stink Potions on me right now! Not that I normally would!
-					Normal17: No, I'm totally not throwing Love Potions while you're not looking! Um, I mean... oh, just buy something!
 				}
 
 				HelpDialogue: {
@@ -2634,7 +2638,7 @@ Mods: {
 					UndergroundHallow: That's a funny face you're making... Is the underground Hallow too disorienting? Try controlling gravity on your own and maybe it can't flip you by force!
 					LifeFruit: If you ask me, Plantera is really letting herself go. A diet of Chlorophyte Ore and Life Fruit isn't THAT healthy! Why don't you help her slim down?
 					CactusDamage: Those cacti can be pretty prickly! Feeling prickled? Try enchanting yourself with cactus essence and see how it goes!
-					RainLightning: Watch out for the lightning when it rains. It's good to pack an umbrella so you're not caught out and end up all wet! 
+					RainLightning: Watch out for the lightning when it rains. It's good to pack an umbrella so you're not caught out and end up all wet!
 				}
 
 				Census.SpawnCondition: Conditions unknown
@@ -2661,8 +2665,10 @@ Mods: {
 				}
 
 				Chat: {
+					// Special
 					Nurse: I always see {0} looking at my biceps when I'm working. Wonder if she wants some of my wood.
 					LucyTheAxe: Lucy from that universe.. Interesting things await you.
+					// Normal
 					Normal1: Dynasty wood? Between you and me, that stuff ain't real wood!
 					Normal2: Sure cactus isn't wood, but I can still chop it with me trusty axe.
 					Normal3: You wouldn't by chance have any fantasies about me... right?
@@ -2727,6 +2733,7 @@ Mods: {
 				}
 
 				Chat: {
+					// Special
 					EternityDefeat: Congratulations. You truly embraced eternity... at least, I think you did? So what happens next? Ascend from this plane of existence? Fight a transcendent cat-like entity? Destroy the world? All the power's in your hands now.
 					Defeat: Good work beating me, I guess. I still feel like stretching my wings... Why don't we go at it for real next time?
 					MutantArmor: Nice armor you have, very realistic skin. As a matter of fact, mind if I borrow it? Your skin, that is.
@@ -2754,6 +2761,7 @@ Mods: {
 					Demolitionist: I'm surprised {0} hasn't blown a hole in the floor yet, on second thought that sounds fun.
 					Tavernkeep: "{0} keeps suggesting I drink some beer, something tells me he wouldn't like me when I'm drunk though."
 					DyeTrader: "{0} wants to see what I would look like in blue... I don't know how to feel."
+					// Normal
 					Normal1: Savagery, barbarism, bloodthirst, that's what I like seeing in people.
 					Normal2: The stronger you get, the more stuff I sell. Makes sense, right?
 					Normal3: There's something all of you have that I don't... Death perception, I think it's called?
@@ -2826,7 +2834,9 @@ Mods: {
 				}
 
 				Chat: {
+					// Special
 					BloodMoon: "[c/FF0000:You will suffer.]"
+					// Normal
 					Normal1: *squeak*
 					Normal2: *chitter*
 					Normal3: *crunch crunch*

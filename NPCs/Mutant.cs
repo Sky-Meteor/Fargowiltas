@@ -180,11 +180,7 @@ namespace Fargowiltas.NPCs
                     return MutantChat("MutantArmor");
             }
 
-            List<string> dialogue = new List<string>();
-            for (int i = 1; i <= 45; i++)
-            {
-                dialogue.Add(MutantChat($"Normal{i}"));
-            }
+            List<string> dialogue = Language.FindAll(Lang.CreateDialogFilter("Mods.Fargowiltas.NPCs.Mutant.Chat.Normal")).Select(item => item.Value).ToList();
 
             if (Fargowiltas.ModLoaded["FargowiltasSouls"])
             {
@@ -295,7 +291,7 @@ namespace Fargowiltas.NPCs
             {
                 dialogue.Add(MutantChat("DyeTrader", Main.npc[dyeTrader].GivenName));
             }
-
+            
             return Main.rand.Next(dialogue);
         }
 
