@@ -2021,11 +2021,6 @@ Mods: {
 				Tooltip: "'Kien R. Oco'"
 			}
 
-			WiresPainting: {
-				DisplayName: Wires Painting
-				Tooltip: "'Look inside'"
-			}
-
 			WoodenToken: {
 				DisplayName: Wooden Token
 				Tooltip: "'The sign of a true wood lover'"
@@ -2171,7 +2166,7 @@ Mods: {
 			}
 
 			LumberJack: {
-				DisplayName: Lumber Jack
+				DisplayName: LumberJack
 				Tooltip: "'I eat a bowl of woodchips for breakfast... without any milk.'"
 			}
 
