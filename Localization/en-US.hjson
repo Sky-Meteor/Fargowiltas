@@ -2493,7 +2493,7 @@ Mods: {
 					LikeNPC: "{$Mods.Fargowiltas.TownNPCMood.Abominationn.LikeNPC}"
 					HateNPC: "{$Mods.Fargowiltas.TownNPCMood.Abominationn.HateNPC}"
 					LikeNPC_Princess: "{$Mods.Fargowiltas.TownNPCMood.Abominationn.LikeNPC_Princess}"
-					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_Fargowiltas/Abominationn}"
+					Princess_LovesNPC: "{NPCName} tells great stories about his battles!"
 				}
 
 				Chat: {
@@ -2556,7 +2556,7 @@ Mods: {
 					DislikeNPC: "{$Mods.Fargowiltas.TownNPCMood.Deviantt.DislikeNPC}"
 					HateNPC: "{$Mods.Fargowiltas.TownNPCMood.Deviantt.HateNPC}"
 					LikeNPC_Princess: "{$Mods.Fargowiltas.TownNPCMood.Deviantt.LikeNPC_Princess}"
-					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_Fargowiltas/Deviantt}"
+					Princess_LovesNPC: "{NPCName} is so fun, we could talk for hours!"
 				}
 
 				Chat: {
@@ -2657,7 +2657,7 @@ Mods: {
 					DislikeNPC: "{$Mods.Fargowiltas.TownNPCMood.LumberJack.DislikeNPC}"
 					HateNPC: "{$Mods.Fargowiltas.TownNPCMood.LumberJack.HateNPC}"
 					LikeNPC_Princess: "{$Mods.Fargowiltas.TownNPCMood.LumberJack.LikeNPC_Princess}"
-					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_Fargowiltas/LumberJack}"
+					Princess_LovesNPC: "{NPCName} is so strong, I want to try chopping wood some time!"
 				}
 
 				Chat: {
@@ -2723,7 +2723,7 @@ Mods: {
 					LikeNPC: "{$Mods.Fargowiltas.TownNPCMood.Mutant.LikeNPC}"
 					DislikeNPC: "{$Mods.Fargowiltas.TownNPCMood.Mutant.DislikeNPC}"
 					LikeNPC_Princess: "{$Mods.Fargowiltas.TownNPCMood.Mutant.LikeNPC_Princess}"
-					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_Fargowiltas/Mutant}"
+					Princess_LovesNPC: "{NPCName} has some amazing items, they're great for meeting new friends!"
 				}
 
 				Chat: {
@@ -2822,7 +2822,7 @@ Mods: {
 					HateBiome: "{$Mods.Fargowiltas.TownNPCMood.Squirrel.HateBiome}"
 					LikeNPC: "{$Mods.Fargowiltas.TownNPCMood.Squirrel.LikeNPC}"
 					LikeNPC_Princess: "{$Mods.Fargowiltas.TownNPCMood.Squirrel.LikeNPC_Princess}"
-					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_Fargowiltas/Squirrel}"
+					Princess_LovesNPC: "{NPCName} is really adorable!"
 				}
 
 				Chat: {
@@ -3006,13 +3006,4 @@ Mods: {
 			SeveralVendors: several vendors
 		}
 	}
-}
-
-# this doesnt work rn
-TownNPCMood_Princess: {
-	LoveNPC_Fargowiltas/Abominationn: "{NPCName} tells great stories about his battles!"
-	LoveNPC_Fargowiltas/Deviantt: "{NPCName} is so fun, we could talk for hours!"
-	LoveNPC_Fargowiltas/Mutant: "{NPCName} has some amazing items, they're great for meeting new friends!"
-	LoveNPC_Fargowiltas/Squirrel: "{NPCName} is really adorable!"
-	LoveNPC_Fargowiltas/LumberJack: "{NPCName} is so strong, I want to try chopping wood some time!"
 }
