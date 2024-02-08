@@ -126,6 +126,18 @@ namespace Fargowiltas.NPCs
                     beeBoss = npc.whoAmI;
                     break;
 
+                case NPCID.CultistBoss:
+                    if (npc.ai[0] == -1 && npc.ai[1] == 1) //just after spawning
+                    {
+                        bool foundTabletNearby = Main.npc.Any(n => n.active && n.type == NPCID.CultistTablet && npc.Distance(n.Center) < 400);
+                        if (!foundTabletNearby)
+                        {
+                            npc.ai[1] = 360;
+                            npc.netUpdate = true;
+                        }
+                    }
+                    break;
+
                 //                case NPCID.TheDestroyer:
                 //                    if (SwarmActive)
                 //                    {
