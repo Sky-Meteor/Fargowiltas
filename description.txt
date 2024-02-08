@@ -4,6 +4,8 @@ There are several other items such as infinite ammos, craftable instant builds f
 Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
+-Cultist skips most of his spawn animation when spawned manually
+
 NEW UPDATE - v3.2.2
 -Updated wiki links to lead to the brand new dedicated wiki at https://fargosmods.wiki.gg
 -Added new Deviantt help dialogue for the new Eternity Mode changes for Cacti and lightning
