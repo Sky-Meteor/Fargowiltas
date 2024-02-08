@@ -734,7 +734,7 @@ namespace Fargowiltas
 
             orig.Invoke(player, out dir, out dashing, dashStartAction);
 
-            if (player.whoAmI == Main.myPlayer && DashKey.JustPressed)
+            if (player.whoAmI == Main.myPlayer && DashKey.JustPressed && !player.CCed)
             {
                 InputManager modPlayer = player.GetModPlayer<InputManager>();
                 if (player.controlRight && player.controlLeft)

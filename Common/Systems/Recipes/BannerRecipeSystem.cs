@@ -526,7 +526,7 @@ namespace Fargowiltas.Common.Systems.Recipes
             AddBannerGroupToItemRecipe(AnyPirateBanner, ItemID.PirateStaff, conditions: Condition.DownedPirates);
             AddBannerToItemRecipe(ItemID.PirateCaptainBanner, ItemID.CoinGun, conditions: Condition.DownedPirates);
 
-            AddBannerToItemRecipe(ItemID.EnchantedSwordBanner, ItemID.Smolstar, conditions: Condition.DownedQueenSlime);
+            //AddBannerToItemRecipe(ItemID.EnchantedSwordBanner, ItemID.Smolstar, conditions: Condition.DownedQueenSlime);
 
             AddBannerGroupToItemRecipe(AnyJungleBanner, ItemID.Yelets, conditions: Condition.DownedMechBossAny);
             AddBannerToItemRecipe(ItemID.LavaBatBanner, ItemID.HelFire, conditions: Condition.DownedMechBossAny);
