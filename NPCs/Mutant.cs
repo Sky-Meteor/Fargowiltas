@@ -105,7 +105,7 @@ namespace Fargowiltas.NPCs
             NPC.knockBackResist = 0.5f;
             AnimationType = NPCID.Guide;
 
-            if (GetInstance<FargoServerConfig>().CatchNPCs)
+            if (FargoServerConfig.Instance.CatchNPCs)
             {
                 Main.npcCatchable[NPC.type] = true;
             //    NPC.catchItem = (short)Mod.ItemType("Mutant");
@@ -152,7 +152,7 @@ namespace Fargowiltas.NPCs
                 return false;
             }
 
-            return GetInstance<FargoServerConfig>().Mutant && FargoWorld.DownedBools["boss"] && !FargoGlobalNPC.AnyBossAlive();
+            return FargoServerConfig.Instance.Mutant && FargoWorld.DownedBools["boss"] && !FargoGlobalNPC.AnyBossAlive();
         }
 
         public override List<string> SetNPCNameList()

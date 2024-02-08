@@ -55,7 +55,7 @@ namespace Fargowiltas
 
         internal static Fargowiltas Instance;
 
-        public override uint ExtraPlayerBuffSlots => ModContent.GetInstance<FargoServerConfig>().ExtraBuffSlots;
+        public override uint ExtraPlayerBuffSlots => FargoServerConfig.Instance.ExtraBuffSlots;
 
 
         public Fargowiltas()
@@ -134,7 +134,7 @@ namespace Fargowiltas
             var wormholes = GetWormholes(self).ToList();
 
             if (
-                ModContent.GetInstance<FargoServerConfig>().UnlimitedPotionBuffsOn120
+                FargoServerConfig.Instance.UnlimitedPotionBuffsOn120
                 && wormholes.Select(x => x.stack).Sum() >= 30
             )
             {
@@ -395,7 +395,7 @@ namespace Fargowiltas
                         break;
 
                     case "DoubleTapDashDisabled":
-                        return ModContent.GetInstance<FargoClientConfig>().DoubleTapDashDisabled;
+                        return FargoClientConfig.Instance.DoubleTapDashDisabled;
                 }
 
             }
@@ -713,7 +713,7 @@ namespace Fargowiltas
         }
         private static void OnVanillaDash(Terraria.On_Player.orig_DoCommonDashHandle orig, Terraria.Player player, out int dir, out bool dashing, Player.DashStartAction dashStartAction)
         {
-            if (ModContent.GetInstance<FargoClientConfig>().DoubleTapDashDisabled)
+            if (FargoClientConfig.Instance.DoubleTapDashDisabled)
             {
                 player.dashTime = 0;
                 /*
@@ -782,14 +782,14 @@ namespace Fargowiltas
         }
         private static void OnVanillaDoubleTapSetBonus(On_Player.orig_KeyDoubleTap orig, Player player, int keyDir)
         {
-            if (!ModContent.GetInstance<FargoClientConfig>().DoubleTapSetBonusDisabled || SetBonusKey.JustPressed)
+            if (!FargoClientConfig.Instance.DoubleTapSetBonusDisabled || SetBonusKey.JustPressed)
             {
                 orig.Invoke(player, keyDir);
             }
         }
         private static void OnVanillaHoldSetBonus(On_Player.orig_KeyHoldDown orig, Player player, int keyDir, int holdTime)
         {
-            if (!ModContent.GetInstance<FargoClientConfig>().DoubleTapSetBonusDisabled || SetBonusKey.Current)
+            if (!FargoClientConfig.Instance.DoubleTapSetBonusDisabled || SetBonusKey.Current)
             {
                 orig.Invoke(player, keyDir, holdTime);
             }

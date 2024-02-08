@@ -13,7 +13,7 @@ namespace Fargowiltas.Common.Systems.Recipes
 
         public override bool IsLoadingEnabled(Mod mod)
         {
-            return ModContent.GetInstance<FargoServerConfig>().BannerRecipes;
+            return FargoServerConfig.Instance.BannerRecipes;
         }
 
         public override void AddRecipeGroups()

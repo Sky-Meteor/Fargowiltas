@@ -276,7 +276,33 @@ Mods: {
 					Seasons: Seasons
 					Seeds: Seeds
 					Unlimited: Unlimited
+					StatMultipliers: Stat Multipliers
 					Misc: Miscellaneous
+				}
+
+				EnemyHealth: {
+					Label: "[i:29] Enemy Health"
+					Tooltip: Multiplies the health of all enemies.
+				}
+
+				BossHealth: {
+					Label: "[i:29] Boss Health"
+					Tooltip: Multiplies the health of all bosses. Highest multiplier between this or Enemy Health is applied.
+				}
+
+				EnemyDamage: {
+					Label: "[i:3507] Enemy Damage"
+					Tooltip: Multiplies post-mitigation damage of all enemies and projectiles.
+				}
+
+				BossDamage: {
+					Label: "[i:3507] Boss Damage"
+					Tooltip: Multiplies post-mitigation damage of all bosses. Highest multiplier between this or Enemy Damage is applied.
+				}
+
+				BossApplyToAllWhenAlive: {
+					Label: Boss Multipliers Apply Universally
+					Tooltip: Boss Health and Boss Damage configs apply to all enemies while a boss is alive, rather than just bosses themselves.
 				}
 			}
 
