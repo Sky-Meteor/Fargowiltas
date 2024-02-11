@@ -18,6 +18,7 @@ using static Terraria.ModLoader.ModContent;
 using Fargowiltas.Items.Explosives;
 using Fargowiltas.Items.Summons.Abom;
 using Fargowiltas.Common.Configs;
+using Fargowiltas.Items.Summons.Deviantt;
 
 namespace Fargowiltas.NPCs
 {
@@ -1026,7 +1027,18 @@ namespace Fargowiltas.NPCs
                 case NPCID.Penguin:
                 case NPCID.IceSlime:
                 case NPCID.SpikedIceSlime:
-                    npcLoot.Add(ItemDropRule.OneFromOptions(10, ItemID.EskimoHood, ItemID.EskimoCoat, ItemID.EskimoPants));
+                    npcLoot.Add(ItemDropRule.OneFromOptions(20, ItemID.EskimoHood, ItemID.EskimoCoat, ItemID.EskimoPants));
+                    break;
+
+                case NPCID.MossHornet:
+                case NPCID.JungleCreeper:
+                case NPCID.JungleCreeperWall:
+                case NPCID.AngryTrapper:
+                case NPCID.GiantTortoise:
+                    npcLoot.Add(ItemDropRule.ByCondition(new Conditions.IsHardmode(), ItemType<JungleChest>(), 50));
+                    break;
+                case NPCID.Moth:
+                    npcLoot.Add(ItemDropRule.ByCondition(new Conditions.IsHardmode(), ItemType<JungleChest>(), 10));
                     break;
 
                 case NPCID.GreekSkeleton:
