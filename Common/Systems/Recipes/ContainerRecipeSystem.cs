@@ -164,13 +164,13 @@ namespace Fargowiltas.Common.Systems.Recipes
             // Dark Mage
             CreateTreasureGroupRecipe(ItemID.BossTrophyDarkmage,
                 ItemID.DD2PetDragon,
-                ItemID.DD2PetGato
+                ItemID.DD2PetGato,
+                ItemID.SquireShield,
+                ItemID.ApprenticeScarf
             );
 
             // Ogre
             CreateTreasureGroupRecipe(ItemID.BossTrophyOgre,
-                ItemID.ApprenticeScarf,
-                ItemID.SquireShield,
                 ItemID.HuntressBuckler,
                 ItemID.MonkBelt,
                 ItemID.DD2PhoenixBow,
