@@ -33,7 +33,7 @@ namespace Fargowiltas.Tiles
 
         public override void MouseOver(int i, int j, int type)
         {
-            if (type == TileID.Extractinator)
+            if (type == TileID.Extractinator || type == TileID.ChlorophyteExtractinator)
             {
                 Main.player[Main.myPlayer].GetModPlayer<FargoPlayer>().extractSpeed = true;
             }
