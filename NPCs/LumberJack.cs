@@ -131,8 +131,8 @@ namespace Fargowiltas.NPCs
 
         public override string GetChat()
         {
-            List<string> dialogue = new List<string>();
-            for (int i = 1; i <= 20; i++)
+            List<string> dialogue = new();
+            for (int i = 1; i <= 19; i++)
             {
                 dialogue.Add(LumberChat($"Normal{i}"));
             }

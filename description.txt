@@ -24,6 +24,7 @@ Removed Jungle Chest item recipe
 Jungle Chest item now drops from Jungle Creepers, Giant Tortoises, Angry Trappers and Moss Hornets at a 2% chance and from Moths at a 10% chance, in Hardmode
 Cultist skips most of his spawn animation when spawned manually
 Super Dummy health changed to 1 million
+Resprited Prismatic Primrose
 
 Fixed Super Dummies not spawning in multiplayer
 Fixed Squirrel blood moon glow offset
