@@ -131,12 +131,8 @@ namespace Fargowiltas.NPCs
 
         public override string GetChat()
         {
-            List<string> dialogue = new();
-            for (int i = 1; i <= 19; i++)
-            {
-                dialogue.Add(LumberChat($"Normal{i}"));
-            }
-
+            List<string> dialogue = Language.FindAll(Lang.CreateDialogFilter("Mods.Fargowiltas.NPCs.LumberJack.Chat.Normal")).Select(item => item.Value).ToList();
+            
             int nurse = NPC.FindFirstNPC(NPCID.Nurse);
             if (nurse >= 0)
             {
@@ -144,7 +140,6 @@ namespace Fargowiltas.NPCs
             }
 
             Player player = Main.LocalPlayer;
-
             if (player.HeldItem.type == ItemID.LucyTheAxe)
             {
                 dialogue.Add(LumberChat("LucyTheAxe"));
