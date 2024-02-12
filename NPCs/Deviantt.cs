@@ -123,7 +123,7 @@ namespace Fargowiltas.NPCs
             if (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("DevianttAlive"))
                 return false;
 
-            return GetInstance<FargoServerConfig>().Devi && !FargoGlobalNPC.AnyBossAlive() 
+            return FargoServerConfig.Instance.Devi && !FargoGlobalNPC.AnyBossAlive() 
                 && ((FargoWorld.DownedBools.TryGetValue("rareEnemy", out bool value) && value)
                 || (Fargowiltas.ModLoaded["FargowiltasSouls"] && (bool)ModLoader.GetMod("FargowiltasSouls").Call("EternityMode")));
         }
