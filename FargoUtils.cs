@@ -52,6 +52,7 @@ namespace Fargowiltas
 
             if (update)
             {
+                seller = Language.GetTextValue($"Mods.Fargowiltas.NPCs.{seller}.DisplayName");
                 string text = Language.GetTextValue("Mods.Fargowiltas.MessageInfo.NewItemUnlocked", seller);
                 if (Main.netMode == NetmodeID.SinglePlayer)
                 {
