@@ -4,6 +4,8 @@ There are several other items such as infinite ammos, craftable instant builds f
 Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
+-Moon Lord death animation speeds up when multiple are alive
+
 NEW UPDATE - v3.3
 Added new Stat Slider configs for:
 Enemy health

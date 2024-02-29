@@ -153,6 +153,18 @@ namespace Fargowiltas.NPCs
                     }
                     break;
 
+                case NPCID.MoonLordCore:
+                    if (npc.ai[0] == 2)
+                    {
+                        int skipPoint = 600 - 60;
+                        if (npc.ai[1] < skipPoint && npc.ai[1] % 60 == 30 && NPC.CountNPCS(npc.type) > 1)
+                        {
+                            npc.ai[1] = skipPoint;
+                            npc.netUpdate = true;
+                        }
+                    }
+                    break;
+
                 //                case NPCID.TheDestroyer:
                 //                    if (SwarmActive)
                 //                    {
