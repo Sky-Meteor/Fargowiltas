@@ -123,6 +123,17 @@ namespace Fargowiltas.NPCs
                 boss = npc.whoAmI;
             }
 
+            if (npc.townNPC && npc.homeTileX == -1 && npc.homeTileY == -1)
+            {
+                bool hasRoom = WorldGen.TownManager.HasRoom(npc.type, out Point homePoint);
+                if (hasRoom)
+                {
+                    int x = homePoint.X;
+                    int y = homePoint.Y - 2;
+                    WorldGen.moveRoom(x, y, npc.whoAmI);
+                }
+            }
+
             switch (npc.type)
             {
                 case NPCID.EaterofWorldsHead:
