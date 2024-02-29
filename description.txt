@@ -5,6 +5,8 @@ Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
 -Moon Lord death animation speeds up when multiple are alive
+-Added Moondial to Portable Sundial recipe
+-Reduced Portable Sundial mana cost from 25 to 15
 
 NEW UPDATE - v3.3
 Added new Stat Slider configs for:
