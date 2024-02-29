@@ -7,6 +7,7 @@ Fargo Wiki: https://fargosmods.wiki.gg
 -Moon Lord death animation speeds up when multiple are alive
 -Added Moondial to Portable Sundial recipe
 -Reduced Portable Sundial mana cost from 25 to 15
+-Prismatic Primrose resets night when Empress isn't beaten
 
 NEW UPDATE - v3.3
 Added new Stat Slider configs for:
