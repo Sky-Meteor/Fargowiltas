@@ -11,6 +11,7 @@ Fargo Wiki: https://fargosmods.wiki.gg
 -Town NPCs remember their home when bug netted
 -Mining a Garden Gnome counts for unlocking Gnomes in Deviantt shop
 -Added recipes for Wall Skeleton, Hanging Skeleton, Catacomb
+-Added Config option for pylons to allow use even during events
 
 NEW UPDATE - v3.3
 Added new Stat Slider configs for:

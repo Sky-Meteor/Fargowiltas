@@ -178,6 +178,11 @@ Mods: {
 					Tooltip: Obeys true torch luck, which may differ from Torch God's Favor
 				}
 
+				PylonsIgnoreEvents: {
+					Label: "[i:4876] Pylons Ignore Events"
+					Tooltip: ""
+				}
+
 				Headers: {
 					TownNPCs: Town NPCs
 					Seasons: Seasons
@@ -210,6 +215,11 @@ Mods: {
 				BossApplyToAllWhenAlive: {
 					Label: Boss Multipliers Apply Universally
 					Tooltip: Boss Health and Boss Damage configs apply to all enemies while a boss is alive, rather than just bosses themselves.
+				}
+
+				PylonsIgnoreEvents: {
+					Label: Pylons Ignore Events
+					Tooltip: ""
 				}
 			}
 
