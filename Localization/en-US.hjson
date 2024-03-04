@@ -178,6 +178,11 @@ Mods: {
 					Tooltip: Obeys true torch luck, which may differ from Torch God's Favor
 				}
 
+				PylonsIgnoreEvents: {
+					Label: Pylons Ignore Events
+					Tooltip: ""
+				}
+
 				Headers: {
 					TownNPCs: Town NPCs
 					Seasons: Seasons
