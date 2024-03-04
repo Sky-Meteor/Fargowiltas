@@ -105,7 +105,7 @@ namespace Fargowiltas.NPCs
         {
             #region Stat Sliders
             FargoServerConfig config = FargoServerConfig.Instance;
-            if (config.EnemyHealth != 1 || config.BossHealth != 1)
+            if ((config.EnemyHealth != 1 || config.BossHealth != 1) && !npc.townNPC && !npc.CountsAsACritter && npc.life > 10)
             {
                 bool boss = config.BossHealth > config.EnemyHealth && // only relevant if boss health is higher than enemy health
                     (npc.boss || npc.type == NPCID.EaterofWorldsHead || npc.type == NPCID.EaterofWorldsBody || npc.type == NPCID.EaterofWorldsTail || (config.BossApplyToAllWhenAlive && AnyBossAlive()));
