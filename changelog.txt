@@ -12,7 +12,6 @@ Catacomb
 -Prismatic Primrose resets night when Empress isn't beaten
 -Town NPCs remember their home when bug netted
 -Mining a Garden Gnome counts for unlocking Gnomes in Deviantt shop
--Added recipes for Wall Skeleton, Hanging Skeleton, Catacomb
 -Added Config option for pylons to allow use even during events
 -Multitask Center recipe is now crafted by hand
 -Critters and town NPCS are now unaffected by enemy health multiplier config
