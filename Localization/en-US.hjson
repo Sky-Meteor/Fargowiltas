@@ -2405,6 +2405,11 @@ Mods: {
 					Do not use if any important building is below
 					'''
 			}
+
+			KohaCrystal: {
+				DisplayName: Koha Crystal
+				Tooltip: Decreases the amount of Mana Crystals you have by 1
+			}
 		}
 
 		NPCs: {
