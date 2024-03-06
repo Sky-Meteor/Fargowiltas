@@ -5,6 +5,13 @@ Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
 NEW UPDATE - v3.3.1
+-New item: Koha Crystal
+
+-New recipes:
+Wall Skeleton
+Hanging Skeleton
+Catacomb
+
 -Moon Lord death animation speeds up when multiple are alive
 -Added Moondial to Portable Sundial recipe
 -Reduced Portable Sundial mana cost from 25 to 15
@@ -14,6 +21,7 @@ NEW UPDATE - v3.3.1
 -Added recipes for Wall Skeleton, Hanging Skeleton, Catacomb
 -Added Config option for pylons to allow use even during events
 -Multitask Center recipe is now crafted by hand
+-Critters and town NPCS are now unaffected by enemy health multiplier config
 
 NEW UPDATE - v3.3
 Added new Stat Slider configs for:
