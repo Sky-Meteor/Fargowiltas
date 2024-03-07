@@ -4,6 +4,8 @@ There are several other items such as infinite ammos, craftable instant builds f
 Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
+-Added Big Suck Potion
+
 NEW UPDATE - v3.3.1
 -New item: Koha Crystal
 

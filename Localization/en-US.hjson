@@ -393,6 +393,11 @@ Mods: {
 				DisplayName: Wood Drop
 				Description: Mods.Fargowiltas.BuffDescription.WoodDrop
 			}
+
+			BigSuckBuff: {
+				DisplayName: Big Suck
+				Description: You are sucking everything
+			}
 		}
 
 		Items: {
@@ -2409,6 +2414,11 @@ Mods: {
 			KohaCrystal: {
 				DisplayName: Koha Crystal
 				Tooltip: Decreases the amount of Mana Crystals you have by 1
+			}
+
+			BigSuckPotion: {
+				DisplayName: Big Suck Potion
+				Tooltip: Makes you suck everything
 			}
 		}
 
