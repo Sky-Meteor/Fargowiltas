@@ -5,6 +5,7 @@ Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
 -Added Big Suck Potion
+-Added Hide Unlimited Buffs config
 -Fixed caught town NPC item sometimes being consumed without actually spawning the town NPC
 
 NEW UPDATE - v3.3.1
