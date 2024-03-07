@@ -16,6 +16,7 @@ using Fargowiltas.Items.Ammos.Coins;
 using Fargowiltas.Items.CaughtNPCs;
 using static System.Net.Mime.MediaTypeNames;
 using Terraria.Localization;
+using Fargowiltas.Items.Misc;
 
 namespace Fargowiltas.Items
 {
@@ -78,9 +79,9 @@ namespace Fargowiltas.Items
         }
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            var fargoServerConfig = GetInstance<FargoServerConfig>();
+            var fargoServerConfig = FargoServerConfig.Instance;
 
-            if (GetInstance<FargoClientConfig>().ExpandedTooltips)
+            if (FargoClientConfig.Instance.ExpandedTooltips)
             {
                 TooltipLine line;
                 //Shop sale tooltips. Very engineered. Adds tooltips to ALL npc shop sales. Aims to handle any edge case as well as possible.
@@ -292,7 +293,7 @@ namespace Fargowiltas.Items
 
         public override void SetDefaults(Item item)
         {
-            if (GetInstance<FargoServerConfig>().IncreaseMaxStack)
+            if (FargoServerConfig.Instance.IncreaseMaxStack)
             {
                 if (item.maxStack > 10 && (item.maxStack != 100) && !(item.type >= ItemID.CopperCoin && item.type <= ItemID.PlatinumCoin))
                 {
@@ -332,7 +333,7 @@ namespace Fargowiltas.Items
 
         public override void PostUpdate(Item item)
         {
-            if (GetInstance<FargoServerConfig>().Halloween == SeasonSelections.AlwaysOn && GetInstance<FargoServerConfig>().Christmas == SeasonSelections.AlwaysOn && firstTick)
+            if (FargoServerConfig.Instance.Halloween == SeasonSelections.AlwaysOn && FargoServerConfig.Instance.Christmas == SeasonSelections.AlwaysOn && firstTick)
             {
                 if (Array.IndexOf(Hearts, item.type) >= 0)
                 {
@@ -352,7 +353,7 @@ namespace Fargowiltas.Items
         {
             if (item.type == ItemID.SiltBlock || item.type == ItemID.SlushBlock || item.type == ItemID.DesertFossil)
             {
-                if (GetInstance<FargoServerConfig>().ExtractSpeed && player.GetModPlayer<FargoPlayer>().extractSpeed)
+                if (FargoServerConfig.Instance.ExtractSpeed && player.GetModPlayer<FargoPlayer>().extractSpeed)
                 {
                     item.useTime = 2;
                     item.useAnimation = 3;
@@ -369,7 +370,7 @@ namespace Fargowiltas.Items
 
         public static void TryUnlimBuff(Item item, Player player)
         {
-            if (item.IsAir || !GetInstance<FargoServerConfig>().UnlimitedPotionBuffsOn120)
+            if (item.IsAir || !FargoServerConfig.Instance.UnlimitedPotionBuffsOn120)
                 return;
 
             if (item.stack >= 30 && item.buffType != 0)
@@ -385,11 +386,11 @@ namespace Fargowiltas.Items
             
         }
 
-        static int[] Informational = { ItemID.DPSMeter, ItemID.CopperWatch, ItemID.TinWatch, ItemID.TungstenWatch, ItemID.SilverWatch, ItemID.GoldWatch, ItemID.PlatinumWatch, ItemID.DepthMeter, ItemID.Compass, ItemID.Radar, ItemID.LifeformAnalyzer, ItemID.TallyCounter, ItemID.MetalDetector, ItemID.Stopwatch, ItemID.Ruler, ItemID.FishermansGuide, ItemID.Sextant, ItemID.WeatherRadio, ItemID.GPS, ItemID.REK, ItemID.GoblinTech, ItemID.FishFinder, ItemID.PDA, ItemID.CellPhone };
+        static int[] Informational = { ItemID.DPSMeter, ItemID.CopperWatch, ItemID.TinWatch, ItemID.TungstenWatch, ItemID.SilverWatch, ItemID.GoldWatch, ItemID.PlatinumWatch, ItemID.DepthMeter, ItemID.Compass, ItemID.Radar, ItemID.LifeformAnalyzer, ItemID.TallyCounter, ItemID.MetalDetector, ItemID.Stopwatch, ItemID.Ruler, ItemID.FishermansGuide, ItemID.Sextant, ItemID.WeatherRadio, ItemID.GPS, ItemID.REK, ItemID.GoblinTech, ItemID.FishFinder, ItemID.PDA, ItemID.CellPhone, ItemID.Shellphone };
         static int[] Construction = { ItemID.Toolbelt, ItemID.Toolbox, ItemID.ExtendoGrip, ItemID.PaintSprayer, ItemID.BrickLayer, ItemID.PortableCementMixer, ItemID.ActuationAccessory, ItemID.ArchitectGizmoPack };
         public static void TryPiggyBankAcc(Item item, Player player)
         {
-            if (item.IsAir || item.maxStack > 1 || !GetInstance<FargoServerConfig>().PiggyBankAcc)
+            if (item.IsAir || item.maxStack > 1 || !FargoServerConfig.Instance.PiggyBankAcc)
                 return;
 
             if (Informational.Contains(item.type))
@@ -517,7 +518,7 @@ namespace Fargowiltas.Items
 
         public override bool CanBeConsumedAsAmmo(Item ammo, Item weapon, Player player)
         {
-            if (GetInstance<FargoServerConfig>().UnlimitedAmmo && Main.hardMode && ammo.ammo != 0 && ammo.stack >= 3996)
+            if (FargoServerConfig.Instance.UnlimitedAmmo && Main.hardMode && ammo.ammo != 0 && ammo.stack >= 3996)
                 return false;
 
             return true;
@@ -525,7 +526,7 @@ namespace Fargowiltas.Items
 
         public override bool? CanConsumeBait(Player player, Item bait)
         {
-            if (GetInstance<FargoServerConfig>().UnlimitedPotionBuffsOn120 && bait.stack >= 30)
+            if (FargoServerConfig.Instance.UnlimitedPotionBuffsOn120 && bait.stack >= 30)
                 return false;
 
             return base.CanConsumeBait(player, bait);
@@ -536,13 +537,14 @@ namespace Fargowiltas.Items
             ItemID.RecallPotion,
             ItemID.PotionOfReturn,
             ItemID.WormholePotion,
-            ItemID.TeleportationPotion
+            ItemID.TeleportationPotion,
+            ItemType<BigSuckPotion>()
         };
         public override bool ConsumeItem(Item item, Player player)
         {
-            if (GetInstance<FargoServerConfig>().UnlimitedConsumableWeapons && Main.hardMode && item.damage > 0 && item.ammo == 0 && item.stack >= 3996)
+            if (FargoServerConfig.Instance.UnlimitedConsumableWeapons && Main.hardMode && item.damage > 0 && item.ammo == 0 && item.stack >= 3996)
                 return false;
-            if (GetInstance<FargoServerConfig>().UnlimitedPotionBuffsOn120 && (item.buffType > 0 || NonBuffPotions.Contains(item.type)) && (item.stack >= 30 || player.inventory.Any(i => i.type == item.type && !i.IsAir && i.stack >= 30)))
+            if (FargoServerConfig.Instance.UnlimitedPotionBuffsOn120 && (item.buffType > 0 || NonBuffPotions.Contains(item.type)) && (item.stack >= 30 || player.inventory.Any(i => i.type == item.type && !i.IsAir && i.stack >= 30)))
                 return false;
             return true;
         }
@@ -619,6 +621,22 @@ namespace Fargowiltas.Items
         public override void HorizontalWingSpeeds(Item item, Player player, ref float speed, ref float acceleration)
         {
             player.GetModPlayer<FargoPlayer>().StatSheetWingSpeed = speed;
+        }
+
+        public override void GrabRange(Item item, Player player, ref int grabRange)
+        {
+            if (player.GetFargoPlayer().bigSuck)
+                grabRange += 9000 * 16; //corner to corner diagonally across a large world is 8736 units
+        }
+
+        public override bool GrabStyle(Item item, Player player)
+        {
+            if (player.GetFargoPlayer().bigSuck)
+            {
+                item.position += (player.MountedCenter - item.Center) / 15f;
+                item.position += player.position - player.oldPosition;
+            }
+            return base.GrabStyle(item, player);
         }
     }
 }
