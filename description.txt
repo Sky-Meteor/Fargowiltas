@@ -4,9 +4,11 @@ There are several other items such as infinite ammos, craftable instant builds f
 Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
+NEW UPDATE - v3.3.1.1
 -Added Big Suck Potion
 -Added Hide Unlimited Buffs config
 -Fixed caught town NPC item sometimes being consumed without actually spawning the town NPC
+-Fixed array error that sometimes prevented town NPCs from spawning properly
 
 NEW UPDATE - v3.3.1
 -New item: Koha Crystal

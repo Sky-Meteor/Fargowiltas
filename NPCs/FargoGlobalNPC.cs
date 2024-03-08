@@ -126,7 +126,7 @@ namespace Fargowiltas.NPCs
             if (npc.townNPC && npc.homeTileX == -1 && npc.homeTileY == -1)
             {
                 bool hasRoom = WorldGen.TownManager.HasRoom(npc.type, out Point homePoint);
-                if (hasRoom)
+                if (hasRoom && homePoint.X > 0 && homePoint.Y > 0)
                 {
                     int x = homePoint.X;
                     int y = homePoint.Y - 2;
