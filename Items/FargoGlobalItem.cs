@@ -16,6 +16,7 @@ using Fargowiltas.Items.Ammos.Coins;
 using Fargowiltas.Items.CaughtNPCs;
 using static System.Net.Mime.MediaTypeNames;
 using Terraria.Localization;
+using Fargowiltas.Items.Misc;
 
 namespace Fargowiltas.Items
 {
@@ -536,7 +537,8 @@ namespace Fargowiltas.Items
             ItemID.RecallPotion,
             ItemID.PotionOfReturn,
             ItemID.WormholePotion,
-            ItemID.TeleportationPotion
+            ItemID.TeleportationPotion,
+            ItemType<BigSuckPotion>()
         };
         public override bool ConsumeItem(Item item, Player player)
         {
@@ -619,6 +621,22 @@ namespace Fargowiltas.Items
         public override void HorizontalWingSpeeds(Item item, Player player, ref float speed, ref float acceleration)
         {
             player.GetModPlayer<FargoPlayer>().StatSheetWingSpeed = speed;
+        }
+
+        public override void GrabRange(Item item, Player player, ref int grabRange)
+        {
+            if (player.GetFargoPlayer().bigSuck)
+                grabRange += 9000 * 16; //corner to corner diagonally across a large world is 8736 units
+        }
+
+        public override bool GrabStyle(Item item, Player player)
+        {
+            if (player.GetFargoPlayer().bigSuck)
+            {
+                item.position += (player.MountedCenter - item.Center) / 15f;
+                item.position += player.position - player.oldPosition;
+            }
+            return base.GrabStyle(item, player);
         }
     }
 }

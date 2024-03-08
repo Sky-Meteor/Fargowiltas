@@ -44,6 +44,7 @@ namespace Fargowiltas
         public bool? CanHover = null;
 
         public int DeathFruitHealth;
+        public bool bigSuck;
 
         internal Dictionary<string, bool> FirstDyeIngredients = new Dictionary<string, bool>();
 
@@ -156,6 +157,7 @@ namespace Fargowiltas
         {
             extractSpeed = false;
             HasDrawnDebuffLayer = false;
+            bigSuck = false;
         }
         public override void ProcessTriggers(TriggersSet triggersSet)
         {

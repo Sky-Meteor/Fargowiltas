@@ -19,6 +19,9 @@ namespace Fargowiltas.Common.Configs
         public bool ExpandedTooltips;
 
         [DefaultValue(false)]
+        public bool HideUnlimitedBuffs;
+
+        [DefaultValue(false)]
         public bool DoubleTapDashDisabled;
 
         [DefaultValue(false)]
