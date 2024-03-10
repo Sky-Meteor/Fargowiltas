@@ -749,14 +749,16 @@ namespace Fargowiltas
                 {
                     dir = -1;
                 }
-                else if (modPlayer.latestXDirReleased != 0)
-                {
-                    dir = modPlayer.latestXDirReleased;
-                }
-                else
-                {
-                    dir = player.direction;
-                }
+                if (dir == 0) // this + commented out below because changed to not have an effect when not holding any movement keys; primarily so it's affected by stun effects
+                    return;
+                //else if (modPlayer.latestXDirReleased != 0)
+                //{
+                //    dir = modPlayer.latestXDirReleased;
+                //}
+                //else
+                //{
+                //    dir = player.direction;
+                //}
                 player.direction = dir;
                 dashing = true;
                 if (player.dashTime > 0)

@@ -108,7 +108,7 @@ namespace Fargowiltas.NPCs
             return FargoServerConfig.Instance.Lumber && FargoWorld.DownedBools.TryGetValue("lumberjack", out bool down) && down;
         }
 
-        // Tree Shake method
+        // Tree Shake spawn method
         public static void OnTreeShake(Terraria.On_WorldGen.orig_ShakeTree orig, int i, int j)
         {
             orig(i, j);
