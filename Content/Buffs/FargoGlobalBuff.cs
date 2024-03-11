@@ -51,11 +51,12 @@ namespace Fargowiltas.Buffs
                                 //keep walking backwards through the buffs until you find another visible one
                                 bool indexCanBeHidden = BuffCanBeHidden(player, indexToSwap);
 
-                                //found another visible buff
-                                if (!indexCanBeHidden)
+                                //found another visible buff or reached first index (they are all invisible)
+                                if (!indexCanBeHidden || indexToSwap == 0)
                                 {
                                     //swap the leftmost hidden unlim buff with the "floating" visible buff
-                                    indexToSwap++;
+                                    if (!indexCanBeHidden)
+                                        indexToSwap++;
                                     int tempBuffType = player.buffType[indexToSwap];
                                     int tempBuffTime = player.buffTime[indexToSwap];
                                     player.buffType[indexToSwap] = player.buffType[buffIndex + 1];
