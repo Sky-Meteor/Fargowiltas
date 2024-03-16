@@ -9,6 +9,14 @@ NEW UPDATE
 -Fixed Squirrel not selling Shellphone if he notices World Shaper Soul
 -Fixed Moss Hornet Banner not counting for Jungle Key recipe
 -Portable Sundial tooltip notes slower speed during boss fight
+-Adjusted recipes
+	-Attractive Ore
+	-Blood Sushi Platter
+	-Blood Urchin
+	-Heart Chocolate
+	-Hemoclaw Crab
+	-Rune Orb
+	-Suspicious Looking Lure
 
 NEW UPDATE - v3.3.1.2
 -Fixed Hide Unlimited Buffs causing buffs to "float"
