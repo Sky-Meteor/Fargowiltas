@@ -838,6 +838,7 @@ Mods: {
 					Left click to instantly change time
 					Time cycles between dawn, noon, dusk, and midnight
 					Right click to activate the Enchanted Sundial effect
+					Slower use speed when a boss is alive
 					Cycling to dawn will reset travelling merchant's shops
 					'''
 			}
