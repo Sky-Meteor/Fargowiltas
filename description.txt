@@ -18,6 +18,7 @@ NEW UPDATE
 	-Rune Orb
 	-Suspicious Looking Lure
 -Fixed Pylon Ignore Events ignoring bosses
+-Fixed right clicked Shellphones not working as info accessories from Piggy Bank
 
 NEW UPDATE - v3.3.1.2
 -Fixed Hide Unlimited Buffs causing buffs to "float"

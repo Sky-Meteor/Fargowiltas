@@ -299,7 +299,13 @@ namespace Fargowiltas.NPCs
             switch (sellType)
             {
                 case SquirrelSellType.SoldBySquirrel:
-                    itemCollections[shopGroup].Add(item.type);
+                    {
+                        itemCollections[shopGroup].Add(item.type);
+                        if (ModContent.TryFind("FargowiltasSouls", "WorldShaperSoul", out ModItem worldShaperSoul) && item.type == worldShaperSoul.Type)
+                        {
+                            itemCollections[SquirrelShopGroup.Other].Add(ItemID.Shellphone);
+                        }
+                    } 
                     break;
 
                 case SquirrelSellType.SomeMaterialsSold:
@@ -312,18 +318,8 @@ namespace Fargowiltas.NPCs
                                 itemCollections[shopGroup].Add(material.type);
                             }
 
-                            int[] cellPhones =
-                            {
-                                ItemID.CellPhone,
-                                ItemID.Shellphone,
-                                ItemID.ShellphoneDummy,
-                                ItemID.ShellphoneHell,
-                                ItemID.ShellphoneOcean,
-                                ItemID.ShellphoneSpawn
-                            };
-                            bool isWorldShaperCellPhoneComponent = cellPhones.Contains(material.type) && ModContent.TryFind("FargowiltasSouls", "WorldShaperSoul", out ModItem worldShaperSoul) && item.type == worldShaperSoul.Type;
                             bool isBerserkerSoulZenithComponent = material.type == ItemID.Zenith && ModContent.TryFind("FargowiltasSouls", "BerserkerSoul", out ModItem berserkerSoul) && item.type == berserkerSoul.Type;
-                            if (isWorldShaperCellPhoneComponent || isBerserkerSoulZenithComponent)
+                            if (isBerserkerSoulZenithComponent)
                             {
                                 itemCollections[SquirrelShopGroup.Other].Add(material.type);
                             }
