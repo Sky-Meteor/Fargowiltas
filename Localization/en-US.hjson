@@ -1931,6 +1931,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			MutantToilet: {
+				DisplayName: Mutant Toilet
+				Tooltip: Don't.
+			}
+
 			EchPainting: {
 				DisplayName: Ech Painting
 				Tooltip: "'Groalt W. Fai'"
