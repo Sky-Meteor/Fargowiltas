@@ -14,7 +14,7 @@ namespace Fargowiltas.Buffs
             int buffTime = player.buffTime[buffIndex];
             int buffType = player.buffType[buffIndex];
             return buffTime <= 2
-                && !Main.debuff[buffType]
+                && (!Main.debuff[buffType] || buffType == BuffID.Tipsy)
                 && !Main.buffNoTimeDisplay[buffType]
                 && !BuffID.Sets.TimeLeftDoesNotDecrease[buffType];
         }
