@@ -20,6 +20,7 @@ NEW UPDATE
 -Fixed Pylon Ignore Events ignoring bosses
 -Fixed right clicked Shellphones not working as info accessories from Piggy Bank
 -Added Mutant Toilet
+-Replaced Party Cone with Party Invite
 
 NEW UPDATE - v3.3.1.2
 -Fixed Hide Unlimited Buffs causing buffs to "float"

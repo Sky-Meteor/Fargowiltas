@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace Fargowiltas.Items.Summons.Abom
 {
-    public class PartyCone : ModItem
+    public class PartyInvite : ModItem
     {
         public override void SetStaticDefaults()
         {
