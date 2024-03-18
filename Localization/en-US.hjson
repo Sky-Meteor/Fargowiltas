@@ -179,7 +179,7 @@ Mods: {
 				}
 
 				PylonsIgnoreEvents: {
-					Label: Pylons Ignore Events
+					Label: "[i:4876] Pylons Ignore Events"
 					Tooltip: ""
 				}
 
