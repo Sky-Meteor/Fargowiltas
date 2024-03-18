@@ -357,7 +357,7 @@ Mods: {
 			OverloadDarkMage: Вы чувствуешь себя как в библиотеке!
 			OverloadDeer: Константа начинает брать верх!
 			OverloadDestroyer: Планета трясётся от самого ядра!
-			OverloadEmpress: 'Рай пуль' опускается за горизонт!
+			OverloadEmpress: "'Рай пуль' опускается за горизонт!"
 			OverloadEye: Неисчисляемые глаза проникают чрез занавес, уставившись на вас!
 			OverloadFish: Океан переполняется свирепыми свиньями!
 			OverloadGolem: Древние аппараты падают с небес, разрушая землю!
@@ -1023,8 +1023,8 @@ Mods: {
 					'''
 			}
 
-			PartyCone: {
-				DisplayName: Праздничный Колпак
+			PartyInvite: {
+				DisplayName: Приглашение на Вечеринку
 				Tooltip:
 					'''
 					Начинает Вечеринку!
@@ -1931,6 +1931,10 @@ Mods: {
 				Tooltip: ""
 			}
 
+			MutantToilet: {
+				DisplayName: Туалет Мутант
+				Tooltip: Не смей.
+
 			EchPainting: {
 				DisplayName: Картина Ech
 				Tooltip: "'авт. Groalt W. Fai'"
@@ -1975,7 +1979,7 @@ Mods: {
 
 			RegalStatue: {
 				DisplayName: Королевская Статуя
-				Городские НИПы респавнятся гораздо быстрее, когда игрок находится рядом
+				Tooltip: Городские НИПы респавнятся гораздо быстрее, когда игрок находится рядом
 			}
 
 			Semistation: {
