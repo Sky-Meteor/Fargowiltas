@@ -2432,7 +2432,11 @@ Mods: {
 
 			BigSuckPotion: {
 				DisplayName: Big Suck Potion
-				Tooltip: Makes you suck everything
+				Tooltip: 
+					'''
+					Makes you suck everything
+					Must be consumed manually
+					'''
 			}
 		}
 
