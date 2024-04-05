@@ -1,3 +1,4 @@
+using Fargowiltas.Common.Systems.Recipes;
 using Fargowiltas.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -48,6 +49,16 @@ namespace Fargowiltas.Items.Summons.Deviantt
             SoundEngine.PlaySound(SoundID.Roar, player.position);
 
             return true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ItemID.BloodMoonStarter)
+                .AddIngredient(ItemID.DeepRedPaint)
+                .AddRecipeGroup(RecipeGroups.AnyFoodT2)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }
