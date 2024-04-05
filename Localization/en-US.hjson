@@ -2969,7 +2969,7 @@ Mods: {
 			TrueTorchLuck: Obeys true torch luck when replacing torches, which may differ from default choices
 			UnlimitedBuff30: Unlimited buff at 30 stack in inventory, Piggy Bank, or Safe
 			UnlimitedUse30: Unlimited use at 30 stack
-			PermanentEffectNearby: Permanently provides effect to nearby players
+			PermanentEffectNearby: Permanently provides effect to nearby players when placed
 			WorksFromBanks: Works from Piggy Bank and Safe
 			SoldBySquirrel: Sold By Squirrel
 			SomeMaterialsSold: Some Materials Sold

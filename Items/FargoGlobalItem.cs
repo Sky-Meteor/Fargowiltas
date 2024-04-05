@@ -267,7 +267,7 @@ namespace Fargowiltas.Items
                     
                     else if (BuffStations.Contains(item.type))
                     {
-                        line = new TooltipLine(Mod, "TooltipUnlim", $"[i:87] [c/AAAAAA:{ExpandedTooltipLoc("PermanentEffectNearby")}]");
+                        line = new TooltipLine(Mod, "TooltipUnlim", $"[i:{item.type}] [c/AAAAAA:{ExpandedTooltipLoc("PermanentEffectNearby")}]");
                         tooltips.Add(line);
                     }
                     

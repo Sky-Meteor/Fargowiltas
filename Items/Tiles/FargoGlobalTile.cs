@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -145,27 +146,37 @@ namespace Fargowiltas.Tiles
                     }
                 }
             }
-            
+            int buff = 0;
+            SoundStyle? sound = null;
             switch (type)
             {
                 case TileID.SharpeningStation:
-                    Main.LocalPlayer.AddBuff(BuffID.Sharpened, 2);
+                    buff = BuffID.Sharpened;
+                    sound = SoundID.Item37;
                     break;
                 case TileID.AmmoBox:
-                    Main.LocalPlayer.AddBuff(BuffID.AmmoBox, 2);
+                    buff = BuffID.AmmoBox;
+                    sound = SoundID.Item149;
                     break;
                 case TileID.CrystalBall:
-                    Main.LocalPlayer.AddBuff(BuffID.Clairvoyance, 2);
+                    buff = BuffID.Clairvoyance;
+                    sound = SoundID.Item4;
                     break;
                 case TileID.BewitchingTable:
-                    Main.LocalPlayer.AddBuff(BuffID.Bewitched, 2);
+                    buff = BuffID.Bewitched;
+                    sound = SoundID.Item4;
                     break;
                 case TileID.WarTable:
-                    Main.LocalPlayer.AddBuff(BuffID.WarTable, 2);
+                    buff = BuffID.WarTable;
+                    sound = SoundID.Item4; 
                     break;
             }
-                            
-
+            if (buff != 0)
+            {
+                if (!Main.LocalPlayer.HasBuff(buff) && sound.HasValue)
+                    SoundEngine.PlaySound(sound.Value, new Vector2(i, j) * 16);
+                Main.LocalPlayer.AddBuff(buff, 2);
+            }
         }
 
         internal static void DestroyChest(int x, int y)
