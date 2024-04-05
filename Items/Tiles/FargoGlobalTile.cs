@@ -171,7 +171,7 @@ namespace Fargowiltas.Tiles
                     sound = SoundID.Item4; 
                     break;
             }
-            if (buff != 0)
+            if (buff != 0 && Main.LocalPlayer.active && !Main.LocalPlayer.dead && !Main.LocalPlayer.ghost)
             {
                 if (!Main.LocalPlayer.HasBuff(buff) && sound.HasValue)
                     SoundEngine.PlaySound(sound.Value, new Vector2(i, j) * 16);
