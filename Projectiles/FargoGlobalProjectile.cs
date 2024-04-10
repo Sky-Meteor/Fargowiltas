@@ -245,6 +245,7 @@ namespace Fargowiltas.Projectiles
             {
                 return false;
             }
+            
             foreach (Rectangle rect in CannotDestroyRectangle)
             {
                 if (rect.Contains(x * 16, y * 16))
@@ -252,13 +253,13 @@ namespace Fargowiltas.Projectiles
                     return false;
                 }
             }
-            //TODO: look at this again. would be great if we could check against protected structures
-            /*
-            if (!GenVars.structures.CanPlace(new(x, y, 1, 1), 0))
+            Rectangle area = new(x, y, 3, 3);
+            if (!GenVars.structures.CanPlace(area))
             {
                 return false;
             }
-            */
+            
+            
             return OkayToDestroyTile(tile);
         }
 
