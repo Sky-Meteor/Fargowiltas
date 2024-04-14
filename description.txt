@@ -4,6 +4,9 @@ There are several other items such as infinite ammos, craftable instant builds f
 Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
+NEW UPDATE - v3.3.3
+-Buffed Mutant Toilet
+
 NEW UPDATE - v3.3.2
 -Fixed Squirrel sometimes not selling Shellphones
 -Fixed Squirrel not selling Shellphone if he notices World Shaper Soul

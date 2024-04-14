@@ -166,6 +166,15 @@ namespace Fargowiltas.Items.Tiles
             {
                 Projectile.NewProjectile(Wiring.GetProjectileSource(spawnX, spawnY), spawnX * 16 + 8, spawnY * 16 + 12, 0f, 0f, ProjectileID.ToiletEffect, 0, 0f, Main.myPlayer);
             }
+
+            if (Main.rand.NextBool(10)
+                && Fargowiltas.ModLoaded["FargowiltasSouls"]
+                && ModContent.TryFind("FargowiltasSouls/MutantBoss", out ModNPC modNPC))
+            {
+                int p = Player.FindClosest(new Vector2(spawnX * 16 + 8, spawnY * 16 + 12), 0, 0);
+                if (p == Main.myPlayer && p != -1)
+                    FargoUtils.SpawnBossNetcoded(Main.player[p], modNPC.Type);
+            }
         }
     }
 }
