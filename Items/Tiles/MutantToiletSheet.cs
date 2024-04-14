@@ -173,7 +173,7 @@ namespace Fargowiltas.Items.Tiles
                 && Main.netMode != NetmodeID.MultiplayerClient)
             {
                 int p = Player.FindClosest(new Vector2(spawnX * 16 + 8, spawnY * 16 + 12), 0, 0);
-                if (p == Main.myPlayer && p != -1)
+                if (p != -1)
                     NPC.SpawnOnPlayer(p, modNPC.Type);
             }
         }
