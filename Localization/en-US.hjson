@@ -113,10 +113,6 @@ Mods: {
 					Tooltip: 30+ for potions and bait
 				}
 
-				ExtraBuffSlots: {
-					Label: "[i:3000] Additional Buff Slots"
-					Tooltip: ""
-				}
 
 				AnglerQuestInstantReset: {
 					Label: "[i:2374] Angler Quest Instant Reset"
