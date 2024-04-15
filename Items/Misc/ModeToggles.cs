@@ -59,27 +59,26 @@ namespace Fargowiltas.Items.Misc
             switch (Main.GameMode)
             {
                 case 0:
-                    Main.GameMode = 1;
-                    ChangeAllPlayerDifficulty(0);
-                    player.difficulty = 0;
+                    Main.GameMode = GameModeID.Expert;
+                    ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
                     text = DiffText("Expert");
                     break;
 
                 case 1:
-                    Main.GameMode = 2;
-                    ChangeAllPlayerDifficulty(0);
+                    Main.GameMode = GameModeID.Master;
+                    ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
                     text = DiffText("Master");
                     break;
 
                 case 2:
-                    Main.GameMode = 3;
-                    ChangeAllPlayerDifficulty(3);
+                    Main.GameMode = GameModeID.Creative;
+                    ChangeAllPlayerDifficulty(PlayerDifficultyID.Creative);
                     text = DiffText("Journey");
                     break;
 
                 default:
-                    Main.GameMode = 0;
-                    ChangeAllPlayerDifficulty(0);
+                    Main.GameMode = GameModeID.Normal;
+                    ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
                     text = DiffText("Normal");
                     break;
             }
@@ -91,7 +90,7 @@ namespace Fargowiltas.Items.Misc
             else if (Main.netMode == NetmodeID.Server)
             {
                 ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(text), new Color(175, 75, 255));
-                NetMessage.SendData(7); //sync world
+                NetMessage.SendData(MessageID.WorldData); //sync world
             }
 
             SoundEngine.PlaySound(SoundID.Roar, player.Center);
@@ -107,6 +106,7 @@ namespace Fargowiltas.Items.Misc
                 if (player.active)
                 {
                     player.difficulty = diff;
+                    NetMessage.SendData(MessageID.SyncPlayer, number: player.whoAmI);
                 }
             }
             
