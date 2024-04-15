@@ -9,6 +9,30 @@ namespace Fargowiltas.Buffs
 {
     public class FargoGlobalBuff : GlobalBuff
     {
+        public static bool InterfaceResources; // To only prevent drawing infinite buffs in the correct location (under the inventory).
+        public override void Load()
+        {
+            On_Main.DrawInterface_Resources_Buffs += InterfaceResourcesCheck;
+            On_Main.DrawBuffIcon += OnDrawBuffIcon;
+        }
+        public override void Unload()
+        {
+            On_Main.DrawInterface_Resources_Buffs -= InterfaceResourcesCheck;
+            On_Main.DrawBuffIcon -= OnDrawBuffIcon;
+        }
+        public static void InterfaceResourcesCheck(On_Main.orig_DrawInterface_Resources_Buffs orig, Main self)
+        {
+            InterfaceResources = true;
+            orig(self);
+            InterfaceResources = false;
+        }
+        public static int OnDrawBuffIcon(On_Main.orig_DrawBuffIcon orig, int drawBuffText, int buffSlotOnPlayer, int x, int y)
+        {
+            if (InterfaceResources && BuffCanBeHidden(Main.LocalPlayer, buffSlotOnPlayer) && FargoClientConfig.Instance.HideUnlimitedBuffs)
+                return drawBuffText;
+            return orig(drawBuffText, buffSlotOnPlayer, x, y);
+        }
+
         static bool BuffCanBeHidden(Player player, int buffIndex)
         {
             int buffTime = player.buffTime[buffIndex];
@@ -25,11 +49,12 @@ namespace Fargowiltas.Buffs
             {
                 player.buffTime[buffIndex] = 2;
             }
-
+            
             //basically all of this is to reorganize buffs with hidden unlims
             //if unorganized, the hidden buffs are just hidden and leaves open gaps in the buff tray
             //yes, this causes the swapped visible buff to be skipped for a tick
             //there has to be a better way to do this...
+            
             if (player.whoAmI == Main.myPlayer)
             {
                 bool canBeHidden = BuffCanBeHidden(player, buffIndex);
@@ -71,10 +96,12 @@ namespace Fargowiltas.Buffs
                             }
                         }
                     }
+                
                 }
             }
+            
         }
-
+        /*
         public override bool PreDraw(SpriteBatch spriteBatch, int type, int buffIndex, ref BuffDrawParams drawParams)
         {
             if (BuffCanBeHidden(Main.LocalPlayer, buffIndex) && FargoClientConfig.Instance.HideUnlimitedBuffs)
@@ -83,5 +110,6 @@ namespace Fargowiltas.Buffs
             }
             return true;
         }
+        */
     }
 }
