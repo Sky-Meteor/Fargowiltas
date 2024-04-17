@@ -113,7 +113,6 @@ Mods: {
 					Tooltip: 30+ for potions and bait
 				}
 
-
 				AnglerQuestInstantReset: {
 					Label: "[i:2374] Angler Quest Instant Reset"
 					Tooltip: ""

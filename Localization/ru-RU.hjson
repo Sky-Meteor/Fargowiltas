@@ -113,7 +113,6 @@ Mods: {
 					Tooltip: 30+ для зелий и наживки
 				}
 
-
 				AnglerQuestInstantReset: {
 					Label: "[i:2374] Мгновенный ресет заданий Рыбака"
 					Tooltip: ""
