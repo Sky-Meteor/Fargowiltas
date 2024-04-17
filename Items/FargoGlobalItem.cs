@@ -17,6 +17,7 @@ using Fargowiltas.Items.CaughtNPCs;
 using static System.Net.Mime.MediaTypeNames;
 using Terraria.Localization;
 using Fargowiltas.Items.Misc;
+using System.Security.AccessControl;
 
 namespace Fargowiltas.Items
 {
@@ -275,7 +276,7 @@ namespace Fargowiltas.Items
 
                 if (fargoServerConfig.PiggyBankAcc)
                 {
-                    if (Informational.Contains(item.type) || Construction.Contains(item.type))
+                    if (FargoItemSets.InfoAccessory[item.type] || FargoItemSets.MechanicalAccessory[item.type])
                     {
                         line = new TooltipLine(Mod, "TooltipUnlim", $"[i:87] [c/AAAAAA:{ExpandedTooltipLoc("WorksFromBanks")}]");
                         tooltips.Add(line);
@@ -385,29 +386,21 @@ namespace Fargowiltas.Items
             }
             
         }
-
-        static int[] Informational = { ItemID.DPSMeter, ItemID.CopperWatch, ItemID.TinWatch, ItemID.TungstenWatch, ItemID.SilverWatch, ItemID.GoldWatch, ItemID.PlatinumWatch, ItemID.DepthMeter, ItemID.Compass, ItemID.Radar, ItemID.LifeformAnalyzer, ItemID.TallyCounter, ItemID.MetalDetector, ItemID.Stopwatch, ItemID.Ruler, ItemID.FishermansGuide, ItemID.Sextant, ItemID.WeatherRadio, ItemID.GPS, ItemID.REK, ItemID.GoblinTech, ItemID.FishFinder, ItemID.PDA, ItemID.CellPhone, ItemID.Shellphone, ItemID.ShellphoneDummy, ItemID.ShellphoneHell, ItemID.ShellphoneOcean, ItemID.ShellphoneSpawn };
-        static int[] Construction = { ItemID.Toolbelt, ItemID.Toolbox, ItemID.ExtendoGrip, ItemID.PaintSprayer, ItemID.BrickLayer, ItemID.PortableCementMixer, ItemID.ActuationAccessory, ItemID.ArchitectGizmoPack };
         public static void TryPiggyBankAcc(Item item, Player player)
         {
             if (item.IsAir || item.maxStack > 1 || !FargoServerConfig.Instance.PiggyBankAcc)
                 return;
 
-            if (Informational.Contains(item.type))
-            {
+            if (FargoItemSets.InfoAccessory[item.type])
                 player.RefreshInfoAccsFromItemType(item);
-            }
-            else if (Construction.Contains(item.type))
-            {
-                player.ApplyEquipFunctional(item, true);
-            }
-        }
 
+            if (FargoItemSets.MechanicalAccessory[item.type])
+                player.RefreshMechanicalAccsFromItemType(item.type);
+        }
         public override void UpdateInventory(Item item, Player player)
         {
             TryUnlimBuff(item, player);
         }
-
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
             if (item.type == ItemID.MusicBox && Main.curMusic > 0 && Main.curMusic <= 41)
@@ -435,7 +428,7 @@ namespace Fargowiltas.Items
                     case 6:
                         itemId = 3 + 562;
                         break;
-                    case 7:
+                        case 7:
                         itemId = 6 + 562;
                         break;
                     case 8:
