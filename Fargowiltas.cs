@@ -310,14 +310,17 @@ namespace Fargowiltas
                             if (args[1].GetType() == typeof(int))
                             {
                                 int tile = (int)args[1];
-                                FargoGlobalProjectile.CannotDestroyTileTypes.Add(tile);
+                                FargoSets.Tiles.InstaCannotDestroy[tile] = true;
                             }
                         }
                         break;
                     case "AddIndestructibleWallType":
                         {
-                            int wall = (int)args[1];
-                            FargoGlobalProjectile.CannotDestroyWallTypes.Add(wall);
+                            if (args[1].GetType() == typeof(int))
+                            {
+                                int wall = (int)args[1];
+                                FargoSets.Walls.InstaCannotDestroy[wall] = true;
+                            }
                         }
                         break;
                     case "AddStat":

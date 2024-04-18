@@ -52,7 +52,7 @@ namespace Fargowiltas
         protected override void Draw(ref PlayerDrawSet drawInfo)
         {
             Player player = drawInfo.drawPlayer;
-            List<int> debuffs = player.buffType.Where(d => Main.debuff[d] && !debuffsToIgnore.Contains(d)).ToList();
+            List<int> debuffs = player.buffType.Where(d => Main.debuff[d]).Except(debuffsToIgnore).ToList();
             const int maxPerLine = 10;
             int yOffset = 0;
             for (int j = 0; j < debuffs.Count; j += maxPerLine)

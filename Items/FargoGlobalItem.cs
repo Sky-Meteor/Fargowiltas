@@ -63,14 +63,6 @@ namespace Fargowiltas.Items
                 }
             }
         }
-        public static List<int> BuffStations = new List<int>
-        {
-            ItemID.SharpeningStation,
-            ItemID.AmmoBox,
-            ItemID.CrystalBall,
-            ItemID.BewitchingTable,
-            ItemID.WarTable,
-        };
         //For the shop sale tooltip system.
         internal class ShopTooltip
         {
@@ -266,7 +258,7 @@ namespace Fargowiltas.Items
                         tooltips.Add(line);
                     }
                     
-                    else if (BuffStations.Contains(item.type))
+                    else if (FargoSets.Items.BuffStation[item.type])
                     {
                         line = new TooltipLine(Mod, "TooltipUnlim", $"[i:{item.type}] [c/AAAAAA:{ExpandedTooltipLoc("PermanentEffectNearby")}]");
                         tooltips.Add(line);
@@ -276,7 +268,7 @@ namespace Fargowiltas.Items
 
                 if (fargoServerConfig.PiggyBankAcc)
                 {
-                    if (FargoItemSets.InfoAccessory[item.type] || FargoItemSets.MechanicalAccessory[item.type])
+                    if (FargoSets.Items.InfoAccessory[item.type] || FargoSets.Items.MechanicalAccessory[item.type])
                     {
                         line = new TooltipLine(Mod, "TooltipUnlim", $"[i:87] [c/AAAAAA:{ExpandedTooltipLoc("WorksFromBanks")}]");
                         tooltips.Add(line);
@@ -391,10 +383,10 @@ namespace Fargowiltas.Items
             if (item.IsAir || item.maxStack > 1 || !FargoServerConfig.Instance.PiggyBankAcc)
                 return;
 
-            if (FargoItemSets.InfoAccessory[item.type])
+            if (FargoSets.Items.InfoAccessory[item.type])
                 player.RefreshInfoAccsFromItemType(item);
 
-            if (FargoItemSets.MechanicalAccessory[item.type])
+            if (FargoSets.Items.MechanicalAccessory[item.type])
                 player.RefreshMechanicalAccsFromItemType(item.type);
         }
         public override void UpdateInventory(Item item, Player player)
@@ -525,19 +517,11 @@ namespace Fargowiltas.Items
             return base.CanConsumeBait(player, bait);
         }
 
-        public static List<int> NonBuffPotions = new List<int>
-        {
-            ItemID.RecallPotion,
-            ItemID.PotionOfReturn,
-            ItemID.WormholePotion,
-            ItemID.TeleportationPotion,
-            ItemType<BigSuckPotion>()
-        };
         public override bool ConsumeItem(Item item, Player player)
         {
             if (FargoServerConfig.Instance.UnlimitedConsumableWeapons && Main.hardMode && item.damage > 0 && item.ammo == 0 && item.stack >= 3996)
                 return false;
-            if (FargoServerConfig.Instance.UnlimitedPotionBuffsOn120 && (item.buffType > 0 || NonBuffPotions.Contains(item.type)) && (item.stack >= 30 || player.inventory.Any(i => i.type == item.type && !i.IsAir && i.stack >= 30)))
+            if (FargoServerConfig.Instance.UnlimitedPotionBuffsOn120 && (item.buffType > 0 || FargoSets.Items.NonBuffPotion[item.type] && (item.stack >= 30 || player.inventory.Any(i => i.type == item.type && !i.IsAir && i.stack >= 30))))
                 return false;
             return true;
         }

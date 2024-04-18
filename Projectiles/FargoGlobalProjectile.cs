@@ -19,8 +19,6 @@ namespace Fargowiltas.Projectiles
         private bool firstTick = true;
         public bool lowRender;
 
-        public static HashSet<int> CannotDestroyTileTypes = new HashSet<int>();
-        public static HashSet<int> CannotDestroyWallTypes = new HashSet<int>();
         public static HashSet<Rectangle> CannotDestroyRectangle = new HashSet<Rectangle>();
 
         public float DamageMultiplier = 1;
@@ -213,27 +211,22 @@ namespace Fargowiltas.Projectiles
             {
                 return false;
             }
-            bool noDungeon = !NPC.downedBoss3 &&
-                (tile.TileType == TileID.BlueDungeonBrick || tile.TileType == TileID.GreenDungeonBrick || tile.TileType == TileID.PinkDungeonBrick
-                || tile.WallType == WallID.BlueDungeonSlabUnsafe || tile.WallType == WallID.BlueDungeonTileUnsafe || tile.WallType == WallID.BlueDungeonUnsafe
-                || tile.WallType == WallID.GreenDungeonSlabUnsafe || tile.WallType == WallID.GreenDungeonTileUnsafe || tile.WallType == WallID.GreenDungeonUnsafe
-                || tile.WallType == WallID.PinkDungeonSlabUnsafe || tile.WallType == WallID.PinkDungeonTileUnsafe || tile.WallType == WallID.PinkDungeonUnsafe
-            );
-            bool noHMOre = (tile.TileType == TileID.Cobalt || tile.TileType == TileID.Palladium || tile.TileType == TileID.Mythril || tile.TileType == TileID.Orichalcum || tile.TileType == TileID.Adamantite || tile.TileType == TileID.Titanium) && !NPC.downedMechBossAny;
+            bool noDungeon = !NPC.downedBoss3 && (FargoSets.Walls.DungeonWall[tile.WallType] || FargoSets.Tiles.DungeonTile[tile.TileType]);
+
+            bool noHMOre = FargoSets.Tiles.HardmodeOre[tile.TileType] && !NPC.downedMechBossAny;
             bool noChloro = tile.TileType == TileID.Chlorophyte && !(NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3);
             bool noLihzahrd = (tile.TileType == TileID.LihzahrdBrick || tile.WallType == WallID.LihzahrdBrickUnsafe) && !NPC.downedGolemBoss;
             bool noAbyss = false;
 
             if (ModLoader.TryGetMod("CalamityMod", out Mod calamity))
             {
-                calamity.TryFind("AbyssGravel", out ModTile gravel);
-                calamity.TryFind("Voidstone", out ModTile voidstone);
-                noAbyss = tile.TileType == gravel.Type || tile.TileType == voidstone.Type;
+                if (calamity.TryFind("AbyssGravel", out ModTile gravel) && calamity.TryFind("Voidstone", out ModTile voidstone))
+                    noAbyss = tile.TileType == gravel.Type || tile.TileType == voidstone.Type;
             }
-            
+
             if (noDungeon || noHMOre || noChloro || noLihzahrd || noAbyss || TileBelongsToMagicStorage(tile) ||
-                CannotDestroyTileTypes.Contains(tile.TileType) ||
-                CannotDestroyWallTypes.Contains(tile.WallType))
+                FargoSets.Tiles.InstaCannotDestroy[tile.TileType] ||
+                FargoSets.Walls.InstaCannotDestroy[tile.WallType])
                 return false;
 
             return true;

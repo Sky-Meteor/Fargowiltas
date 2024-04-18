@@ -171,27 +171,6 @@ namespace Fargowiltas.NPCs
             }
         }
 
-        private static int[] ItemsSoldDirectly => new int[]
-        {
-            ItemID.CellPhone,
-            ItemID.Shellphone,
-            ItemID.ShellphoneDummy,
-            ItemID.ShellphoneHell,
-            ItemID.ShellphoneOcean,
-            ItemID.ShellphoneSpawn,
-            ItemID.AnkhShield,
-            ItemID.RodofDiscord,
-            ItemID.TerrasparkBoots,
-            ItemID.TorchGodsFavor,
-            ModContent.ItemType<Omnistation>(),
-            ModContent.ItemType<Omnistation2>(),
-            ModContent.ItemType<CrucibleCosmos>(),
-            ModContent.ItemType<ElementalAssembler>(),
-            ModContent.ItemType<MultitaskCenter>(),
-            ModContent.ItemType<PortableSundial>(),
-            ModContent.ItemType<BattleCry>()
-        };
-
         public static SquirrelShopGroup SquirrelSells(Item item, out SquirrelSellType sellType)
         {
 
@@ -201,13 +180,13 @@ namespace Fargowiltas.NPCs
                 return SquirrelShopGroup.Other;
             }
 
-            if (item.makeNPC != 0 || ItemsSoldDirectly.Contains(item.type))
+            if (item.makeNPC != 0 || FargoSets.Items.SquirrelSellsDirectly[item.type])
             {
                 sellType = SquirrelSellType.SoldBySquirrel;
                 return SquirrelShopGroup.Other;
             }
 
-            bool Potion = (item.buffType != 0 && item.type != ItemID.GrilledSquirrel) || FargoGlobalItem.NonBuffPotions.Contains(item.type);
+            bool Potion = (item.buffType != 0 && item.type != ItemID.GrilledSquirrel) || FargoSets.Items.NonBuffPotion[item.type];
             if (Potion && item.maxStack >= 30)
             {
                 sellType = SquirrelSellType.SoldAtThirtyStack;
