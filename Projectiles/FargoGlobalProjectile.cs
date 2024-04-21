@@ -231,7 +231,7 @@ namespace Fargowiltas.Projectiles
 
             return true;
         }
-        public static bool OkayToDestroyTileAt(int x, int y) // Testing for blocks that should not be destroyed
+        public static bool OkayToDestroyTileAt(int x, int y, bool bypassVanillaCanPlace = false) // Testing for blocks that should not be destroyed
         {
             Tile tile = Main.tile[x, y];
             if (tile == null)
@@ -247,11 +247,10 @@ namespace Fargowiltas.Projectiles
                 }
             }
             Rectangle area = new(x, y, 3, 3);
-            if (!GenVars.structures.CanPlace(area))
+            if (!bypassVanillaCanPlace && !GenVars.structures.CanPlace(area))
             {
                 return false;
             }
-            
             
             return OkayToDestroyTile(tile);
         }
