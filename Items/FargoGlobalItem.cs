@@ -304,15 +304,13 @@ namespace Fargowiltas.Items
                     break;
 
                 case ItemID.WoodenCrate:
-                    if (!Main.remixWorld && !Main.zenithWorld)
-                    {
-                        itemLoot.Add(ItemDropRule.OneFromOptions(40, ItemID.Spear, ItemID.Blowpipe, ItemID.WandofSparking, ItemID.WoodenBoomerang));
-                    }
-                    else
-                    {
-                        itemLoot.Add(ItemDropRule.OneFromOptions(40, ItemID.Spear, ItemID.Blowpipe, ItemID.WoodenBoomerang));
-                    }
-
+                    
+                    var leadingRule = new LeadingConditionRule(new Conditions.NotRemixSeed());
+                    var dropRuleNormal = ItemDropRule.OneFromOptions(40, ItemID.Spear, ItemID.Blowpipe, ItemID.WoodenBoomerang, ItemID.WandofSparking);
+                    var dropRuleRemix = ItemDropRule.OneFromOptions(40, ItemID.Spear, ItemID.Blowpipe, ItemID.WoodenBoomerang);
+                    leadingRule.OnSuccess(dropRuleNormal);
+                    leadingRule.OnFailedConditions(dropRuleRemix);
+                    itemLoot.Add(leadingRule);
                     break;
 
                 case ItemID.GoldenCrate:
