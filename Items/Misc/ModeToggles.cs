@@ -37,7 +37,7 @@ namespace Fargowiltas.Items.Misc
             Item.consumable = false;
             Item.shoot = ModContent.ProjectileType<WorldTokenProj>();
         }
-
+        public override bool AltFunctionUse(Player player) => true;
         public override bool CanUseItem(Player player)
         {
             for (int i = 0; i < Main.maxNPCs; i++) //cant use while boss alive
@@ -56,32 +56,52 @@ namespace Fargowiltas.Items.Misc
 
             static string DiffText(string difficulty) => Language.GetTextValue($"Mods.Fargowiltas.Items.ModeToggle.{difficulty}");
 
-            switch (Main.GameMode)
+            if (player.altFunctionUse == 2)
             {
-                case 0:
+                if (Main.GameMode == GameModeID.Creative)
+                {
                     Main.GameMode = GameModeID.Expert;
                     ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
                     text = DiffText("Expert");
-                    break;
-
-                case 1:
-                    Main.GameMode = GameModeID.Master;
-                    ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
-                    text = DiffText("Master");
-                    break;
-
-                case 2:
+                }
+                else
+                {
                     Main.GameMode = GameModeID.Creative;
                     ChangeAllPlayerDifficulty(PlayerDifficultyID.Creative);
                     text = DiffText("Journey");
-                    break;
-
-                default:
-                    Main.GameMode = GameModeID.Normal;
-                    ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
-                    text = DiffText("Normal");
-                    break;
+                }
             }
+            else
+            {
+                switch (Main.GameMode)
+                {
+                    case GameModeID.Normal:
+                        Main.GameMode = GameModeID.Expert;
+                        ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
+                        text = DiffText("Expert");
+                        break;
+
+                    case GameModeID.Expert:
+                        Main.GameMode = GameModeID.Master;
+                        ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
+                        text = DiffText("Master");
+                        break;
+                        /*
+                    case GameModeID.Master:
+                        Main.GameMode = GameModeID.Creative;
+                        ChangeAllPlayerDifficulty(PlayerDifficultyID.Creative);
+                        text = DiffText("Journey");
+                        break;
+                        */
+
+                    default:
+                        Main.GameMode = GameModeID.Normal;
+                        ChangeAllPlayerDifficulty(PlayerDifficultyID.SoftCore);
+                        text = DiffText("Normal");
+                        break;
+                }
+            }
+            
             
             if (Main.netMode == NetmodeID.SinglePlayer)
             {
