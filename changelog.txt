@@ -1,17 +1,19 @@
-NEW UPDATE - V 3.3.1
--New item: Koha Crystal
-
--New recipes:
-Wall Skeleton
-Hanging Skeleton
-Catacomb
-
--Moon Lord death animation speeds up when multiple are alive
--Added Moondial to Portable Sundial recipe
--Reduced Portable Sundial mana cost from 25 to 15
--Prismatic Primrose resets night when Empress isn't beaten
--Town NPCs remember their home when bug netted
--Mining a Garden Gnome counts for unlocking Gnomes in Deviantt shop
--Added Config option for pylons to allow use even during events
--Multitask Center recipe is now crafted by hand
--Critters and town NPCS are now unaffected by enemy health multiplier config
+NEW UPDATE - V 3.3.3
+-Fixed Hide Unlimited Buffs only preventing their rendering (and not mousetext and clickability), and made it only affect the buff display under your hotbar, and not the display under the mount/pet tab
+-Insta items now check for vanilla protection areas, such as the spawn
+Instahouse and Grave Buster are exceptions to this
+-Changed tooltips of Insta items alongside above change
+-Following added item recipes and drops are now disabled in Don't Dig Up worlds: Katana, Wand of Sparking, Flower of Fire, Aqua Scepter, Snowball Cannon, Chain Knife.
+-Added permanent Shimmer upgrades to Stat Sheet UI, along with a mod call for other mods adding their permanent upgrades to this system
+-World Token now toggles Journey Mode with right click, and cycles normal modes with left click
+-Changes to permanent buff station feature:
+--Plays their click sound when giving you the effect
+--Tooltip now shows the station item instead of piggy bank
+--Tooltip clarifies that effect takes place when placed
+-Changed Piggy Bank Accessory lists to be completely identical to vanilla's list of accessories that work from inventory, and greatly optimized this feature's code
+-Optimized tile checks, improving the performance of Insta items
+-Removed Extra Buff Slots config
+-Disabled decraft for Big Suck Potion
+-Lihzahrd Instactuation Bomb now properly centers on the altar's center
+-Fixed Lumberjack dropping from trees despite the Lumberjack config being disabled
+-Fixed Mutant Toilet duplicating when mined
