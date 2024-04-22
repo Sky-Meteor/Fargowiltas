@@ -9,12 +9,36 @@ namespace Fargowiltas.Buffs
 {
     public class FargoGlobalBuff : GlobalBuff
     {
+        public static bool InterfaceResources; // To only prevent drawing infinite buffs in the correct location (under the inventory).
+        public override void Load()
+        {
+            On_Main.DrawInterface_Resources_Buffs += InterfaceResourcesCheck;
+            On_Main.DrawBuffIcon += OnDrawBuffIcon;
+        }
+        public override void Unload()
+        {
+            On_Main.DrawInterface_Resources_Buffs -= InterfaceResourcesCheck;
+            On_Main.DrawBuffIcon -= OnDrawBuffIcon;
+        }
+        public static void InterfaceResourcesCheck(On_Main.orig_DrawInterface_Resources_Buffs orig, Main self)
+        {
+            InterfaceResources = true;
+            orig(self);
+            InterfaceResources = false;
+        }
+        public static int OnDrawBuffIcon(On_Main.orig_DrawBuffIcon orig, int drawBuffText, int buffSlotOnPlayer, int x, int y)
+        {
+            if (InterfaceResources && BuffCanBeHidden(Main.LocalPlayer, buffSlotOnPlayer) && FargoClientConfig.Instance.HideUnlimitedBuffs)
+                return drawBuffText;
+            return orig(drawBuffText, buffSlotOnPlayer, x, y);
+        }
+
         static bool BuffCanBeHidden(Player player, int buffIndex)
         {
             int buffTime = player.buffTime[buffIndex];
             int buffType = player.buffType[buffIndex];
             return buffTime <= 2
-                && !Main.debuff[buffType]
+                && (!Main.debuff[buffType] || buffType == BuffID.Tipsy)
                 && !Main.buffNoTimeDisplay[buffType]
                 && !BuffID.Sets.TimeLeftDoesNotDecrease[buffType];
         }
@@ -25,11 +49,12 @@ namespace Fargowiltas.Buffs
             {
                 player.buffTime[buffIndex] = 2;
             }
-
+            
             //basically all of this is to reorganize buffs with hidden unlims
             //if unorganized, the hidden buffs are just hidden and leaves open gaps in the buff tray
             //yes, this causes the swapped visible buff to be skipped for a tick
             //there has to be a better way to do this...
+            
             if (player.whoAmI == Main.myPlayer)
             {
                 bool canBeHidden = BuffCanBeHidden(player, buffIndex);
@@ -51,11 +76,12 @@ namespace Fargowiltas.Buffs
                                 //keep walking backwards through the buffs until you find another visible one
                                 bool indexCanBeHidden = BuffCanBeHidden(player, indexToSwap);
 
-                                //found another visible buff
-                                if (!indexCanBeHidden)
+                                //found another visible buff or reached first index (they are all invisible)
+                                if (!indexCanBeHidden || indexToSwap == 0)
                                 {
                                     //swap the leftmost hidden unlim buff with the "floating" visible buff
-                                    indexToSwap++;
+                                    if (!indexCanBeHidden)
+                                        indexToSwap++;
                                     int tempBuffType = player.buffType[indexToSwap];
                                     int tempBuffTime = player.buffTime[indexToSwap];
                                     player.buffType[indexToSwap] = player.buffType[buffIndex + 1];
@@ -70,23 +96,20 @@ namespace Fargowiltas.Buffs
                             }
                         }
                     }
+                
                 }
             }
+            
         }
-
+        /*
         public override bool PreDraw(SpriteBatch spriteBatch, int type, int buffIndex, ref BuffDrawParams drawParams)
         {
-            Player player = Main.LocalPlayer;
-            bool canBeHidden =
-                player.buffTime[buffIndex] <= 2
-                && !Main.debuff[type]
-                && !Main.buffNoTimeDisplay[type]
-                && !BuffID.Sets.TimeLeftDoesNotDecrease[type];
-            if (canBeHidden && FargoClientConfig.Instance.HideUnlimitedBuffs)
+            if (BuffCanBeHidden(Main.LocalPlayer, buffIndex) && FargoClientConfig.Instance.HideUnlimitedBuffs)
             {
                 return false;
             }
             return true;
         }
+        */
     }
 }

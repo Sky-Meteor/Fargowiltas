@@ -8,8 +8,6 @@ namespace Fargowiltas.Items.Misc
 {
 	public class BigSuckPotion : ModItem
 	{
-        public override string Texture => "Fargowiltas/Items/Placeholder";
-
         public override void SetStaticDefaults()
         {
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 20;
@@ -44,6 +42,7 @@ namespace Fargowiltas.Items.Misc
                 .AddIngredient(ItemID.Meteorite)
                 .AddIngredient(ItemID.FallenStar)
                 .AddTile(TileID.Bottles) 
+                .DisableDecraft()
                 .Register();
         }
     }

@@ -1,3 +1,4 @@
+using Fargowiltas.Common.Systems.Recipes;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -23,15 +24,12 @@ namespace Fargowiltas.Items.Summons.Deviantt
 
         public override void AddRecipes()
         {
-            if (ModContent.TryFind("Fargowiltas/Deviantt", out ModItem modItem))
-            {
-                CreateRecipe()
-                  .AddIngredient(ItemID.ChumBucket)
-                  .AddIngredient(ItemID.GoldCoin, 10)
-                  .AddIngredient(modItem.Type)
-                  .AddTile(TileID.MythrilAnvil)
-                  .Register();
-            }
+            CreateRecipe()
+                .AddIngredient(ItemID.BloodMoonStarter)
+                .AddIngredient(ItemID.DeepRedPaint)
+                .AddRecipeGroup(RecipeGroups.AnyFoodT3)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
         }
     }
 }

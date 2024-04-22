@@ -171,23 +171,6 @@ namespace Fargowiltas.NPCs
             }
         }
 
-        private static int[] ItemsSoldDirectly => new int[]
-        {
-            ItemID.CellPhone,
-            ItemID.Shellphone,
-            ItemID.AnkhShield,
-            ItemID.RodofDiscord,
-            ItemID.TerrasparkBoots,
-            ItemID.TorchGodsFavor,
-            ModContent.ItemType<Omnistation>(),
-            ModContent.ItemType<Omnistation2>(),
-            ModContent.ItemType<CrucibleCosmos>(),
-            ModContent.ItemType<ElementalAssembler>(),
-            ModContent.ItemType<MultitaskCenter>(),
-            ModContent.ItemType<PortableSundial>(),
-            ModContent.ItemType<BattleCry>()
-        };
-
         public static SquirrelShopGroup SquirrelSells(Item item, out SquirrelSellType sellType)
         {
 
@@ -197,13 +180,13 @@ namespace Fargowiltas.NPCs
                 return SquirrelShopGroup.Other;
             }
 
-            if (item.makeNPC != 0 || ItemsSoldDirectly.Contains(item.type))
+            if (item.makeNPC != 0 || FargoSets.Items.SquirrelSellsDirectly[item.type])
             {
                 sellType = SquirrelSellType.SoldBySquirrel;
                 return SquirrelShopGroup.Other;
             }
 
-            bool Potion = (item.buffType != 0 && item.type != ItemID.GrilledSquirrel) || FargoGlobalItem.NonBuffPotions.Contains(item.type);
+            bool Potion = (item.buffType != 0 && item.type != ItemID.GrilledSquirrel) || FargoSets.Items.NonBuffPotion[item.type];
             if (Potion && item.maxStack >= 30)
             {
                 sellType = SquirrelSellType.SoldAtThirtyStack;
@@ -295,7 +278,13 @@ namespace Fargowiltas.NPCs
             switch (sellType)
             {
                 case SquirrelSellType.SoldBySquirrel:
-                    itemCollections[shopGroup].Add(item.type);
+                    {
+                        itemCollections[shopGroup].Add(item.type);
+                        if (ModContent.TryFind("FargowiltasSouls", "WorldShaperSoul", out ModItem worldShaperSoul) && item.type == worldShaperSoul.Type)
+                        {
+                            itemCollections[SquirrelShopGroup.Other].Add(ItemID.Shellphone);
+                        }
+                    } 
                     break;
 
                 case SquirrelSellType.SomeMaterialsSold:
@@ -308,9 +297,8 @@ namespace Fargowiltas.NPCs
                                 itemCollections[shopGroup].Add(material.type);
                             }
 
-                            bool isWorldShaperCellPhoneComponent = material.type == ItemID.CellPhone && ModContent.TryFind("FargowiltasSouls", "WorldShaperSoul", out ModItem worldShaperSoul) && item.type == worldShaperSoul.Type;
                             bool isBerserkerSoulZenithComponent = material.type == ItemID.Zenith && ModContent.TryFind("FargowiltasSouls", "BerserkerSoul", out ModItem berserkerSoul) && item.type == berserkerSoul.Type;
-                            if (isWorldShaperCellPhoneComponent || isBerserkerSoulZenithComponent)
+                            if (isBerserkerSoulZenithComponent)
                             {
                                 itemCollections[SquirrelShopGroup.Other].Add(material.type);
                             }

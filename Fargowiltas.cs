@@ -19,6 +19,7 @@ using Terraria.Graphics;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using static Fargowiltas.FargoSets;
 
 namespace Fargowiltas
 {
@@ -50,13 +51,13 @@ namespace Fargowiltas
         internal static Dictionary<int, string> ModRareEnemies = new Dictionary<int, string>();
 
         public List<StatSheetUI.Stat> ModStats;
+        public List<StatSheetUI.PermaUpgrade> PermaUpgrades;
 
         private string[] mods;
 
         internal static Fargowiltas Instance;
 
         public override uint ExtraPlayerBuffSlots => FargoServerConfig.Instance.ExtraBuffSlots;
-
 
         public Fargowiltas()
         {
@@ -75,7 +76,15 @@ namespace Fargowiltas
             Instance = this;
 
             ModStats = new();
-            
+            PermaUpgrades = new List<StatSheetUI.PermaUpgrade>
+            {
+                new(ContentSamples.ItemsByType[ItemID.AegisCrystal], () => Main.LocalPlayer.usedAegisCrystal),
+                new(ContentSamples.ItemsByType[ItemID.AegisFruit], () => Main.LocalPlayer.usedAegisFruit),
+                new(ContentSamples.ItemsByType[ItemID.ArcaneCrystal], () => Main.LocalPlayer.usedArcaneCrystal),
+                new(ContentSamples.ItemsByType[ItemID.Ambrosia], () => Main.LocalPlayer.usedAmbrosia),
+                new(ContentSamples.ItemsByType[ItemID.GummyWorm], () => Main.LocalPlayer.usedGummyWorm),
+                new(ContentSamples.ItemsByType[ItemID.GalaxyPearl], () => Main.LocalPlayer.usedGalaxyPearl)
+            };
 
             summonTracker = new MutantSummonTracker();
             dialogueTracker = new DevianttDialogueTracker();
@@ -312,14 +321,17 @@ namespace Fargowiltas
                             if (args[1].GetType() == typeof(int))
                             {
                                 int tile = (int)args[1];
-                                FargoGlobalProjectile.CannotDestroyTileTypes.Add(tile);
+                                FargoSets.Tiles.InstaCannotDestroy[tile] = true;
                             }
                         }
                         break;
                     case "AddIndestructibleWallType":
                         {
-                            int wall = (int)args[1];
-                            FargoGlobalProjectile.CannotDestroyWallTypes.Add(wall);
+                            if (args[1].GetType() == typeof(int))
+                            {
+                                int wall = (int)args[1];
+                                FargoSets.Walls.InstaCannotDestroy[wall] = true;
+                            }
                         }
                         break;
                     case "AddStat":
@@ -332,6 +344,18 @@ namespace Fargowiltas
                             int itemID = (int)args[1];
                             Func<string> TextFunction = (Func<string>)args[2];
                             ModStats.Add(new StatSheetUI.Stat(itemID, TextFunction));
+                        }
+                        break;
+                    case "AddPermaUpgrade":
+                        {
+                            if (args[1].GetType() != typeof(Item))
+                                throw new Exception($"Call Error (Fargo Mutant Mod AddStat): args[1] must be of type Item");
+                            if (args[2].GetType() != typeof(Func<bool>))
+                                throw new Exception($"Call Error (Fargo Mutant Mod AddStat): args[2] must be of type Func<bool>");
+
+                            Item item = (Item)args[1];
+                            Func<bool> ConsumedFunction = (Func<bool>)args[2];
+                            PermaUpgrades.Add(new StatSheetUI.PermaUpgrade(item, ConsumedFunction));
                         }
                         break;
                     case "SwarmActive":
@@ -749,14 +773,16 @@ namespace Fargowiltas
                 {
                     dir = -1;
                 }
-                else if (modPlayer.latestXDirReleased != 0)
-                {
-                    dir = modPlayer.latestXDirReleased;
-                }
-                else
-                {
-                    dir = player.direction;
-                }
+                if (dir == 0) // this + commented out below because changed to not have an effect when not holding any movement keys; primarily so it's affected by stun effects
+                    return;
+                //else if (modPlayer.latestXDirReleased != 0)
+                //{
+                //    dir = modPlayer.latestXDirReleased;
+                //}
+                //else
+                //{
+                //    dir = player.direction;
+                //}
                 player.direction = dir;
                 dashing = true;
                 if (player.dashTime > 0)

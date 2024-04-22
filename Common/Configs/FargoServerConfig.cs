@@ -112,6 +112,7 @@ namespace Fargowiltas.Common.Configs
         public bool BossApplyToAllWhenAlive;
 
         [Header("$Mods.Fargowiltas.Configs.FargoServerConfig.Headers.Misc")]
+
         [Range(0, maxExtraBuffSlots)]
         [DefaultValue(22)]
         [ReloadRequired]
