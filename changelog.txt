@@ -1,2 +1,3 @@
-NEW UPDATE - V 3.3.3.3
--Readded Extra Buff Slots config
+NEW UPDATE - V 3.3.3.4
+-Fixed bugs with Hide Unlimited Buffs config
+-Fixed bugs with Unlimited Buffs and Bait at stack config
