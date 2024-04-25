@@ -116,6 +116,7 @@ namespace Fargowiltas
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
         {
             ModPacket packet = Mod.GetPacket();
+            packet.Write((byte)9);
             packet.Write((byte)Player.whoAmI);
             packet.Write((byte)DeathFruitHealth);
             packet.Send(toWho, fromWho);

@@ -529,6 +529,16 @@ namespace Fargowiltas
                     }
                     break;
 
+                case 9: // sync death fruit health
+                    {
+                        int p = (int)reader.ReadByte();
+                        int deathFruitHealth = reader.ReadByte();
+                        if (p >= 0 && p < Main.maxPlayers && Main.player[p].active)
+                        {
+                            Main.player[p].GetModPlayer<FargoPlayer>().DeathFruitHealth = deathFruitHealth;
+                        }
+                    }
+                    break;
                 default:
                     break;
             }
@@ -729,8 +739,7 @@ namespace Fargowiltas
             }
             else
             {
-                // I have no idea how to convert this to the standard system so im gonna post this method too lol
-                FargoNet.SendNetMessage(FargoNet.SummonNPCFromClient, (byte)player.whoAmI, (short)bossType, spawnMessage, npcCenter.X, npcCenter.Y, overrideDisplayName, namePlural);
+                FargoNet.SendNetMessage(FargoNet.SummonNPCFromClient, (byte)player.whoAmI, (short)bossType, spawnMessage, (int)npcCenter.X, (int)npcCenter.Y, overrideDisplayName, namePlural);
             }
 
             return 200;
