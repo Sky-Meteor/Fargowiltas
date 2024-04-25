@@ -1,3 +1,3 @@
 NEW UPDATE - V 3.3.3.4
--Fixed bugs with Hide Unlimited Buffs config
--Fixed bugs with Unlimited Buffs and Bait at stack config
+-Fixed multiplayer read underflow bug that could cause strange issues such as ghost enemies spawning
+-Buff Station trigger sound has a cooldown and doesn't play if AlchemistNPC is enabled (since that apparently broke it)
