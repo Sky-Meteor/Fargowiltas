@@ -46,6 +46,8 @@ namespace Fargowiltas
         public int DeathFruitHealth;
         public bool bigSuck;
 
+        public int StationSoundCooldown;
+
         internal Dictionary<string, bool> FirstDyeIngredients = new Dictionary<string, bool>();
 
         private readonly string[] tags = new string[]
@@ -214,7 +216,10 @@ namespace Fargowiltas
                 Player.buffImmune[BuffID.Horrified] = true;
             }
         }
-
+        public override void UpdateDead()
+        {
+            StationSoundCooldown = 0;
+        }
         public override void PostUpdateMiscEffects()
         {
             if (ElementalAssemblerNearby > 0)
@@ -222,6 +227,8 @@ namespace Fargowiltas
                 ElementalAssemblerNearby -= 1;
                 Player.alchemyTable = true;
             }
+            if (StationSoundCooldown > 0)
+                StationSoundCooldown--;
 
             if (Player.equippedWings == null)
                 ResetStatSheetWings();

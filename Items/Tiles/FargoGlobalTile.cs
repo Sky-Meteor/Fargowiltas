@@ -173,8 +173,12 @@ namespace Fargowiltas.Tiles
             }
             if (buff != 0 && Main.LocalPlayer.active && !Main.LocalPlayer.dead && !Main.LocalPlayer.ghost)
             {
-                if (!Main.LocalPlayer.HasBuff(buff) && sound.HasValue)
+                bool noAlchemistNPC = !(ModLoader.HasMod("AlchemistNPC") || ModLoader.HasMod("AlchemistNPCLite")); // because it fucks with buffs for some reason and makes the sound spam WHY WHY WHY WHY WHAT'S WRONG WITH YOU WHY WHY WHY
+                if (!Main.LocalPlayer.HasBuff(buff) && sound.HasValue && noAlchemistNPC && Main.LocalPlayer.GetModPlayer<FargoPlayer>().StationSoundCooldown <= 0)
+                {
                     SoundEngine.PlaySound(sound.Value, new Vector2(i, j) * 16);
+                    Main.LocalPlayer.GetModPlayer<FargoPlayer>().StationSoundCooldown = 60 * 60;
+                }
                 Main.LocalPlayer.AddBuff(buff, 2);
             }
         }
