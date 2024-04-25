@@ -71,6 +71,8 @@ namespace Fargowiltas.NPCs
         public static int plantBoss = -1;
         public static int beeBoss = -1;
 
+        public bool FirstFrame = true;
+
         public override bool InstancePerEntity => true;
 
         //        public override void SetDefaults(NPC npc)
@@ -98,26 +100,26 @@ namespace Fargowiltas.NPCs
             
             if (target.friendly && FargoServerConfig.Instance.SaferBoundNPCs && (target.type == NPCID.BoundGoblin || target.type == NPCID.BoundMechanic || target.type == NPCID.BoundWizard || target.type == NPCID.BartenderUnconscious || target.type == NPCID.GolferRescue))
                 return false;
-            
             return base.CanHitNPC(npc, target);
-        }
-        public override void SetDefaults(NPC npc)
-        {
-            #region Stat Sliders
-            FargoServerConfig config = FargoServerConfig.Instance;
-            if ((config.EnemyHealth != 1 || config.BossHealth != 1) && !npc.townNPC && !npc.CountsAsACritter && npc.life > 10)
-            {
-                bool boss = config.BossHealth > config.EnemyHealth && // only relevant if boss health is higher than enemy health
-                    (npc.boss || npc.type == NPCID.EaterofWorldsHead || npc.type == NPCID.EaterofWorldsBody || npc.type == NPCID.EaterofWorldsTail || (config.BossApplyToAllWhenAlive && AnyBossAlive()));
-                if (boss)
-                    npc.lifeMax = (int)Math.Round(npc.lifeMax * config.BossHealth);
-                else
-                    npc.lifeMax = (int)Math.Round(npc.lifeMax * config.EnemyHealth);
-            }
-            #endregion
         }
         public override bool PreAI(NPC npc)
         {
+            if (FirstFrame)
+            {
+                FirstFrame = false;
+                #region Stat Sliders
+                FargoServerConfig config = FargoServerConfig.Instance;
+                if ((config.EnemyHealth != 1 || config.BossHealth != 1) && !npc.townNPC && !npc.CountsAsACritter && npc.life > 10)
+                {
+                    bool boss = config.BossHealth > config.EnemyHealth && // only relevant if boss health is higher than enemy health
+                        (npc.boss || npc.type == NPCID.EaterofWorldsHead || npc.type == NPCID.EaterofWorldsBody || npc.type == NPCID.EaterofWorldsTail || (config.BossApplyToAllWhenAlive && AnyBossAlive()));
+                    if (boss)
+                        npc.lifeMax = (int)Math.Round(npc.lifeMax * config.BossHealth);
+                    else
+                        npc.lifeMax = (int)Math.Round(npc.lifeMax * config.EnemyHealth);
+                }
+                #endregion
+            }
             if (npc.boss)
             {
                 boss = npc.whoAmI;
