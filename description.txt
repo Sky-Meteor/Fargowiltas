@@ -4,6 +4,9 @@ There are several other items such as infinite ammos, craftable instant builds f
 Fargo Discord: https://discord.gg/Rgen4Vv
 Fargo Wiki: https://fargosmods.wiki.gg
 
+NEW UPDATE - V3.3.3.6
+-Big Suck Potion no longer sucks hearts or mana stars
+
 NEW UPDATE - v3.3.3
 -Fixed Hide Unlimited Buffs only preventing their rendering (and not mousetext and clickability), and made it only affect the buff display under your hotbar, and not the display under the mount/pet tab
 -Insta items now check for vanilla protection areas, such as the spawn

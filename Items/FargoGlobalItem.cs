@@ -606,7 +606,7 @@ namespace Fargowiltas.Items
 
         public override bool GrabStyle(Item item, Player player)
         {
-            if (player.GetFargoPlayer().bigSuck)
+            if (player.GetFargoPlayer().bigSuck && !Hearts.Contains(item.type) && !Stars.Contains(item.type))
             {
                 item.position += (player.MountedCenter - item.Center) / 15f;
                 item.position += player.position - player.oldPosition;
