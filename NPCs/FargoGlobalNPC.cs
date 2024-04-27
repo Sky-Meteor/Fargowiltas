@@ -117,6 +117,7 @@ namespace Fargowiltas.NPCs
                         npc.lifeMax = (int)Math.Round(npc.lifeMax * config.BossHealth);
                     else
                         npc.lifeMax = (int)Math.Round(npc.lifeMax * config.EnemyHealth);
+                    npc.life = npc.lifeMax;
                 }
                 #endregion
             }

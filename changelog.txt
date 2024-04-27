@@ -1,3 +1,2 @@
-NEW UPDATE - V 3.3.3.5
--Fixed multiplayer read underflow bug that could cause strange issues such as ghost enemies spawning
--Buff Station trigger sound has a cooldown and doesn't play if AlchemistNPC is enabled (since that apparently broke it)
+NEW UPDATE - V 3.3.3.7
+-Fixed the Enemy/Boss Health multiplier configs not working correctly
